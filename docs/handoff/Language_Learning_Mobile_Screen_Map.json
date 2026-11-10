@@ -1,0 +1,705 @@
+{
+  "schemaVersion": 1,
+  "product": "Language Learning App — Nordic Editorial mobile (working description; final brand TBD)",
+  "sourceFigmaFile": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App",
+  "designSystemPage": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=197-828",
+  "screenCount": 27,
+  "sourceOfTruth": "Figma for approved visual; curriculum blueprint & architecture for learning-domain behaviour; code for native runtime decisions",
+  "recordStatus": "Figma screenshots and IDs verified on 2026-11-10. Paths are recommendations for Expo Router, not existing application routes. Product-identity amendment: Finnish V1, Swedish future; app brand TBD, Figma Suomi wordmark provisional.",
+  "screens": [
+    {
+      "id": "home",
+      "name": "Home",
+      "category": "core-learning",
+      "figmaNodeId": "173:826",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826",
+      "presentationType": "route",
+      "expoRouteOrHost": "/(tabs)/home",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 1,
+      "expectedUiStates": [
+        "default",
+        "resume",
+        "due-review-preview"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "PrimaryButton",
+        "ProgressIndicator",
+        "LearningPattern"
+      ],
+      "sampleContent": "Unit 4 — Where are you? (3/6 lessons). Next lesson hero and review preview.",
+      "implementationRequirements": "Single dominant Continue action; show current stage/unit/lesson dynamically; display due review and genuine capability preview; Progress/Settings remain secondary destinations.",
+      "navigationContract": "Home tab; Continue to current lesson; Review; Course; Library; Progress preview; Settings."
+    },
+    {
+      "id": "grammar-lesson",
+      "name": "Grammar Lesson",
+      "category": "core-learning",
+      "figmaNodeId": "173:922",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-922",
+      "presentationType": "route",
+      "expoRouteOrHost": "/learn/[lessonId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 2,
+      "expectedUiStates": [
+        "explanation",
+        "step-progress",
+        "spoken-note-optional"
+      ],
+      "designSystemDependencies": [
+        "FocusedLearningHeader",
+        "LearningPattern",
+        "PrimaryButton",
+        "ProgressIndicator"
+      ],
+      "sampleContent": "Unit 4.2 — Saying where something is: talo → talossa; kauppa → kaupassa; Helsinki → Helsingissä.",
+      "implementationRequirements": "Structured lesson step with concise explanation, visual noun + suffix pattern, examples, takeaway and Continue; supports any unit, not only inessive.",
+      "navigationContract": "Back to lesson context; Continue advances lessonStep cursor."
+    },
+    {
+      "id": "exercise-default",
+      "name": "Exercise / Default",
+      "category": "core-learning",
+      "figmaNodeId": "173:997",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-997",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/learn/[lessonId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 2,
+      "expectedUiStates": [
+        "unanswered",
+        "selected",
+        "disabled"
+      ],
+      "designSystemDependencies": [
+        "FocusedLearningHeader",
+        "AnswerOption",
+        "ProgressIndicator"
+      ],
+      "sampleContent": "Olen Helsingissä. Choose from/from in/to Helsinki; answer taps evaluate in the mockup.",
+      "implementationRequirements": "Render question from content data; selection is temporary UI; disable repeat submission while evaluating; reserve space for feedback.",
+      "navigationContract": "Answer choice → evaluate; next lesson step after feedback; back to lesson."
+    },
+    {
+      "id": "exercise-correct",
+      "name": "Exercise / Correct",
+      "category": "feedback",
+      "figmaNodeId": "173:1052",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-1052",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/learn/[lessonId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 2,
+      "expectedUiStates": [
+        "correct"
+      ],
+      "designSystemDependencies": [
+        "AnswerOption",
+        "Feedback",
+        "FocusedLearningHeader",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Correct answer “in Helsinki”; exactly + concise -ssä explanation.",
+      "implementationRequirements": "Keep answer geometry unchanged, display selected correct option and explicit checkmark, update only scored knowledge targets once.",
+      "navigationContract": "Continue to next lesson step; not necessarily a route."
+    },
+    {
+      "id": "course",
+      "name": "Course",
+      "category": "course",
+      "figmaNodeId": "182:881",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-881",
+      "presentationType": "route",
+      "expoRouteOrHost": "/(tabs)/course",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 1,
+      "expectedUiStates": [
+        "current-unit-expanded",
+        "completed-chapters",
+        "upcoming-chapters"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "CourseChapterEntry",
+        "LessonProgressRow",
+        "ProgressIndicator",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Four stages; A1 Foundations eight units; Unit 4 currently 3/6; lesson 4.4 is current.",
+      "implementationRequirements": "Accordion/chapter journey with clear current unit, six lesson statuses, later chapters and stages; distinguish completed versus familiar.",
+      "navigationContract": "Course tab; current lesson resolved from saved cursor; other chapter entry as available."
+    },
+    {
+      "id": "review-landing",
+      "name": "Review / Landing",
+      "category": "review",
+      "figmaNodeId": "182:929",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-929",
+      "presentationType": "route",
+      "expoRouteOrHost": "/(tabs)/review",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 3,
+      "expectedUiStates": [
+        "items-ready",
+        "session-launch",
+        "none-ready"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "PrimaryButton",
+        "VocabularyEntry"
+      ],
+      "sampleContent": "Sample: 10 items due (8 words, 2 grammar), about 5 minutes.",
+      "implementationRequirements": "Due count computed by review scheduler, not static; concise word/grammar preview; Start Review only if items available.",
+      "navigationContract": "Review tab; Start Review → active session; empty queue → Nothing Ready."
+    },
+    {
+      "id": "review-default",
+      "name": "Review / Default",
+      "category": "review",
+      "figmaNodeId": "182:977",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-977",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/review/session",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 3,
+      "expectedUiStates": [
+        "unanswered",
+        "not_sure",
+        "selected"
+      ],
+      "designSystemDependencies": [
+        "FocusedReviewHeader",
+        "AnswerOption",
+        "TextButton",
+        "ProgressIndicator"
+      ],
+      "sampleContent": "Question 3/10: En tiedä. Four options; QA added “I’m not sure yet”.",
+      "implementationRequirements": "Review item may test word, phrase or grammar; “not_sure” must be a real scored result separate from Almost; render from authored exercise.",
+      "navigationContract": "Evaluate choice or Not sure, show feedback in same session, then advance."
+    },
+    {
+      "id": "review-correct",
+      "name": "Review / Correct",
+      "category": "review",
+      "figmaNodeId": "182:1001",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-1001",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/review/session",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 3,
+      "expectedUiStates": [
+        "correct"
+      ],
+      "designSystemDependencies": [
+        "FocusedReviewHeader",
+        "AnswerOption",
+        "Feedback",
+        "PrimaryButton"
+      ],
+      "sampleContent": "“En tiedä.” = “I don’t know”; short first-person negative explanation.",
+      "implementationRequirements": "Selected answer and feedback rendered without layout shift; scored result scheduled by domain; continue until queue ends.",
+      "navigationContract": "Continue to next review item, or Session Complete when the last item is answered."
+    },
+    {
+      "id": "vocabulary-library",
+      "name": "Vocabulary Library",
+      "category": "reference",
+      "figmaNodeId": "182:1025",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-1025",
+      "presentationType": "route",
+      "expoRouteOrHost": "/(tabs)/library/vocabulary",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "all",
+        "learning",
+        "familiar",
+        "query",
+        "empty"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "LibraryTabs",
+        "LibraryFilter",
+        "SearchField",
+        "VocabularyEntry"
+      ],
+      "sampleContent": "haluan, missä?, täällä, vielä, paljon, siellä; En tiedä., Voinko…?, Minulla on…",
+      "implementationRequirements": "Encountered lexical items + phrases; lemma and learner-facing forms distinct; search/filter from local content/progress; no fake 94 count.",
+      "navigationContract": "Library tab; switch to Grammar; select vocabulary to detail."
+    },
+    {
+      "id": "grammar-library",
+      "name": "Grammar Library",
+      "category": "reference",
+      "figmaNodeId": "242:1030",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1030",
+      "presentationType": "route",
+      "expoRouteOrHost": "/(tabs)/library/grammar",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "introduced-concepts",
+        "search",
+        "later-in-course"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "LibraryTabs",
+        "SearchField",
+        "GrammarEntry"
+      ],
+      "sampleContent": "olen/olet, -ko/-kö, en+verb, -ssa/-ssä, Minulla on, genitive -n.",
+      "implementationRequirements": "Practical titles first, pattern examples second, technical terms optional; later concepts clearly labelled rather than falsely familiar.",
+      "navigationContract": "Library tab; switch to Vocabulary; open current concept detail."
+    },
+    {
+      "id": "grammar-detail",
+      "name": "Grammar Detail",
+      "category": "reference",
+      "figmaNodeId": "242:1079",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1079",
+      "presentationType": "route",
+      "expoRouteOrHost": "/library/grammar/[conceptId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "content",
+        "related-patterns",
+        "practice-entry"
+      ],
+      "designSystemDependencies": [
+        "ReferenceHeader",
+        "LearningPattern",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Inessive -ssa/-ssä, talo → talossa, kauppa → kaupassa, Helsinki → Helsingissä.",
+      "implementationRequirements": "Reference lesson supports short/full grammar explanations and examples; avoid implying automatic formation of every noun.",
+      "navigationContract": "Back to Grammar; optional practice from concept exercises, only after engine supports it."
+    },
+    {
+      "id": "vocabulary-detail",
+      "name": "Vocabulary Detail",
+      "category": "reference",
+      "figmaNodeId": "242:1114",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1114",
+      "presentationType": "route",
+      "expoRouteOrHost": "/library/vocabulary/[vocabId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "standard",
+        "spoken-recognition-note",
+        "familiarity",
+        "practice-entry"
+      ],
+      "designSystemDependencies": [
+        "ReferenceHeader",
+        "VocabularyEntry",
+        "PrimaryButton"
+      ],
+      "sampleContent": "haluan = I want, canonical haluta, spoken recognition haluun, Haluan kahvia.",
+      "implementationRequirements": "Canonical lemma retains identity; learner-facing conjugated form is a teaching form; spoken notes are recognition-first and toggleable.",
+      "navigationContract": "Back to Vocabulary; practice item only when a reviewable exercise exists."
+    },
+    {
+      "id": "progress",
+      "name": "Progress",
+      "category": "support",
+      "figmaNodeId": "242:1145",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1145",
+      "presentationType": "route",
+      "expoRouteOrHost": "/progress",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "current",
+        "becoming-comfortable",
+        "comfortable",
+        "still-practising"
+      ],
+      "designSystemDependencies": [
+        "ReferenceHeader",
+        "CapabilityStatement",
+        "ProgressIndicator"
+      ],
+      "sampleContent": "A1 Foundations Unit 4; abilities: introduce yourself, ask simple questions, locations.",
+      "implementationRequirements": "Derive capabilities from explicit evidence/lesson completion, not percentages; never equate lesson completion to familiarity.",
+      "navigationContract": "Secondary route via Home capability preview; Back to previous screen."
+    },
+    {
+      "id": "onboarding-welcome",
+      "name": "Onboarding / Welcome",
+      "category": "onboarding",
+      "figmaNodeId": "242:1167",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1167",
+      "presentationType": "route",
+      "expoRouteOrHost": "/onboarding/welcome",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 1,
+      "expectedUiStates": [
+        "first-launch"
+      ],
+      "designSystemDependencies": [
+        "OnboardingStepIndicator",
+        "PrimaryButton"
+      ],
+      "sampleContent": "“Finnish, at your own pace.” minä / sinä / suomi.",
+      "implementationRequirements": "No account, placement, quotas or subscriptions; strong editorial start; persist completion only when onboarding done.",
+      "navigationContract": "Get started → How Learning Works."
+    },
+    {
+      "id": "onboarding-learning",
+      "name": "Onboarding / How Learning Works",
+      "category": "onboarding",
+      "figmaNodeId": "242:1193",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1193",
+      "presentationType": "route",
+      "expoRouteOrHost": "/onboarding/how-it-works",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 1,
+      "expectedUiStates": [
+        "introduction",
+        "three-steps"
+      ],
+      "designSystemDependencies": [
+        "OnboardingStepIndicator",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Understand → Practise → Remember; minä olen, En tiedä.",
+      "implementationRequirements": "Three coherent principles rather than generic features; no streak or microphone messaging.",
+      "navigationContract": "Continue → Ready; support back as appropriate."
+    },
+    {
+      "id": "onboarding-ready",
+      "name": "Onboarding / Ready",
+      "category": "onboarding",
+      "figmaNodeId": "242:1219",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1219",
+      "presentationType": "route",
+      "expoRouteOrHost": "/onboarding/ready",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 1,
+      "expectedUiStates": [
+        "ready-to-start"
+      ],
+      "designSystemDependencies": [
+        "OnboardingStepIndicator",
+        "PrimaryButton"
+      ],
+      "sampleContent": "A1 Foundations, Unit 1 Hello, hei/moi/kiitos; saved locally.",
+      "implementationRequirements": "Promise device-local save only; first run advances into actual Unit 1/first lesson or Home routing to it.",
+      "navigationContract": "Start learning → initial lesson or Home resume route."
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "category": "support",
+      "figmaNodeId": "242:1245",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245",
+      "presentationType": "route",
+      "expoRouteOrHost": "/settings",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 5,
+      "expectedUiStates": [
+        "daily-reminder-toggle",
+        "spoken-notes-toggle",
+        "local-save-info",
+        "reset-entry"
+      ],
+      "designSystemDependencies": [
+        "ReferenceHeader",
+        "SettingsRow",
+        "SettingsSwitch",
+        "ConfirmationSheet"
+      ],
+      "sampleContent": "Two toggles, device-local saved progress, Reset learning progress, About Version 0.1.",
+      "implementationRequirements": "Preferences persisted separately; reset preserves preferences; avoid an inert reminder toggle—implement notification permission/scheduling if enabled or clearly disable.",
+      "navigationContract": "Secondary route via Settings icon; Reset entry opens confirmation overlay."
+    },
+    {
+      "id": "exercise-almost",
+      "name": "Exercise / Almost",
+      "category": "feedback",
+      "figmaNodeId": "268:1270",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1270",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/learn/[lessonId]",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 2,
+      "expectedUiStates": [
+        "almost"
+      ],
+      "designSystemDependencies": [
+        "FocusedLearningHeader",
+        "AnswerOption",
+        "Feedback",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Selected “to Helsinki”; brief -ssä meaning “in” correction.",
+      "implementationRequirements": "Same answer geometry as Default/Correct, warm constructive colour, explicit wrong-but-useful explanation; records almost, not correct.",
+      "navigationContract": "Continue lesson step; no fake perfect result."
+    },
+    {
+      "id": "lesson-complete",
+      "name": "Lesson Complete",
+      "category": "completion",
+      "figmaNodeId": "268:1320",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1320",
+      "presentationType": "route",
+      "expoRouteOrHost": "/learn/[lessonId]/complete",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 2,
+      "expectedUiStates": [
+        "lesson-completed"
+      ],
+      "designSystemDependencies": [
+        "FocusedLearningHeader",
+        "LearningPattern",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Unit 4.2 Saying “in”, talo → talossa; pattern returns in Review.",
+      "implementationRequirements": "Completed required lesson steps, not mastery; acknowledge practice and schedule exposed items; remain resumable.",
+      "navigationContract": "Continue next lesson if available or return Course; sample 4/5 exercise does not directly imply completion."
+    },
+    {
+      "id": "unit-complete",
+      "name": "Unit Complete",
+      "category": "completion",
+      "figmaNodeId": "268:1345",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1345",
+      "presentationType": "route",
+      "expoRouteOrHost": "/course/unit/[unitId]/complete",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 4,
+      "expectedUiStates": [
+        "unit-completed",
+        "next-unit"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "PrimaryButton",
+        "CapabilityStatement"
+      ],
+      "sampleContent": "Unit 4 complete; Next Unit 5 Food & quantities.",
+      "implementationRequirements": "Only after every required lesson/checkpoint; summary and still-reviewing explanation; next-unit dynamic.",
+      "navigationContract": "Continue to actual next unit, not fixed Course screenshot; Back to Course secondary."
+    },
+    {
+      "id": "review-session-complete",
+      "name": "Review / Session Complete",
+      "category": "completion",
+      "figmaNodeId": "268:1394",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1394",
+      "presentationType": "route",
+      "expoRouteOrHost": "/review/session/complete",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 4,
+      "expectedUiStates": [
+        "review-finished"
+      ],
+      "designSystemDependencies": [
+        "FocusedReviewHeader",
+        "Feedback",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Ten items revisited; En tiedä., missä?, -ssa/-ssä.",
+      "implementationRequirements": "Quiet recap with reviewed items, no percentage or perfect-score banners; enqueue weak items by schedule.",
+      "navigationContract": "Back to Review or continue learning."
+    },
+    {
+      "id": "review-nothing-ready",
+      "name": "Review / Nothing Ready",
+      "category": "empty",
+      "figmaNodeId": "268:1419",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1419",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/(tabs)/review",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 4,
+      "expectedUiStates": [
+        "queue-empty"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "ReviewEmptyState",
+        "PrimaryButton"
+      ],
+      "sampleContent": "No due reviews now; “Olen täällä.” thematic motif.",
+      "implementationRequirements": "Do not invent next-due timestamps or falsely imply mastery; source due status from review engine.",
+      "navigationContract": "Continue learning/Home or Course."
+    },
+    {
+      "id": "library-search-empty",
+      "name": "Library / No Search Results",
+      "category": "empty",
+      "figmaNodeId": "268:1468",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1468",
+      "presentationType": "transient",
+      "expoRouteOrHost": "/(tabs)/library/vocabulary",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 6,
+      "expectedUiStates": [
+        "query-with-no-matches"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "SearchField",
+        "LibraryTabs",
+        "LibraryFilter",
+        "PrimaryButton"
+      ],
+      "sampleContent": "No matches for raitiovaunu in currently encountered collection.",
+      "implementationRequirements": "Search does not imply word absent from Finnish; clear query without losing tab/filter context.",
+      "navigationContract": "Clear search → Vocabulary Library."
+    },
+    {
+      "id": "loading",
+      "name": "Loading",
+      "category": "system",
+      "figmaNodeId": "268:1517",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1517",
+      "presentationType": "transient",
+      "expoRouteOrHost": "current-route",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 6,
+      "expectedUiStates": [
+        "loading"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "Skeleton"
+      ],
+      "sampleContent": "Content-shaped muted placeholders and “Getting your lesson ready…”",
+      "implementationRequirements": "Only show when local hydration/content loading actually requires it; avoid endless shimmer.",
+      "navigationContract": "Return to requested content or recover gracefully."
+    },
+    {
+      "id": "offline",
+      "name": "Offline",
+      "category": "system",
+      "figmaNodeId": "268:1566",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1566",
+      "presentationType": "transient",
+      "expoRouteOrHost": "current-route",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 6,
+      "expectedUiStates": [
+        "offline-informational"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "PrimaryButton"
+      ],
+      "sampleContent": "Local data survives offline; available content can continue.",
+      "implementationRequirements": "Local-first: do not block bundled lessons unnecessarily; content availability must be verified in implementation.",
+      "navigationContract": "Continue available learning; Retry only for actual unavailable resource."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "category": "system",
+      "figmaNodeId": "268:1615",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1615",
+      "presentationType": "transient",
+      "expoRouteOrHost": "current-route",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 6,
+      "expectedUiStates": [
+        "load-failed",
+        "retry"
+      ],
+      "designSystemDependencies": [
+        "AppHeader",
+        "BottomNavigation",
+        "PrimaryButton",
+        "SecondaryButton"
+      ],
+      "sampleContent": "“Something didn’t load.” Try again / Back to Home.",
+      "implementationRequirements": "Error copy must not guarantee data preserved if storage is corrupted; keep actionable retry and safe back.",
+      "navigationContract": "Try again → Loading (prototype only); Back to Home."
+    },
+    {
+      "id": "reset-confirmation",
+      "name": "Reset Confirmation",
+      "category": "overlay",
+      "figmaNodeId": "268:1664",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=268-1664",
+      "presentationType": "overlay",
+      "expoRouteOrHost": "/settings (modal overlay)",
+      "visualSourceStatus": "approved Nordic Editorial Figma mockup (content is illustrative where Unit 4 appears)",
+      "implementationPriority": 6,
+      "expectedUiStates": [
+        "open",
+        "cancel",
+        "confirm-destructive"
+      ],
+      "designSystemDependencies": [
+        "ConfirmationSheet",
+        "PrimaryButton",
+        "SettingsRow"
+      ],
+      "sampleContent": "Clear learning history and review progress on this device; preferences remain unchanged.",
+      "implementationRequirements": "Cancel primary/safe; confirm explicitly clears learner state and preserves preferences; sheet focus/labels and dismissals need native validation.",
+      "navigationContract": "Settings → open; Cancel → Settings; Confirm → reset and route to first-run state."
+    }
+  ],
+  "routeConventions": {
+    "tabs": [
+      "home",
+      "course",
+      "review",
+      "library"
+    ],
+    "nestedLearning": "/learn/[lessonId]",
+    "reviewSession": "/review/session",
+    "referenceDetail": "/library/{grammar|vocabulary}/[id]",
+    "overlay": "reset confirmation over settings",
+    "transient": "answer/feedback/loading/offline/error/no-search/nothing-ready are not separate navigable Figma pages",
+    "languageScoping": "Selected learning language resolves the course/data registry; routes may remain language-agnostic if language is held in persisted app context; all domain progress keyed by target language."
+  },
+  "implementationStages": {
+    "1": "Expo foundation and shared design system",
+    "2": "Structured Unit 1 content + functional lesson vertical slice",
+    "3": "Review and capability progress",
+    "4": "Library/reference/settings",
+    "5": "Completion, system states, accessibility and device QA"
+  },
+  "brand": {
+    "status": "undecided",
+    "currentFigmaWordmark": "suomi",
+    "wordmarkStatus": "legacy Figma visual reference only; replace before publishing",
+    "workingRepositorySlug": "vokri",
+    "visualDirection": "Nordic Editorial",
+    "doNotUseAsProductBrand": [
+      "Suomi",
+      "Nordic Editorial"
+    ],
+    "workingDisplayName": "Vokri (provisional)"
+  },
+  "learningLanguages": {
+    "targetLanguageField": "learningLanguage",
+    "initialReleasedLanguages": [
+      "fi"
+    ],
+    "plannedFutureLanguages": [
+      "sv"
+    ],
+    "defaultLanguage": "fi",
+    "languagesAreTargetsToLearnNotInterfaceLocales": true,
+    "languageScopedContentIds": true,
+    "languageScopedKnowledgeReviewAndProgress": true,
+    "languageSelectionUi": "Do not expose Swedish until reviewed Swedish curriculum is available"
+  }
+}
