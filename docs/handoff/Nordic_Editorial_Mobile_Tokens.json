@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 2,
+  "name": "Nordic Editorial / Mobile Design Tokens (language-neutral app)",
+  "version": "1.0.0-verified-figma",
+  "status": "Figma token values verified 2026-11-10. Native runtime scaling, typography and accessibility remain implementation QA. Brand-neutral app amendment; numerical Figma token values unchanged.",
+  "source": {
+    "figmaFileUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App",
+    "explorationsPageNodeId": "173:766",
+    "designSystemPageNodeId": "197:828",
+    "designSystemPageUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=197-828",
+    "paletteCollectionName": "Nordic 01 / Exploration palette",
+    "semanticCollectionName": "Suomi / Nordic Editorial / Semantic colours",
+    "dimensionsCollectionName": "Suomi / Nordic Editorial / Dimensions",
+    "mode": "Light"
+  },
+  "platformPriority": [
+    "ios",
+    "android"
+  ],
+  "deferredPlatforms": [
+    "web"
+  ],
+  "referenceViewport": {
+    "width": 390,
+    "height": 844,
+    "unit": "Figma px / native logical dp reference only",
+    "notDeviceContract": true
+  },
+  "primitiveColors": {
+    "ivory": "#F7F5EF",
+    "pine": "#183B35",
+    "mint": "#D6EAE0",
+    "apricot": "#F4AB77",
+    "periwinkle": "#C9D8F6",
+    "paper": "#FFFEFA",
+    "secondary": "#53645E",
+    "muted": "#65736B",
+    "border": "#D9DED5",
+    "pineTrack": "#426159",
+    "almostSurface": "#FCE9DE",
+    "almostInk": "#854326",
+    "disabledSurface": "#E7EAE4"
+  },
+  "semanticColorAliases": {
+    "background/primary": "ivory",
+    "background/elevated": "paper",
+    "surface/primary": "paper",
+    "surface/secondary": "ivory",
+    "surface/featured": "pine",
+    "text/primary": "pine",
+    "text/secondary": "secondary",
+    "text/muted": "muted",
+    "text/on-dark": "ivory",
+    "border/subtle": "border",
+    "border/interactive": "pine",
+    "action/primary": "pine",
+    "action/primary-text": "ivory",
+    "action/secondary": "paper",
+    "learning/highlight": "apricot",
+    "grammar/highlight": "periwinkle",
+    "feedback/correct": "mint",
+    "feedback/correct-text": "pine",
+    "feedback/almost": "almostSurface",
+    "feedback/almost-text": "almostInk",
+    "navigation/active": "mint",
+    "navigation/inactive": "secondary",
+    "progress/track": "border",
+    "progress/fill": "pine",
+    "field/background": "paper",
+    "field/disabled": "disabledSurface",
+    "focus/ring": "pine"
+  },
+  "resolvedSemanticColors": {
+    "background/primary": "#F7F5EF",
+    "background/elevated": "#FFFEFA",
+    "surface/primary": "#FFFEFA",
+    "surface/secondary": "#F7F5EF",
+    "surface/featured": "#183B35",
+    "text/primary": "#183B35",
+    "text/secondary": "#53645E",
+    "text/muted": "#65736B",
+    "text/on-dark": "#F7F5EF",
+    "border/subtle": "#D9DED5",
+    "border/interactive": "#183B35",
+    "action/primary": "#183B35",
+    "action/primary-text": "#F7F5EF",
+    "action/secondary": "#FFFEFA",
+    "learning/highlight": "#F4AB77",
+    "grammar/highlight": "#C9D8F6",
+    "feedback/correct": "#D6EAE0",
+    "feedback/correct-text": "#183B35",
+    "feedback/almost": "#FCE9DE",
+    "feedback/almost-text": "#854326",
+    "navigation/active": "#D6EAE0",
+    "navigation/inactive": "#53645E",
+    "progress/track": "#D9DED5",
+    "progress/fill": "#183B35",
+    "field/background": "#FFFEFA",
+    "field/disabled": "#E7EAE4",
+    "focus/ring": "#183B35"
+  },
+  "typography": {
+    "fontFamilies": {
+      "editorial": "Newsreader",
+      "interface": "Inter"
+    },
+    "styles": {
+      "editorialDisplay": {
+        "figmaStyle": "Nordic 01 / display",
+        "family": "Newsreader",
+        "weight": "Regular",
+        "fontSize": 38,
+        "lineHeight": 40,
+        "letterSpacingPx": 0
+      },
+      "pageHeading": {
+        "figmaStyle": "Nordic 01 / heading",
+        "family": "Newsreader",
+        "weight": "Regular",
+        "fontSize": 34,
+        "lineHeight": 36,
+        "letterSpacingPx": 0
+      },
+      "finnishDisplay": {
+        "figmaStyle": "Suomi / Nordic Editorial / Finnish Display",
+        "family": "Inter",
+        "weight": "Medium",
+        "fontSize": 43,
+        "lineHeight": 53,
+        "letterSpacingPx": -0.8
+      },
+      "finnishVocabularyEntry": {
+        "figmaStyle": "Suomi / Nordic Editorial / Finnish Vocabulary Entry",
+        "family": "Inter",
+        "weight": "Semi Bold",
+        "fontSize": 22,
+        "lineHeight": 28,
+        "letterSpacingPx": -0.5
+      },
+      "sectionHeading": {
+        "figmaStyle": "Nordic 01 / section",
+        "family": "Inter",
+        "weight": "Semi Bold",
+        "fontSize": 17,
+        "lineHeight": 24,
+        "letterSpacingPx": 0
+      },
+      "body": {
+        "figmaStyle": "Nordic 01 / body",
+        "family": "Inter",
+        "weight": "Regular",
+        "fontSize": 15,
+        "lineHeight": 22,
+        "letterSpacingPx": 0
+      },
+      "bodyEmphasis": {
+        "figmaStyle": "Suomi / Nordic Editorial / Body Emphasis",
+        "family": "Inter",
+        "weight": "Semi Bold",
+        "fontSize": 15,
+        "lineHeight": 22,
+        "letterSpacingPx": 0
+      },
+      "supporting": {
+        "figmaStyle": "Nordic 01 / support",
+        "family": "Inter",
+        "weight": "Regular",
+        "fontSize": 13,
+        "lineHeight": 19,
+        "letterSpacingPx": 0
+      },
+      "metadata": {
+        "figmaStyle": "Nordic 01 / meta",
+        "family": "Inter",
+        "weight": "Medium",
+        "fontSize": 12,
+        "lineHeight": 16,
+        "letterSpacingPx": 0
+      },
+      "caption": {
+        "figmaStyle": "Suomi / Nordic Editorial / Caption",
+        "family": "Inter",
+        "weight": "Regular",
+        "fontSize": 12,
+        "lineHeight": 18,
+        "letterSpacingPx": 0
+      },
+      "buttonLabel": {
+        "figmaStyle": "Nordic 01 / button",
+        "family": "Inter",
+        "weight": "Semi Bold",
+        "fontSize": 15,
+        "lineHeight": 22,
+        "letterSpacingPx": 0
+      },
+      "navigationLabel": {
+        "figmaStyle": "Suomi / Nordic Editorial / Navigation Label",
+        "family": "Inter",
+        "weight": "Medium",
+        "fontSize": 11,
+        "lineHeight": 16,
+        "letterSpacingPx": 0
+      }
+    },
+    "fontLoadingNotes": [
+      "Use a properly licensed, Expo-compatible source for Newsreader and Inter. Do not extract fonts from Figma.",
+      "Support Finnish ä, ö, long vowels and double consonants.",
+      "Respect native font scaling; Figma type sizes are initial defaults, not clipping limits.",
+      "Selected editorial headings may locally override style sizes to match individual approved screen compositions."
+    ]
+  },
+  "spacing": {
+    "space/1": 4,
+    "space/2": 8,
+    "space/3": 12,
+    "space/4": 16,
+    "space/5": 20,
+    "space/6": 24,
+    "space/7": 32,
+    "space/8": 40
+  },
+  "radii": {
+    "radius/control": 13,
+    "radius/answer": 14,
+    "radius/featured": 22,
+    "radius/filter": 16,
+    "radius/round": 99
+  },
+  "dimensions": {
+    "size/touch-min": 44,
+    "size/button": 52,
+    "size/answer": 60,
+    "size/search": 52,
+    "size/header-app": 60,
+    "size/header-focused": 72,
+    "size/navigation": 88,
+    "layout/mobile-width": 390,
+    "layout/page-margin": 24,
+    "layout/safe-top": 44,
+    "layout/safe-bottom-action": 108,
+    "stroke/hairline": 1
+  },
+  "layoutPolicy": {
+    "referenceSideMargin": 24,
+    "contentWidth": "screenWidth - 2 * sideMargin",
+    "useSafeAreaInsetsAtRuntime": true,
+    "referenceTopStatusArea": 44,
+    "referenceBottomNavigationHeight": 88,
+    "referenceFocusedActionHeight": 108,
+    "onShortScreens": "preserve visible fixed action/navigation and scroll the remaining content",
+    "avoidHardcoded390Widths": true,
+    "testedScreens": [
+      "390×844 Figma approved reference",
+      "360×844 static Figma resizing exposes clipping",
+      "430×844 static Figma resizing underfills space",
+      "390×720 static Figma resizing clips fixed bottom areas"
+    ],
+    "nativeQARequired": [
+      "360px width",
+      "390px width",
+      "430px width",
+      "short viewport",
+      "200% text scaling",
+      "iOS safe areas",
+      "Android gesture navigation"
+    ]
+  },
+  "componentSets": {
+    "Button / Pine": {
+      "figmaNodeId": "216:939",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=216-939",
+      "variantCount": 3
+    },
+    "Button / Ivory": {
+      "figmaNodeId": "216:940",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=216-940",
+      "variantCount": 3
+    },
+    "Button / Text": {
+      "figmaNodeId": "216:941",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=216-941",
+      "variantCount": 3
+    },
+    "Answer Option": {
+      "figmaNodeId": "204:804",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=204-804",
+      "variantCount": 5
+    },
+    "Feedback": {
+      "figmaNodeId": "204:806",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=204-806",
+      "variantCount": 3
+    },
+    "Mobile Navigation": {
+      "figmaNodeId": "202:796",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=202-796",
+      "variantCount": 4
+    },
+    "App Header": {
+      "figmaNodeId": "202:798",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=202-798",
+      "variantCount": 2
+    },
+    "Focused Header": {
+      "figmaNodeId": "202:800",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=202-800",
+      "variantCount": 3
+    },
+    "Progress Indicator": {
+      "figmaNodeId": "202:802",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=202-802",
+      "variantCount": 4
+    },
+    "Search Field": {
+      "figmaNodeId": "200:800",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=200-800",
+      "variantCount": 4
+    },
+    "Library Tabs": {
+      "figmaNodeId": "200:802",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=200-802",
+      "variantCount": 4
+    },
+    "Library Filter": {
+      "figmaNodeId": "200:804",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=200-804",
+      "variantCount": 6
+    },
+    "Vocabulary Entry": {
+      "figmaNodeId": "206:890",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=206-890",
+      "variantCount": 4
+    },
+    "Course Chapter Entry": {
+      "figmaNodeId": "206:892",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=206-892",
+      "variantCount": 4
+    },
+    "Lesson Progress Row": {
+      "figmaNodeId": "206:894",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=206-894",
+      "variantCount": 3
+    },
+    "Learning Pattern": {
+      "figmaNodeId": "204:808",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=204-808",
+      "variantCount": 2
+    }
+  },
+  "contrastAudit": {
+    "method": "WCAG 2.x relative luminance from approved hex colors; only listed pairings checked",
+    "pairs": [
+      {
+        "foreground": "pine",
+        "background": "ivory",
+        "ratio": 11.23,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "secondary",
+        "background": "ivory",
+        "ratio": 5.75,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "muted",
+        "background": "ivory",
+        "ratio": 4.57,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "pine",
+        "background": "mint",
+        "ratio": 9.74,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "pine",
+        "background": "periwinkle",
+        "ratio": 8.53,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "pine",
+        "background": "apricot",
+        "ratio": 6.37,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "almostInk",
+        "background": "almostSurface",
+        "ratio": 6.31,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "pine",
+        "background": "paper",
+        "ratio": 12.13,
+        "normalTextAA": true
+      },
+      {
+        "foreground": "border",
+        "background": "ivory",
+        "ratio": 1.25,
+        "normalTextAA": false
+      }
+    ],
+    "note": "Border on Ivory (~1.25:1) is decorative, not a standalone focus or selection indicator."
+  },
+  "interactionPolicy": {
+    "avoidGamification": true,
+    "correctColorNotOnlyCue": true,
+    "almostColorNotOnlyCue": true,
+    "minimumTouchTarget": 44,
+    "preferReducedMotion": true,
+    "buttonsProvidePressedAndDisabledStates": true,
+    "selectedOptionsRemainReadable": true,
+    "notSureIsDistinctReviewResult": true
+  },
+  "brand": {
+    "status": "to_be_named",
+    "currentFigmaSourceWordmark": "suomi",
+    "wordmarkIsFinalBrand": false,
+    "approvedVisualIdentity": "Nordic Editorial",
+    "workingRepositorySlug": "vokri",
+    "learningLanguages": [
+      "fi",
+      "sv"
+    ],
+    "implementedInitially": [
+      "fi"
+    ],
+    "note": "Preserve exact source Figma token collection names only as source identifiers; do not brand the future app Suomi.",
+    "workingDisplayName": "Vokri (provisional)"
+  }
+}
