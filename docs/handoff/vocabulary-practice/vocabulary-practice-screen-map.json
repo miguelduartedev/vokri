@@ -1,0 +1,3857 @@
+{
+  "schemaVersion": 1,
+  "project": "Vokri (working name)",
+  "feature": "Vocabulary Practice",
+  "targetLanguage": "fi",
+  "futureTargetLanguages": [
+    "sv"
+  ],
+  "auditDate": "2026-11-11",
+  "scope": "Figma prototype inventory; not runnable application",
+  "designSystemUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=197-828",
+  "pageUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-766",
+  "sectionIds": {
+    "foundation": "297:1638",
+    "my-words": "323:2076",
+    "flashcards": "340:2467",
+    "word-match": "361:3102",
+    "integration": "388:3972"
+  },
+  "counts": {
+    "foundation": 11,
+    "my-words": 18,
+    "flashcards": 31,
+    "word-match": 21,
+    "integration": 3
+  },
+  "totalScreenCount": 84,
+  "sourceModeMatrix": {
+    "encountered": {
+      "flashcards": "297:1989",
+      "wordMatch": "297:2013"
+    },
+    "unit": {
+      "flashcards": "297:2037",
+      "wordMatch": "388:3975"
+    },
+    "myWords": {
+      "flashcards": "297:2061",
+      "wordMatch": "388:4071"
+    },
+    "combined": {
+      "flashcards": "304:2002",
+      "wordMatch": "388:4163"
+    }
+  },
+  "practiceSessionExamples": {
+    "flashcards": {
+      "all": "343:2467",
+      "unit": "343:2783",
+      "myWords": "343:2821",
+      "combined": "343:2935"
+    },
+    "wordMatch": {
+      "all": "362:3113",
+      "unit": "362:3545",
+      "myWords": "362:3572",
+      "combined": "362:3599"
+    }
+  },
+  "statesAreIllustrative": true,
+  "prototypeLimitations": [
+    "Figma cannot execute randomisation, scoring, local persistence, or scheduled review.",
+    "Word Match Preview mid-session and Preview final pair are Figma-only shortcuts, not product actions.",
+    "Several standalone alternate-source examples cannot demonstrate origin-sensitive runtime back/return destinations."
+  ],
+  "screens": [
+    {
+      "id": "vp.297-1639",
+      "name": "01.1 — Review · Practise anytime",
+      "figmaNodeId": "297:1639",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Review · Practise anytime",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I297:1641;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "CTA · Start review",
+          "fromNodeId": "299:2003",
+          "destinationNodeId": "182:977",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=182-977"
+        },
+        {
+          "fromControl": "Practice entry / flashcards",
+          "fromNodeId": "299:2012",
+          "destinationNodeId": "297:1989",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989"
+        },
+        {
+          "fromControl": "Practice entry / word-match",
+          "fromNodeId": "299:2019",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I297:1695;182:817",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I297:1695;182:822",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Library",
+          "fromNodeId": "I297:1695;182:832",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-1696",
+      "name": "01.2 — Course · Unit vocabulary practice",
+      "figmaNodeId": "297:1696",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "unit",
+      "interactionState": "Course · Unit vocabulary practice",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I297:1698;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Practice this reached unit · Interactive entry",
+          "fromNodeId": "302:1990",
+          "destinationNodeId": "297:2037",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I297:1848;182:792",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I297:1848;182:802",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Tab / Library",
+          "fromNodeId": "I297:1848;182:807",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-1849",
+      "name": "01.3 — Library · My Words",
+      "figmaNodeId": "297:1849",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1849",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "personal",
+      "interactionState": "Library · My Words",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I297:1851;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Grammar tab",
+          "fromNodeId": "302:1997",
+          "destinationNodeId": "242:1030",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1030"
+        },
+        {
+          "fromControl": "Course vocabulary · inactive",
+          "fromNodeId": "302:2018",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        },
+        {
+          "fromControl": "Add a word · Prompt 2 destination",
+          "fromNodeId": "302:2025",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I297:1988;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I297:1988;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I297:1988;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-1989",
+      "name": "01.4 — Setup · All words / Flashcards",
+      "figmaNodeId": "297:1989",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "encountered",
+      "interactionState": "Setup · All words / Flashcards",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:1991;182:866",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Mode · Word Match",
+          "fromNodeId": "305:2049",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "305:2059",
+          "destinationNodeId": "297:2037",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "305:2064",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "305:2067",
+          "destinationNodeId": "304:2002",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=304-2002"
+        },
+        {
+          "fromControl": "CTA / Start flashcards",
+          "fromNodeId": "305:2097",
+          "destinationNodeId": "343:2467",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2467"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-2013",
+      "name": "01.4b — Setup · All words / Word Match",
+      "figmaNodeId": "297:2013",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "encountered",
+      "interactionState": "Setup · All words / Word Match",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:2015;182:866",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Mode · Flashcards",
+          "fromNodeId": "305:2111",
+          "destinationNodeId": "297:1989",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "305:2124",
+          "destinationNodeId": "388:3975",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-3975"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "305:2129",
+          "destinationNodeId": "388:4071",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4071"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "305:2132",
+          "destinationNodeId": "388:4163",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4163"
+        },
+        {
+          "fromControl": "CTA / Start Word Match",
+          "fromNodeId": "305:2154",
+          "destinationNodeId": "362:3113",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3113"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-2037",
+      "name": "01.5 — Setup · Specific unit",
+      "figmaNodeId": "297:2037",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "unit",
+      "interactionState": "Setup · Specific unit",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:2039;182:866",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Mode · Word Match",
+          "fromNodeId": "305:2171",
+          "destinationNodeId": "388:3975",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-3975"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "305:2178",
+          "destinationNodeId": "297:1989",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "305:2186",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "305:2189",
+          "destinationNodeId": "304:2002",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=304-2002"
+        },
+        {
+          "fromControl": "CTA / Start flashcards",
+          "fromNodeId": "305:2223",
+          "destinationNodeId": "343:2783",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2783"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-2061",
+      "name": "01.6 — Setup · My Words",
+      "figmaNodeId": "297:2061",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "personal",
+      "interactionState": "Setup · My Words",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:2063;182:866",
+          "destinationNodeId": "297:1849",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1849"
+        },
+        {
+          "fromControl": "Mode · Word Match",
+          "fromNodeId": "305:2240",
+          "destinationNodeId": "388:4071",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4071"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "305:2247",
+          "destinationNodeId": "297:1989",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "305:2250",
+          "destinationNodeId": "297:2037",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "305:2258",
+          "destinationNodeId": "304:2002",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=304-2002"
+        },
+        {
+          "fromControl": "CTA / Start flashcards",
+          "fromNodeId": "305:2288",
+          "destinationNodeId": "343:2821",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2821"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-2085",
+      "name": "01.7 — Setup · No encountered vocabulary",
+      "figmaNodeId": "297:2085",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2085",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Setup · No encountered vocabulary",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:2087;182:866",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.297-2109",
+      "name": "01.8 — Setup · Insufficient match pairs",
+      "figmaNodeId": "297:2109",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2109",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Setup · Insufficient match pairs",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I297:2111;182:866",
+          "destinationNodeId": "297:1849",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1849"
+        },
+        {
+          "fromControl": "Mode · Flashcards",
+          "fromNodeId": "305:2414",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "305:2424",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "CTA / Switch to Flashcards",
+          "fromNodeId": "305:2447",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.304-2002",
+      "name": "01.6b — Setup · Course + My Words",
+      "figmaNodeId": "304:2002",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=304-2002",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "combined",
+      "interactionState": "Setup · Course + My Words",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I304:2004;182:866",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Mode · Word Match",
+          "fromNodeId": "305:2305",
+          "destinationNodeId": "388:4163",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4163"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "305:2312",
+          "destinationNodeId": "297:1989",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1989"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "305:2315",
+          "destinationNodeId": "297:2037",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "305:2320",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "CTA / Start flashcards",
+          "fromNodeId": "305:2353",
+          "destinationNodeId": "343:2935",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2935"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.308-2217",
+      "name": "01.3a — Library · Course vocabulary",
+      "figmaNodeId": "308:2217",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217",
+      "phase": "foundation",
+      "featureArea": "shared-setup-and-entry-points",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "setup-or-main-tab-entry",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Library · Course vocabulary",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "AppHeader",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I308:2219;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Grammar tab",
+          "fromNodeId": "308:2230",
+          "destinationNodeId": "242:1030",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1030"
+        },
+        {
+          "fromControl": "My Words · inactive",
+          "fromNodeId": "308:2407",
+          "destinationNodeId": "297:1849",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1849"
+        },
+        {
+          "fromControl": "Entry / haluan",
+          "fromNodeId": "308:2255",
+          "destinationNodeId": "242:1114",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1114"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I308:2356;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I308:2356;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I308:2356;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Shared entry/setup sample; the 94-word/Unit-4 counts are illustrative, not seeded progress."
+    },
+    {
+      "id": "vp.323-2079",
+      "name": "02.1 — My Words · Empty",
+      "figmaNodeId": "323:2079",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2079",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "My Words · Empty",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I323:2092;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Chip / Course",
+          "fromNodeId": "323:2132",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        },
+        {
+          "fromControl": "Action / Add your first word",
+          "fromNodeId": "323:2142",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I323:2103;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I323:2103;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I323:2103;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2145",
+      "name": "02.2 — Add to My Words",
+      "figmaNodeId": "323:2145",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "Add to My Words",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Add to My Words",
+          "fromNodeId": "323:2159",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Chip / Phrase",
+          "fromNodeId": "323:2174",
+          "destinationNodeId": "323:2189",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2189"
+        },
+        {
+          "fromControl": "Chip / Sentence",
+          "fromNodeId": "323:2176",
+          "destinationNodeId": "323:2236",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2236"
+        },
+        {
+          "fromControl": "Action / ＋  Add optional details",
+          "fromNodeId": "323:2186",
+          "destinationNodeId": "323:2285",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285"
+        },
+        {
+          "fromControl": "Action / Save word",
+          "fromNodeId": "323:2165",
+          "destinationNodeId": "323:2424",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2424"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2189",
+      "name": "02.3 — Add a phrase",
+      "figmaNodeId": "323:2189",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2189",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Add a phrase",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Add a phrase",
+          "fromNodeId": "323:2203",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Chip / Word",
+          "fromNodeId": "323:2216",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Chip / Sentence",
+          "fromNodeId": "323:2220",
+          "destinationNodeId": "323:2236",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2236"
+        },
+        {
+          "fromControl": "Action / ＋  Add optional details",
+          "fromNodeId": "323:2230",
+          "destinationNodeId": "323:2285",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285"
+        },
+        {
+          "fromControl": "Action / Save phrase",
+          "fromNodeId": "323:2209",
+          "destinationNodeId": "325:2349",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=325-2349"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2236",
+      "name": "02.4 — Add a sentence",
+      "figmaNodeId": "323:2236",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2236",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Add a sentence",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Add a sentence",
+          "fromNodeId": "323:2250",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Chip / Word",
+          "fromNodeId": "323:2263",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Chip / Phrase",
+          "fromNodeId": "323:2265",
+          "destinationNodeId": "323:2189",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2189"
+        },
+        {
+          "fromControl": "Action / ＋  Add context or notes",
+          "fromNodeId": "323:2279",
+          "destinationNodeId": "323:2285",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285"
+        },
+        {
+          "fromControl": "Action / Save sentence",
+          "fromNodeId": "323:2256",
+          "destinationNodeId": "325:2384",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=325-2384"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2285",
+      "name": "02.5 — Optional details",
+      "figmaNodeId": "323:2285",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Optional details",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Optional details",
+          "fromNodeId": "323:2299",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Action / Topic, source & unit  ›",
+          "fromNodeId": "323:2333",
+          "destinationNodeId": "323:2335",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2335"
+        },
+        {
+          "fromControl": "Action / Save with details",
+          "fromNodeId": "323:2305",
+          "destinationNodeId": "323:2424",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2424"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2335",
+      "name": "02.6 — Organise entry",
+      "figmaNodeId": "323:2335",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2335",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Organise entry",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Organise entry",
+          "fromNodeId": "323:2349",
+          "destinationNodeId": "323:2285",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285"
+        },
+        {
+          "fromControl": "Action / Done",
+          "fromNodeId": "323:2355",
+          "destinationNodeId": "323:2285",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2285"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2388",
+      "name": "02.7 — Possible duplicate",
+      "figmaNodeId": "323:2388",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2388",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Possible duplicate",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Possible duplicate",
+          "fromNodeId": "323:2402",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Action / View existing entry",
+          "fromNodeId": "323:2417",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        },
+        {
+          "fromControl": "Action / Keep as a separate entry",
+          "fromNodeId": "323:2419",
+          "destinationNodeId": "323:2424",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2424"
+        },
+        {
+          "fromControl": "Action / Back to editing",
+          "fromNodeId": "323:2421",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2424",
+      "name": "02.8 — Entry saved",
+      "figmaNodeId": "323:2424",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2424",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Entry saved",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Entry saved",
+          "fromNodeId": "323:2438",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Action / View saved entry",
+          "fromNodeId": "323:2453",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        },
+        {
+          "fromControl": "Action / Add another word",
+          "fromNodeId": "323:2455",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Action / Back to My Words",
+          "fromNodeId": "323:2457",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2459",
+      "name": "02.9 — My Words · Populated",
+      "figmaNodeId": "323:2459",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "My Words · Populated",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I323:2472;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Chip / Course",
+          "fromNodeId": "323:2512",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        },
+        {
+          "fromControl": "Chip / ＋ Add word",
+          "fromNodeId": "323:2518",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "My Words / saved 2",
+          "fromNodeId": "323:2538",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        },
+        {
+          "fromControl": "Action / Practise My Words  ↗",
+          "fromNodeId": "323:2554",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I323:2483;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I323:2483;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I323:2483;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2556",
+      "name": "02.10 — Personal entry",
+      "figmaNodeId": "323:2556",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "Personal entry",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Personal entry",
+          "fromNodeId": "323:2570",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Action / Edit entry",
+          "fromNodeId": "323:2596",
+          "destinationNodeId": "323:2600",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2600"
+        },
+        {
+          "fromControl": "Action / Delete entry",
+          "fromNodeId": "323:2598",
+          "destinationNodeId": "323:2649",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2649"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2600",
+      "name": "02.11 — Edit saved word",
+      "figmaNodeId": "323:2600",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2600",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Edit saved word",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Edit saved word",
+          "fromNodeId": "323:2614",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        },
+        {
+          "fromControl": "Action / Shopping  ·  Topic & context  ›",
+          "fromNodeId": "323:2646",
+          "destinationNodeId": "323:2335",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2335"
+        },
+        {
+          "fromControl": "Action / Save changes",
+          "fromNodeId": "323:2620",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2649",
+      "name": "02.12 — Delete confirmation",
+      "figmaNodeId": "323:2649",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2649",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "overlay-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Delete confirmation",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / My Words",
+          "fromNodeId": "323:2663",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        },
+        {
+          "fromControl": "Action / Delete this entry",
+          "fromNodeId": "323:2681",
+          "destinationNodeId": "331:2372",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=331-2372"
+        },
+        {
+          "fromControl": "Action / Keep word",
+          "fromNodeId": "323:2683",
+          "destinationNodeId": "323:2556",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2556"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2685",
+      "name": "02.13 — Missing meaning",
+      "figmaNodeId": "323:2685",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2685",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Missing meaning",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Missing meaning",
+          "fromNodeId": "323:2699",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2728",
+      "name": "02.14 — My Words · No search results",
+      "figmaNodeId": "323:2728",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2728",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "My Words · No search results",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I323:2741;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Action / Clear search",
+          "fromNodeId": "323:2794",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Action / Add a new word",
+          "fromNodeId": "323:2796",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I323:2752;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I323:2752;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I323:2752;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.323-2798",
+      "name": "02.15 — Sentence · Long-form detail",
+      "figmaNodeId": "323:2798",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2798",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Sentence · Long-form detail",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Back / Sentence · Long-form detail",
+          "fromNodeId": "323:2812",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.325-2349",
+      "name": "02.8a — Phrase saved",
+      "figmaNodeId": "325:2349",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=325-2349",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Phrase saved",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Action / View saved entry",
+          "fromNodeId": "325:2365",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Action / Add another word",
+          "fromNodeId": "325:2367",
+          "destinationNodeId": "323:2189",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2189"
+        },
+        {
+          "fromControl": "Action / Back to My Words",
+          "fromNodeId": "325:2369",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.325-2384",
+      "name": "02.8b — Sentence saved",
+      "figmaNodeId": "325:2384",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=325-2384",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Sentence saved",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Action / View saved entry",
+          "fromNodeId": "325:2400",
+          "destinationNodeId": "323:2459",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2459"
+        },
+        {
+          "fromControl": "Action / Add another word",
+          "fromNodeId": "325:2402",
+          "destinationNodeId": "323:2236",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2236"
+        },
+        {
+          "fromControl": "Action / Back to My Words",
+          "fromNodeId": "325:2404",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.331-2372",
+      "name": "02.9b — My Words · After deleting an entry",
+      "figmaNodeId": "331:2372",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=331-2372",
+      "phase": "my-words",
+      "featureArea": "manual-word-phrase-sentence-capture",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "library/my-words-or-editor",
+      "sourceScope": "personal",
+      "interactionState": "My Words · After deleting an entry",
+      "componentDependencies": [
+        "MyWordsEntry",
+        "VocabularySearch",
+        "EntryTypeSelector",
+        "EntryEditor",
+        "ConfirmationSheet"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Settings",
+          "fromNodeId": "I331:2374;182:784",
+          "destinationNodeId": "242:1245",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=242-1245"
+        },
+        {
+          "fromControl": "Chip / Course",
+          "fromNodeId": "331:2381",
+          "destinationNodeId": "308:2217",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=308-2217"
+        },
+        {
+          "fromControl": "Chip / ＋ Add word",
+          "fromNodeId": "331:2387",
+          "destinationNodeId": "323:2145",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=323-2145"
+        },
+        {
+          "fromControl": "Action / Practise My Words  ↗",
+          "fromNodeId": "331:2411",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Tab / Home",
+          "fromNodeId": "I331:2413;182:842",
+          "destinationNodeId": "173:826",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=173-826"
+        },
+        {
+          "fromControl": "Tab / Course",
+          "fromNodeId": "I331:2413;182:847",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Tab / Review",
+          "fromNodeId": "I331:2413;182:852",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "User-authored local entry/sample; editable content, distinct from curated course data."
+    },
+    {
+      "id": "vp.343-2467",
+      "name": "03.1 — First card · Finnish to English",
+      "figmaNodeId": "343:2467",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2467",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "First card · Finnish to English",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2481",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:2496",
+          "destinationNodeId": "343:2505",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2505"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2503",
+          "destinationNodeId": "343:2505",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2505"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2505",
+      "name": "03.2 — Answer revealed · Word",
+      "figmaNodeId": "343:2505",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2505",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Answer revealed · Word",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2519",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Rating / Again",
+          "fromNodeId": "343:2543",
+          "destinationNodeId": "343:2549",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2549"
+        },
+        {
+          "fromControl": "Rating / Almost",
+          "fromNodeId": "343:2545",
+          "destinationNodeId": "343:2589",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2589"
+        },
+        {
+          "fromControl": "Rating / Knew it",
+          "fromNodeId": "343:2547",
+          "destinationNodeId": "343:2629",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2629"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2549",
+      "name": "03.3 — Again selected · Feedback",
+      "figmaNodeId": "343:2549",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2549",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Again selected · Feedback",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2563",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Next card",
+          "fromNodeId": "343:2587",
+          "destinationNodeId": "343:3009",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3009"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2589",
+      "name": "03.4 — Almost selected · Feedback",
+      "figmaNodeId": "343:2589",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2589",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Almost selected · Feedback",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2603",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Next card",
+          "fromNodeId": "343:2627",
+          "destinationNodeId": "343:3009",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3009"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2629",
+      "name": "03.5 — Knew it selected · Feedback",
+      "figmaNodeId": "343:2629",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2629",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Knew it selected · Feedback",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2643",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Next card",
+          "fromNodeId": "343:2667",
+          "destinationNodeId": "343:3009",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3009"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2669",
+      "name": "03.6 — Reverse direction · English to Finnish",
+      "figmaNodeId": "343:2669",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2669",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Reverse direction · English to Finnish",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2683",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:2696",
+          "destinationNodeId": "343:2705",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2705"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2703",
+          "destinationNodeId": "343:2705",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2705"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2705",
+      "name": "03.7 — Reverse direction · Revealed",
+      "figmaNodeId": "343:2705",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2705",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Reverse direction · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2719",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2747",
+      "name": "03.8 — Mixed direction · Card front",
+      "figmaNodeId": "343:2747",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2747",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Mixed direction · Card front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2761",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:2774",
+          "destinationNodeId": "343:3087",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3087"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2781",
+          "destinationNodeId": "343:3087",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3087"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2783",
+      "name": "03.9 — Unit practice · Word front",
+      "figmaNodeId": "343:2783",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2783",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "unit",
+      "interactionState": "Unit practice · Word front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2797",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:2812",
+          "destinationNodeId": "343:3213",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3213"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2819",
+          "destinationNodeId": "343:3213",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3213"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2821",
+      "name": "03.10 — My Words · Sentence front",
+      "figmaNodeId": "343:2821",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2821",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "personal",
+      "interactionState": "My Words · Sentence front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2835",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / sentence / front",
+          "fromNodeId": "343:2848",
+          "destinationNodeId": "343:2857",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2857"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2855",
+          "destinationNodeId": "343:2857",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2857"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2857",
+      "name": "03.11 — My Words · Sentence revealed",
+      "figmaNodeId": "343:2857",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2857",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "personal",
+      "interactionState": "My Words · Sentence revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2871",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2899",
+      "name": "03.12 — Long sentence · Card front",
+      "figmaNodeId": "343:2899",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2899",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Long sentence · Card front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2913",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / sentence / front",
+          "fromNodeId": "343:2926",
+          "destinationNodeId": "343:3171",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3171"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2933",
+          "destinationNodeId": "343:3171",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3171"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2935",
+      "name": "03.13 — Course plus My Words · Front",
+      "figmaNodeId": "343:2935",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2935",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "personal",
+      "interactionState": "Course plus My Words · Front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2949",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / sentence / front",
+          "fromNodeId": "343:2962",
+          "destinationNodeId": "343:3255",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3255"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:2969",
+          "destinationNodeId": "343:3255",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3255"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-2971",
+      "name": "03.14 — Revisit phase · Card front",
+      "figmaNodeId": "343:2971",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2971",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Revisit phase · Card front",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:2985",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:3000",
+          "destinationNodeId": "343:3129",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3129"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:3007",
+          "destinationNodeId": "343:3129",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3129"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3009",
+      "name": "03.19 — Next card · First pass",
+      "figmaNodeId": "343:3009",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3009",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Next card · First pass",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3023",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "343:3036",
+          "destinationNodeId": "343:3045",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3045"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "343:3043",
+          "destinationNodeId": "343:3045",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3045"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3045",
+      "name": "03.20 — Next card · Answer revealed",
+      "figmaNodeId": "343:3045",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3045",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Next card · Answer revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3059",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Rating / Again",
+          "fromNodeId": "343:3081",
+          "destinationNodeId": "343:3464",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3464"
+        },
+        {
+          "fromControl": "Rating / Almost",
+          "fromNodeId": "343:3083",
+          "destinationNodeId": "343:3464",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3464"
+        },
+        {
+          "fromControl": "Rating / Knew it",
+          "fromNodeId": "343:3085",
+          "destinationNodeId": "343:3464",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3464"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3087",
+      "name": "03.22 — Mixed direction · Revealed",
+      "figmaNodeId": "343:3087",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3087",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Mixed direction · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3101",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3129",
+      "name": "03.23 — Revisit phase · Revealed",
+      "figmaNodeId": "343:3129",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3129",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Revisit phase · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3143",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Rating / Again",
+          "fromNodeId": "343:3165",
+          "destinationNodeId": "353:3091",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=353-3091"
+        },
+        {
+          "fromControl": "Rating / Almost",
+          "fromNodeId": "343:3167",
+          "destinationNodeId": "353:3091",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=353-3091"
+        },
+        {
+          "fromControl": "Rating / Knew it",
+          "fromNodeId": "343:3169",
+          "destinationNodeId": "343:3297",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3297"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3171",
+      "name": "03.24 — Long sentence · Revealed",
+      "figmaNodeId": "343:3171",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3171",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Long sentence · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3185",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3213",
+      "name": "03.25 — Unit practice · Revealed",
+      "figmaNodeId": "343:3213",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3213",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "unit",
+      "interactionState": "Unit practice · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3227",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3255",
+      "name": "03.26 — Course plus My Words · Revealed",
+      "figmaNodeId": "343:3255",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3255",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "personal",
+      "interactionState": "Course plus My Words · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3269",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3297",
+      "name": "03.15 — Session complete",
+      "figmaNodeId": "343:3297",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3297",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Session complete",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3311",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Action / Practise again",
+          "fromNodeId": "343:3341",
+          "destinationNodeId": "343:2467",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2467"
+        },
+        {
+          "fromControl": "Action / Done",
+          "fromNodeId": "343:3343",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3345",
+      "name": "03.16 — Exit confirmation",
+      "figmaNodeId": "343:3345",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "overlay-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Exit confirmation",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3359",
+          "destinationNodeId": "345:2918",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2918"
+        },
+        {
+          "fromControl": "Action / Leave session",
+          "fromNodeId": "343:3379",
+          "destinationNodeId": "343:3383",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3383"
+        },
+        {
+          "fromControl": "Action / Continue studying",
+          "fromNodeId": "343:3381",
+          "destinationNodeId": "345:2918",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2918"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3383",
+      "name": "03.17 — Resume session",
+      "figmaNodeId": "343:3383",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3383",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Resume session",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3397",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Action / Start a new session",
+          "fromNodeId": "343:3418",
+          "destinationNodeId": "343:2467",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2467"
+        },
+        {
+          "fromControl": "Action / Resume flashcards",
+          "fromNodeId": "343:3420",
+          "destinationNodeId": "345:2918",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2918"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3422",
+      "name": "03.18 — Small collection",
+      "figmaNodeId": "343:3422",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3422",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Small collection",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3436",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Action / Start with 3 cards",
+          "fromNodeId": "343:3462",
+          "destinationNodeId": "345:2996",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2996"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.343-3464",
+      "name": "03.21 — First pass finished",
+      "figmaNodeId": "343:3464",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3464",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "First pass finished",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "343:3478",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Revisit 3 words",
+          "fromNodeId": "343:3510",
+          "destinationNodeId": "343:2971",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2971"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.345-2918",
+      "name": "03.27 — Resume card · 4 of 10",
+      "figmaNodeId": "345:2918",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2918",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Resume card · 4 of 10",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "345:2921",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "345:2932",
+          "destinationNodeId": "345:2954",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2954"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "345:2935",
+          "destinationNodeId": "345:2954",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2954"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.345-2954",
+      "name": "03.27a — Resume card · Revealed",
+      "figmaNodeId": "345:2954",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2954",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Resume card · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "345:2957",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.345-2996",
+      "name": "03.28 — Small collection · First of 3",
+      "figmaNodeId": "345:2996",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-2996",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Small collection · First of 3",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "345:2999",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Flashcard / word / front",
+          "fromNodeId": "345:3012",
+          "destinationNodeId": "345:3034",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-3034"
+        },
+        {
+          "fromControl": "Action / Show answer",
+          "fromNodeId": "345:3015",
+          "destinationNodeId": "345:3034",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-3034"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.345-3034",
+      "name": "03.28a — Small collection · Revealed",
+      "figmaNodeId": "345:3034",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=345-3034",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Small collection · Revealed",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "345:3037",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.353-3091",
+      "name": "03.29 — Revisit still uncertain",
+      "figmaNodeId": "353:3091",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=353-3091",
+      "phase": "flashcards",
+      "featureArea": "active-recall",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/flashcards",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Revisit still uncertain",
+      "componentDependencies": [
+        "FlashcardSurface",
+        "FlashcardRating",
+        "FocusedHeader",
+        "SessionProgress",
+        "StickyActions"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "353:3094",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Revisit 2 words",
+          "fromNodeId": "353:3126",
+          "destinationNodeId": "343:2971",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-2971"
+        }
+      ],
+      "implementationNotes": "Active-recall front/reveal/Again-Almost-KnewIt sample; optional practice not scheduled review."
+    },
+    {
+      "id": "vp.362-3113",
+      "name": "04.1 — Word Match / Initial Board",
+      "figmaNodeId": "362:3113",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3113",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Word Match / Initial Board",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3126;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / EN / 0",
+          "fromNodeId": "I364:3514;361:3125",
+          "destinationNodeId": "362:3167",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3167"
+        },
+        {
+          "fromControl": "Match tile / FI / 2",
+          "fromNodeId": "I364:3514;361:3137",
+          "destinationNodeId": "362:3140",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3140"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3140",
+      "name": "04.2 — Finnish Tile Selected",
+      "figmaNodeId": "362:3140",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3140",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Finnish Tile Selected",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3153;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / EN / 0",
+          "fromNodeId": "I366:3534;361:3125",
+          "destinationNodeId": "362:3194",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3194"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3167",
+      "name": "04.3 — English Tile Selected",
+      "figmaNodeId": "362:3167",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3167",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "English Tile Selected",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3180;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 0",
+          "fromNodeId": "I366:3564;361:3127",
+          "destinationNodeId": "362:3221",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3221"
+        },
+        {
+          "fromControl": "Match tile / FI / 2",
+          "fromNodeId": "I366:3564;361:3137",
+          "destinationNodeId": "362:3194",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3194"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3194",
+      "name": "04.4 — Correct Match",
+      "figmaNodeId": "362:3194",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3194",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Correct Match",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3207;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 2",
+          "fromNodeId": "I366:3594;361:3137",
+          "destinationNodeId": "362:3275",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3275"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3221",
+      "name": "04.5 — Incorrect Match",
+      "figmaNodeId": "362:3221",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3221",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Incorrect Match",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3234;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 0",
+          "fromNodeId": "I366:3627;361:3127",
+          "destinationNodeId": "362:3248",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3248"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3248",
+      "name": "04.6 — Retry After Incorrect Match",
+      "figmaNodeId": "362:3248",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3248",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Retry After Incorrect Match",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3261;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 2",
+          "fromNodeId": "I366:3659;361:3137",
+          "destinationNodeId": "362:3194",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3194"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3275",
+      "name": "04.7 — Pair Cleared & Replaced",
+      "figmaNodeId": "362:3275",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3275",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Pair Cleared & Replaced",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3288;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Action / Preview mid-session",
+          "fromNodeId": "376:3930",
+          "destinationNodeId": "362:3302",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3302"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3302",
+      "name": "04.8 — Mid-session Progress",
+      "figmaNodeId": "362:3302",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3302",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Mid-session Progress",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3315;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Action / Preview final pair",
+          "fromNodeId": "376:3937",
+          "destinationNodeId": "362:3329",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3329"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3329",
+      "name": "04.9 — Last Pair of First Pass",
+      "figmaNodeId": "362:3329",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3329",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Last Pair of First Pass",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3342;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 2",
+          "fromNodeId": "I367:3697;361:3137",
+          "destinationNodeId": "362:3356",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3356"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3356",
+      "name": "04.10 — First Pass Finished / Revisit Available",
+      "figmaNodeId": "362:3356",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3356",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "First Pass Finished / Revisit Available",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3369;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Action / Finish now",
+          "fromNodeId": "368:3885",
+          "destinationNodeId": "362:3437",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3437"
+        },
+        {
+          "fromControl": "Action / Revisit 3 pairs",
+          "fromNodeId": "368:3891",
+          "destinationNodeId": "362:3383",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3383"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3383",
+      "name": "04.11 — Revisit Phase / Active Matching",
+      "figmaNodeId": "362:3383",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3383",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Revisit Phase / Active Matching",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3396;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Match tile / FI / 0",
+          "fromNodeId": "I367:3738;361:3127",
+          "destinationNodeId": "362:3410",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3410"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3410",
+      "name": "04.12 — Revisit / Still Uncertain",
+      "figmaNodeId": "362:3410",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3410",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Revisit / Still Uncertain",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3423;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        },
+        {
+          "fromControl": "Action / Finish for now",
+          "fromNodeId": "375:3923",
+          "destinationNodeId": "362:3464",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3464"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3437",
+      "name": "04.13 — Session Complete / All Pairs Matched",
+      "figmaNodeId": "362:3437",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3437",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Session Complete / All Pairs Matched",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3450;361:3145",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Practise again",
+          "fromNodeId": "368:3919",
+          "destinationNodeId": "362:3113",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3113"
+        },
+        {
+          "fromControl": "Action / Done",
+          "fromNodeId": "368:3925",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3464",
+      "name": "04.14 — Session Complete / Some Items Revisited",
+      "figmaNodeId": "362:3464",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3464",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Session Complete / Some Items Revisited",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3477;361:3145",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Practise again",
+          "fromNodeId": "368:3953",
+          "destinationNodeId": "362:3113",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3113"
+        },
+        {
+          "fromControl": "Action / Done",
+          "fromNodeId": "368:3959",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3491",
+      "name": "04.15 — Exit Confirmation",
+      "figmaNodeId": "362:3491",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "overlay-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Exit Confirmation",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3504;361:3145",
+          "destinationNodeId": "343:3345",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=343-3345"
+        },
+        {
+          "fromControl": "Action / Keep matching",
+          "fromNodeId": "369:3908",
+          "destinationNodeId": "362:3302",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3302"
+        },
+        {
+          "fromControl": "Action / Exit practice",
+          "fromNodeId": "369:3914",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3518",
+      "name": "04.16 — Resume Session",
+      "figmaNodeId": "362:3518",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3518",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Resume Session",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3531;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3545",
+      "name": "04.17 — Unit-specific Word Match",
+      "figmaNodeId": "362:3545",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3545",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "unit",
+      "interactionState": "Unit-specific Word Match",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3558;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3572",
+      "name": "04.18 — My Words / Word Match",
+      "figmaNodeId": "362:3572",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3572",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "personal",
+      "interactionState": "My Words / Word Match",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3585;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3599",
+      "name": "04.19 — Course + My Words",
+      "figmaNodeId": "362:3599",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3599",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "combined",
+      "interactionState": "Course + My Words",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3612;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3626",
+      "name": "04.20 — Short Phrase Matching",
+      "figmaNodeId": "362:3626",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3626",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Short Phrase Matching",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3639;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.362-3653",
+      "name": "04.21 — Small Eligible Collection",
+      "figmaNodeId": "362:3653",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3653",
+      "phase": "word-match",
+      "featureArea": "recognition-matching",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "screen-or-session-state",
+      "expoRouteOrHost": "practice/session/word-match",
+      "sourceScope": "depends-on-context",
+      "interactionState": "Small Eligible Collection",
+      "componentDependencies": [
+        "WordMatchTile",
+        "MatchingBoard",
+        "FocusedHeader",
+        "SessionProgress",
+        "WordMatchCompletion"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close / Flashcards",
+          "fromNodeId": "I362:3666;361:3145",
+          "destinationNodeId": "362:3491",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3491"
+        }
+      ],
+      "implementationNotes": "Representative matching, progress/revisit and completion sample; real item queue is dynamic."
+    },
+    {
+      "id": "vp.388-3975",
+      "name": "05.A — Setup / Unit 4 · Word Match selected",
+      "figmaNodeId": "388:3975",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-3975",
+      "phase": "integration",
+      "featureArea": "mode-selected-setup-variants",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "unit",
+      "interactionState": "Setup / Unit 4 · Word Match selected",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I388:3977;182:866",
+          "destinationNodeId": "297:1696",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1696"
+        },
+        {
+          "fromControl": "Mode · Flashcards",
+          "fromNodeId": "388:3989",
+          "destinationNodeId": "297:2037",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2037"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "388:3995",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "388:3999",
+          "destinationNodeId": "388:4071",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4071"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "388:4000",
+          "destinationNodeId": "388:4163",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4163"
+        },
+        {
+          "fromControl": "CTA / Start Word Match",
+          "fromNodeId": "388:4033",
+          "destinationNodeId": "362:3545",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3545"
+        }
+      ],
+      "implementationNotes": "New Word Match-selected setup variant. Source-specific CTA and selection must match."
+    },
+    {
+      "id": "vp.388-4071",
+      "name": "05.B — Setup / My Words · Word Match selected",
+      "figmaNodeId": "388:4071",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4071",
+      "phase": "integration",
+      "featureArea": "mode-selected-setup-variants",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "personal",
+      "interactionState": "Setup / My Words · Word Match selected",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I388:4073;182:866",
+          "destinationNodeId": "297:1849",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1849"
+        },
+        {
+          "fromControl": "Mode · Flashcards",
+          "fromNodeId": "388:4085",
+          "destinationNodeId": "297:2061",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2061"
+        },
+        {
+          "fromControl": "Mode · Word Match / selected",
+          "fromNodeId": "388:4086",
+          "destinationNodeId": "297:2109",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2109"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "388:4091",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "388:4092",
+          "destinationNodeId": "388:3975",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-3975"
+        },
+        {
+          "fromControl": "Source · Course + My Words",
+          "fromNodeId": "388:4096",
+          "destinationNodeId": "388:4163",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4163"
+        },
+        {
+          "fromControl": "CTA / Start Word Match",
+          "fromNodeId": "388:4125",
+          "destinationNodeId": "362:3572",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3572"
+        }
+      ],
+      "implementationNotes": "New Word Match-selected setup variant. Source-specific CTA and selection must match."
+    },
+    {
+      "id": "vp.388-4163",
+      "name": "05.C — Setup / Course + My Words · Word Match selected",
+      "figmaNodeId": "388:4163",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4163",
+      "phase": "integration",
+      "featureArea": "mode-selected-setup-variants",
+      "frame": {
+        "width": 390,
+        "height": 844
+      },
+      "presentationType": "transient-state-or-specialized-route",
+      "expoRouteOrHost": "practice/setup-or-entry",
+      "sourceScope": "combined",
+      "interactionState": "Setup / Course + My Words · Word Match selected",
+      "componentDependencies": [
+        "PracticeModeTile",
+        "VocabularySourceChoice",
+        "SessionSizeSelector",
+        "FocusedHeader"
+      ],
+      "prototypeActions": [
+        {
+          "fromControl": "Close review",
+          "fromNodeId": "I388:4165;182:866",
+          "destinationNodeId": "297:1639",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-1639"
+        },
+        {
+          "fromControl": "Mode · Flashcards",
+          "fromNodeId": "388:4177",
+          "destinationNodeId": "304:2002",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=304-2002"
+        },
+        {
+          "fromControl": "Source · Words you've seen",
+          "fromNodeId": "388:4183",
+          "destinationNodeId": "297:2013",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=297-2013"
+        },
+        {
+          "fromControl": "Source · A specific unit",
+          "fromNodeId": "388:4184",
+          "destinationNodeId": "388:3975",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-3975"
+        },
+        {
+          "fromControl": "Source · My Words",
+          "fromNodeId": "388:4187",
+          "destinationNodeId": "388:4071",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=388-4071"
+        },
+        {
+          "fromControl": "CTA / Start Word Match",
+          "fromNodeId": "388:4217",
+          "destinationNodeId": "362:3599",
+          "destinationUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=362-3599"
+        }
+      ],
+      "implementationNotes": "New Word Match-selected setup variant. Source-specific CTA and selection must match."
+    }
+  ]
+}
