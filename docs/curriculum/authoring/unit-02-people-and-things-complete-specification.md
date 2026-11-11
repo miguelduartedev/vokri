@@ -93,8 +93,8 @@ This binding statement supplies the canonical fields that are not worth repeatin
 | 2.2 Who is that? | 19 + one optional spoken note | 13 | 8 | 9–13 min |
 | 2.3 Finnish and English | 20 | 13 | 5 | 9–13 min |
 | 2.4 Where you live | 13 | 9 | 0 | 5–8 min |
-| 2.5 Questions and no | 15 | 16 (eight in the checkpoint) | 0 | 12–18 min |
-| **Total** | **84 required + 2 optional** | **62** | **16** | **41–61 min** |
+| 2.5 Questions and no | 16 | 16 (eight in the checkpoint) | 0 | 12–18 min |
+| **Total** | **85 required + 2 optional** | **62** | **16** | **41–61 min** |
 
 Total learner responses are **73** when the 5 matching-board records are expanded to their 16 pair decisions: `62 - 5 + 16 = 73`, before extra work for longer text responses. They are intentionally distributed over multiple sittings; the natural pause points do not create sixth lessons. **All duration estimates need actual novice-device calibration.**
 
@@ -724,14 +724,15 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 | 5 | `question-recall` | `exercise` | E03 | none |
 | 6 | `negative-forms` | `grammar_explanation` | **A simple negative.** Finnish has a negative verb: en (I don't), et (you don't), ei (he/she/it doesn't, also ‘no’ as a short answer). We will produce **en** with two verbs: **Puhun suomea → En puhu suomea.** **Asun Suomessa → En asu Suomessa.** After en, use puhu or asu here — not puhun or asun. The full negative paradigm can wait. | `grammar.negative-en` |
 | 7 | `ei-introduction` | `vocabulary_intro` | **ei** — no/not, the dictionary form of the negative verb. **Ei.** can be a one-word reply meaning “No.” For “I don't speak,” use **En puhu**; ei and en are not interchangeable within the same sentence. | `ei` |
-| 8 | `negative-recognition` | `exercise` | E04 | none |
-| 9 | `negative-speaking` | `exercise` | E05 | none |
-| 10 | `negative-living` | `exercise` | E06 | none |
-| 11 | `recall-ei` | `exercise` | E07 | none |
-| 12 | `how-question` | `vocabulary_intro` | **miten** — how. **Miten menee?** means “How's it going?” in everyday greetings. Recognise the full phrase for now; you are not expected to produce or analyse menee. | `miten` |
-| 13 | `recognise-miten` | `exercise` | E08 | none |
-| 14 | `full-example` | `example_set` | **Aino:** Hei! Olen Aino. Asun Suomessa. Puhun englantia. **Leo:** Puhutko suomea? **Aino:** Ei, en puhu suomea. **Leo:** Kiitos! The conversation uses your existing words to communicate something real. | none |
-| 15 | `checkpoint` | `checkpoint` | **What can you say now?** These eight questions cover the whole unit and a little from Unit 1. Attempt them; a perfect score is not required. Exercises E09, E10, E11, E12, E13, E14, E15, E16. | none |
+| 8 | `negative-phrase` | `phrase_intro` | **En puhu …** — “I don't speak …” **En puhu suomea.** — “I don't speak Finnish.” **En puhu englantia.** — “I don't speak English.” “Learn this short negative phrase with an unchanged language word; en goes before puhu.” | `phrase.en-puhu-language` |
+| 9 | `negative-recognition` | `exercise` | E04 | none |
+| 10 | `negative-speaking` | `exercise` | E05 | none |
+| 11 | `negative-living` | `exercise` | E06 | none |
+| 12 | `recall-ei` | `exercise` | E07 | none |
+| 13 | `how-question` | `vocabulary_intro` | **miten** — how. **Miten menee?** means “How's it going?” in everyday greetings. Recognise the full phrase for now; you are not expected to produce or analyse menee. | `miten` |
+| 14 | `recognise-miten` | `exercise` | E08 | none |
+| 15 | `full-example` | `example_set` | **Aino:** Hei! Olen Aino. Asun Suomessa. Puhun englantia. **Leo:** Puhutko suomea? **Aino:** Ei, en puhu suomea. **Leo:** Kiitos! The conversation uses your existing words to communicate something real. | none |
+| 16 | `checkpoint` | `checkpoint` | **What can you say now?** These eight questions cover the whole unit and a little from Unit 1. Attempt them; a perfect score is not required. Exercises E09, E10, E11, E12, E13, E14, E15, E16. | none |
 
 **Role note:** `phrase.puhutko-suomea` was first encountered in 2.3 as a whole recognition chunk; it is not marked NEW again. Here the learner first encounters `grammar.yes-no-ko-ko` before the form is assessed productively. `ei` remains **one** canonical lemma; en/et/ei are forms, not three unrelated vocabulary entries. The productive focus is en plus a short ei response. `miten` remains recognition-only.
 
@@ -906,7 +907,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 
 ## Part III — Independent scheduled-Review variants
 
-These **eight additional records are authored but not compulsory lesson steps**. They provide self-contained follow-up checks for seven recognition-only items and the cue-dependent production item ihminen. They are selected only when the target is due and has been formally encountered. Every task uses existing kind `multiple_choice` and `intent: recognition`, with three stable options shuffled in the app.
+These **nine additional records are authored but not compulsory lesson steps**. They provide self-contained follow-up checks for seven recognition-only items and the cue-dependent production item ihminen. They are selected only when the target is due and has been formally encountered. Every task uses existing kind `multiple_choice` and `intent: recognition`, with three stable options shuffled in the app.
 
 **R01 — `ex.people-and-things.review.me-we`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
 **Prompt:** What does **me** mean in the context learned?  
@@ -987,6 +988,16 @@ These **eight additional records are authored but not compulsory lesson steps**.
 **Near feedback:** None; no invented near-correct synonym.  
 **Not sure:** Ihminen means person.  
 **Hint:** null. **Linked:** `vocab.ihminen`. **Scored:** `vocab.ihminen` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
+
+**R09 — `ex.people-and-things.review.en-puhu-meaning`** · `multiple_choice` · intent phrase recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **En puhu suomea.** mean?  
+**Stimulus:** `En puhu suomea.`  
+**Answer:** Options (shuffle): `a` I speak Finnish. · `b` I don't speak Finnish. · `c` I don't live in Finland. **Accepted option:** `b`.  
+**Correct feedback:** En puhu suomea. means I do not speak Finnish.  
+**Incorrect feedback:** `a`: Puhun suomea. is affirmative; en changes it to a negative. `c`: En asu Suomessa. means I do not live in Finland.  
+**Near feedback:** None.  
+**Not sure:** It means I don't speak Finnish.  
+**Hint:** null. **Linked:** `phrase.en-puhu-language`, `grammar.negative-en`, `vocab.puhua`. **Scored:** `phrase.en-puhu-language` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
 Review session assembly remains **one target at most once per scheduled Review session**, using the existing deterministic scheduler. Repeating a successful response immediately is not proof of a **spaced** successful recall. The `reviewEligible` flag declares content suitability; the engine still checks due time, encounter status and editorial release status.
 
