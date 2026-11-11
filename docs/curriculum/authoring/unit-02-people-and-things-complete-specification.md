@@ -906,32 +906,87 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 
 ## Part III — Independent scheduled-Review variants
 
-These **eight additional authored records are not compulsory extra steps in Lesson 2.5**. They address recognition-only items or a cue-dependent lemma with self-contained prompts that may be selected when their target is due and encountered. All use `multiple_choice`, `intent: recognition`, `demand: recognition`, `difficulty: foundation`, `reviewEligible: true`, `hint: null`, `editorialStatus: needs_review`. No future production requirement is introduced by recognising the Finnish item.
+These **eight additional records are authored but not compulsory lesson steps**. They provide self-contained follow-up checks for seven recognition-only items and the cue-dependent production item ihminen. They are selected only when the target is due and has been formally encountered. Every task uses existing kind `multiple_choice` and `intent: recognition`, with three stable options shuffled in the app.
 
-**R01 — `ex.people-and-things.review.me-we`**  
-**Prompt:** “In this context, what does **me** mean?” **Stimulus:** `me`. **Options:** `a` they · `b` we · `c` you (plural/polite) (shuffle). **Accepted:** `b`. **Correct:** We corresponds to me. **Incorrect `a`:** They is he; me means we. **Incorrect `c`:** You (plural or polite) is te, not me. **Near:** none. **Not sure:** Me means we. **Linked/scored:** `vocab.me` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R01 — `ex.people-and-things.review.me-we`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **me** mean in the context learned?  
+**Stimulus:** `me`  
+**Answer:** Options (shuffle): `a` they · `b` we · `c` you — group or polite. **Accepted option:** `b`.  
+**Correct feedback:** Me means we.  
+**Incorrect feedback:** `a`: They is he; me means we. `c`: Group/polite you is te, not me.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Me means we.  
+**Hint:** null. **Linked:** `vocab.me`. **Scored:** `vocab.me` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R02 — `ex.people-and-things.review.te-you`**  
-**Prompt:** “In this context, what does **te** mean?” **Stimulus:** `te`. **Options:** `a` we · `b` you — plural or polite · `c` they (shuffle). **Accepted:** `b`. **Correct:** Te is a plural or polite form of you. **Incorrect `a`:** We is me; te addresses you (plural/polite). **Incorrect `c`:** They is he; te addresses you. **Near:** none. **Not sure:** Te means you, plural or polite. **Linked/scored:** `vocab.te` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R02 — `ex.people-and-things.review.te-you`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **te** mean in the context learned?  
+**Stimulus:** `te`  
+**Answer:** Options (shuffle): `a` we · `b` you — group or polite · `c` they. **Accepted option:** `b`.  
+**Correct feedback:** Te addresses more than one person or is a polite you.  
+**Incorrect feedback:** `a`: We is me; te addresses you. `c`: They is he, not te.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Te is plural or polite you.  
+**Hint:** null. **Linked:** `vocab.te`. **Scored:** `vocab.te` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R03 — `ex.people-and-things.review.he-they`**  
-**Prompt:** “In this context, what does **he** mean?” **Stimulus:** `he`. **Options:** `a` he/she — one person · `b` they — people · `c` we (shuffle). **Accepted:** `b`. **Correct:** He means they (people). **Incorrect `a`:** Hän means one person (he/she). He refers to a group. **Incorrect `c`:** Me means we; he means they. **Near:** none. **Not sure:** He means they. **Linked/scored:** `vocab.he` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R03 — `ex.people-and-things.review.he-they`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **he** mean in the context learned?  
+**Stimulus:** `he`  
+**Answer:** Options (shuffle): `a` he/she, one person · `b` they — people · `c` we. **Accepted option:** `b`.  
+**Correct feedback:** He means they in standard Finnish.  
+**Incorrect feedback:** `a`: One person is hän; he is a group. `c`: We is me; he means they.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** He means they.  
+**Hint:** null. **Linked:** `vocab.he`. **Scored:** `vocab.he` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R04 — `ex.people-and-things.review.ystava-friend`**  
-**Prompt:** “In this context, what does **ystävä** mean?” **Stimulus:** `ystävä`. **Options:** `a` child · `b` friend · `c` man (shuffle). **Accepted:** `b`. **Correct:** Ystävä means friend. **Incorrect `a`:** Child is lapsi; ystävä is friend. **Incorrect `c`:** Man is mies; ystävä is friend. **Near:** none. **Not sure:** Ystävä means friend. **Linked/scored:** `vocab.ystava` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R04 — `ex.people-and-things.review.ystava-friend`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **ystävä** mean in the context learned?  
+**Stimulus:** `ystävä`  
+**Answer:** Options (shuffle): `a` child · `b` friend · `c` man. **Accepted option:** `b`.  
+**Correct feedback:** Ystävä means friend.  
+**Incorrect feedback:** `a`: Child is lapsi; ystävä means friend. `c`: Man is mies; ystävä means friend.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Ystävä means friend.  
+**Hint:** null. **Linked:** `vocab.ystava`. **Scored:** `vocab.ystava` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R05 — `ex.people-and-things.review.hyvin-well`**  
-**Prompt:** “In this context, what does **hyvin** mean?” **Stimulus:** `hyvin`. **Options:** `a` now · `b` well (how well) · `c` maybe (shuffle). **Accepted:** `b`. **Correct:** Hyvin means well in the taught phrase. **Incorrect `a`:** Now is nyt; hyvin means well. **Incorrect `c`:** Maybe is ehkä; hyvin means well. **Near:** none. **Not sure:** Hyvin means well. **Linked/scored:** `vocab.hyvin` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R05 — `ex.people-and-things.review.hyvin-well`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **hyvin** mean in the context learned?  
+**Stimulus:** `hyvin`  
+**Answer:** Options (shuffle): `a` now · `b` well (how well) · `c` maybe. **Accepted option:** `b`.  
+**Correct feedback:** Hyvin tells how well.  
+**Incorrect feedback:** `a`: Now is nyt; hyvin means well. `c`: Maybe is ehkä; hyvin means well.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Hyvin means well.  
+**Hint:** null. **Linked:** `vocab.hyvin`. **Scored:** `vocab.hyvin` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R06 — `ex.people-and-things.review.maa-country`**  
-**Prompt:** “In this context, what does **maa** mean?” **Stimulus:** `maa`. **Options:** `a` language · `b` country / land · `c` name (shuffle). **Accepted:** `b`. **Correct:** Maa means country or land. **Incorrect `a`:** Language is kieli; maa means country or land. **Incorrect `c`:** Name is nimi; maa means country or land. **Near:** none. **Not sure:** Maa means country/land. **Linked/scored:** `vocab.maa` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R06 — `ex.people-and-things.review.maa-country`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **maa** mean in the context learned?  
+**Stimulus:** `maa`  
+**Answer:** Options (shuffle): `a` language · `b` country / land · `c` name. **Accepted option:** `b`.  
+**Correct feedback:** Maa means country or land.  
+**Incorrect feedback:** `a`: Language is kieli; maa is a country/land. `c`: Name is nimi; maa is country/land.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Maa means country or land.  
+**Hint:** null. **Linked:** `vocab.maa`. **Scored:** `vocab.maa` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R07 — `ex.people-and-things.review.miten-how`**  
-**Prompt:** “In this context, what does **miten** mean?” **Stimulus:** `miten`. **Options:** `a` who · `b` how · `c` what/which (shuffle). **Accepted:** `b`. **Correct:** Miten means how, as in Miten menee? **Incorrect `a`:** Who is kuka; miten means how. **Incorrect `c`:** What/which is mikä; miten means how. **Near:** none. **Not sure:** Miten means how. **Linked/scored:** `vocab.miten` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
+**R07 — `ex.people-and-things.review.miten-how`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **miten** mean in the context learned?  
+**Stimulus:** `miten`  
+**Answer:** Options (shuffle): `a` who · `b` how · `c` what/which. **Accepted option:** `b`.  
+**Correct feedback:** Miten asks how, as in Miten menee?  
+**Incorrect feedback:** `a`: Who is kuka; miten means how. `c`: What/which is mikä; miten means how.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Miten means how.  
+**Hint:** null. **Linked:** `vocab.miten`. **Scored:** `vocab.miten` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
-**R08 — `ex.people-and-things.review.ihminen-person`**  
-**Prompt:** “In this context, what does **ihminen** mean?” **Stimulus:** `ihminen`. **Options:** `a` woman specifically · `b` person / human · `c` child specifically (shuffle). **Accepted:** `b`. **Correct:** Ihminen is the general word for a person. **Incorrect `a`:** Woman is nainen; ihminen is a general person. **Incorrect `c`:** Child is lapsi; ihminen is a general person. **Near:** none. **Not sure:** Ihminen means person. **Linked/scored:** `vocab.ihminen` only. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
-
+**R08 — `ex.people-and-things.review.ihminen-person`** · `multiple_choice` · intent recognition / demand independent comprehension · difficulty foundation  
+**Prompt:** What does **ihminen** mean in the context learned?  
+**Stimulus:** `ihminen`  
+**Answer:** Options (shuffle): `a` woman, specifically · `b` person / human · `c` child, specifically. **Accepted option:** `b`.  
+**Correct feedback:** Ihminen is the general word for person.  
+**Incorrect feedback:** `a`: Woman is nainen; ihminen is a general person. `c`: Child is lapsi; ihminen is a general person.  
+**Near feedback:** None; no invented near-correct synonym.  
+**Not sure:** Ihminen means person.  
+**Hint:** null. **Linked:** `vocab.ihminen`. **Scored:** `vocab.ihminen` only. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
 Review session assembly remains **one target at most once per scheduled Review session**, using the existing deterministic scheduler. Repeating a successful response immediately is not proof of a **spaced** successful recall. The `reviewEligible` flag declares content suitability; the engine still checks due time, encounter status and editorial release status.
 
