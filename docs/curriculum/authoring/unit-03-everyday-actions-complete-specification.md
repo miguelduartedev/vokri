@@ -638,15 +638,15 @@ All listed steps required and identified by `step.everyday-actions.going-coming.
 **Not sure:** Write tulen.  
 **Hint:** null. **Linked:** `vocab.tulla`. **Scored:** `vocab.tulla`. **Review eligible:** true, context included. **Editorial:** `needs_review`.
 
-**D06 — `ex.everyday-actions.going-coming.choose-leaving`** · `multiple_choice` · contextual recognition  
-**Prompt:** You're at the door leaving the room. Which Finnish reply clearly says ‘I'm going now’?  
-**Stimulus:** You are moving away from the room.  
-**Answer:** Options (shuffled): `a` Ehkä tulen. · `b` Menen nyt. · `c` Tulen nyt.. Accepted: `b`.  
-**Correct feedback:** Menen nyt. fits your movement away from the current place.  
-**Incorrect feedback:** `a`: Ehkä tulen. means maybe I'll come, which doesn't state that you're leaving now. `c`: Tulen nyt. would naturally be used when coming towards a waiting person or destination in focus.  
+**D06 — `ex.everyday-actions.going-coming.choose-uncertain-coming`** · `multiple_choice` · guided contextual recognition  
+**Prompt:** A friend asks whether you will come. You aren't certain. Which Finnish sentence means “Maybe I'll come”?  
+**Stimulus:** You may come, but you are not sure yet.  
+**Answer:** Shuffled options: `a` Ehkä tulen. · `b` Menen nyt. · `c` Tulen nyt. **Accepted ID:** `a`.  
+**Correct feedback:** Ehkä tulen. uses ehkä to express uncertainty.  
+**Incorrect feedback:** `b`: Menen nyt. says you're going now, not that you might come. `c`: Tulen nyt. says you're coming now, without maybe.  
 **Near feedback:** None.  
-**Not sure:** Use Menen nyt.  
-**Hint:** null. **Linked:** `vocab.menna`, `vocab.tulla`, `vocab.nyt`. **Scored:** `vocab.menna`. **Review eligible:** true, context included. **Editorial:** `needs_review`.
+**Not sure:** The uncertain reply is Ehkä tulen.  
+**Hint:** null. **Linked:** `vocab.ehka`, `vocab.tulla`, `vocab.menna`, `vocab.nyt`. **Scored:** `vocab.ehka`. **Review eligible:** true, context included. **Editorial:** `needs_review`.
 
 **D07 — `ex.everyday-actions.going-coming.write-nyt`** · `text_input` · independent recall  
 **Prompt:** Type the Finnish word for ‘now’.  
