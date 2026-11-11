@@ -1,6 +1,6 @@
 ## Lesson 3.1 — What you want and need
 
-**Metadata:** `lesson.everyday-actions.want-and-need`, `unit.everyday-actions`, `learningLanguage: fi`, order 1, estimated **6–9 minutes**, prerequisite `lesson.people-and-things.questions-and-no`. **Goal:** express a want or need using the taught I-forms. **New production:** `vocab.haluta`, `vocab.tarvita`. **Phrase items:** `phrase.haluan-slot`, `phrase.tarvitsen-slot`. **Grammar:** `grammar.first-person-forms`. **Previously learned:** `vocab.puhua`, `phrase.puhun-language`, `vocab.olla`. **Pause:** after A05 before the phrases.
+**Metadata:** `lesson.everyday-actions.want-and-need`, `unit.everyday-actions`, `learningLanguage: fi`, order 1, estimated **6–9 minutes**, prerequisite `lesson.people-and-things.questions-and-no`. **Goal:** express a want or need using the taught I-forms. **New production:** `vocab.haluta`, `vocab.tarvita`. **Phrase items:** `phrase.haluan-slot`, `phrase.tarvitsen-slot`. **Grammar:** `grammar.first-person-forms` and awareness-only `grammar.verb-type-1-preview`. **Previously learned:** `vocab.puhua`, `phrase.puhun-language`, `vocab.olla`. **Pause:** after A05 before the phrases.
 
 ### Ordered learner experience
 
@@ -13,7 +13,7 @@ Every listed step is required; ID prefix `step.everyday-actions.want-and-need.` 
 | 3 | `recognise-want` | `exercise` | A01 | none |
 | 4 | `tarvita` | `vocabulary_intro` | **tarvita** — to need; **tarvitsen** — I need. “Use it when you require something.” | `vocab.tarvita` |
 | 5 | `recognise-need` | `exercise` | A02 | none |
-| 6 | `form-explanation` | `grammar_explanation` | **Different stems, same person.** “Puhua → puhun and asua → asun are familiar. Haluta → haluan, and tarvita → tarvitsen look different. Learn these actual I-forms; you do not need a verb-type table.” | `grammar.first-person-forms` |
+| 6 | `form-explanation` | `grammar_explanation` | **A first verb pattern — and its limits.** “The familiar **puhua → puhun** and **asua → asun** show a transparent *verb type 1* pattern: in these taught verbs, the final dictionary-form -a is removed and the first-person form ends in -n. But this is **not a rule for all Finnish verbs**. **haluta → haluan** and **tarvita → tarvitsen** work differently. Learn their full forms now; the verb-type tables can wait.” | `grammar.first-person-forms`, `grammar.verb-type-1-preview` |
 | 7 | `match-intentions` | `exercise` | A03 | none |
 | 8 | `write-want` | `exercise` | A04 | none |
 | 9 | `write-need` | `exercise` | A05 | none |
