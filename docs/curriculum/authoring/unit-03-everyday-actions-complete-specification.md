@@ -927,7 +927,7 @@ All rows are required. Full step ID prefix `step.everyday-actions.ask-answer-say
 | 14 | `f8` | `exercise` | F08 | none |
 | 15 | `f9` | `exercise` | F09 | none |
 | 16 | `f10` | `exercise` | F10 | none |
-| 17 | `context` | `example_set` | **Someone asks you a question you cannot answer:** “En tiedä, mutta voin kysyä.” — “I don't know, but I can ask.” “It is a practical reply without new verb forms.” | none |
+| 17 | `context` | `example_set` | **Meeting someone:** “Hei! Olen Aino. Opiskelen suomea.” — “Hello! I'm Aino. I study Finnish.” **When someone asks something you cannot answer:** “En tiedä, mutta voin kysyä.” — “I don't know, but I can ask.” “These reuse earlier greetings, introductions and language expressions without new grammar.” | none |
 | 18 | `checkpoint` | `checkpoint` | **Everyday actions — your turn.** “You will use what you know about intentions, understanding, permission, direction, study and negation. A perfect score is not required.” F11, F12, F13, F14, F15, F16, F17, F18, F19. | none |
 
 **Optional `spoken_note`** `step.everyday-actions.ask-answer-say.spoken-mutta`, after F08: “In casual speech, **mutta** is often shortened to **mut**. You only need to recognise it; write mutta in standard Finnish.” Reference `spoken.mutta-mut`. No new mastery target.
