@@ -138,7 +138,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Options (stable IDs, shuffled visually): `a` tämä · `b` tuo · `c` se. **Accepted:** `a`.  
 **Correct feedback:** Tämä is a natural choice for something in your immediate focus.  
 **Incorrect feedback:** `b`: Tuo commonly points to something farther away; the card is in your hand. `c`: Se often refers to something already identified or mentioned. Here you are pointing to the card in your hand.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Use tämä for the card in your hand.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tama`, `vocab.tuo`, `vocab.se`. **Scored targets:** `vocab.tama`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -148,7 +148,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Options (stable IDs, shuffled visually): `a` se · `b` tuo · `c` tämä. **Accepted:** `b`.  
 **Correct feedback:** Tuo commonly draws attention to something farther away.  
 **Incorrect feedback:** `a`: Se could refer back to a known bag, but this task is about pointing one out across the room. `c`: Tämä is more typical for something in the speaker’s immediate focus; the bag is farther away.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Tuo is a useful choice when pointing across the room.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tama`, `vocab.tuo`, `vocab.se`. **Scored targets:** `vocab.tuo`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -158,7 +158,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Options (stable IDs, shuffled visually): `a` tämä · `b` tuo · `c` se. **Accepted:** `c`.  
 **Correct feedback:** Se often refers to something already known in the conversation.  
 **Incorrect feedback:** `a`: Tämä can point to a current focus, but se is the straightforward reference-back word taught here. `b`: Tuo can point out something, especially away from the speaker; this is a reference back to an established item.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Se is often ‘it’ or ‘that’ when the thing is already known.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tama`, `vocab.tuo`, `vocab.se`. **Scored targets:** `vocab.se`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -168,7 +168,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Pairs (each independently evaluated): 1. **tämä** ↔ **this — in my hand** → `vocab.tama`; 2. **tuo** ↔ **that — pointed out across the room** → `vocab.tuo`; 3. **se** ↔ **it — already mentioned** → `vocab.se`. **Accepted:** only these pair identities; any order.  
 **Correct feedback:** Those three contexts explain why speakers choose different pointing words.  
 **Incorrect feedback:** Check the situation: near the speaker, farther away, or already mentioned.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** In your hand: tämä. Across the room: tuo. Already mentioned: se.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tama`, `vocab.tuo`, `vocab.se`. **Scored targets:** `vocab.tama`, `vocab.tuo`, `vocab.se`. **Review eligible:** no; lesson-local context/board. **Editorial:** `needs_review`.
 
@@ -178,7 +178,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Options (stable IDs, shuffled visually): `a` Who? · `b` What? / Which? · `c` Where?. **Accepted:** `b`.  
 **Correct feedback:** Mikä can ask what something is, or which one is meant.  
 **Incorrect feedback:** `a`: Who? is commonly kuka; that comes in the next lesson. `c`: This unit uses mikä to ask what something is, not where it is.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Mikä asks ‘what?’ or ‘which?’ in the taught object question.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.mika`. **Scored targets:** `vocab.mika`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -188,7 +188,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Accepted after N1: `tämä`.  
 **Correct feedback:** Tämä refers to the object you are holding.  
 **Incorrect feedback:** The word for ‘this’ in this situation is tämä.  
-**Authored near response:** `tama` → The vowel matters: write tämä with ä.  
+**Near feedback:** `tama` → The vowel matters: write tämä with ä.  
 **Not sure:** Write tämä. The dots above ä are part of the word.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tama`. **Scored targets:** `vocab.tama`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -198,7 +198,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Accepted after N1: `tuo`.  
 **Correct feedback:** Tuo fits the object you are pointing out across the room.  
 **Incorrect feedback:** The taught pointing word for this farther-away object is tuo.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** The word is tuo.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.tuo`. **Scored targets:** `vocab.tuo`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -208,7 +208,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Accepted after N1: `se`.  
 **Correct feedback:** Se often refers back to something you both know about.  
 **Incorrect feedback:** The taught reference-back word is se.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Write se.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.se`. **Scored targets:** `vocab.se`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -218,7 +218,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Token bank (shuffled): on / tämä / Mikä. **Accepted assembled sentence:** `Mikä tämä on?`.  
 **Correct feedback:** Mikä tämä on? is a complete question you can use immediately.  
 **Incorrect feedback:** Start with mikä, then tämä, then on: Mikä tämä on?  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Build: Mikä → tämä → on?  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.mika`, `vocab.tama`, `phrase.mika-tama-on`. **Scored targets:** `phrase.mika-tama-on`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -228,7 +228,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Options (stable IDs, shuffled visually): `a` Mikä tämä on? · `b` Mikä tuo on? · `c` Mikä se on?. **Accepted:** `b`.  
 **Correct feedback:** Mikä tuo on? asks about the object you are pointing out farther away.  
 **Incorrect feedback:** `a`: Mikä tämä on? is more natural when it is in the speaker’s immediate focus. `c`: Mikä se on? can refer to a known thing, but this scenario explicitly describes pointing out something farther away.  
-**Authored near response:** None (no invented near-answer credit).  
+**Near feedback:** None (no invented near-answer credit).  
 **Not sure:** Use Mikä tuo on? in this particular pointing situation.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.mika`, `vocab.tama`, `vocab.tuo`, `vocab.se`, `phrase.mika-tama-on`. **Scored targets:** `vocab.tuo`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -238,7 +238,7 @@ All steps required except the optional spoken note, with ID prefix `step.people-
 **Answer:** Accepted after N1: `mikä`.  
 **Correct feedback:** Mikä is the word used in Mikä tämä on?  
 **Incorrect feedback:** The question word is mikä.  
-**Authored near response:** `mika` → Keep the final ä: mikä.  
+**Near feedback:** `mika` → Keep the final ä: mikä.  
 **Not sure:** Write mikä.  
 **Hint:** none; all relevant context appears in the prompt. **Linked targets:** `vocab.mika`, `phrase.mika-tama-on`. **Scored targets:** `vocab.mika`. **Review eligible:** yes, independently self-contained. **Editorial:** `needs_review`.
 
@@ -289,7 +289,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Options (shuffle visually): `a` mikä · `b` kuka · `c` sinä. **Accepted:** `b`.  
 **Correct:** Kuka asks who a person is.  
 **Incorrect:** `a`: Mikä is the taught ‘what/which’ word; here you are asking about a person’s identity. `c`: Sinä means ‘you’, not the question ‘who?’.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Use kuka for ‘who?’  
 **Hint:** null (context already supplied). **Linked:** `vocab.kuka`, `vocab.mika`, `vocab.sina`. **Scored:** `vocab.kuka`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -299,7 +299,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Options (shuffle visually): `a` Only a man · `b` Only a woman · `c` A man or a woman. **Accepted:** `c`.  
 **Correct:** Hän refers to one person without marking their gender.  
 **Incorrect:** `a`: Hän is not limited to men; Finnish does not distinguish he and she in this pronoun. `b`: Hän is not limited to women; it can refer to any one person.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Hän can mean ‘he’ or ‘she’, depending on context.  
 **Hint:** null (context already supplied). **Linked:** `vocab.han`, `grammar.han-person-reference`. **Scored:** `vocab.han`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -309,7 +309,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Authored pairs, each scored separately: **ihminen** ↔ **a person** (`vocab.ihminen`); **mies** ↔ **a man** (`vocab.mies`); **nainen** ↔ **a woman** (`vocab.nainen`); **lapsi** ↔ **a child** (`vocab.lapsi`). Correct when every chosen pair identity matches; no order constraint.  
 **Correct:** Each word names a different kind of person.  
 **Incorrect:** Use the specific meaning: person, man, woman or child.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Person = ihminen; man = mies; woman = nainen; child = lapsi.  
 **Hint:** null (context already supplied). **Linked:** `vocab.ihminen`, `vocab.mies`, `vocab.nainen`, `vocab.lapsi`. **Scored:** `vocab.ihminen`, `vocab.mies`, `vocab.nainen`, `vocab.lapsi`. **Review eligible:** no, lesson-context board or cue. **Editorial:** `needs_review`.
 
@@ -319,7 +319,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `ihminen`.  
 **Correct:** Ihminen means a person or human being.  
 **Incorrect:** The general word is ihminen.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** The word is ihminen.  
 **Hint:** null (context already supplied). **Linked:** `vocab.ihminen`. **Scored:** `vocab.ihminen`. **Review eligible:** no, lesson-context board or cue. **Editorial:** `needs_review`.
 
@@ -329,7 +329,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `mies`.  
 **Correct:** Mies means a man.  
 **Incorrect:** The word for man is mies.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Write mies.  
 **Hint:** null (context already supplied). **Linked:** `vocab.mies`. **Scored:** `vocab.mies`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -339,7 +339,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `nainen`.  
 **Correct:** Nainen means a woman.  
 **Incorrect:** The word for woman is nainen.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Write nainen.  
 **Hint:** null (context already supplied). **Linked:** `vocab.nainen`. **Scored:** `vocab.nainen`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -349,7 +349,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `lapsi`.  
 **Correct:** Lapsi means a child.  
 **Incorrect:** The word for child is lapsi.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Write lapsi.  
 **Hint:** null (context already supplied). **Linked:** `vocab.lapsi`. **Scored:** `vocab.lapsi`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -359,7 +359,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `hän`.  
 **Correct:** Hän is the standard form and it does not mark gender.  
 **Incorrect:** The standard pronoun is hän.  
-**Near:** `han` → Finnish writes hän with ä; han is not the same form.  
+**Near feedback:** `han` → Finnish writes hän with ä; han is not the same form.  
 **Not sure:** Write hän, with ä.  
 **Hint:** null (context already supplied). **Linked:** `vocab.han`, `grammar.han-person-reference`. **Scored:** `vocab.han`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -369,7 +369,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `kuka`.  
 **Correct:** Kuka asks who someone is.  
 **Incorrect:** The question word is kuka. Mikä asks what/which.  
-**Near:** None. **Specific incorrect feedback for `mikä`:** Mikä asks ‘what/which’ here. Use kuka for a person’s identity.  
+**Near feedback:** None. **Specific incorrect feedback for `mikä`:** Mikä asks ‘what/which’ here. Use kuka for a person’s identity.  
 **Not sure:** Write kuka.  
 **Hint:** null (context already supplied). **Linked:** `vocab.kuka`, `vocab.mika`. **Scored:** `vocab.kuka`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -379,7 +379,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Shuffled tiles: hän / on / Kuka. Accepted: `Kuka hän on?`.  
 **Correct:** Kuka hän on? asks who the person is.  
 **Incorrect:** The taught word order is Kuka → hän → on?  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Place Kuka first: Kuka hän on?  
 **Hint:** null (context already supplied). **Linked:** `vocab.kuka`, `vocab.han`, `phrase.kuka-han-on`. **Scored:** `phrase.kuka-han-on`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -389,7 +389,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Authored pairs, each scored separately: **me** ↔ **we** (`vocab.me`); **te** ↔ **you — a group or polite form** (`vocab.te`); **he** ↔ **they — people** (`vocab.he`); **ystävä** ↔ **a friend** (`vocab.ystava`). Correct when every chosen pair identity matches; no order constraint.  
 **Correct:** These forms refer to groups or a friend. You only need to recognise them for now.  
 **Incorrect:** Use the meaning and number of people: we, you, they, or friend.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Me = we; te = plural/polite you; he = they; ystävä = friend.  
 **Hint:** null (context already supplied). **Linked:** `vocab.me`, `vocab.te`, `vocab.he`, `vocab.ystava`. **Scored:** `vocab.me`, `vocab.te`, `vocab.he`, `vocab.ystava`. **Review eligible:** no, lesson-context board or cue. **Editorial:** `needs_review`.
 
@@ -399,7 +399,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Options (shuffle visually): `a` Mikä tämä on? · `b` Kuka hän on? · `c` Entä sinä?. **Accepted:** `b`.  
 **Correct:** Kuka hän on? is a question about who the person is.  
 **Incorrect:** `a`: Mikä tämä on? asks what something is in the taught object context. `c`: Entä sinä? means ‘And you?’; it does not ask who someone is.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Use Kuka hän on? for an unknown person.  
 **Hint:** null (context already supplied). **Linked:** `phrase.kuka-han-on`, `phrase.mika-tama-on`, `phrase.enta-sina`. **Scored:** `phrase.kuka-han-on`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -409,7 +409,7 @@ All steps are required; the spoken note following the table is optional and reco
 **Answer:** Accepted under Unit 1 N1 normalisation: `lapsi`.  
 **Correct:** Lapsi is the word for child.  
 **Incorrect:** The word is lapsi.  
-**Near:** None; don't guess at near synonyms.  
+**Near feedback:** None; don't guess at near synonyms.  
 **Not sure:** Write lapsi.  
 **Hint:** null (context already supplied). **Linked:** `vocab.lapsi`. **Scored:** `vocab.lapsi`. **Review eligible:** yes, standalone. **Editorial:** `needs_review`.
 
@@ -744,7 +744,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Options (visually shuffled): `a` Puhun suomea. · `b` Puhutko suomea? · `c` Asun Suomessa.. Accepted option ID: `b`.  
 **Correct feedback:** Puhutko suomea? is the yes/no question with -ko.  
 **Incorrect feedback:** `a`: Puhun suomea. is a statement meaning I speak Finnish. `c`: Asun Suomessa. tells where the speaker lives.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** The question is Puhutko suomea?  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.yes-no-ko-ko`, `phrase.puhutko-suomea`, `phrase.puhun-language`. **Scored:** `grammar.yes-no-ko-ko`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -754,7 +754,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `oletko`.  
 **Correct feedback:** Oletko is the question form of olet.  
 **Incorrect feedback:** Add -ko to olet: oletko.  
-**Authored near:** `olet` → Olet is a statement form; add -ko. `oletkö` → With olet the suffix is -ko: oletko.  
+**Near feedback:** `olet` → Olet is a statement form; add -ko. `oletkö` → With olet the suffix is -ko: oletko.  
 **Not sure:** Write oletko.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.yes-no-ko-ko`, `vocab.olla`. **Scored:** `grammar.yes-no-ko-ko`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -764,7 +764,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `Puhutko suomea?`.  
 **Correct feedback:** Puhutko suomea? asks whether the other person speaks Finnish.  
 **Incorrect feedback:** Use Puhutko suomea? The question ending stays attached to puhut.  
-**Authored near:** `puhunko suomea` → Puhunko would ask whether I speak Finnish. You need puhutko.  
+**Near feedback:** `puhunko suomea` → Puhunko would ask whether I speak Finnish. You need puhutko.  
 **Not sure:** Write Puhutko suomea?  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `phrase.puhutko-suomea`, `grammar.yes-no-ko-ko`, `vocab.puhua`, `vocab.suomi`. **Scored:** `phrase.puhutko-suomea`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -774,7 +774,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Options (visually shuffled): `a` En puhun suomea. · `b` En puhu suomea. · `c` Puhun suomea.. Accepted option ID: `b`.  
 **Correct feedback:** En puhu suomea. uses en and the form puhu.  
 **Incorrect feedback:** `a`: After en use puhu, not puhun. `c`: Puhun suomea. is affirmative; it does not say no.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** The negative is En puhu suomea.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.negative-en`, `vocab.puhua`, `phrase.en-puhu-language`. **Scored:** `grammar.negative-en`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -784,7 +784,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `En puhu suomea.` or `Minä en puhu suomea.`.  
 **Correct feedback:** En puhu suomea. uses en + puhu.  
 **Incorrect feedback:** Change Puhun to En puhu. Do not write en puhun.  
-**Authored near:** `en puhun suomea` → After en, the correct form is puhu, without -n.  
+**Near feedback:** `en puhun suomea` → After en, the correct form is puhu, without -n.  
 **Not sure:** Write En puhu suomea.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.negative-en`, `vocab.puhua`, `phrase.en-puhu-language`, `phrase.puhun-language`. **Scored:** `grammar.negative-en`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -794,7 +794,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `En asu Suomessa.` or `Minä en asu Suomessa.`.  
 **Correct feedback:** En asu Suomessa. is the correct negative statement.  
 **Incorrect feedback:** Use En asu Suomessa. After en, write asu, not asun.  
-**Authored near:** `en asun suomessa` → Use asu without -n after en.  
+**Near feedback:** `en asun suomessa` → Use asu without -n after en.  
 **Not sure:** Write En asu Suomessa.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.negative-en`, `vocab.asua`, `phrase.asun-suomessa`. **Scored:** `grammar.negative-en`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -804,7 +804,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `ei`.  
 **Correct feedback:** Ei is a one-word negative answer. En is used for I don't.  
 **Incorrect feedback:** The short answer is ei. En is for the first-person negative construction.  
-**Authored near:** `en` → En means I don't in the forms taught here. The short answer requested is ei.  
+**Near feedback:** `en` → En means I don't in the forms taught here. The short answer requested is ei.  
 **Not sure:** Write ei.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.ei`, `grammar.negative-en`. **Scored:** `vocab.ei`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -814,7 +814,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Options (visually shuffled): `a` How's it going? · `b` Who is that? · `c` Do you speak Finnish?. Accepted option ID: `a`.  
 **Correct feedback:** Miten asks how. Miten menee? means How's it going?  
 **Incorrect feedback:** `b`: Who is that? is Kuka hän on? `c`: Do you speak Finnish? is Puhutko suomea?  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** Miten menee? means How's it going?  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.miten`, `phrase.kuka-han-on`, `phrase.puhutko-suomea`. **Scored:** `vocab.miten`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -824,7 +824,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Options (visually shuffled): `a` tuo · `b` se · `c` tämä. Accepted option ID: `b`.  
 **Correct feedback:** Se often refers back to an item already mentioned.  
 **Incorrect feedback:** `a`: Tuo tends to point something out; here the item is already established. `c`: Tämä may indicate the current focus; se is the reference-back word taught here.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** Use se for this context.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.se`, `vocab.tuo`, `vocab.tama`. **Scored:** `vocab.se`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -834,7 +834,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Shuffled tiles: on / Kuka / hän. Accepted assembled sentence: `Kuka hän on?`.  
 **Correct feedback:** Kuka hän on? asks about this person's identity.  
 **Incorrect feedback:** Put the tiles in this order: Kuka → hän → on.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** Build Kuka hän on?  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.kuka`, `vocab.han`, `phrase.kuka-han-on`. **Scored:** `phrase.kuka-han-on`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -844,7 +844,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `nainen`.  
 **Correct feedback:** Nainen means woman.  
 **Incorrect feedback:** The word is nainen.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** Write nainen.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.nainen`. **Scored:** `vocab.nainen`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -854,7 +854,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `Puhun suomea.` or `Minä puhun suomea.`.  
 **Correct feedback:** Puhun suomea. adds useful information to an introduction.  
 **Incorrect feedback:** Use Puhun suomea; the language form after puhun is suomea.  
-**Authored near:** `puhun suomi` → After puhun use suomea, not the dictionary form suomi.  
+**Near feedback:** `puhun suomi` → After puhun use suomea, not the dictionary form suomi.  
 **Not sure:** Write Puhun suomea.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.puhua`, `vocab.suomi`, `phrase.puhun-language`. **Scored:** `phrase.puhun-language`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -864,7 +864,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `Asun Suomessa.` or `Minä asun Suomessa.`.  
 **Correct feedback:** Asun Suomessa. tells where you live.  
 **Incorrect feedback:** Write Asun Suomessa. This location phrase uses Suomessa.  
-**Authored near:** `asun suomea` → Use Suomessa for in Finland, not suomea.  
+**Near feedback:** `asun suomea` → Use Suomessa for in Finland, not suomea.  
 **Not sure:** Write Asun Suomessa.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.asua`, `vocab.suomi`, `phrase.asun-suomessa`. **Scored:** `phrase.asun-suomessa`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -874,7 +874,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `Puhutko suomea?`.  
 **Correct feedback:** Puhutko suomea? uses the taught yes/no question pattern.  
 **Incorrect feedback:** Use Puhutko suomea? — don't change the person to I.  
-**Authored near:** `puhunko suomea` → Puhunko is a different person; use puhutko for you.  
+**Near feedback:** `puhunko suomea` → Puhunko is a different person; use puhutko for you.  
 **Not sure:** Write Puhutko suomea?  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `phrase.puhutko-suomea`, `grammar.yes-no-ko-ko`. **Scored:** `grammar.yes-no-ko-ko`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -884,7 +884,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Accepted after N1 text normalization: `En puhu englantia.` or `Minä en puhu englantia.`.  
 **Correct feedback:** En puhu englantia. has the correct negative form.  
 **Incorrect feedback:** Change Puhun to En puhu. Keep englantia.  
-**Authored near:** `en puhun englantia` → After en, use puhu, not puhun.  
+**Near feedback:** `en puhun englantia` → After en, use puhu, not puhun.  
 **Not sure:** Write En puhu englantia.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `grammar.negative-en`, `vocab.puhua`, `vocab.englanti`, `phrase.en-puhu-language`. **Scored:** `grammar.negative-en`. **Review eligible:** yes, self-contained. **Editorial:** `needs_review`.
 
@@ -894,7 +894,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 **Answer:** Shuffled tiles: Puhun suomea. / Hei! / Asun Suomessa. / Olen Aino.. Accepted assembled sentence: `Hei! Olen Aino. Puhun suomea. Asun Suomessa.`.  
 **Correct feedback:** You linked Unit 1 greetings and names with the new information from Unit 2.  
 **Incorrect feedback:** Use Hei! → Olen Aino. → Puhun suomea. → Asun Suomessa.  
-**Authored near:** None.  
+**Near feedback:** None.  
 **Not sure:** Start with Hei!, then Olen Aino., Puhun suomea., Asun Suomessa.  
 **Hint:** null; cues are already in the prompt or tokens. **Linked:** `vocab.hei`, `phrase.olen-slot`, `phrase.puhun-language`, `phrase.asun-suomessa`. **Scored:** none, capability evidence only; `knowledgeScoring: false`. **Review eligible:** no; capability-only assembly. **Editorial:** `needs_review`.
 
