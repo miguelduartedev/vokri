@@ -266,7 +266,7 @@ All steps are required; the spoken note following the table is optional and reco
 | 5 | `recognise-han` | `exercise` | B02 | none |
 | 6 | `people-words` | `vocabulary_intro` | **ihminen** — person, human. **mies** — man. **nainen** — woman. **lapsi** — child. “These name different types of people; you need not know how to inflect them yet.” | `vocab.ihminen`, `vocab.mies`, `vocab.nainen`, `vocab.lapsi` |
 | 7 | `people-match` | `exercise` | B03 | none |
-| 8 | `person-in-context` | `example_set` | **Kuka hän on?** — “Who is he/she?” **Hän on Aino.** — “She is Aino.” “Notice the word **on** (‘is’) inside these useful expressions. Learn the expressions as whole examples for now; no third-person conjugation table is required.” | none |
+| 8 | `person-in-context` | `example_set` | **Kuka hän on?** — “Who is he/she?” **Hän on Aino.** — “She is Aino.” **yksi lapsi** — “one child.” **mies ja nainen** — “a man and a woman.” “These short noun phrases reuse Unit 1’s yksi and ja without introducing new grammar. Notice the word **on** (‘is’) inside these useful expressions. Learn the expressions as whole examples for now; no third-person conjugation table is required.” | none |
 | 9 | `question-chunk` | `phrase_intro` | **Kuka hän on?** — “Who is that person?” “You can ask who someone is even before learning all the ways Finnish verbs change.” | `phrase.kuka-han-on` |
 | 10 | `recall-ihminen` | `exercise` | B04 | none |
 | 11 | `recall-mies` | `exercise` | B05 | none |
@@ -718,7 +718,7 @@ Step IDs use prefix `step.people-and-things.questions-and-no.` followed by suffi
 | # | Step suffix | Step type | Exact learner-facing copy / referenced exercise | First encounter |
 |---:|---|---|---|---|
 | 1 | `opening` | `explanation` | **A question and a simple no.** You can say who you are, which language you speak, and where you live. Now you can ask whether something is true — and say when it is not. | none |
-| 2 | `question-patterns` | `grammar_explanation` | **Questions with -ko/-kö.** For the three forms in this lesson: on → onko (is it?), olet → oletko (are you?), puhut → puhutko (do you speak?). This suffix attaches to the verb and its question form comes first. Learn these examples: **Onko hän suomalainen?** (Is he/she Finnish?), **Oletko suomalainen?** (Are you Finnish?), **Puhutko suomea?** (Do you speak Finnish?). Puhut is the you-form used here; you do not need its full conjugation table. | `grammar.yes-no-ko-ko` |
+| 2 | `question-patterns` | `grammar_explanation` | **Questions with -ko/-kö.** For the three forms in this lesson: on → onko (is it?), olet → oletko (are you?), puhut → puhutko (do you speak?). This suffix attaches to the verb and its question form comes first. Learn these examples: **Onko hän suomalainen?** (Is he/she Finnish?), **Oletko suomalainen?** (Are you Finnish?), **Puhutko suomea?** (Do you speak Finnish?). **Kyllä. / Joo.** = “Yes”, two positive answers learned in Unit 1. Puhut is the you-form used here; you do not need its full conjugation table. | `grammar.yes-no-ko-ko` |
 | 3 | `question-choice` | `exercise` | E01 | none |
 | 4 | `question-form` | `exercise` | E02 | none |
 | 5 | `question-recall` | `exercise` | E03 | none |
