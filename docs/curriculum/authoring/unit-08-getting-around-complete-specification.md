@@ -967,3 +967,266 @@ All use original content/needs_review, the shared N1 acceptance and answer-speci
 
 **Headline:** “Here or towards here?” **Copy:** “You can tell when someone is at a place and when they are going towards it.” **Required steps:** 19; **exercises:** 15; **matching pair decisions:** 4. The command Tule tänne is recognised as a fixed phrase, not a general imperative skill. **Next:** 8.5 From there and by bus.
 
+## Lesson 8.5 — From there and by bus
+
+**Lesson ID:** `lesson.getting-around.from-there-by-bus` · `unit.getting-around` · `fi` · Order 5 · **Estimated:** 14–21 minutes (untested; heavier load). **Prerequisite:** Lesson 8.4 and Unit 4 location awareness.  
+**Capability:** recognise a taught movement-from form, distinguish travel method from location, and produce Menen bussilla. **New production lemmas:** none. **New recognition:** `vocab.myohassa`, `vocab.ajoissa`, `vocab.paasta`, `vocab.ajaa`. **Grammar:** `grammar.getting-around.location-source` (recognition), `grammar.getting-around.transport-method` (finite controlled production). **Productive phrase:** `phrase.getting-around.menen-bussilla`; **recognition-only fixed question:** `phrase.getting-around.miten-paasen-keskustaan`. **Other:** `mistä` fixed recognition question, not new lemma.  
+**Completion:** all required steps and E01–E19 attempted or Not sure, no perfection gate. **Pause:** after E09 before vehicle-method forms. No full source, transit or verb tables.
+
+### Ordered learner experience
+
+Step IDs: `step.getting-around.from-there-by-bus.<suffix>`; all sourced forms are finite examples, never a generated grammar rule. Recognition words are introduced before their first required assessment.
+
+| # | Step suffix | LessonStep type | Exact learner-facing content / exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **From somewhere, by a vehicle.** Finnish describes where someone is, where they go, where they come from and what method they use. We will learn a few exact forms, not all local cases or unrestricted noun inflections. | none | Yes |
+| 2 | `source-forms` | `grammar_explanation` | **Tulen kaupasta.** — I come **from the shop**. **Tulen keskustasta.** — I come **from downtown**. **Tulen talosta.** — I come **out of the house**. These are three explicitly taught -sta/-stä source forms; compare known *kaupassa* (in shop) and *kauppaan* (to shop). Recognition first; don't generate an unknown place's source form. | `grammar.getting-around.location-source` | Yes |
+| 3 | `station-external` | `example_set` | **Station exception:** **asemalle** (to station), **asemalla** (at station), **asemalta** (from station) are common in ordinary transport contexts; **pysäkille/pysäkillä/pysäkiltä** work for a stop. Being literally inside a building is a different situation. This is why -sta is **not** universal for from. | none | Yes |
+| 4 | `practice-01` | `exercise` | E01 | none | Yes |
+| 5 | `practice-02` | `exercise` | E02 | none | Yes |
+| 6 | `practice-03` | `exercise` | E03 | none | Yes |
+| 7 | `practice-04` | `exercise` | E04 | none | Yes |
+| 8 | `source-question` | `phrase_intro` | **Mistä?** — Where from? Recognise it as a complete source question. You already know **Missä?** (where at) and **Minne?** (where to). Mistä is not an extra independently productive Unit 8 lemma. | none | Yes |
+| 9 | `practice-05` | `exercise` | E05 | none | Yes |
+| 10 | `late-ontime` | `vocabulary_intro` | Recognition-only: **myöhässä — late** and **ajoissa — in time/on time**. Compare **Juna on myöhässä.** and **Bussi on ajoissa.** These are fictional illustrative statuses, not actual schedule information. | `vocab.myohassa`, `vocab.ajoissa` | Yes |
+| 11 | `practice-06` | `exercise` | E06 | none | Yes |
+| 12 | `practice-07` | `exercise` | E07 | none | Yes |
+| 13 | `reach-drive` | `vocabulary_intro` | Recognition-only: **päästä — get to/reach (a place)** in navigation; **ajaa — drive** in road transport. You will recognise a fixed question with pääsen, but not be asked to conjugate either verb independently. | `vocab.paasta`, `vocab.ajaa` | Yes |
+| 14 | `practice-08` | `exercise` | E08 | none | Yes |
+| 15 | `practice-09` | `exercise` | E09 | none | Yes |
+| 16 | `vehicle-method` | `grammar_explanation` | **By bus:** **bussilla**. **By train:** **junalla**. Learn these two exact transport forms for production. Also recognise **metrolla** (by metro), **raitiovaunulla** (by tram), **taksilla** (by taxi). This does not mean you can add -lla to every noun automatically. | `grammar.getting-around.transport-method` | Yes |
+| 17 | `bus-phrase` | `phrase_intro` | **Menen bussilla.** — I'm going by bus. The new form bussilla tells how you travel. The same simple idea applies to an authored phrase **Menen junalla.**, but only the finite forms taught above are required. | `phrase.getting-around.menen-bussilla` | Yes |
+| 18 | `practice-10` | `exercise` | E10 | none | Yes |
+| 19 | `practice-11` | `exercise` | E11 | none | Yes |
+| 20 | `bus-inside-contrast` | `example_set` | **Menen bussilla.** — I'm travelling by bus (method). **Olen bussissa.** — I'm inside/on the bus (location). The difference is real and important: don't use the -ssa location form to mean travelling by a mode. | none | Yes |
+| 21 | `practice-12` | `exercise` | E12 | none | Yes |
+| 22 | `practice-13` | `exercise` | E13 | none | Yes |
+| 23 | `practice-14` | `exercise` | E14 | none | Yes |
+| 24 | `checkpoint` | `checkpoint` | **Lesson checkpoint E15–E19:** construct and independently retrieve by-bus travel, recognise the fixed getting-downtown question, and interpret source versus destination phrases. | none | Yes |
+| 25 | `get-downtown` | `phrase_intro` | **Miten pääsen keskustaan?** — How do I get downtown? Learn this useful question **as one recognition-only chunk**. Pääsen comes from päästä (recognition-only), not a new general present-tense conjugation lesson. | `phrase.getting-around.miten-paasen-keskustaan` | Yes |
+| 26 | `source-recap` | `example_set` | **Menen keskustaan** — go to downtown; **Olen keskustassa** — be in downtown; **Tulen keskustasta** — come from downtown. They are three different jobs with a finite authored form for the same noun. | none | Yes |
+
+### All complete authored exercises
+
+All records use original content/needs_review, the existing N1 and scored-target contracts. The source/transport matching boards are guided comparisons with **no duplicate grammar score**, and the late/on-time items remain recognition-only.
+
+**E01 — `ex.getting-around.from-there-by-bus.from-shop`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In this context, what does Tulen kaupasta. mean?  
+**Stimulus:** Tulen kaupasta. — a person has been to the shop and is now coming back.  
+**Options (stable IDs):** `a` I come from the shop. · `b` I'm going to the shop. · `c` I'm inside the shop.. **Correct:** `a` I come from the shop.. Shuffle visually.  
+**Wrong option `b`:** Menen kauppaan is going to the shop.  
+**Wrong option `c`:** Olen kaupassa describes being in the shop.  
+**Correct feedback:** Kaupasta means from the shop, with the taught source form.  
+**Wrong feedback:** The ending -sta in kaupasta marks the origin in this context.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** I come from the shop.  
+**Hint:** None. **Linked:** `vocab.kauppa`, `vocab.tulla`, `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E02 — `ex.getting-around.from-there-by-bus.from-downtown`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Tulen keskustasta. say?  
+**Stimulus:** Tulen keskustasta.  
+**Options (stable IDs):** `a` I'm coming from downtown. · `b` I'm already downtown. · `c` I'm going downtown.. **Correct:** `a` I'm coming from downtown.. Shuffle visually.  
+**Wrong option `b`:** Olen keskustassa means I'm in downtown.  
+**Wrong option `c`:** Menen keskustaan means I'm going downtown.  
+**Correct feedback:** Keskustasta is the taught 'from the centre' form, not the destination keskustaan.  
+**Wrong feedback:** The form keskustasta marks coming from downtown.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** I'm coming from downtown.  
+**Hint:** None. **Linked:** `vocab.keskusta`, `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E03 — `ex.getting-around.from-there-by-bus.location-source-pairs`** · `matching` · intent `concept_recognition` · difficulty `contextual`  
+**Prompt:** Match each already taught location/source phrase with its correct meaning.  
+**Stimulus:** From and in must remain distinct. The source forms are deliberately authored, not generated for arbitrary nouns.  
+**Matching pairs (3 decisions):** **kaupassa ↔ in the shop**; guided contrast, not duplicate scored target; **kaupasta ↔ from the shop**; guided contrast, not duplicate scored target; **keskustasta ↔ from downtown**; guided contrast, not duplicate scored target. `knowledgeScoring: false`, `scoredTargetIds: []` for this board.  
+**Correct feedback:** Kaupassa is in the shop; kaupasta is from the shop; keskustasta is from downtown.  
+**Wrong feedback:** Compare the original known -ssa location with the -sta source form.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** kaupassa = in shop; kaupasta = from shop; keskustasta = from downtown.  
+**Hint:** None. **Linked:** `vocab.kauppa`, `vocab.keskusta`, `grammar.getting-around.location-source`. **Scored:** none. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**E04 — `ex.getting-around.from-there-by-bus.station-departure`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In a normal transit context, which taught expression means 'from the station'?  
+**Stimulus:** A passenger departs from the station (not literally walking out of the building's interior).  
+**Options (stable IDs):** `a` asemalle · `b` asemalta · `c` asemassa. **Correct:** `b` asemalta. Shuffle visually.  
+**Wrong option `a`:** Asemalle means to/towards the station, not from it.  
+**Wrong option `c`:** Asemassa is not the taught ordinary transit meaning 'from the station'.  
+**Correct feedback:** Asemalta expresses from the station in this context. From a building's interior can be expressed differently.  
+**Wrong feedback:** The station belongs to the taught external-place series: asemalle, asemalla, asemalta.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Asemalta.  
+**Hint:** None. **Linked:** `vocab.asema`, `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E05 — `ex.getting-around.from-there-by-bus.mista-question`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the question word mistä ask in a simple movement context?  
+**Stimulus:** Mistä? — a fixed question word, taught for recognition only.  
+**Options (stable IDs):** `a` Where from? · `b` Where to? · `c` Where (at a place)?. **Correct:** `a` Where from?. Shuffle visually.  
+**Wrong option `b`:** Minne is where to, a destination.  
+**Wrong option `c`:** Missä is where a person/thing is.  
+**Correct feedback:** Mistä asks where from, the source of movement.  
+**Wrong feedback:** Mistä is source; minne is destination and missä is location.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Where from?  
+**Hint:** None. **Linked:** `grammar.getting-around.location-source`, `vocab.missa`, `vocab.minne`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E06 — `ex.getting-around.from-there-by-bus.late-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** A transport message says Juna on myöhässä. What does myöhässä indicate?  
+**Stimulus:** Juna on myöhässä. — a train is not running on time.  
+**Options (stable IDs):** `a` late · `b` early · `c` at the station. **Correct:** `a` late. Shuffle visually.  
+**Wrong option `b`:** Early is a different meaning; myöhässä means late.  
+**Wrong option `c`:** Asema would name the station, not lateness.  
+**Correct feedback:** Myöhässä means late.  
+**Wrong feedback:** Myöhässä indicates lateness. It is recognition-only here.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Myöhässä = late.  
+**Hint:** None. **Linked:** `vocab.myohassa`, `vocab.juna`. **Scored:** `vocab.myohassa`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E07 — `ex.getting-around.from-there-by-bus.in-time-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does ajoissa mean in Bussi on ajoissa.?  
+**Stimulus:** Bussi on ajoissa. — the bus arrives in time.  
+**Options (stable IDs):** `a` late · `b` in time / on time · `c` by bus. **Correct:** `b` in time / on time. Shuffle visually.  
+**Wrong option `a`:** Myöhässä means late, the opposite in this scenario.  
+**Wrong option `c`:** Bussilla means by bus, not in time.  
+**Correct feedback:** Ajoissa means in time/on time in this context.  
+**Wrong feedback:** The punctuality word is ajoissa, not myöhässä.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Ajoissa = in time/on time.  
+**Hint:** None. **Linked:** `vocab.ajoissa`, `vocab.bussi`. **Scored:** `vocab.ajoissa`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E08 — `ex.getting-around.from-there-by-bus.paasta-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In navigation, what is the practical meaning of päästä?  
+**Stimulus:** A person wants to get to the city centre. Päästä is recognition-only.  
+**Options (stable IDs):** `a` to reach / get to · `b` to drive a car · `c` to buy a ticket. **Correct:** `a` to reach / get to. Shuffle visually.  
+**Wrong option `b`:** Ajaa means drive in transport contexts.  
+**Wrong option `c`:** Ostaa means buy, an earlier verb.  
+**Correct feedback:** Päästä can mean reach/get to a place; pääsen occurs in a fixed question later.  
+**Wrong feedback:** Päästä is about reaching or being able to get somewhere in this navigation context.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Päästä = get to / reach.  
+**Hint:** None. **Linked:** `vocab.paasta`. **Scored:** `vocab.paasta`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E09 — `ex.getting-around.from-there-by-bus.ajaa-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does ajaa typically mean in a road-transport context?  
+**Stimulus:** Ajaa, recognition only.  
+**Options (stable IDs):** `a` to drive · `b` to sleep · `c` to ask. **Correct:** `a` to drive. Shuffle visually.  
+**Wrong option `b`:** Nukkua means sleep.  
+**Wrong option `c`:** Kysyä means ask.  
+**Correct feedback:** Ajaa often means drive; you do not need to produce its conjugated forms.  
+**Wrong feedback:** Ajaa is drive in this setting.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Ajaa = to drive.  
+**Hint:** None. **Linked:** `vocab.ajaa`. **Scored:** `vocab.ajaa`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E10 — `ex.getting-around.from-there-by-bus.by-bus-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Menen bussilla. mean?  
+**Stimulus:** Menen bussilla.  
+**Options (stable IDs):** `a` I'm inside the bus. · `b` I'm going by bus. · `c` I'm going to the bus.. **Correct:** `b` I'm going by bus.. Shuffle visually.  
+**Wrong option `a`:** Olen bussissa would say I am inside the bus.  
+**Wrong option `c`:** Menen bussille could have a different movement meaning; this lesson explicitly teaches travel by bus.  
+**Correct feedback:** Menen bussilla is a statement about the **method** of travel.  
+**Wrong feedback:** Bussilla means by bus, not inside the bus.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** I'm going by bus.  
+**Hint:** None. **Linked:** `phrase.getting-around.menen-bussilla`, `vocab.bussi`, `grammar.getting-around.transport-method`. **Scored:** `phrase.getting-around.menen-bussilla`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E11 — `ex.getting-around.from-there-by-bus.method-pairs`** · `matching` · intent `concept_recognition` · difficulty `contextual`  
+**Prompt:** Match the taught transport forms with their method-of-travel meanings.  
+**Stimulus:** These are finite recognised forms, not a new general suffix rule.  
+**Matching pairs (3 decisions):** **bussilla ↔ by bus**; guided contrast, not duplicate scored target; **junalla ↔ by train**; guided contrast, not duplicate scored target; **metrolla ↔ by metro**; guided contrast, not duplicate scored target. `knowledgeScoring: false`, `scoredTargetIds: []` for this board.  
+**Correct feedback:** Bussilla, junalla and metrolla describe travel by bus, train and metro.  
+**Wrong feedback:** All three indicate travel method; choose the correct vehicle name in each form.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** bussilla = by bus; junalla = by train; metrolla = by metro.  
+**Hint:** None. **Linked:** `vocab.bussi`, `vocab.juna`, `vocab.metro`, `grammar.getting-around.transport-method`. **Scored:** none. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**E12 — `ex.getting-around.from-there-by-bus.bus-inside-versus-by`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
+**Prompt:** A person is travelling by bus. Which specific Finnish phrase expresses the travel method?  
+**Stimulus:** Travel **by** bus, not merely be physically inside a bus.  
+**Options (stable IDs):** `a` Olen bussissa. · `b` Menen bussilla. · `c` Menen keskustaan.. **Correct:** `b` Menen bussilla.. Shuffle visually.  
+**Wrong option `a`:** Olen bussissa means I am inside/on the bus, a location rather than the travel method.  
+**Wrong option `c`:** Menen keskustaan names a destination, not transport method.  
+**Correct feedback:** Menen bussilla describes travelling by bus; bussissa describes being inside/on the bus.  
+**Wrong feedback:** The practical travel-method form is bussilla.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Menen bussilla.  
+**Hint:** None. **Linked:** `vocab.bussi`, `grammar.getting-around.transport-method`. **Scored:** `grammar.getting-around.transport-method`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E13 — `ex.getting-around.from-there-by-bus.write-bussilla`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Type the taught Finnish word meaning 'by bus'.  
+**Stimulus:** by bus (method of transport, not inside the bus)  
+**Accepted after N1:** `bussilla`. Meaningful -lla/-ssa differences remain distinct.  
+**Correct feedback:** Bussilla means by bus; the dictionary noun is bussi.  
+**Wrong feedback:** Use bussilla, not bussissa. The endings have different meanings.  
+**Near feedback:** `bussissa` → Bussissa means inside/on the bus. By bus is bussilla.  
+**Not sure:** Write bussilla.  
+**Hint:** None. **Linked:** `vocab.bussi`, `grammar.getting-around.transport-method`. **Scored:** `grammar.getting-around.transport-method`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E14 — `ex.getting-around.from-there-by-bus.write-junalla`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Type the explicitly taught Finnish form meaning 'by train'.  
+**Stimulus:** by train (method of travel)  
+**Accepted after N1:** `junalla`. Meaningful -lla/-ssa differences remain distinct.  
+**Correct feedback:** Junalla means by train.  
+**Wrong feedback:** Use the finite taught method form junalla, not junassa (inside a train).  
+**Near feedback:** `junassa` → Junassa is inside/on a train. Junalla is by train.  
+**Not sure:** Write junalla.  
+**Hint:** None. **Linked:** `vocab.juna`, `grammar.getting-around.transport-method`. **Scored:** `grammar.getting-around.transport-method`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E15 — `ex.getting-around.from-there-by-bus.build-by-bus`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
+**Prompt:** Arrange the two supplied tiles to say 'I'm going by bus'.  
+**Stimulus:** Use the exact finite form of bussi learned in this lesson.  
+**Shuffled lowercase lexical tiles:** `bussilla`, `menen`. **Accepted complete sentence:** `Menen bussilla.`. Capitalise assembled first word.  
+**Correct feedback:** Menen bussilla is a natural simple sentence about travel method.  
+**Wrong feedback:** Use menen + bussilla, not the dictionary noun bussi.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Menen bussilla.  
+**Hint:** None. **Linked:** `vocab.menna`, `vocab.bussi`, `grammar.getting-around.transport-method`. **Scored:** `grammar.getting-around.transport-method`. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**E16 — `ex.getting-around.from-there-by-bus.independent-by-bus`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Independently write 'I'm going by bus' in Finnish.  
+**Stimulus:** I'm going by bus. Use the taught travel-method form.  
+**Accepted after N1:** `Menen bussilla.`, `Minä menen bussilla.`. Meaningful -lla/-ssa differences remain distinct.  
+**Correct feedback:** Menen bussilla. is independently retrieved from the new transport phrase.  
+**Wrong feedback:** Use menen (I go) and bussilla (by bus), not bussissa.  
+**Near feedback:** `Menen bussissa` → Bussissa is a location; travelling by bus is Menen bussilla.  
+**Not sure:** Write Menen bussilla.  
+**Hint:** None. **Linked:** `phrase.getting-around.menen-bussilla`, `vocab.bussi`, `grammar.getting-around.transport-method`. **Scored:** `phrase.getting-around.menen-bussilla`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E17 — `ex.getting-around.from-there-by-bus.reach-downtown-question`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the fixed question Miten pääsen keskustaan? ask?  
+**Stimulus:** Miten pääsen keskustaan? — recognition-only; päästä is not a productive verb paradigm.  
+**Options (stable IDs):** `a` How do I get downtown? · `b` Am I already downtown? · `c` What is the bus ticket price?. **Correct:** `a` How do I get downtown?. Shuffle visually.  
+**Wrong option `b`:** Olen keskustassa describes being downtown, not asking how to reach it.  
+**Wrong option `c`:** Lippu concerns tickets, but this question asks about getting somewhere.  
+**Correct feedback:** Miten pääsen keskustaan? asks how to reach the city centre.  
+**Wrong feedback:** Pääsen means getting/being able to reach here. Learn this as a fixed question only.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** How do I get downtown?  
+**Hint:** None. **Linked:** `phrase.getting-around.miten-paasen-keskustaan`, `vocab.paasta`, `vocab.keskusta`. **Scored:** `phrase.getting-around.miten-paasen-keskustaan`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E18 — `ex.getting-around.from-there-by-bus.from-centre`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence says someone comes *from* downtown rather than going downtown?  
+**Stimulus:** Distinguish taught source from destination forms of keskusta.  
+**Options (stable IDs):** `a` Menen keskustaan. · `b` Tulen keskustasta. · `c` Olen keskustassa.. **Correct:** `b` Tulen keskustasta.. Shuffle visually.  
+**Wrong option `a`:** Keskustaan is the destination form — to the centre.  
+**Wrong option `c`:** Keskustassa is the location form — in the centre.  
+**Correct feedback:** Tulen keskustasta. expresses movement from the centre.  
+**Wrong feedback:** Use keskustasta as the finite source form.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Tulen keskustasta.  
+**Hint:** None. **Linked:** `vocab.keskusta`, `grammar.getting-around.location-source`, `vocab.tulla`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**E19 — `ex.getting-around.from-there-by-bus.from-shop-check`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** A person has left the shop and is now coming from it. Which sentence says that?  
+**Stimulus:** The shop is the point of departure.  
+**Options (stable IDs):** `a` Tulen kaupasta. · `b` Menen kauppaan. · `c` Olen kaupassa.. **Correct:** `a` Tulen kaupasta.. Shuffle visually.  
+**Wrong option `b`:** Menen kauppaan describes going to the shop.  
+**Wrong option `c`:** Olen kaupassa describes being inside the shop.  
+**Correct feedback:** Tulen kaupasta. says I'm coming from the shop.  
+**Wrong feedback:** Kaupasta marks movement from the shop.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Tulen kaupasta.  
+**Hint:** None. **Linked:** `vocab.kauppa`, `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “From where, and how?” **Copy:** “You can recognise a place someone comes from and describe travelling by bus or train with an explicitly taught form.” **Required steps:** 26; **required exercises:** 19; **matching pair decisions:** 6. This is a finite transport lesson, not mastery of six local cases or arbitrary verb paradigms. **Next:** 8.6 Simple directions.
+
