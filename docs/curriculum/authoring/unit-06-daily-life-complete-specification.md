@@ -1340,14 +1340,14 @@ Lähden perjantaina.`. This multiline task is capability evidence only: `scoredT
 **Hint:** None. **Linked:** `vocab.herata`, `vocab.kello`, `vocab.aamu`, `vocab.juoda`, `vocab.kahvi`, `vocab.perjantai`, `vocab.lahtea`, `grammar.daily-life.whole-hour-time`. **Scored:** none. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
 
 **G16 — `ex.daily-life.how-often.final-day-and-frequency`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
-**Prompt:** Arrange the supplied tiles to say “On Monday I often drink coffee.”  
-**Stimulus:** All of the words are supplied, so this is guided integration rather than unaided spelling.  
-**Shuffled tokens:** `kahvia`, `Maanantaina`, `usein`, `juon`. **Accepted complete sentences:** `Maanantaina juon usein kahvia.`, `Juon usein kahvia maanantaina.`. Supplied word tiles do not prove unaided spelling.  
-**Correct feedback:** Maanantaina juon usein kahvia. is grammatically natural for a statement about a particular Monday.  
-**Wrong feedback:** Use maanantaina as the date phrase and juon usein kahvia as the main statement; don't reinterpret it as 'every Monday'.  
+**Prompt:** Arrange the supplied tiles to say “I often drink coffee in the morning.”  
+**Stimulus:** All forms are taught; this is guided integration of an everyday activity, daypart and frequency.  
+**Shuffled tokens:** `kahvia`, `Aamulla`, `usein`, `juon`. **Accepted complete sentences:** `Aamulla juon usein kahvia.`, `Juon usein kahvia aamulla.`. Supplied word tiles do not prove unaided spelling.  
+**Correct feedback:** Aamulla juon usein kahvia. is a natural repeated morning activity, not an event tied to one Monday.  
+**Wrong feedback:** Combine the fixed expression aamulla with juon usein kahvia.  
 **Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
 **Not sure:** Maanantaina juon usein kahvia.  
-**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.usein`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.frequency-placement`. **Scored:** `grammar.daily-life.frequency-placement`. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
+**Hint:** None. **Linked:** `vocab.aamu`, `vocab.usein`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.frequency-placement`. **Scored:** `grammar.daily-life.frequency-placement`. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
 
 **G17 — `ex.daily-life.how-often.final-independent-freq`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
 **Prompt:** Without choices, write the Finnish word for “often.”  
