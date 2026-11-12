@@ -161,7 +161,7 @@ Tänään juon kahvia.
 Menen keskustaan.
 ```
 
-This is an authored bounded composition, **not** an open conversation with automatic semantic grading. No new language-learning algorithm or screenshot-only content.
+This is an authored bounded composition, **not** an open conversation with automatic semantic grading. The learner may use explicitly approved per-line variants: two Unit 1 greetings on line 1, four taught placements/pronoun variants for `tänään juon kahvia` on line 2, and two taught subject-pronoun variants for `Menen keskustaan` on line 3 — **16 valid triples**, validated as three independent text fields in the specified meaning/order. These are all authored and already learned forms, not fuzzy rewriting. No new language-learning algorithm or screenshot-only content.
 
 ## 8. A1 Foundations Stage Completion Audit
 
