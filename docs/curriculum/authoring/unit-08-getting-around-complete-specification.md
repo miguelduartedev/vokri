@@ -105,7 +105,6 @@ This completes an **authored eight-unit curriculum**, not a certified CEFR A1 ex
 
 | ID | Scope | Main evidence |
 |---|---|---|
-| `grammar.getting-around.transport-lexicon` | lexical transport distinctions | explicit transport exercise; prefer lemma scores |
 | `grammar.getting-around.location-destination` | where vs where-to with finite familiar destination forms | lesson 8.3, 8.4 |
 | `grammar.getting-around.location-source` | recognition of taught -sta/-stä vs other source endings | lesson 8.5 |
 | `grammar.getting-around.transport-method` | finite `-lla/-llä` travel-method chunks vs `-ssa/-ssä` location | lesson 8.5 |
