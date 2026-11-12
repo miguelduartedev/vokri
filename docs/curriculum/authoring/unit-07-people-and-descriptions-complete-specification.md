@@ -1180,3 +1180,213 @@ Each exercise uses the inherited N1/feedback contract, stable options and exact 
 
 **Headline:** “Colours in everyday sentences.” **Copy:** “You can name four colours and describe the colour of familiar singular objects.” **Steps:** 19, **required exercises:** 15, **matching pairs:** 4. Colour nouns are new, but house and room remain earlier vocabulary. **Next:** Lesson 7.6 — People review.
 
+## Lesson 7.6 — People review
+
+**ID:** `lesson.people-and-descriptions.people-review` · `unit.people-and-descriptions` · `fi` · Order 6 · **Estimated 12–18 minutes** (untested). **Prerequisite:** Lesson 7.5. **New production/recognition:** none. **Capability:** produce simple possession, negative possession, person descriptors, genitive ownership and colour statements, and integrate them into a short fictional profile. **Prerequisite targets:** all Unit 7 forms/phrases; previously encountered `hän`, `olla`, `asua`, `talo`, `huone`.  
+**Completion:** all required steps and F01–F16 attempted or Not sure, without a perfect-score condition. **Pause:** before the six-task final checkpoint F11–F16.
+
+### Ordered learner experience
+
+Full step IDs `step.people-and-descriptions.people-review.<suffix>`. No new formal encounters or production role promotions occur in the review lesson.
+
+| # | Step suffix | Type | Exact learner-facing content / exercise | New formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **People review.** You have learned family words, simple possession, limited genitives and kanssa, basic adjectives and colours. Combine them in short fictional descriptions. You do not need to tell the app anything about your own family or partner. | none | Yes |
+| 2 | `possession-recap` | `example_set` | **Minulla on sisko.** — I have a sister. **Minulla ei ole veljeä.** — I don't have a brother. The taught negative forms siskoa and veljeä are not arbitrary -a endings. The verb remains on or ei ole. | none | Yes |
+| 3 | `practice-01` | `exercise` | F01 | none | Yes |
+| 4 | `practice-02` | `exercise` | F02 | none | Yes |
+| 5 | `practice-03` | `exercise` | F03 | none | Yes |
+| 6 | `practice-04` | `exercise` | F04 | none | Yes |
+| 7 | `practice-05` | `exercise` | F05 | none | Yes |
+| 8 | `genitive-recap` | `example_set` | **Ainon sisko** — Aino's sister. **Asun kumppanin kanssa.** — I live with my partner. The genitive forms Ainon and kumppanin serve different examples but follow the same limited authored pattern. | none | Yes |
+| 9 | `practice-06` | `exercise` | F06 | none | Yes |
+| 10 | `practice-07` | `exercise` | F07 | none | Yes |
+| 11 | `practice-08` | `exercise` | F08 | none | Yes |
+| 12 | `practice-09` | `exercise` | F09 | none | Yes |
+| 13 | `adjective-recap` | `example_set` | **Hän on pitkä.** — That person is tall. **Hän on nuori.** — That person is young. **Talo on punainen.** — The house is red. No plural adjective agreement, personal appearance judgment or new case production is required. | none | Yes |
+| 14 | `practice-10` | `exercise` | F10 | none | Yes |
+| 15 | `unit-capability-check` | `checkpoint` | **Unit 7 checkpoint F11–F16:** independently describe a person and a coloured house, recognise a genitive relationship, build a fictional mini-profile and apply the taught negative possession of kumppani. Each task keeps precise feedback and scoring. | none | Yes |
+| 16 | `assessment-transition` | `explanation` | **Your first short people profile.** The remaining exercises include an authored three-sentence fictional profile using exactly known words. Writing supplied facts is an A1 learning task, not a request to disclose personal details. Multi-line acceptance will be implemented with three scoped inputs if necessary. | none | Yes |
+
+### Fully authored exercises, including six-task final capability assessment
+
+All records have `learningLanguage: fi`, `sourceType: original`, `editorialStatus: needs_review`, `reviewedBy: null`. F11–F16 are inside Lesson 7.6; they do not constitute a seventh lesson. F15 is **capability-only**, scoredTargetIds empty, and must retain each input sentence boundary deterministically.
+
+**F01 — `ex.people-and-descriptions.people-review.possession-choice`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which sentence correctly says 'I have a brother'?  
+**Stimulus:** A fictional speaker, present tense.  
+**Options (stable IDs, shuffle):** `a` Minulla on veli. · `b` Minä olen veli. · `c` Minulla ei ole veljeä.. **Correct:** `a` Minulla on veli..  
+**Wrong option `b`:** Minä olen veli says I am a brother, not that I have one.  
+**Wrong option `c`:** Minulla ei ole veljeä says I don't have a brother.  
+**Correct feedback:** Minulla on veli expresses affirmative possession.  
+**Wrong feedback:** Use Minulla on + the noun for I have, rather than minä olen.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Minulla on veli.  
+**Hint:** None. **Linked:** `vocab.veli`, `phrase.people.minulla-on`, `grammar.people.possession-positive`. **Scored:** `grammar.people.possession-positive`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F02 — `ex.people-and-descriptions.people-review.independent-sister`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'I have a sister' in the taught Finnish form.  
+**Stimulus:** A fictional speaker; no family disclosure is requested.  
+**Accepted after N1:** `Minulla on sisko.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Minulla on sisko. is a correct simple positive possession sentence.  
+**Wrong feedback:** Use Minulla on sisko, not Minulla olen sisko.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Minulla on sisko.  
+**Hint:** None. **Linked:** `vocab.sisko`, `phrase.people.minulla-on`. **Scored:** `phrase.people.minulla-on`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F03 — `ex.people-and-descriptions.people-review.negative-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Minulla ei ole veljeä mean?  
+**Stimulus:** Minulla ei ole veljeä.  
+**Options (stable IDs, shuffle):** `a` I have a brother. · `b` I don't have a brother. · `c` I am a brother.. **Correct:** `b` I don't have a brother..  
+**Wrong option `a`:** This is negative; affirmative would be Minulla on veli.  
+**Wrong option `c`:** I am a brother would use an olla sentence, not negative possession.  
+**Correct feedback:** Minulla ei ole veljeä denies having a brother; the noun is partitive.  
+**Wrong feedback:** The taught negative is ei ole veljeä, not the bare word veli.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** I don't have a brother.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F04 — `ex.people-and-descriptions.people-review.transform-sister`** · `transform` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Change the positive sentence to the taught negative version, keeping the sister meaning.  
+**Stimulus:** Minulla on sisko. → I don't have a sister.  
+**Accepted after N1:** `Minulla ei ole siskoa.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Minulla ei ole siskoa. uses the correct taught partitive siskoa.  
+**Wrong feedback:** Use ei ole siskoa; don't leave the noun unchanged.  
+**Near feedback:** `Minulla ei ole sisko` → Negative possession requires siskoa, not the basic noun.  
+**Not sure:** Minulla ei ole siskoa.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F05 — `ex.people-and-descriptions.people-review.transform-brother`** · `transform` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Change this sentence to 'I don't have a brother'.  
+**Stimulus:** Minulla on veli.  
+**Accepted after N1:** `Minulla ei ole veljeä.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Veljeä is the partitive form of veli after ei ole.  
+**Wrong feedback:** Use Minulla ei ole veljeä, not velia or veli.  
+**Near feedback:** `Minulla ei ole veli` → Use veljeä after ei ole.; `Minulla ei ole velia` → The correct changed stem is veljeä.  
+**Not sure:** Minulla ei ole veljeä.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F06 — `ex.people-and-descriptions.people-review.genitive-aino`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which English meaning fits Ainon sisko?  
+**Stimulus:** Ainon sisko (fictional Aino)  
+**Options (stable IDs, shuffle):** `a` Aino's sister · `b` Aino is a sister · `c` Aino's partner. **Correct:** `a` Aino's sister.  
+**Wrong option `b`:** This is a noun phrase with a possessor, not a full 'Aino is' sentence.  
+**Wrong option `c`:** Partner would be kumppani rather than sisko.  
+**Correct feedback:** Ainon sisko means Aino's sister; Ainon is a genitive form.  
+**Wrong feedback:** Ainon specifies whose sister is meant.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Aino's sister.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F07 — `ex.people-and-descriptions.people-review.recall-veljen`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Type the taught genitive of veli, meaning 'brother's'.  
+**Stimulus:** brother's (genitive singular)  
+**Accepted after N1:** `veljen`. Authored forms only; no guessed stems.  
+**Correct feedback:** Veli → veljen is a taught stem-changing genitive.  
+**Wrong feedback:** Write veljen, not velin.  
+**Near feedback:** `velin` → The taught form has the changed stem velje-: veljen.  
+**Not sure:** Veljen.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F08 — `ex.people-and-descriptions.people-review.with-partner-choice`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
+**Prompt:** Which expression is correct standard Finnish for 'with a partner'?  
+**Stimulus:** Use the taught genitive + kanssa construction.  
+**Options (stable IDs, shuffle):** `a` kumppani kanssa · `b` kumppanin kanssa · `c` kumppania kanssa. **Correct:** `b` kumppanin kanssa.  
+**Wrong option `a`:** Kumppani is the dictionary form; before kanssa use kumppanin.  
+**Wrong option `c`:** Kumppania was the negative-possession partitive, not the genitive here.  
+**Correct feedback:** Kumppanin kanssa is the correct taught form.  
+**Wrong feedback:** Kanssa follows the genitive kumppanin.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Kumppanin kanssa.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F09 — `ex.people-and-descriptions.people-review.live-partner`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write 'I live with my partner' as a complete sentence.  
+**Stimulus:** A fictional speaker; no real relationship status.  
+**Accepted after N1:** `Asun kumppanin kanssa.`, `Minä asun kumppanin kanssa.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Asun kumppanin kanssa. is a correct learned sentence.  
+**Wrong feedback:** Use asun and kumppanin kanssa with the noun in its genitive form.  
+**Near feedback:** `Asun kumppani kanssa` → Use genitive kumppanin before kanssa.  
+**Not sure:** Asun kumppanin kanssa.  
+**Hint:** None. **Linked:** `vocab.asua`, `vocab.kumppani`, `vocab.kanssa`, `phrase.people.asun-kumppanin-kanssa`. **Scored:** `phrase.people.asun-kumppanin-kanssa`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F10 — `ex.people-and-descriptions.people-review.tall-person`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
+**Prompt:** Which sentence means 'That person is tall'?  
+**Stimulus:** A single fictional person, height context.  
+**Options (stable IDs, shuffle):** `a` Hän on pitkä. · `b` Hän on lyhyt. · `c` Hän on iso.. **Correct:** `a` Hän on pitkä..  
+**Wrong option `b`:** Lyhyt means short, the opposite height description.  
+**Wrong option `c`:** Iso means big; it isn't the specific word tall.  
+**Correct feedback:** Hän on pitkä. describes a tall person using the singular adjective.  
+**Wrong feedback:** The precise height adjective is pitkä.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Hän on pitkä.  
+**Hint:** None. **Linked:** `vocab.pitka`, `vocab.han`, `grammar.people.predicative-singular`. **Scored:** `vocab.pitka`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F11 — `ex.people-and-descriptions.people-review.independent-young`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Independently type 'That person is young' in standard Finnish.  
+**Stimulus:** The fictional person is young; hän is gender-neutral.  
+**Accepted after N1:** `Hän on nuori.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Hän on nuori. is a natural singular description.  
+**Wrong feedback:** Use Hän on plus nuori, not a plural form.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Hän on nuori.  
+**Hint:** None. **Linked:** `vocab.nuori`, `vocab.han`, `grammar.people.predicative-singular`. **Scored:** `vocab.nuori`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F12 — `ex.people-and-descriptions.people-review.red-house-independent`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write 'The house is red' without any Finnish answer choices.  
+**Stimulus:** A fictional house, red exterior; talo was introduced in Unit 4.  
+**Accepted after N1:** `Talo on punainen.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Talo on punainen. uses the taught singular colour adjective.  
+**Wrong feedback:** Use talo + on + punainen; no extra case endings.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Talo on punainen.  
+**Hint:** None. **Linked:** `vocab.talo`, `vocab.punainen`, `grammar.people.colour-statement`. **Scored:** `grammar.people.colour-statement`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F13 — `ex.people-and-descriptions.people-review.integrated-name-tiles`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
+**Prompt:** Arrange four supplied words to say 'Aino's partner is Emma'.  
+**Stimulus:** Fictional names; the genitive form of Aino is taught.  
+**Shuffled lowercase lexical tokens:** `ainon`, `kumppani`, `on`, `emma`. **Accepted complete order:** `Ainon kumppani on Emma.`. Capitalise the first assembled word and the supplied proper name Emma; this is guided composition.  
+**Correct feedback:** Ainon kumppani on Emma. identifies Emma as Aino's partner.  
+**Wrong feedback:** Begin with the possessor Ainon, then kumppani on Emma.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Ainon kumppani on Emma.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `grammar.people.genitive-restricted`, `vocab.olla`. **Scored:** none. **Review eligible:** false, guided or capability assessment. **Editorial:** `needs_review`.  
+
+**F14 — `ex.people-and-descriptions.people-review.another-genitive-sentence`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write 'Emma's brother is Olli' using the taught Emman genitive and familiar on.  
+**Stimulus:** Fictional Emma and Olli, both proper-name context.  
+**Accepted after N1:** `Emman veli on Olli.`. Authored forms only; no guessed stems.  
+**Correct feedback:** Emman veli on Olli. uses the proper-name genitive with a relationship noun.  
+**Wrong feedback:** Use Emman (Emma's) + veli (brother) + on Olli.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Emman veli on Olli.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.genitive-restricted`, `vocab.olla`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+**F15 — `ex.people-and-descriptions.people-review.integrated-three-line-profile`** · `text_input` · intent `cumulative` · difficulty `cumulative`  
+**Prompt:** Write exactly THREE short Finnish sentences on separate lines about these fictional facts: (1) Emma's partner is Aino. (2) Aino is young. (3) Aino's house is blue.  
+**Stimulus:** Use the exact taught models for the three statements. Do not add new words or case rules.  
+**Accepted after N1:** `Emman kumppani on Aino.
+Aino on nuori.
+Ainon talo on sininen.`. Three separately evaluated lines; `knowledgeScoring: false`, `scoredTargetIds: []`.  
+**Correct feedback:** The three sentences describe the same fictional people and one familiar object, combining genitive relationships, a singular description and a colour.  
+**Wrong feedback:** Use the model: Emman kumppani on Aino. / Aino on nuori. / Ainon talo on sininen. Keep three distinct sentences.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Emman kumppani on Aino. / Aino on nuori. / Ainon talo on sininen.  
+**Hint:** None. **Linked:** `grammar.people.genitive-restricted`, `vocab.kumppani`, `vocab.nuori`, `vocab.talo`, `vocab.sininen`, `grammar.people.colour-statement`. **Scored:** none. **Review eligible:** false, guided or capability assessment. **Editorial:** `needs_review`.  
+
+**F16 — `ex.people-and-descriptions.people-review.negative-partner-capstone`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** A fictional speaker has no partner. Which complete sentence accurately says that?  
+**Stimulus:** No partner; recall the explicitly taught negative noun form.  
+**Options (stable IDs, shuffle):** `a` Minulla ei ole kumppani. · `b` Minulla ei ole kumppania. · `c` Minulla olen kumppania.. **Correct:** `b` Minulla ei ole kumppania..  
+**Wrong option `a`:** After negative possession use the taught partitive kumppania, not bare kumppani.  
+**Wrong option `c`:** The negative frame is ei ole, never minulla olen.  
+**Correct feedback:** Minulla ei ole kumppania. correctly expresses a negative relationship statement.  
+**Wrong feedback:** Use minulla ei ole with kumppania, not the dictionary noun.  
+**Near feedback:** None; no automatic near-miss credit.  
+**Not sure:** Minulla ei ole kumppania.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
+
+### End-of-unit capability and completion
+
+**Blueprint ability trace:** F02 = independently say “I have a sister”; F04/F05 = make affirmative possession negative with exact taught siskoa/veljeä; F11 = say someone is young and F10 tall; F06/F07/F14 = recognise or independently retrieve simple genitives; F12 = type a colour statement about a familiar object. **F15** integrates the finite curriculum in a three-sentence fictional profile, evaluated as one capability outcome without automatic lexical mastery. F16 provides a fresh negative-partner scenario. **Final headline:** “People and places, in simple Finnish.” **Copy:** “You can say someone has—or doesn't have—a sibling, describe a person, recognise whose relative is being discussed and describe an object by colour. The words will return in scheduled Review as they become due.” **Required steps:** 16; **exercises:** 16. **Next:** Unit 8 — Getting Around. Completion doesn't imply spontaneous speaking, human teacher assessment or permanent familiarity.
+
