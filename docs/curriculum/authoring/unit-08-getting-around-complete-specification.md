@@ -543,3 +543,219 @@ Records are `sourceType: original`, `editorialStatus: needs_review` and `learnin
 
 **Headline:** “You can ask for the station.” **Copy:** “You know words for station, stop, ticket and route, and you can ask where a station is. Next you'll learn how to describe a destination downtown.” **Required steps:** 22; **exercises:** 16; **matching pair decisions:** 4. No assumption that every stop is a full station. **Next:** 8.3 Around the city.
 
+## Lesson 8.3 — Around the city
+
+**Lesson ID:** `lesson.getting-around.around-the-city` · `unit.getting-around` · `fi` · Order 3 · **Estimated:** 11–16 minutes (untested). **Prerequisite:** Lesson 8.2 and Unit 4's location/destination introduction.  
+**Capability:** name city, centre, road and journey; independently say you are going downtown. **New production:** `vocab.kaupunki`, `vocab.keskusta`, `vocab.tie`, `vocab.matka`. **New recognition:** `vocab.lento`, `vocab.lentokentta`. **New grammar:** `grammar.getting-around.location-destination`; **phrase:** `phrase.getting-around.menen-keskustaan`. **Earlier review:** `minne`, `mennä`, `kauppaan`, `kotiin`, `pitkä`.  
+**Completion:** required steps and C01–C16 attempted/Not sure. **Pause:** after C09 before the taught keskustaan form. No universal destination conjugator.
+
+### Ordered learner experience
+
+Full IDs: `step.getting-around.around-the-city.<suffix>`. The future source form `keskustasta` is recognition context only, not independently assessed before Lesson 8.5.
+
+| # | Step suffix | Step type | Exact learner-facing content or exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Around the city.** A city has a centre, roads and many possible routes. You already know how to ask where someone is going; now you can say a precise destination: downtown. | none | Yes |
+| 2 | `city-centre` | `vocabulary_intro` | **kaupunki — city; keskusta — the city centre/downtown.** The city and its central area aren't exactly the same thing. Learn both dictionary nouns first. | `vocab.kaupunki`, `vocab.keskusta` | Yes |
+| 3 | `practice-01` | `exercise` | C01 | none | Yes |
+| 4 | `road-journey` | `vocabulary_intro` | **tie — road/way; matka — trip/journey.** Reitti from the previous lesson means a route (the path planned), not necessarily one physical road or one person's trip. | `vocab.tie`, `vocab.matka` | Yes |
+| 5 | `practice-02` | `exercise` | C02 | none | Yes |
+| 6 | `flight-airport` | `vocabulary_intro` | Recognition only: **lento — flight; lentokenttä — airport.** You might see these in travel information, but spelling them in Finnish and explaining aircraft operations are outside this lesson. | `vocab.lento`, `vocab.lentokentta` | Yes |
+| 7 | `practice-03` | `exercise` | C03 | none | Yes |
+| 8 | `practice-04` | `exercise` | C04 | none | Yes |
+| 9 | `practice-05` | `exercise` | C05 | none | Yes |
+| 10 | `practice-06` | `exercise` | C06 | none | Yes |
+| 11 | `practice-07` | `exercise` | C07 | none | Yes |
+| 12 | `practice-08` | `exercise` | C08 | none | Yes |
+| 13 | `practice-09` | `exercise` | C09 | none | Yes |
+| 14 | `destination-form` | `grammar_explanation` | **keskusta → keskustaan**. Finnish often changes a place word when you move **to** it. **Menen keskustaan.** — I'm going to the city centre. This is one authored destination form; don't guess the ending of every other place noun. You already know **Menen kauppaan** and **Menen kotiin** from Unit 4. | `grammar.getting-around.location-destination` | Yes |
+| 15 | `downtown-phrase` | `phrase_intro` | **Menen keskustaan.** — I'm going downtown. This is productive as one useful practical sentence. You already know menen; the new part is the exact form keskustaan. | `phrase.getting-around.menen-keskustaan` | Yes |
+| 16 | `practice-10` | `exercise` | C10 | none | Yes |
+| 17 | `practice-11` | `exercise` | C11 | none | Yes |
+| 18 | `practice-12` | `exercise` | C12 | none | Yes |
+| 19 | `checkpoint` | `checkpoint` | **Lesson checkpoint C13–C16:** independently produce a downtown destination, understand the previously taught Minne menet? question, distinguish where someone already is and reuse an earlier adjective for a new road. | none | Yes |
+| 20 | `location-contrast` | `example_set` | **Menen keskustaan** — I go *to* the city centre. **Olen keskustassa** — I'm *in* the city centre. **Tulen keskustasta** — I come *from* the centre (recognition of this source form will be taught in 8.5). Don't treat location, destination and origin as interchangeable. | none | Yes |
+| 21 | `unit4-review` | `example_set` | **Minne menet?** — Where are you going? This is REVIEW from Unit 4, not a new first-time phrase. **Menen kauppaan.** and **Menen kotiin.** are earlier authored destination examples. The centre forms extend the same practical distinction. | none | Yes |
+
+### All complete authored exercises
+
+Use unchanged N1, explicit accepted strings and per-option feedback. Do not rewrite Unit 4's lesson or emit new encounters for Unit 4 words; the new authored destination is a form of `vocab.keskusta`.
+
+**C01 — `ex.getting-around.around-the-city.city-centre-match`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the city noun and the city-centre noun to their meanings.  
+**Stimulus:** A whole city is not exactly the same as the central part of a city.  
+**Matching pairs (2 first-attempt decisions):** **kaupunki ↔ city** scoring `vocab.kaupunki`; **keskusta ↔ city centre / downtown** scoring `vocab.keskusta`. Separate columns shuffled independently.  
+**Correct feedback:** Kaupunki is the city; keskusta is its centre/downtown.  
+**Wrong feedback:** Keskusta refers to a particular central area, not the entire kaupunki.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** kaupunki = city; keskusta = city centre.  
+**Hint:** None. **Linked:** `vocab.kaupunki`, `vocab.keskusta`. **Scored:** `vocab.kaupunki`, `vocab.keskusta`. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**C02 — `ex.getting-around.around-the-city.road-trip-match`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the word for a road with the word for a trip.  
+**Stimulus:** A physical road is not the same as a journey made along it.  
+**Matching pairs (2 first-attempt decisions):** **tie ↔ road** scoring `vocab.tie`; **matka ↔ trip / journey** scoring `vocab.matka`. Separate columns shuffled independently.  
+**Correct feedback:** Tie is a road; matka is a journey or trip.  
+**Wrong feedback:** The road is the physical way; a journey is the event of travelling.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** tie = road; matka = journey.  
+**Hint:** None. **Linked:** `vocab.tie`, `vocab.matka`. **Scored:** `vocab.tie`, `vocab.matka`. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**C03 — `ex.getting-around.around-the-city.lento-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which English noun corresponds to lento in a travel listing?  
+**Stimulus:** lento, recognition only  
+**Options (stable IDs):** `a` flight · `b` city centre · `c` route. **Correct:** `a` flight. Shuffle visually.  
+**Wrong option `b`:** Keskusta means city centre.  
+**Wrong option `c`:** Reitti is a route, which a flight may follow but is not the same noun.  
+**Correct feedback:** Lento is a flight.  
+**Wrong feedback:** The noun lento means flight; no new verb tense is involved.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Lento → flight.  
+**Hint:** None. **Linked:** `vocab.lento`. **Scored:** `vocab.lento`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C04 — `ex.getting-around.around-the-city.airport-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does lentokenttä mean in a travel notice?  
+**Stimulus:** lentokenttä, recognition only  
+**Options (stable IDs):** `a` a bus stop · `b` an airport · `c` a ticket. **Correct:** `b` an airport. Shuffle visually.  
+**Wrong option `a`:** A bus stop is a pysäkki.  
+**Wrong option `c`:** A ticket is lippu or matkalippu.  
+**Correct feedback:** Lentokenttä means airport.  
+**Wrong feedback:** Lentokenttä names an airport, not a stop or ticket.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Lentokenttä is airport.  
+**Hint:** None. **Linked:** `vocab.lentokentta`. **Scored:** `vocab.lentokentta`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C05 — `ex.getting-around.around-the-city.route-versus-road`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** A transit app shows the sequence of stops a service follows. Which Finnish noun most precisely names this planned route?  
+**Stimulus:** The *path of a transport service*, rather than a single physical street.  
+**Options (stable IDs):** `a` tie · `b` reitti · `c` matka. **Correct:** `b` reitti. Shuffle visually.  
+**Wrong option `a`:** Tie is a road, which might form part of a route but is not the whole route plan.  
+**Wrong option `c`:** Matka is a trip or journey, rather than specifically a mapped service route.  
+**Correct feedback:** Reitti is a route; tie is a road and matka is a journey.  
+**Wrong feedback:** Choose reitti for the route plan, not one road or an individual trip.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Reitti.  
+**Hint:** None. **Linked:** `vocab.reitti`, `vocab.tie`, `vocab.matka`. **Scored:** `vocab.reitti`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C06 — `ex.getting-around.around-the-city.write-city`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary noun for a city.  
+**Stimulus:** city, not city centre  
+**Accepted after N1:** `kaupunki`. No unapproved inflections.  
+**Correct feedback:** Kaupunki means city.  
+**Wrong feedback:** Use kaupunki; keskusta means the city's centre.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Write kaupunki.  
+**Hint:** None. **Linked:** `vocab.kaupunki`. **Scored:** `vocab.kaupunki`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C07 — `ex.getting-around.around-the-city.write-centre`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary word for city centre / downtown.  
+**Stimulus:** city centre (dictionary noun)  
+**Accepted after N1:** `keskusta`. No unapproved inflections.  
+**Correct feedback:** Keskusta is the city centre; later you'll use keskustaan for a destination.  
+**Wrong feedback:** Write keskusta. The directional form keskustaan is not the requested dictionary noun.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Write keskusta.  
+**Hint:** None. **Linked:** `vocab.keskusta`. **Scored:** `vocab.keskusta`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C08 — `ex.getting-around.around-the-city.write-road`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary noun for road.  
+**Stimulus:** road / way (physical road)  
+**Accepted after N1:** `tie`. No unapproved inflections.  
+**Correct feedback:** Tie means road.  
+**Wrong feedback:** Write tie, not reitti (route) or matka (journey).  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Write tie.  
+**Hint:** None. **Linked:** `vocab.tie`. **Scored:** `vocab.tie`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C09 — `ex.getting-around.around-the-city.write-trip`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for a journey or trip.  
+**Stimulus:** trip / journey  
+**Accepted after N1:** `matka`. No unapproved inflections.  
+**Correct feedback:** Matka is journey or trip.  
+**Wrong feedback:** Use matka for the journey, not tie (road).  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Write matka.  
+**Hint:** None. **Linked:** `vocab.matka`. **Scored:** `vocab.matka`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C10 — `ex.getting-around.around-the-city.downtown-movement-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Menen keskustaan. mean?  
+**Stimulus:** Menen keskustaan.  
+**Options (stable IDs):** `a` I'm in the city centre. · `b` I'm going downtown. · `c` I'm coming from the city centre.. **Correct:** `b` I'm going downtown.. Shuffle visually.  
+**Wrong option `a`:** Olen keskustassa would express being in the city centre.  
+**Wrong option `c`:** Tulen keskustasta would express coming from the city centre.  
+**Correct feedback:** Menen keskustaan says I'm going downtown, using a finite destination form.  
+**Wrong feedback:** The form keskustaan signals going towards the city centre.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** I'm going downtown.  
+**Hint:** None. **Linked:** `phrase.getting-around.menen-keskustaan`, `vocab.keskusta`, `vocab.menna`. **Scored:** `phrase.getting-around.menen-keskustaan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C11 — `ex.getting-around.around-the-city.keskustaan-form`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
+**Prompt:** Which of these explicitly taught forms fits movement *to* the city centre?  
+**Stimulus:** Menen _____. — I'm going downtown.  
+**Options (stable IDs):** `a` keskustassa · `b` keskusta · `c` keskustaan. **Correct:** `c` keskustaan. Shuffle visually.  
+**Wrong option `a`:** Keskustassa is a recognised location form meaning in the centre.  
+**Wrong option `b`:** Keskusta is the dictionary noun, not the taught destination expression.  
+**Correct feedback:** Keskustaan is the authored destination form.  
+**Wrong feedback:** For this specific noun, the taught destination is keskustaan.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** keskustaan.  
+**Hint:** None. **Linked:** `vocab.keskusta`, `grammar.getting-around.location-destination`. **Scored:** `grammar.getting-around.location-destination`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C12 — `ex.getting-around.around-the-city.build-downtown`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
+**Prompt:** Arrange the two supplied tiles to say 'I'm going downtown'.  
+**Stimulus:** You know menen from Unit 3, and keskustaan is the new taught destination.  
+**Shuffled lowercase lexical tiles:** `keskustaan`, `menen`. **Accepted sentence:** `Menen keskustaan.`. The first assembled word is capitalised by the renderer.  
+**Correct feedback:** Menen keskustaan. expresses a movement towards the city centre.  
+**Wrong feedback:** Start with menen (I go), then use keskustaan (downtown as destination).  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Menen keskustaan.  
+**Hint:** None. **Linked:** `vocab.keskusta`, `vocab.menna`, `grammar.getting-around.location-destination`. **Scored:** `grammar.getting-around.location-destination`. **Review eligible:** false, guided board/tiles. **Editorial:** `needs_review`.  
+
+**C13 — `ex.getting-around.around-the-city.independent-downtown`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Without seeing any Finnish word choices, type 'I'm going downtown'.  
+**Stimulus:** I am going to the city centre. Use the taught destination form.  
+**Accepted after N1:** `Menen keskustaan.`, `Minä menen keskustaan.`. No unapproved inflections.  
+**Correct feedback:** Menen keskustaan. is the intended independently retrieved destination sentence.  
+**Wrong feedback:** The Finnish sentence is Menen keskustaan, not Menen keskusta.  
+**Near feedback:** `Menen keskusta` → Use the taught destination form keskustaan.; `Menen keskustassa` → Keskustassa means in the centre; movement to the centre needs keskustaan.  
+**Not sure:** Write Menen keskustaan.  
+**Hint:** None. **Linked:** `phrase.getting-around.menen-keskustaan`, `vocab.keskusta`, `vocab.menna`. **Scored:** `phrase.getting-around.menen-keskustaan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C14 — `ex.getting-around.around-the-city.minne-review`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the previously taught question Minne menet? ask?  
+**Stimulus:** Minne menet? (review from Unit 4)  
+**Options (stable IDs):** `a` Where are you? · `b` Where are you going? · `c` Where did you go yesterday?. **Correct:** `b` Where are you going?. Shuffle visually.  
+**Wrong option `a`:** Missä asks about location; minne asks destination.  
+**Wrong option `c`:** The taught present-tense question does not ask about yesterday or require past tense.  
+**Correct feedback:** Minne menet? asks where someone is going.  
+**Wrong feedback:** Minne asks where to, not simply where.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Where are you going?  
+**Hint:** None. **Linked:** `vocab.minne`, `vocab.menna`. **Scored:** `grammar.getting-around.location-destination`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C15 — `ex.getting-around.around-the-city.in-or-to-centre`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which Finnish sentence describes being *in* downtown, without travelling towards it?  
+**Stimulus:** You are already in the city centre; this is a location, not a destination.  
+**Options (stable IDs):** `a` Menen keskustaan. · `b` Olen keskustassa. · `c` Tulen keskustasta.. **Correct:** `b` Olen keskustassa.. Shuffle visually.  
+**Wrong option `a`:** Menen keskustaan says I am going to the centre.  
+**Wrong option `c`:** Tulen keskustasta says I am coming from the centre.  
+**Correct feedback:** Olen keskustassa. uses a finite location form, not a movement destination.  
+**Wrong feedback:** Being in downtown is Olen keskustassa, not Menen keskustaan.  
+**Near feedback:** None unless explicitly authored.  
+**Not sure:** Olen keskustassa.  
+**Hint:** None. **Linked:** `vocab.keskusta`, `grammar.getting-around.location-destination`, `vocab.olla`. **Scored:** `grammar.getting-around.location-destination`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**C16 — `ex.getting-around.around-the-city.long-road`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write 'The road is long' using the Unit 7 adjective pitkä.  
+**Stimulus:** A fictional physical road; tie is new and pitkä was taught in Unit 7 as tall/long by context.  
+**Accepted after N1:** `Tie on pitkä.`. No unapproved inflections.  
+**Correct feedback:** Tie on pitkä. reuses the familiar singular adjective to describe a road.  
+**Wrong feedback:** Use tie for road and pitkä for long: Tie on pitkä.  
+**Near feedback:** `Tie on pitka` → Pitkä ends with ä.  
+**Not sure:** Write Tie on pitkä.  
+**Hint:** None. **Linked:** `vocab.tie`, `vocab.pitka`, `grammar.people.predicative-singular`. **Scored:** `vocab.tie`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “I'm going downtown.” **Copy:** “You can name the city and its centre and say Menen keskustaan using a taught destination form.” **Required steps:** 21; **required exercises:** 16; **matching decisions:** 4. The learner is not yet independently generating any place's destination case. **Next:** 8.4 Here, there and where to.
+
