@@ -805,7 +805,7 @@ All use original content/needs_review, the shared N1 acceptance and answer-speci
 **Wrong feedback:** Täällä means here at a place, not motion to it.  
 **Near feedback:** None; wrong direction is not a near-success.  
 **Not sure:** Olen täällä. — I'm here.  
-**Hint:** None. **Linked:** `vocab.taalla`, `vocab.olla`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+**Hint:** None. **Linked:** `vocab.taalla`, `vocab.olla`. **Scored:** `vocab.taalla` (Unit 4 Review; new direction grammar is taught later). **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
 
 **D02 — `ex.getting-around.here-there-where-to.tanne-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
 **Prompt:** What does tänne indicate?  
@@ -829,7 +829,7 @@ All use original content/needs_review, the shared N1 acceptance and answer-speci
 **Wrong feedback:** Being there uses siellä; movement to there uses sinne.  
 **Near feedback:** None; wrong direction is not a near-success.  
 **Not sure:** Olen siellä. — I'm there.  
-**Hint:** None. **Linked:** `vocab.siella`, `vocab.olla`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+**Hint:** None. **Linked:** `vocab.siella`, `vocab.olla`. **Scored:** `vocab.siella` (Unit 4 Review; new direction grammar is taught later). **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
 
 **D04 — `ex.getting-around.here-there-where-to.sinne-direction`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
 **Prompt:** Which word means 'towards there' rather than 'at that location'?  
@@ -1266,8 +1266,8 @@ Step IDs: `step.getting-around.simple-directions.<suffix>`. The final two `check
 | 22 | `unit-capability-transition` | `explanation` | **Unit 8 checkpoint.** Next you'll use all five practical abilities: identify transport, ask where a station is, say you're going downtown, understand a from-phrase and follow basic direction order. Recall is tested without requiring new forms. | none | Yes |
 | 23 | `unit8-capability-check` | `checkpoint` | **Unit 8 practical checkpoint F14–F17:** choose the correct mode of transport, independently ask where the station is and say you go downtown, then recognise movement from a known place. Direction-sequence comprehension was checked immediately before this. | none | Yes |
 | 24 | `a1-stage-transition` | `explanation` | **A1 Foundations closing check.** Unit 8 is the final stage unit. A short, fictional story will reuse language from greetings, daily life, food and transport. Finishing this curriculum is valuable progress, but it is not an externally certified CEFR A1 exam. | none | Yes |
-| 25 | `a1-foundations-capstone` | `checkpoint` | **A1 Foundations stage capstone F18–F21:** understand a basic introduction, retrieve a daily food/drink sentence, describe a concrete house by colour and write a connected three-line story about a fictional journey. Capability-only; do not award multiple lexical mastery events. | none | Yes |
-| 26 | `three-line-guide` | `example_set` | **One short day in three lines.** The final exercise gives three English facts about Aino, a fictional person. Write one taught Finnish sentence per line. This is a *restricted capability assessment*, not unrestricted storytelling or an AI-graded conversation. | none | Yes |
+| 25 | `three-line-guide` | `example_set` | **One short day in three lines.** The final exercise gives three English facts about Aino, a fictional person. Write one taught Finnish sentence per line. This is a *restricted capability assessment*, not unrestricted storytelling or an AI-graded conversation. | none | Yes |
+| 26 | `a1-foundations-capstone` | `checkpoint` | **A1 Foundations stage capstone F18–F21:** understand a basic introduction, retrieve a daily food/drink sentence, describe a concrete house by colour and write a connected three-line story about a fictional journey. Capability-only; do not award multiple lexical mastery events. | none | Yes |
 
 ### All complete authored exercises, Unit 8 checkpoint and A1 capstone
 
@@ -1467,7 +1467,7 @@ The first thirteen exercises introduce/assess simple directions. **F14–F17** c
 **Wrong feedback:** Hei is a greeting and olen introduces yourself.  
 **Near feedback:** None; an incorrect direction is not an Almost result.  
 **Not sure:** Hi! I'm Aino.  
-**Hint:** None. **Linked:** `vocab.hei`, `vocab.olla`, `phrase.hello.olen`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+**Hint:** None. **Linked:** `vocab.hei`, `vocab.olla`, `phrase.olen-slot`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
 
 **F19 — `ex.getting-around.simple-directions.a1-today-coffee`** · `text_input` · intent `cumulative_recall` · difficulty `cumulative`  
 **Prompt:** Type 'Today I drink coffee' using previously taught Unit 5 and Unit 6 forms.  
