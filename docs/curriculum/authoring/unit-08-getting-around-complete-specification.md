@@ -1509,3 +1509,215 @@ Menen keskustaan.`. Multiline task is **one capability-only assessment** with th
 
 **Completion copy:** “You've reached the end of A1 Foundations. You can introduce yourself, use simple everyday Finnish and understand basic travel directions. Your vocabulary will continue returning in scheduled Review.” **Required steps:** 25; **optional spoken note:** one; **required exercise records:** 21; **matching decisions:** 4. **Stage complete flag:** only after all eight units' required lesson/checkpoint tasks have been attempted, regardless of perfect scores; scheduled knowledge, familiarity and due items remain independent. The next curriculum stage is not authored by this document.
 
+## Part III — Independently authored scheduled-Review variants
+
+Sixteen **standalone Review-only items** cover all nine Unit 8 recognition-only lemmas and seven targeted navigation/grammar/phrase distinctions. They are **not mandatory lesson exercises** and are not optional Word Match activities. Review is selected only by the existing due scheduler after actual formal encounter and internal editorial approval. All use `multiple_choice`, intent `recognition`, `sourceType: original`, `editorialStatus: needs_review`, stable shuffled option IDs, and explicit `scoredTargetIds` naming **only one** target per task. Recognition-only items never require unrestricted Finnish spelling.
+
+**R01 — `ex.getting-around.review.pyora-bicycle`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** In a transport list, which English meaning belongs to pyörä?  
+**Stimulus:** pyörä — recognition-only, transport context (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` bicycle · `b` train platform · `c` station. **Accepted:** `a` bicycle.  
+**Wrong option `b`:** Laituri can mean train platform; pyörä is bicycle/wheel.  
+**Wrong option `c`:** Asema means station.  
+**Correct feedback:** Pyörä is commonly a bicycle in transport context, also wheel.  
+**Wrong feedback:** Pyörä is commonly a bicycle in transport context, also wheel.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Pyörä is commonly a bicycle in transport context, also wheel.  
+**Hint:** None. **Linked:** `vocab.pyora`. **Scored:** `vocab.pyora` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R02 — `ex.getting-around.review.matkalippu-travel-ticket`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does matkalippu mean in a travel notice?  
+**Stimulus:** matkalippu — recognition-only (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` travel ticket · `b` road · `c` rail station. **Accepted:** `a` travel ticket.  
+**Wrong option `b`:** Tie is road.  
+**Wrong option `c`:** Asema is station.  
+**Correct feedback:** Matkalippu means travel ticket.  
+**Wrong feedback:** Matkalippu means travel ticket.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Matkalippu means travel ticket.  
+**Hint:** None. **Linked:** `vocab.matkalippu`. **Scored:** `vocab.matkalippu` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R03 — `ex.getting-around.review.laituri-platform`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** At a railway station, which English meaning fits laituri?  
+**Stimulus:** laituri on a train information screen (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` taxi · `b` platform · `c` city centre. **Accepted:** `b` platform.  
+**Wrong option `a`:** Taksi is taxi, not platform.  
+**Wrong option `c`:** Keskusta is downtown, not platform.  
+**Correct feedback:** Laituri names a train platform in this context; elsewhere it can be a pier.  
+**Wrong feedback:** Laituri names a train platform in this context; elsewhere it can be a pier.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Laituri names a train platform in this context; elsewhere it can be a pier.  
+**Hint:** None. **Linked:** `vocab.laituri`. **Scored:** `vocab.laituri` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R04 — `ex.getting-around.review.lento-flight`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does lento mean in a transport listing?  
+**Stimulus:** lento — recognition-only (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` flight · `b` route · `c` ticket. **Accepted:** `a` flight.  
+**Wrong option `b`:** Reitti is route, not flight.  
+**Wrong option `c`:** Lippu is ticket, not flight.  
+**Correct feedback:** Lento means flight.  
+**Wrong feedback:** Lento means flight.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Lento means flight.  
+**Hint:** None. **Linked:** `vocab.lento`. **Scored:** `vocab.lento` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R05 — `ex.getting-around.review.lentokentta-airport`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does lentokenttä mean?  
+**Stimulus:** lentokenttä — recognition-only place (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` bus stop · `b` airport · `c` rail route. **Accepted:** `b` airport.  
+**Wrong option `a`:** Pysäkki is a stop.  
+**Wrong option `c`:** Reitti is route.  
+**Correct feedback:** Lentokenttä is airport.  
+**Wrong feedback:** Lentokenttä is airport.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Lentokenttä is airport.  
+**Hint:** None. **Linked:** `vocab.lentokentta`. **Scored:** `vocab.lentokentta` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R06 — `ex.getting-around.review.myohassa-late`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** In Juna on myöhässä, what does myöhässä mean?  
+**Stimulus:** Juna on myöhässä. (fictional train status) (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` late · `b` in time · `c` downtown. **Accepted:** `a` late.  
+**Wrong option `b`:** Ajoissa means in time.  
+**Wrong option `c`:** Keskusta is downtown.  
+**Correct feedback:** Myöhässä means late.  
+**Wrong feedback:** Myöhässä means late.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Myöhässä means late.  
+**Hint:** None. **Linked:** `vocab.myohassa`. **Scored:** `vocab.myohassa` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R07 — `ex.getting-around.review.ajoissa-on-time`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does ajoissa mean in Bussi on ajoissa?  
+**Stimulus:** Bussi on ajoissa. (fictional punctual service) (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` a ticket · `b` in time / on time · `c` a train stop. **Accepted:** `b` in time / on time.  
+**Wrong option `a`:** Lippu is ticket.  
+**Wrong option `c`:** Pysäkki is stop.  
+**Correct feedback:** Ajoissa means in time or on time.  
+**Wrong feedback:** Ajoissa means in time or on time.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Ajoissa means in time or on time.  
+**Hint:** None. **Linked:** `vocab.ajoissa`. **Scored:** `vocab.ajoissa` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R08 — `ex.getting-around.review.paasta-reach`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What is the practical navigation meaning of päästä?  
+**Stimulus:** päästä — to reach/get to somewhere, recognition only (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` to drive · `b` to reach / get to · `c` to buy. **Accepted:** `b` to reach / get to.  
+**Wrong option `a`:** Ajaa means drive.  
+**Wrong option `c`:** Ostaa means buy, an earlier verb.  
+**Correct feedback:** Päästä can mean to reach/get to a destination.  
+**Wrong feedback:** Päästä can mean to reach/get to a destination.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Päästä can mean to reach/get to a destination.  
+**Hint:** None. **Linked:** `vocab.paasta`. **Scored:** `vocab.paasta` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R09 — `ex.getting-around.review.ajaa-drive`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** In a transport context, what does ajaa usually mean?  
+**Stimulus:** ajaa — recognition-only dictionary verb (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` to drive · `b` to sleep · `c` to leave. **Accepted:** `a` to drive.  
+**Wrong option `b`:** Nukkua means to sleep.  
+**Wrong option `c`:** Lähteä means leave or set off.  
+**Correct feedback:** Ajaa means to drive in this context.  
+**Wrong feedback:** Ajaa means to drive in this context.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Ajaa means to drive in this context.  
+**Hint:** None. **Linked:** `vocab.ajaa`. **Scored:** `vocab.ajaa` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R10 — `ex.getting-around.review.kaupasta-source`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does Tulen kaupasta say?  
+**Stimulus:** Tulen kaupasta. The shop is the journey's source. (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` I'm going to the shop. · `b` I'm coming from the shop. · `c` I'm in the shop.. **Accepted:** `b` I'm coming from the shop..  
+**Wrong option `a`:** Menen kauppaan is going to shop.  
+**Wrong option `c`:** Olen kaupassa is in shop.  
+**Correct feedback:** Kaupasta means from the shop, a finite -sta source form.  
+**Wrong feedback:** Kaupasta means from the shop, a finite -sta source form.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Kaupasta means from the shop, a finite -sta source form.  
+**Hint:** None. **Linked:** `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R11 — `ex.getting-around.review.bussilla-method`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** Which meaning belongs to Menen bussilla?  
+**Stimulus:** Menen bussilla. (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` I'm going by bus. · `b` I'm inside/on the bus. · `c` I'm going to the bus stop.. **Accepted:** `a` I'm going by bus..  
+**Wrong option `b`:** Olen bussissa expresses being in the bus.  
+**Wrong option `c`:** Pysäkille would express to a stop, not by bus.  
+**Correct feedback:** Menen bussilla describes the method of transport.  
+**Wrong feedback:** Menen bussilla describes the method of transport.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Menen bussilla describes the method of transport.  
+**Hint:** None. **Linked:** `grammar.getting-around.transport-method`. **Scored:** `grammar.getting-around.transport-method` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R12 — `ex.getting-around.review.tanne-motion`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** The speaker says Tule tänne. What should the other person do?  
+**Stimulus:** Tule tänne. — fixed recognition-only imperative (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` come towards the speaker · `b` remain here without moving · `c` go away to another place. **Accepted:** `a` come towards the speaker.  
+**Wrong option `b`:** Olen täällä would state an existing location.  
+**Wrong option `c`:** Menen sinne would say go there.  
+**Correct feedback:** Tänne means towards here, and Tule tänne asks someone to come.  
+**Wrong feedback:** Tänne means towards here, and Tule tänne asks someone to come.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Tänne means towards here, and Tule tänne asks someone to come.  
+**Hint:** None. **Linked:** `grammar.getting-around.here-there-movement`. **Scored:** `grammar.getting-around.here-there-movement` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R13 — `ex.getting-around.review.turn-left`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does Käänny vasemmalle mean?  
+**Stimulus:** Käänny vasemmalle. (fixed short direction) (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` turn right · `b` turn left · `c` go straight. **Accepted:** `b` turn left.  
+**Wrong option `a`:** Right is oikealle.  
+**Wrong option `c`:** Straight ahead is suoraan.  
+**Correct feedback:** Vasemmalle is to the left; this fixed phrase is Turn left.  
+**Wrong feedback:** Vasemmalle is to the left; this fixed phrase is Turn left.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** Vasemmalle is to the left; this fixed phrase is Turn left.  
+**Hint:** None. **Linked:** `phrase.getting-around.kaanny-vasemmalle`. **Scored:** `phrase.getting-around.kaanny-vasemmalle` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R14 — `ex.getting-around.review.how-reach-centre`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** Which English question translates Miten pääsen keskustaan?  
+**Stimulus:** Miten pääsen keskustaan? — recognition-only fixed question (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` How do I get downtown? · `b` Am I downtown now? · `c` Where is the bus ticket?. **Accepted:** `a` How do I get downtown?.  
+**Wrong option `b`:** Olen keskustassa would state being downtown.  
+**Wrong option `c`:** Lippu is a ticket and isn't being asked about.  
+**Correct feedback:** The question asks how to reach the city centre; no productive pääsen paradigm is required.  
+**Wrong feedback:** The question asks how to reach the city centre; no productive pääsen paradigm is required.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** The question asks how to reach the city centre; no productive pääsen paradigm is required.  
+**Hint:** None. **Linked:** `phrase.getting-around.miten-paasen-keskustaan`. **Scored:** `phrase.getting-around.miten-paasen-keskustaan` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R15 — `ex.getting-around.review.where-bus-going`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** What does Minne tämä bussi menee ask?  
+**Stimulus:** Minne tämä bussi menee? — fixed recognition phrase (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` Where does this bus go? · `b` Where is the bus stop? · `c` What time is it?. **Accepted:** `a` Where does this bus go?.  
+**Wrong option `b`:** Pysäkki would refer to the stop, not the bus's destination.  
+**Wrong option `c`:** Mitä kello on? asks the time.  
+**Correct feedback:** The question asks where this bus goes.  
+**Wrong feedback:** The question asks where this bus goes.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** The question asks where this bus goes.  
+**Hint:** None. **Linked:** `phrase.getting-around.minne-tama-bussi-menee`. **Scored:** `phrase.getting-around.minne-tama-bussi-menee` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+**R16 — `ex.getting-around.review.route-straight-right`** · `multiple_choice` · standalone recognition · `reviewEligible: true`  
+**Prompt:** Follow the two short instructions in order. Which route sequence is correct?  
+**Stimulus:** 1. Mene suoraan. 2. Käänny oikealle. (self-contained; no prior lesson slide required).  
+**Options (stable IDs, shuffle visually):** `a` straight, then right · `b` right, then straight · `c` straight, then left. **Accepted:** `a` straight, then right.  
+**Wrong option `b`:** This reverses the order.  
+**Wrong option `c`:** Vasemmalle is left, but the instruction says oikealle/right.  
+**Correct feedback:** First go straight, then turn right.  
+**Wrong feedback:** First go straight, then turn right.  
+**Near feedback:** None; don't grant unsupported partial credit. **Not sure:** First go straight, then turn right.  
+**Hint:** None. **Linked:** `grammar.getting-around.direction-instruction`. **Scored:** `grammar.getting-around.direction-instruction` only. **Review eligible:** true. **Editorial:** `needs_review`.  
+
+## Part IV — Unit 8 and A1 Foundations completion contract
+
+### Five practical Unit 8 abilities — explicit authored evidence
+
+| Blueprint ability | Assessed task | Evidence level |
+|---|---|---|
+| Identify an appropriate transport noun | F14 (train), plus A05/A11/A12 and source-specific recognition | Contextual multiple choice |
+| Ask where the station is | F15 `Missä asema on?` | **Independent production**, two explicitly accepted order variants |
+| Say you're going downtown | F16 `Menen keskustaan.` | **Independent production** of a finite destination phrase |
+| Understand movement from somewhere | F17 `Tulen kaupasta.`; E01/E02/E18/E19 | **Recognition of finite** source forms, not unrestricted production |
+| Follow a straight/right/left instruction | F13 three-step route; R16 two-step due Review | **Ordered comprehension**, no graphical map needed |
+
+### Small cross-unit A1 Foundations closing assessment
+
+F18 recognises `Hei! Olen Aino.` (Unit 1). F19 independently retrieves `Tänään juon kahvia.` (Unit 5 food + Unit 6 routine). F20 independently retrieves `Talo on punainen.` (Unit 4 place + Unit 7 description). F21 combines a three-line fictional story, with the exact accepted model:
+
+```text
+Hei! Olen Aino.
+Tänään juon kahvia.
+Menen keskustaan.
+```
+
+This is **one capability-only exercise**: `knowledgeScoring: false`, `scoredTargetIds: []`. The English cues specify all three required meanings and order; no open-ended AI grade. If N1 cannot preserve line boundaries in one field, use three scoped `text_input` subfields with authored acceptance per sentence. Do not accidentally generate multiple vocabulary successes from a single reconstructed story.
+
+### Stage-completion semantics
+
+The app may mark `stage.a1-foundations` **curricularly complete** after all eight units' required lessons and checkpoints have been attempted (including explicit Not sure), without a perfect-score requirement. Knowledge state and scheduled Review due dates remain separate and may continue after completion. No automatic “CEFR A1 certified” or permanently mastered labels. Any next-stage content remains deferred.
+
+### Scope and source note
+
+Unit 8 reuses actual Unit 4 phrases `Missä se on?` and `Minne menet?` as Review. It intentionally does not teach all six local cases, generate arbitrary destination/source forms, generalise imperatives, score recognition-only `päästä` as productive, invent dynamic transit schedules, or add a map/audio system. Source evidence and editorial limits are documented in the companion QA file; no external teacher has reviewed this full authored set. Owner approval is sufficient for internal authoring status.
+
