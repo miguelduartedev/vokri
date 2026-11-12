@@ -97,15 +97,15 @@ Read with [Exercise Authoring Standard v1](./exercise-authoring-standard-v1.md),
 
 | Lesson | Required ordered steps | Required exercise records | Matching pair responses | Estimated study duration |
 |---|---:|---:|---:|---|
-| 5.1 Coffee, tea and water | 17 | 13 | 2 | 8–12 min |
+| 5.1 Coffee, tea and water | 17 | 13 | 4 | 8–12 min |
 | 5.2 Food you actually use | 17 | 13 | 6 | 8–12 min |
 | 5.3 Asking for something | 15 | 11 | 2 | 7–10 min |
 | 5.4 A little, a lot, two | 17 | 13 | 2 | 8–12 min |
 | 5.5 How much is it? | 27 | 19 | 7 | 13–19 min |
 | 5.6 Café and shop review | 6 | 13 (ten in final checkpoint) | 0 | 9–14 min |
-| **Total** | **99 required + one optional spoken note** | **82** | **19** | **53–79 min** |
+| **Total** | **99 required + one optional spoken note** | **82** | **21** | **53–79 min** |
 
-There are **eight matching exercise records** with 19 pair responses, giving **82-8+19 = 93 required learner response units** before the effort of multiword text entry. Lesson 5.5 is deliberately the heaviest due to six production words; the unit has natural pause/resume boundaries. No added seventh lesson.
+There are **nine matching exercise records** with 21 pair responses, giving **82-9+21 = 94 required learner response units** before the effort of multiword text entry. Lesson 5.5 is deliberately the heaviest due to six production words; the unit has natural pause/resume boundaries. No added seventh lesson.
 
 ## Part II — Fully authored lessons
 
@@ -169,15 +169,15 @@ Full ID prefix `step.food-and-quantities.coffee-tea-water.` + suffix. Every row 
 **Not sure:** Write tee.  
 **Hint:** null. **Linked:** `vocab.tee`. **Scored:** `vocab.tee`. **Review eligible:** true; independent of original lesson step. **Editorial:** `needs_review`.
 
-**A04 — `ex.food-and-quantities.coffee-tea-water.water-milk-meaning`** · `multiple_choice` · intent recognition · demand guided recognition · difficulty foundation  
-**Prompt:** Which Finnish word names water rather than milk or tea?  
-**Stimulus:** water  
-**Answer:** Options (IDs stable; shuffle display): `a` maito · `b` vesi · `c` tee. Accepted ID: `b`.  
-**Correct feedback:** Vesi means water.  
-**Incorrect feedback:** `a`: Maito means milk. `c`: Tee means tea.  
-**Near feedback:** None (do not invent near credit).  
-**Not sure:** Water is vesi.  
-**Hint:** null. **Linked:** `vocab.vesi`, `vocab.maito`, `vocab.tee`. **Scored:** `vocab.vesi`. **Review eligible:** true; independent of original lesson step. **Editorial:** `needs_review`.
+**A04 — `ex.food-and-quantities.coffee-tea-water.water-milk-meaning`** · `matching` · intent recognition · demand guided recognition · difficulty foundation  
+**Prompt:** Match the two new Finnish drink words to their meanings.  
+**Stimulus:** Two different drinks; no Finnish typing.  
+**Answer:** Pairs, each independently scored on first attempt: **vesi** ↔ **water** (`vocab.vesi`); **maito** ↔ **milk** (`vocab.maito`). Shuffle both columns; accept only these identities.  
+**Correct feedback:** Vesi means water; maito means milk.  
+**Incorrect feedback:** `vesi`: Vesi means water, not milk. `maito`: Maito means milk, not water.  
+**Near feedback:** None.  
+**Not sure:** vesi = water; maito = milk.  
+**Hint:** null. **Linked:** `vocab.vesi`, `vocab.maito`. **Scored:** `vocab.vesi`, `vocab.maito`, first-attempt pair outcomes. **Review eligible:** false; lesson-local two-pair matching. **Editorial:** `needs_review`.
 
 **A05 — `ex.food-and-quantities.coffee-tea-water.type-vesi`** · `text_input` · intent recall · demand independent dictionary-form recall · difficulty recall  
 **Prompt:** Type the Finnish dictionary word for water.  
