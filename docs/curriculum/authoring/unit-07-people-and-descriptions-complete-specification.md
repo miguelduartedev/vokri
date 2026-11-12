@@ -775,3 +775,211 @@ Each record: `fi`, `sourceType: original`, `editorialStatus: needs_review`, full
 
 **Headline:** “Whose, and with whom.” **Copy:** “You can recognise a few genitive forms and say that you live with a friend or partner.” **Required steps:** 22; **optional spoken note:** 1; **exercises:** 17; **matching pair decisions:** 3. **Next:** Lesson 7.4 — Describing someone. Genitive recognition is not mastery of arbitrary noun inflections.
 
+## Lesson 7.4 — Describing someone
+
+**ID:** `lesson.people-and-descriptions.describing-someone` · `unit.people-and-descriptions` · `fi` · Order 4 · **Estimated 10–15 minutes**, untested. **Prerequisite:** Lesson 7.3. **New production:** `vocab.iso`, `vocab.pieni`, `vocab.vanha`, `vocab.nuori`, `vocab.pitka`, `vocab.lyhyt`. **Recognition-only:** `vocab.kaunis`, `vocab.mukava`. **Grammar:** `grammar.people.predicative-singular`. **Support:** `vocab.han`, `vocab.olla`, `vocab.talo`, `vocab.huone`.  
+**Capability:** make simple singular descriptions of a fictional person or familiar concrete thing. **Completion:** required steps visited; D01–D16 attempted or Not sure. No appearance stereotypes or case-agreement paradigm.
+
+### Ordered learner experience
+
+Step IDs use `step.people-and-descriptions.describing-someone.<suffix>`.
+
+| # | Step suffix | Type | Exact teaching text or exercise reference | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Describe someone simply.** Finnish can use a familiar pattern, Hän on + adjective, without a full adjective grammar table. We will practise size, age and height using fictional people or familiar objects. A person's value is never part of the assessment. | none | Yes |
+| 2 | `size-words` | `vocabulary_intro` | **iso — big; pieni — small.** Use these for familiar concrete things such as a talo (house) or huone (room). A sentence like Talo on iso uses the already known verb on. | `vocab.iso`, `vocab.pieni` | Yes |
+| 3 | `practice-01` | `exercise` | D01 | none | Yes |
+| 4 | `age-words` | `vocabulary_intro` | **vanha — old; nuori — young.** These are neutral age words in our fictional examples; do not infer someone's age from appearance or require self-descriptions. | `vocab.vanha`, `vocab.nuori` | Yes |
+| 5 | `practice-02` | `exercise` | D02 | none | Yes |
+| 6 | `height-words` | `vocabulary_intro` | **pitkä — tall** in a person's height description; it can also mean **long** for a suitable object or time span. **lyhyt — short** in height or length contexts. The English gloss must match the scenario. | `vocab.pitka`, `vocab.lyhyt` | Yes |
+| 7 | `practice-03` | `exercise` | D03 | none | Yes |
+| 8 | `recognise-extra-adjectives` | `vocabulary_intro` | Recognition only: **kaunis — beautiful**, **mukava — nice/pleasant**. You may recognise them in examples but are not required to type them as productive new adjectives. | `vocab.kaunis`, `vocab.mukava` | Yes |
+| 9 | `practice-04` | `exercise` | D04 | none | Yes |
+| 10 | `practice-05` | `exercise` | D05 | none | Yes |
+| 11 | `predicate-explanation` | `grammar_explanation` | **Hän on pitkä.** — That person is tall. **Hän on nuori.** — That person is young. In these **singular** simple descriptions, the adjective after on keeps its taught basic form. This is not a full table of adjective agreement. | `grammar.people.predicative-singular` | Yes |
+| 12 | `practice-06` | `exercise` | D06 | none | Yes |
+| 13 | `practice-07` | `exercise` | D07 | none | Yes |
+| 14 | `practice-08` | `exercise` | D08 | none | Yes |
+| 15 | `practice-09` | `exercise` | D09 | none | Yes |
+| 16 | `practice-10` | `exercise` | D10 | none | Yes |
+| 17 | `practice-11` | `exercise` | D11 | none | Yes |
+| 18 | `object-examples` | `example_set` | **Talo on iso.** — The house is big. **Huone on pieni.** — The room is small. Both nouns were taught in Unit 4. No new case forms of the nouns or adjectives are required here. | none | Yes |
+| 19 | `practice-12` | `exercise` | D12 | none | Yes |
+| 20 | `checkpoint` | `checkpoint` | **Lesson checkpoint D13–D16:** retrieve a taught adjective in a genuine singular sentence and distinguish height from size; no plural agreement. | none | Yes |
+
+### Complete authored exercises
+
+All exercises use standard Finnish, the existing N1 grader, explicit target scoping, and editorial status needs_review. The two/three-pair recognition boards each score the target item independently on first attempt.
+
+**D01 — `ex.people-and-descriptions.describing-someone.size-match`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the two size adjectives to their meanings.  
+**Stimulus:** Use the Finnish dictionary forms.  
+**Pairs (2 independent first-attempt decisions):** **iso ↔ big** scoring `vocab.iso`; **pieni ↔ small** scoring `vocab.pieni`. Contextual glosses prevent ambiguity.  
+**Correct feedback:** Iso means big, pieni means small.  
+**Wrong feedback:** Big is iso; small is pieni.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** iso → big; pieni → small.  
+**Hint:** None. **Linked:** `vocab.iso`, `vocab.pieni`. **Scored:** `vocab.iso`, `vocab.pieni`. **Review eligible:** false, guided board. **Editorial:** `needs_review`.  
+
+**D02 — `ex.people-and-descriptions.describing-someone.age-match`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the two age descriptions with their meanings.  
+**Stimulus:** These are adjectives, not claims about your personal age.  
+**Pairs (2 independent first-attempt decisions):** **nuori ↔ young** scoring `vocab.nuori`; **vanha ↔ old** scoring `vocab.vanha`. Contextual glosses prevent ambiguity.  
+**Correct feedback:** Nuori means young; vanha means old.  
+**Wrong feedback:** Vanha and nuori describe contrasting ages, not size.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** nuori → young; vanha → old.  
+**Hint:** None. **Linked:** `vocab.nuori`, `vocab.vanha`. **Scored:** `vocab.nuori`, `vocab.vanha`. **Review eligible:** false, guided board. **Editorial:** `needs_review`.  
+
+**D03 — `ex.people-and-descriptions.describing-someone.height-match`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the adjectives for tall and short.  
+**Stimulus:** In this board the context is a person's height.  
+**Pairs (2 independent first-attempt decisions):** **pitkä ↔ tall** scoring `vocab.pitka`; **lyhyt ↔ short** scoring `vocab.lyhyt`. Contextual glosses prevent ambiguity.  
+**Correct feedback:** Pitkä means tall here, lyhyt means short.  
+**Wrong feedback:** In a height description, pitkä is tall and lyhyt is short. Pitkä can also mean long in another context.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** pitkä → tall; lyhyt → short (height context).  
+**Hint:** None. **Linked:** `vocab.pitka`, `vocab.lyhyt`. **Scored:** `vocab.pitka`, `vocab.lyhyt`. **Review eligible:** false, guided board. **Editorial:** `needs_review`.  
+
+**D04 — `ex.people-and-descriptions.describing-someone.kaunis-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does kaunis mean in a simple description?  
+**Stimulus:** A fictional context: Hän on kaunis.  
+**Options (keyed, shuffle visually):** `a` beautiful · `b` tall · `c` small. **Correct:** `a` beautiful.  
+**Wrong `b`:** Tall would be pitkä.  
+**Wrong `c`:** Small would be pieni.  
+**Correct feedback:** Kaunis means beautiful, a recognition-only word for now.  
+**Wrong feedback:** Kaunis is beautiful; it's not another word for tall or small.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Kaunis means beautiful.  
+**Hint:** None. **Linked:** `vocab.kaunis`. **Scored:** `vocab.kaunis`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D05 — `ex.people-and-descriptions.describing-someone.mukava-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In an everyday description, how can mukava be understood?  
+**Stimulus:** A fictional person is described as mukava.  
+**Options (keyed, shuffle visually):** `a` old · `b` nice / pleasant · `c` short. **Correct:** `b` nice / pleasant.  
+**Wrong `a`:** Vanha means old.  
+**Wrong `c`:** Lyhyt means short.  
+**Correct feedback:** Mukava often means nice or pleasant, in context.  
+**Wrong feedback:** Mukava means nice/pleasant; it isn't one of the six production adjectives.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Mukava is nice/pleasant.  
+**Hint:** None. **Linked:** `vocab.mukava`. **Scored:** `vocab.mukava`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D06 — `ex.people-and-descriptions.describing-someone.retrieve-iso`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'big'.  
+**Stimulus:** big  
+**Accepted after N1:** `iso`.  
+**Correct feedback:** Iso is big.  
+**Wrong feedback:** Write iso; pieni is small.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write iso.  
+**Hint:** None. **Linked:** `vocab.iso`. **Scored:** `vocab.iso`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D07 — `ex.people-and-descriptions.describing-someone.retrieve-pieni`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'small'.  
+**Stimulus:** small  
+**Accepted after N1:** `pieni`.  
+**Correct feedback:** Pieni means small.  
+**Wrong feedback:** Write pieni, not iso.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write pieni.  
+**Hint:** None. **Linked:** `vocab.pieni`. **Scored:** `vocab.pieni`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D08 — `ex.people-and-descriptions.describing-someone.retrieve-vanha`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'old'.  
+**Stimulus:** old (age context)  
+**Accepted after N1:** `vanha`.  
+**Correct feedback:** Vanha is old.  
+**Wrong feedback:** Write vanha; nuori is young.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write vanha.  
+**Hint:** None. **Linked:** `vocab.vanha`. **Scored:** `vocab.vanha`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D09 — `ex.people-and-descriptions.describing-someone.retrieve-nuori`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'young'.  
+**Stimulus:** young  
+**Accepted after N1:** `nuori`.  
+**Correct feedback:** Nuori means young.  
+**Wrong feedback:** Write nuori, not vanha.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write nuori.  
+**Hint:** None. **Linked:** `vocab.nuori`. **Scored:** `vocab.nuori`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D10 — `ex.people-and-descriptions.describing-someone.retrieve-pitka`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'tall' in a height description.  
+**Stimulus:** a tall person  
+**Accepted after N1:** `pitkä`.  
+**Correct feedback:** Pitkä describes tall height; it can also mean long in other contexts.  
+**Wrong feedback:** Write pitkä with ä. Lyhyt is short.  
+**Near feedback:** `pitka` → The last vowel is ä, so write pitkä.  
+**Not sure:** Write pitkä.  
+**Hint:** None. **Linked:** `vocab.pitka`. **Scored:** `vocab.pitka`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D11 — `ex.people-and-descriptions.describing-someone.retrieve-lyhyt`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish adjective for 'short' in a height description.  
+**Stimulus:** a short person  
+**Accepted after N1:** `lyhyt`.  
+**Correct feedback:** Lyhyt means short in this context.  
+**Wrong feedback:** Write lyhyt. Pitkä means tall here.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write lyhyt.  
+**Hint:** None. **Linked:** `vocab.lyhyt`. **Scored:** `vocab.lyhyt`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D12 — `ex.people-and-descriptions.describing-someone.predicate-tall`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
+**Prompt:** Which complete sentence says 'That person is tall'?  
+**Stimulus:** A fictional person's height, in a singular predicative sentence.  
+**Options (keyed, shuffle visually):** `a` Hän on pitkä. · `b` Hän on pitkän. · `c` Hän on pitkässä.. **Correct:** `a` Hän on pitkä..  
+**Wrong `b`:** Pitkän is not the taught predicate form in this sentence.  
+**Wrong `c`:** Pitkässä is a different inflected form and is not used in this basic description.  
+**Correct feedback:** Hän on pitkä. uses the singular adjective in its basic form.  
+**Wrong feedback:** With a singular person and on, the taught predicate is pitkä, not genitive or inessive.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Hän on pitkä.  
+**Hint:** None. **Linked:** `vocab.pitka`, `vocab.han`, `grammar.people.predicative-singular`. **Scored:** `grammar.people.predicative-singular`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D13 — `ex.people-and-descriptions.describing-someone.type-young-person`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Describe a fictional person as young: type 'He/she is young' in standard Finnish.  
+**Stimulus:** A singular person; remember hän does not indicate gender.  
+**Accepted after N1:** `Hän on nuori.`.  
+**Correct feedback:** Hän on nuori. is a simple singular description.  
+**Wrong feedback:** Use Hän on followed by the adjective nuori, not a plural form.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write Hän on nuori.  
+**Hint:** None. **Linked:** `vocab.nuori`, `vocab.han`, `grammar.people.predicative-singular`. **Scored:** `vocab.nuori`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D14 — `ex.people-and-descriptions.describing-someone.house-is-big`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence describes a house as big?  
+**Stimulus:** The noun talo was taught in Unit 4.  
+**Options (keyed, shuffle visually):** `a` Talo on iso. · `b` Talo on pieni. · `c` Talo on vanha.. **Correct:** `a` Talo on iso..  
+**Wrong `b`:** Talo on pieni means the house is small.  
+**Wrong `c`:** Talo on vanha means the house is old.  
+**Correct feedback:** Talo on iso. describes a big house with a simple singular predicate.  
+**Wrong feedback:** Use iso for big. Don't change the already known noun talo.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Talo on iso.  
+**Hint:** None. **Linked:** `vocab.iso`, `vocab.talo`, `grammar.people.predicative-singular`. **Scored:** `vocab.iso`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D15 — `ex.people-and-descriptions.describing-someone.room-is-small`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'The room is small' using the taught noun huone and adjective pieni.  
+**Stimulus:** A fictional room; don't describe anything personal.  
+**Accepted after N1:** `Huone on pieni.`.  
+**Correct feedback:** Huone on pieni. is a natural simple description of a room.  
+**Wrong feedback:** Use Huone on pieni; the adjective is in its basic form.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Write Huone on pieni.  
+**Hint:** None. **Linked:** `vocab.pieni`, `vocab.huone`, `grammar.people.predicative-singular`. **Scored:** `vocab.pieni`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D16 — `ex.people-and-descriptions.describing-someone.final-short-person`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Independently type 'That person is short' using hän and the taught adjective.  
+**Stimulus:** A fictional person, height context.  
+**Accepted after N1:** `Hän on lyhyt.`.  
+**Correct feedback:** Hän on lyhyt. is a complete and neutral height description.  
+**Wrong feedback:** Use lyhyt for short, not pitkä.  
+**Near feedback:** None; don't invent near credit.  
+**Not sure:** Hän on lyhyt.  
+**Hint:** None. **Linked:** `vocab.lyhyt`, `vocab.han`, `grammar.people.predicative-singular`. **Scored:** `vocab.lyhyt`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Describe someone or something.” **Copy:** “You can use familiar on-sentences with basic adjectives to describe a person or object.” **Steps:** 20 required; **exercises:** 16; **matching pairs:** 6. **Next:** Lesson 7.5 — Basic colours. No adjectives are promoted from recognition-only unless explicitly in the new production list.
+
