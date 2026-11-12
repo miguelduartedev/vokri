@@ -314,3 +314,194 @@ Every exercise below has `sourceType: original`, `editorialStatus: needs_review`
 
 **Ready to continue:** “You can recognise morning and evening and say when you wake or sleep.” 19 required LessonSteps; 14 required exercise records; one two-pair matching board produces an additional matching decision. Not sure is a valid attempt; no perfect score or permanent mastery claim. **Next:** Lesson 6.2 — Eat, drink, today, tomorrow. Any incorrect target enters the *existing* scheduled Review rules, not a second practice engine.
 
+## Lesson 6.2 — Eat, drink, today, tomorrow
+
+**ID:** `lesson.daily-life.eat-drink-today-tomorrow` · `unit.daily-life` · `fi` · Order 2 · **Duration:** 10–15 minutes (untested). **Prerequisite:** `lesson.daily-life.morning-evening`.  
+**Capability:** Say what you eat/drink today or tomorrow using known food/drink forms. **New production:** `vocab.syoda`, `vocab.juoda`, `vocab.tanaan`, `vocab.huomenna`. **New recognition:** `vocab.eilen`. **Earlier unit reuse:** `vocab.kahvi`, `vocab.tee`, `vocab.vesi`, `vocab.leipa`, `vocab.ruoka`.  
+**Completion:** all required steps and B01–B14 attempted or Not sure. **Pause:** After B05 before independent text recall. No perfect score, no new case lesson.
+
+### Ordered learner experience
+
+Full ID prefix `step.daily-life.eat-drink-today-tomorrow.` plus each suffix. Only the formal introductions emit new encounter events; review words are context only.
+
+| # | Step suffix | Type | Exact teaching content / exercise | New formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Today and tomorrow.** You know foods and drinks from Unit 5. Now add two verbs so you can say what you eat and drink, and two time words so you can talk about today or tomorrow. | none | Yes |
+| 2 | `dictionary-verbs` | `vocabulary_intro` | **syödä — to eat; juoda — to drink.** These are dictionary forms. Finnish changes the verb when you say what *I* do; you'll learn those exact forms shortly. | `vocab.syoda`, `vocab.juoda` | Yes |
+| 3 | `time-words` | `vocabulary_intro` | **tänään — today; huomenna — tomorrow.** These short time words can appear before or after a familiar present-tense activity. | `vocab.tanaan`, `vocab.huomenna` | Yes |
+| 4 | `yesterday-recognition` | `vocabulary_intro` | **eilen — yesterday.** Recognition only. You'll understand this when reading a calendar, but you do **not** need Finnish past-tense production in Unit 6. | `vocab.eilen` | Yes |
+| 5 | `practice-01` | `exercise` | B01 | none | Yes |
+| 6 | `practice-02` | `exercise` | B02 | none | Yes |
+| 7 | `practice-03` | `exercise` | B03 | none | Yes |
+| 8 | `practice-04` | `exercise` | B04 | none | Yes |
+| 9 | `i-eat-i-drink` | `grammar_explanation` | **Talking about yourself:** syödä becomes **syön** (“I eat”); juoda becomes **juon** (“I drink”). Memorise these two useful forms, not an invented universal rule. You learned similar person changes earlier. | none | Yes |
+| 10 | `practice-05` | `exercise` | B05 | none | Yes |
+| 11 | `food-reuse` | `example_set` | **Juon kahvia.** — I drink coffee. **Syön leipää.** — I eat bread. The drink/food forms kahvia and leipää were taught in Unit 5; they are not newly introduced or independently scored here. | none | Yes |
+| 12 | `practice-06` | `exercise` | B06 | none | Yes |
+| 13 | `practice-07` | `exercise` | B07 | none | Yes |
+| 14 | `practice-08` | `exercise` | B08 | none | Yes |
+| 15 | `practice-09` | `exercise` | B09 | none | Yes |
+| 16 | `practice-10` | `exercise` | B10 | none | Yes |
+| 17 | `practice-11` | `exercise` | B11 | none | Yes |
+| 18 | `temporal-context` | `grammar_explanation` | **No future tense required here.** Finnish often uses a present form with **huomenna** to talk about a future plan: **Huomenna juon vettä.** Keep this as a practical beginner sentence; do not learn a separate future conjugation. | none | Yes |
+| 19 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint B12–B14:** Build a taught day-and-drink sentence, distinguish today/tomorrow, and retrieve a complete phrase. All tasks are individually assessed. | none | Yes |
+| 20 | `review-contrast` | `example_set` | **Tänään syön ruokaa.** — Today I eat food. **Huomenna juon teetä.** — Tomorrow I drink tea. The contrast is the time word and the action, not an unfamiliar noun inflection. | none | Yes |
+
+### Complete authored exercises
+
+All records: `sourceType: original`, `editorialStatus: needs_review`, `reviewedBy: null`, `learningLanguage: fi`; deterministic N1 and the shared wrong-vs-Almost adapter; no assumed review success.
+
+**B01 — `ex.daily-life.eat-drink-today-tomorrow.eat-or-drink`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** You see the dictionary word syödä. Which action is it?  
+**Stimulus:** syödä  
+**Options:** `a` eat · `b` drink · `c` sleep; **correct:** `a` eat. Shuffle visually by option ID.  
+**Wrong `b`:** Juoda means drink.  
+**Wrong `c`:** Nukkua means sleep.  
+**Correct:** Syödä means eat, while juoda means drink.  
+**Wrong:** The action syödä is eating.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** Syödä is to eat.  
+**Hint:** None. **Linked:** `vocab.syoda`, `vocab.juoda`. **Scored:** `vocab.syoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B02 — `ex.daily-life.eat-drink-today-tomorrow.drink-meaning`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** What does juoda mean?  
+**Stimulus:** juoda  
+**Options:** `a` to eat · `b` to drink · `c` to go; **correct:** `b` to drink. Shuffle visually by option ID.  
+**Wrong `a`:** Syödä is eat, not drink.  
+**Wrong `c`:** Mennä is go, an earlier action verb.  
+**Correct:** Juoda is to drink.  
+**Wrong:** Juoda is to drink; syödä is to eat.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** Juoda means drink.  
+**Hint:** None. **Linked:** `vocab.juoda`, `vocab.syoda`. **Scored:** `vocab.juoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B03 — `ex.daily-life.eat-drink-today-tomorrow.today-tomorrow`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** You plan to do something on the next day, not today. Which word fits?  
+**Stimulus:** tomorrow  
+**Options:** `a` tänään · `b` huomenna · `c` aamulla; **correct:** `b` huomenna. Shuffle visually by option ID.  
+**Wrong `a`:** Tänään means today.  
+**Wrong `c`:** Aamulla means in the morning; it does not mean tomorrow.  
+**Correct:** Huomenna means tomorrow; tänään means today.  
+**Wrong:** The word for tomorrow is huomenna.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** Huomenna is tomorrow.  
+**Hint:** None. **Linked:** `vocab.huomenna`, `vocab.tanaan`. **Scored:** `vocab.huomenna`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B04 — `ex.daily-life.eat-drink-today-tomorrow.eilen-recognition`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** Which English meaning belongs to eilen?  
+**Stimulus:** eilen (recognition only)  
+**Options:** `a` yesterday · `b` tomorrow · `c` today; **correct:** `a` yesterday. Shuffle visually by option ID.  
+**Wrong `b`:** Tomorrow is huomenna.  
+**Wrong `c`:** Today is tänään.  
+**Correct:** Eilen means yesterday. You won't need to describe yesterday in Finnish yet.  
+**Wrong:** Eilen means yesterday; we are not introducing past-tense sentences.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** Eilen is yesterday.  
+**Hint:** None. **Linked:** `vocab.eilen`. **Scored:** `vocab.eilen`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B05 — `ex.daily-life.eat-drink-today-tomorrow.first-person-pair`** · `matching` · `grammar` · difficulty `controlled`  
+**Prompt:** Match the two taught first-person verb forms to the right actions.  
+**Stimulus:** These are I-forms, not infinitives.  
+**Pairs (2 separate first-attempt decisions):** **syön ↔ I eat** (`vocab.syoda`); **juon ↔ I drink** (`vocab.juoda`). Shuffle columns independently.  
+**Correct:** Syön is I eat; juon is I drink.  
+**Wrong:** Check the distinct middle vowels and the actions: syön (eat), juon (drink).  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** syön → I eat; juon → I drink.  
+**Hint:** None. **Linked:** `vocab.syoda`, `vocab.juoda`, `grammar.daily-life.first-person-forms`. **Scored:** `vocab.syoda`, `vocab.juoda`. **Review eligible:** false (lesson scaffold / matching). **Editorial:** `needs_review`.  
+
+**B06 — `ex.daily-life.eat-drink-today-tomorrow.type-syon`** · `text_input` · `controlled_production` · difficulty `controlled`  
+**Prompt:** Type the taught one-word Finnish form for “I eat.”  
+**Stimulus:** I eat  
+**N1 accepted:** `syön`; no fuzzy synonyms.  
+**Correct:** Syön is the first-person form of syödä.  
+**Wrong:** Use syön, not the dictionary form syödä.  
+**Near:** `syon` → Finnish ö is essential: syön, not syon.  
+**Not sure:** Write syön.  
+**Hint:** None. **Linked:** `vocab.syoda`. **Scored:** `vocab.syoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B07 — `ex.daily-life.eat-drink-today-tomorrow.type-juon`** · `text_input` · `controlled_production` · difficulty `controlled`  
+**Prompt:** Type the taught one-word Finnish form for “I drink.”  
+**Stimulus:** I drink  
+**N1 accepted:** `juon`; no fuzzy synonyms.  
+**Correct:** Juon is the first-person form of juoda.  
+**Wrong:** The I-form is juon; the dictionary word is juoda.  
+**Near:** `juodan` → Don't add -n directly to juoda: the form is juon.  
+**Not sure:** Write juon.  
+**Hint:** None. **Linked:** `vocab.juoda`. **Scored:** `vocab.juoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B08 — `ex.daily-life.eat-drink-today-tomorrow.type-tanaan`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word for “today.”  
+**Stimulus:** today  
+**N1 accepted:** `tänään`; no fuzzy synonyms.  
+**Correct:** Tänään means today.  
+**Wrong:** Today is tänään; tomorrow is huomenna.  
+**Near:** `tanaan` → Write the ä vowels: tänään.; `tänän` → The word is tänään with the correct long vowel.  
+**Not sure:** Write tänään.  
+**Hint:** None. **Linked:** `vocab.tanaan`. **Scored:** `vocab.tanaan`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B09 — `ex.daily-life.eat-drink-today-tomorrow.type-huomenna`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word for “tomorrow.”  
+**Stimulus:** tomorrow  
+**N1 accepted:** `huomenna`; no fuzzy synonyms.  
+**Correct:** Huomenna means tomorrow.  
+**Wrong:** Use huomenna for tomorrow, not tänään.  
+**Near:** `huomena` → Write the double n: huomenna.  
+**Not sure:** Write huomenna.  
+**Hint:** None. **Linked:** `vocab.huomenna`. **Scored:** `vocab.huomenna`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B10 — `ex.daily-life.eat-drink-today-tomorrow.drink-coffee`** · `text_input` · `contextual_application` · difficulty `contextual`  
+**Prompt:** Type the taught Finnish sentence “I drink coffee.”  
+**Stimulus:** I drink coffee. Unit 5 taught the form kahvia.  
+**N1 accepted:** `Juon kahvia.`, `Minä juon kahvia.`; no fuzzy synonyms.  
+**Correct:** Juon kahvia combines the new verb with the familiar drink form from Unit 5.  
+**Wrong:** Use juon for the action and kahvia for an unspecified amount of coffee.  
+**Near:** `Juoda kahvia` → Use juon for “I drink”; juoda is the dictionary form.  
+**Not sure:** Write Juon kahvia.  
+**Hint:** None. **Linked:** `vocab.juoda`, `vocab.kahvi`. **Scored:** `vocab.juoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B11 — `ex.daily-life.eat-drink-today-tomorrow.eat-bread`** · `text_input` · `contextual_application` · difficulty `contextual`  
+**Prompt:** Type the taught Finnish sentence “I eat bread.”  
+**Stimulus:** I eat bread. Unit 5 taught leipää.  
+**N1 accepted:** `Syön leipää.`, `Minä syön leipää.`; no fuzzy synonyms.  
+**Correct:** Syön leipää uses the existing taught food form.  
+**Wrong:** Use syön for I eat, and leipää for bread in this context.  
+**Near:** `syon leipaa` → Write ö and ä as taught: Syön leipää.  
+**Not sure:** Write Syön leipää.  
+**Hint:** None. **Linked:** `vocab.syoda`, `vocab.leipa`. **Scored:** `vocab.syoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B12 — `ex.daily-life.eat-drink-today-tomorrow.today-tea-tiles`** · `token_build` · `controlled_construction` · difficulty `controlled`  
+**Prompt:** Build a sentence meaning “Today I drink tea” with all three supplied tiles.  
+**Stimulus:** Use today's word, the I-form and the taught partitive of tea.  
+**Shuffled tiles:** `teetä`, `juon`, `Tänään`; **accepted whole sequences:** `Tänään juon teetä.`, `Juon teetä tänään.`. This is guided token arrangement, not unaided spelling.  
+**Correct:** Tänään juon teetä. combines today with an everyday drink.  
+**Wrong:** The verb is juon, tea in a request/drink context is teetä, and today is tänään.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** One natural sentence is Tänään juon teetä.  
+**Hint:** None. **Linked:** `vocab.tanaan`, `vocab.juoda`, `vocab.tee`. **Scored:** `vocab.tanaan`. **Review eligible:** false (lesson scaffold / matching). **Editorial:** `needs_review`.  
+
+**B13 — `ex.daily-life.eat-drink-today-tomorrow.tomorrow-context`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence says you will drink water tomorrow?  
+**Stimulus:** The Finnish present form can be used with a clear future time word.  
+**Options:** `a` Tänään juon vettä. · `b` Huomenna juon vettä. · `c` Huomenna syön vettä.; **correct:** `b` Huomenna juon vettä.. Shuffle visually by option ID.  
+**Wrong `a`:** Tänään means today, not tomorrow.  
+**Wrong `c`:** Syön is eat; you drink water using juon.  
+**Correct:** Huomenna juon vettä. uses tomorrow and the right verb.  
+**Wrong:** Use huomenna for tomorrow and juon for a drink.  
+**Near:** None; do not invent an Almost trigger.  
+**Not sure:** Choose Huomenna juon vettä.  
+**Hint:** None. **Linked:** `vocab.huomenna`, `vocab.juoda`, `vocab.vesi`. **Scored:** `vocab.huomenna`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+**B14 — `ex.daily-life.eat-drink-today-tomorrow.tomorrow-water-recall`** · `text_input` · `contextual_application` · difficulty `contextual`  
+**Prompt:** Without seeing any Finnish options, write “Tomorrow I drink water.”  
+**Stimulus:** Tomorrow I drink water. Use only the forms taught in Units 5 and 6.  
+**N1 accepted:** `Huomenna juon vettä.`, `Juon vettä huomenna.`, `Minä juon vettä huomenna.`, `Huomenna minä juon vettä.`; no fuzzy synonyms.  
+**Correct:** Huomenna juon vettä. is a complete, natural statement about tomorrow.  
+**Wrong:** The sentence needs huomenna (tomorrow), juon (I drink) and vettä (water).  
+**Near:** `huomenna juon vesi` → Use the previously taught drink form vettä, not the dictionary form vesi.  
+**Not sure:** Write Huomenna juon vettä.  
+**Hint:** None. **Linked:** `vocab.huomenna`, `vocab.juoda`, `vocab.vesi`. **Scored:** `vocab.juoda`. **Review eligible:** true (standalone). **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Food, drink, today and tomorrow.” **Copy:** “You can use the taught forms syön and juon with familiar foods and say whether something happens today or tomorrow.” 20 required steps, 14 required exercise records, 2 matching decisions. Completing the lesson doesn't imply mastery of all food and time expressions. **Next:** Lesson 6.3 — What time is it? **Resume:** after B05 if needed.
+
