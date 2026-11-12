@@ -1118,15 +1118,15 @@ All are `fi`/`sourceType: original`/`editorialStatus: needs_review`; determinist
 **Not sure:** I'm at home on Friday.  
 **Hint:** None. **Linked:** `vocab.perjantai`, `grammar.daily-life.weekday-time-forms`, `vocab.koti`. **Scored:** `vocab.perjantai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
 
-**E15 — `ex.daily-life.friday-sunday.weekday-seven-check`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
-**Prompt:** Write the Finnish dictionary word for Sunday, without answer options.  
-**Stimulus:** Sunday (noun)  
-**Accepted after N1:** `sunnuntai`.  
-**Correct feedback:** Sunnuntai is Sunday; sunnuntaina would mean on Sunday.  
-**Wrong feedback:** For the dictionary noun use sunnuntai, not sunnuntaina.  
-**Near feedback:** None, unless explicitly authored.  
-**Not sure:** Sunnuntai.  
-**Hint:** None. **Linked:** `vocab.sunnuntai`. **Scored:** `vocab.sunnuntai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+**E15 — `ex.daily-life.friday-sunday.weekday-seven-check`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type “I am at home on Sunday” using the taught weekday time form.  
+**Stimulus:** A particular Sunday; kotona is the familiar Unit 4 expression for “at home.”  
+**Accepted after N1:** `Sunnuntaina olen kotona.`, `Olen kotona sunnuntaina.`, `Minä olen kotona sunnuntaina.`, `Sunnuntaina minä olen kotona.`.  
+**Correct feedback:** Sunnuntaina olen kotona. uses the weekday time form, rather than the noun sunnuntai.  
+**Wrong feedback:** Say on Sunday with sunnuntaina; use olen kotona for I am at home.  
+**Near feedback:** `Sunnuntai olen kotona` → Add the taught weekday time form: sunnuntaina.  
+**Not sure:** Sunnuntaina olen kotona.  
+**Hint:** None. **Linked:** `vocab.sunnuntai`, `vocab.olla`, `vocab.koti`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
 
 **E16 — `ex.daily-life.friday-sunday.weekday-old-check`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
 **Prompt:** Write the Finnish dictionary noun for Wednesday.  
