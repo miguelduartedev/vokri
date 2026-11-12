@@ -703,12 +703,12 @@ Step IDs use `step.food-and-quantities.a-little-a-lot-two.` plus suffix. All lis
 **D08 — `ex.food-and-quantities.a-little-a-lot-two.one-two-match`** · `matching` · guided recognition · difficulty guided  
 **Prompt:** Match the two complete apple quantities to their English meanings.  
 **Stimulus:** One and two apples, each unique.  
-**Answer:** Pairs with distinct first-attempt decisions: yksi omena ↔ one apple (`grammar.numeral-singular-partitive`); kaksi omenaa ↔ two apples (`grammar.numeral-singular-partitive`).  
+**Answer:** Pairs with distinct first-attempt decisions: yksi omena ↔ one apple (`vocab.yksi`); kaksi omenaa ↔ two apples (`grammar.numeral-singular-partitive`).  
 **Correct feedback:** Yksi omena is one apple; kaksi omenaa is two apples.  
 **Incorrect feedback:** `yksi`: Yksi omena means one apple. `kaksi`: Kaksi omenaa means two apples.  
 **Near feedback:** None.  
 **Not sure:** yksi omena = one apple; kaksi omenaa = two apples.  
-**Hint:** null. **Linked:** `vocab.omena`, `vocab.yksi`, `vocab.kaksi`, `grammar.numeral-singular-partitive`. **Scored:** `grammar.numeral-singular-partitive`. **Review eligible:** false; lesson-local matching. **Editorial:** `needs_review`.
+**Hint:** null. **Linked:** `vocab.omena`, `vocab.yksi`, `vocab.kaksi`, `grammar.numeral-singular-partitive`. **Scored:** `vocab.yksi`, `grammar.numeral-singular-partitive`. **Review eligible:** false; lesson-local matching. **Editorial:** `needs_review`.
 
 **D09 — `ex.food-and-quantities.a-little-a-lot-two.build-two-apples`** · `token_build` · controlled construction · difficulty guided  
 **Prompt:** Build ‘two apples’ with the supplied Finnish words.  
