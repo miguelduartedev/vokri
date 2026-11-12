@@ -694,9 +694,9 @@ Full ID prefix is `step.where-are-you.going-to.` + suffix. All rows required and
 **D04 — `ex.where-are-you.going-to.meaning-kotiin`** · `multiple_choice` · form recognition  
 **Prompt:** What does the sentence Menen kotiin. mean?  
 **Stimulus:** Menen kotiin.  
-**Answer:** Shuffled options: `a` I'm in the house. · `b` I'm going home. · `c` I'm in the house.; accepted `b`.  
+**Answer:** Shuffled options: `a` I'm at school. · `b` I'm going home. · `c` I'm in the house.; accepted `b`.  
 **Correct feedback:** Menen kotiin. means I'm going home.  
-**Incorrect feedback:** `a`: Olen talossa. describes being in a house, not travelling home. `c`: Olen talossa. says I'm in the house; this is movement toward home.  
+**Incorrect feedback:** `a`: Being at school is a location statement; Menen kotiin. is about travelling home. `c`: Olen talossa. says I'm in the house; this is movement toward home.  
 **Near feedback:** None.  
 **Not sure:** Menen kotiin means I'm going home.  
 **Hint:** null. **Linked:** `phrase.menen-kotiin`, `vocab.menna`, `vocab.koti`. **Scored:** `phrase.menen-kotiin`. **Review eligible:** true, independently contextualised. **Editorial:** `needs_review`.
