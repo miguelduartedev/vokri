@@ -120,3 +120,197 @@ The six lessons are intentionally not forced to a common number of interactions.
 
 ## Part II — Six fully authored lessons
 
+## Lesson 6.1 — Morning and evening
+
+**Lesson ID:** `lesson.daily-life.morning-evening` · **Unit:** `unit.daily-life` · **Language:** `fi` · **Order:** 1 · **Est. time:** 9–13 minutes (untested).  
+**Capability:** Recognise morning and evening and produce natural first-person waking/sleeping statements.  
+**Prerequisite:** `lesson.food-and-quantities.cafe-shop-review`. **New production:** `vocab.aamu`, `vocab.ilta`, `vocab.herata`, `vocab.nukkua`. **New recognition:** `vocab.nousta`. **Grammar:** `grammar.daily-life.first-person-forms`, `grammar.daily-life.daypart-fixed-forms`. **Review context:** `vocab.koti`, `vocab.olla`, `vocab.menna`.  
+**Completion:** visit all required steps; attempt each exercise or select Not sure; no perfect-score gate. **Pause/resume:** After A06 before the first-person forms.
+
+### Ordered learner experience
+
+Full IDs: `step.daily-life.morning-evening.<step-suffix>`; all texts below are exact learner-facing content. Formal encounter is marked only for deliberate introduction.
+
+| # | Step suffix | Type | Learner-facing copy or exercise ref | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Morning and evening.** You already know simple actions; now you'll describe waking and sleeping. Learn two time-of-day words, two actions and the forms that say what *I* do. There is no long verb table. | none | Yes |
+| 2 | `day-nouns` | `vocabulary_intro` | **aamu — morning; ilta — evening.** These are the dictionary words for the two parts of the day. You will later see different forms when saying *in the morning* and *in the evening*. | `vocab.aamu`, `vocab.ilta` | Yes |
+| 3 | `two-verbs` | `vocabulary_intro` | **herätä — to wake up; nukkua — to sleep.** Waking up is the change from asleep to awake; sleeping is the ongoing activity. Both are useful dictionary forms. | `vocab.herata`, `vocab.nukkua` | Yes |
+| 4 | `get-up-note` | `vocabulary_intro` | **nousta — to get up / rise.** Recognition only: if you wake up and then stand up, nousta describes the second action. No production or conjugation is expected. | `vocab.nousta` | Yes |
+| 5 | `practice-01` | `exercise` | A01 | none | Yes |
+| 6 | `practice-02` | `exercise` | A02 | none | Yes |
+| 7 | `practice-03` | `exercise` | A03 | none | Yes |
+| 8 | `practice-04` | `exercise` | A04 | none | Yes |
+| 9 | `practice-05` | `exercise` | A05 | none | Yes |
+| 10 | `practice-06` | `exercise` | A06 | none | Yes |
+| 11 | `i-forms` | `grammar_explanation` | **What I do.** In a statement, the verb looks different from its dictionary form: **herätä → herään** (I wake up), **nukkua → nukun** (I sleep). Learn both exact forms; not every Finnish verb follows one simple add-n shortcut. | `grammar.daily-life.first-person-forms` | Yes |
+| 12 | `practice-07` | `exercise` | A07 | none | Yes |
+| 13 | `practice-08` | `exercise` | A08 | none | Yes |
+| 14 | `practice-09` | `exercise` | A09 | none | Yes |
+| 15 | `daypart` | `grammar_explanation` | **When?** The noun aamu appears as **aamulla** (in the morning); ilta appears as **illalla** (in the evening). Treat these as two useful fixed forms, not a general -lla case table. | `grammar.daily-life.daypart-fixed-forms` | Yes |
+| 16 | `examples` | `example_set` | **Herään aamulla.** — I wake up in the morning. **Illalla olen kotona.** — In the evening I am at home. **Nukun kotona.** — I sleep at home. The known words olen/kotona are review context, not new encounters. | none | Yes |
+| 17 | `practice-10` | `exercise` | A10 | none | Yes |
+| 18 | `practice-11` | `exercise` | A11 | none | Yes |
+| 19 | `optional-spoken` | `spoken_note` | Optional spoken recognition recap: earlier **meen** (menen) and **tuun** (tulen) may appear in everyday conversations. No new spoken spelling is assessed in this lesson. | none | No |
+| 20 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint:** A12–A14; answer contextual waking/sleeping and time-of-day questions. Not sure is permitted. All constituent exercises have their own answer/feedback. | none | Yes |
+
+### Complete authored exercises
+
+Every exercise below has `sourceType: original`, `editorialStatus: needs_review`, `reviewedBy: null`, and `learningLanguage: fi`. Each first attempted result commits no more than the explicit scored targets. N1 normalisation applies to all text answers.
+
+**A01 — `ex.daily-life.morning-evening.morning-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** A schedule says aamu. Which part of the day is that?  
+**Stimulus:** aamu  
+**Options (stable IDs, shuffle in UI):** `a` morning · `b` evening · `c` tomorrow. **Correct option:** `a` morning.  
+**Wrong option `b`:** Ilta is evening, not aamu.  
+**Wrong option `c`:** Huomenna is tomorrow, not a part of the day.  
+**Correct feedback:** Aamu means morning.  
+**Wrong feedback:** Aamu is the morning; ilta is the evening.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** Aamu means morning.  
+**Hint:** None. **Linked:** `vocab.aamu`, `vocab.ilta`. **Scored:** `vocab.aamu`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A02 — `ex.daily-life.morning-evening.evening-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish word means evening?  
+**Stimulus:** A person is describing the later part of the day.  
+**Options (stable IDs, shuffle in UI):** `a` aamu · `b` ilta · `c` tänään. **Correct option:** `b` ilta.  
+**Wrong option `a`:** Aamu is morning.  
+**Wrong option `c`:** Tänään means today; it doesn't name the evening.  
+**Correct feedback:** Ilta names the evening.  
+**Wrong feedback:** Ilta means evening, not morning or today.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** The word is ilta.  
+**Hint:** None. **Linked:** `vocab.aamu`, `vocab.ilta`. **Scored:** `vocab.ilta`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A03 — `ex.daily-life.morning-evening.wake-sleep`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the two activity verbs with their meanings.  
+**Stimulus:** Two dictionary-form actions.  
+**Matching pairs (2 decisions):** (1) **herätä** ↔ **wake up**, first-attempt target `vocab.herata`; (2) **nukkua** ↔ **sleep**, first-attempt target `vocab.nukkua`. Columns shuffle independently.  
+**Correct feedback:** Herätä means wake up; nukkua means sleep.  
+**Wrong feedback:** Waking is becoming awake; sleeping is the state before that.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** herätä → wake up; nukkua → sleep.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.nukkua`. **Scored:** `vocab.herata`, `vocab.nukkua`. **Review eligible:** No; depends on teaching context or board. **Editorial:** `needs_review`.  
+
+**A04 — `ex.daily-life.morning-evening.recognise-get-up`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which meaning fits nousta in this context?  
+**Stimulus:** Someone wakes up, then gets out of bed. Nousta describes the second action.  
+**Options (stable IDs, shuffle in UI):** `a` to go to sleep · `b` to get up / rise · `c` to drink. **Correct option:** `b` to get up / rise.  
+**Wrong option `a`:** Nukkua is to sleep; nousta means get up.  
+**Wrong option `c`:** Juoda means to drink, not get up.  
+**Correct feedback:** Nousta is to get up or rise; herätä is to wake up.  
+**Wrong feedback:** Nousta is the movement of getting up, not falling asleep.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** Nousta means rise/get up; recognition only.  
+**Hint:** None. **Linked:** `vocab.nousta`, `vocab.herata`. **Scored:** `vocab.nousta`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A05 — `ex.daily-life.morning-evening.write-aamu`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for “morning.”  
+**Stimulus:** morning  
+**Accepted after N1:** `aamu`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Aamu is morning. Aamulla is a useful time expression.  
+**Wrong feedback:** Write aamu, not a different time expression.  
+**Near feedback:** `amu` → Write both a's: aamu has a long opening vowel.  
+**Not sure feedback:** Write aamu.  
+**Hint:** None. **Linked:** `vocab.aamu`. **Scored:** `vocab.aamu`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A06 — `ex.daily-life.morning-evening.write-ilta`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for “evening.”  
+**Stimulus:** evening  
+**Accepted after N1:** `ilta`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Ilta is the noun. Illalla means in the evening.  
+**Wrong feedback:** The Finnish word is ilta, not aamulla.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** Write ilta.  
+**Hint:** None. **Linked:** `vocab.ilta`. **Scored:** `vocab.ilta`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A07 — `ex.daily-life.morning-evening.first-person-choice`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which form says “I wake up”?  
+**Stimulus:** You are talking about yourself.  
+**Options (stable IDs, shuffle in UI):** `a` herään · `b` nukun · `c` herätä. **Correct option:** `a` herään.  
+**Wrong option `b`:** Nukun means I sleep, a different action.  
+**Wrong option `c`:** Herätä is the dictionary form, not the taught I-form.  
+**Correct feedback:** Herään means “I wake up” and comes from herätä.  
+**Wrong feedback:** Use herään for waking up in the first person.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** The taught I-form is herään.  
+**Hint:** None. **Linked:** `vocab.herata`, `grammar.daily-life.first-person-forms`. **Scored:** `grammar.daily-life.first-person-forms`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A08 — `ex.daily-life.morning-evening.retrieve-heraan`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type “I wake up” in Finnish, using one taught verb.  
+**Stimulus:** I wake up.  
+**Accepted after N1:** `herään`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Herään already includes “I” in the verb form.  
+**Wrong feedback:** Write herään, not the dictionary form herätä.  
+**Near feedback:** `heran` → Write both the long ää and final n: herään.; `heräänn` → There is only one final n in herään.  
+**Not sure feedback:** Write herään.  
+**Hint:** None. **Linked:** `vocab.herata`. **Scored:** `vocab.herata`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A09 — `ex.daily-life.morning-evening.retrieve-nukun`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type “I sleep” in Finnish as one word.  
+**Stimulus:** I sleep.  
+**Accepted after N1:** `nukun`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Nukun is “I sleep”; the dictionary word is nukkua.  
+**Wrong feedback:** Use nukun in a first-person statement, not nukkua.  
+**Near feedback:** `nukkun` → Nukun has one k in the middle of the I-form.  
+**Not sure feedback:** Write nukun.  
+**Hint:** None. **Linked:** `vocab.nukkua`. **Scored:** `vocab.nukkua`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A10 — `ex.daily-life.morning-evening.daypart-context`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which taught expression means “in the morning” in a routine?  
+**Stimulus:** _____ herään. — In the morning, I wake up.  
+**Options (stable IDs, shuffle in UI):** `a` illalla · `b` aamulla · `c` ilta. **Correct option:** `b` aamulla.  
+**Wrong option `a`:** Illalla means in the evening.  
+**Wrong option `c`:** Ilta is the dictionary noun evening, not the time phrase needed.  
+**Correct feedback:** Aamulla describes when you wake up.  
+**Wrong feedback:** The fixed time expression is aamulla, not the evening form.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** Choose aamulla for “in the morning”.  
+**Hint:** None. **Linked:** `vocab.aamu`, `grammar.daily-life.daypart-fixed-forms`. **Scored:** `grammar.daily-life.daypart-fixed-forms`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A11 — `ex.daily-life.morning-evening.build-morning`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
+**Prompt:** Put these two tiles in a natural order to say “I wake up in the morning.”  
+**Stimulus:** The verb and time expression are supplied.  
+**Shuffled tiles:** `aamulla`, `Herään`. **Accepted complete sequences:** `Herään aamulla.`, `Aamulla herään.`. Tokens are provided; this is guided construction, not independent spelling.  
+**Correct feedback:** Herään aamulla and Aamulla herään both work naturally.  
+**Wrong feedback:** Keep the taught verb herään and time expression aamulla together.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** One valid sentence is Herään aamulla.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.aamu`, `grammar.daily-life.daypart-fixed-forms`. **Scored:** `grammar.daily-life.daypart-fixed-forms`. **Review eligible:** No; depends on teaching context or board. **Editorial:** `needs_review`.  
+
+**A12 — `ex.daily-life.morning-evening.sleep-context`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type the taught sentence “I sleep at home.”  
+**Stimulus:** I sleep at home. Kotona was introduced in Unit 4.  
+**Accepted after N1:** `Nukun kotona.`, `Minä nukun kotona.`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Nukun kotona uses the known location word kotona.  
+**Wrong feedback:** The verb is nukun, and “at home” is kotona.  
+**Near feedback:** `nukkua kotona` → Use first-person nukun, not the dictionary form nukkua.  
+**Not sure feedback:** Write Nukun kotona.  
+**Hint:** None. **Linked:** `vocab.nukkua`, `vocab.koti`. **Scored:** `vocab.nukkua`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A13 — `ex.daily-life.morning-evening.contrast-wake`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** You have just opened your eyes. Which sentence means “I wake up”?  
+**Stimulus:** Choose the action, not a location.  
+**Options (stable IDs, shuffle in UI):** `a` Nukun. · `b` Herään. · `c` Olen kotona.. **Correct option:** `b` Herään..  
+**Wrong option `a`:** Nukun means I sleep, not wake up.  
+**Wrong option `c`:** Olen kotona says I am at home without naming this action.  
+**Correct feedback:** Herään describes waking up, while nukun is sleeping.  
+**Wrong feedback:** Waking up is herään; sleeping is nukun.  
+**Near feedback:** None; don't invent near responses.  
+**Not sure feedback:** Choose Herään.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.nukkua`. **Scored:** `vocab.herata`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+**A14 — `ex.daily-life.morning-evening.evening-fixed-form`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type the taught expression for “in the evening.”  
+**Stimulus:** in the evening  
+**Accepted after N1:** `illalla`. No unlisted synonym or spelling guesses.  
+**Correct feedback:** Illalla tells when something happens; ilta is the noun.  
+**Wrong feedback:** Use illalla for “in the evening”.  
+**Near feedback:** `illala` → Write double l in illalla.; `ilala` → The taught form is illalla with both double-l positions.  
+**Not sure feedback:** Write illalla.  
+**Hint:** None. **Linked:** `vocab.ilta`, `grammar.daily-life.daypart-fixed-forms`. **Scored:** `grammar.daily-life.daypart-fixed-forms`. **Review eligible:** Yes; fully self-contained. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Ready to continue:** “You can recognise morning and evening and say when you wake or sleep.” 19 required LessonSteps; 14 required exercise records; one two-pair matching board produces an additional matching decision. Not sure is a valid attempt; no perfect score or permanent mastery claim. **Next:** Lesson 6.2 — Eat, drink, today, tomorrow. Any incorrect target enters the *existing* scheduled Review rules, not a second practice engine.
+
