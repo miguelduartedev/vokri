@@ -393,7 +393,7 @@ All exercises: `sourceType: original`, `editorialStatus: needs_review`, `reviewe
 **Hint:** None. **Linked:** `vocab.kumppani`. **Scored:** `vocab.kumppani`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
 
 **B05 — `ex.people-and-descriptions.people-close-to-you.write-ystava`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
-**Prompt:** Type the Finnish word ystävä from your earlier recognition practice: 'friend'.  
+**Prompt:** Type the Finnish word for 'friend' that you previously recognised in Unit 2; use the established, non-buddy friend term.  
 **Stimulus:** friend — retrieve the earlier-recognised word independently.  
 **Accepted N1 forms:** `ystävä`. Do not accept missing/incorrect Finnish case endings.  
 **Correct feedback:** Ystävä is now retrieved as production vocabulary; its earlier Unit 2 recognition history stays intact.  
@@ -1345,7 +1345,7 @@ All records have `learningLanguage: fi`, `sourceType: original`, `editorialStatu
 **F13 — `ex.people-and-descriptions.people-review.integrated-name-tiles`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
 **Prompt:** Arrange four supplied words to say 'Aino's partner is Emma'.  
 **Stimulus:** Fictional names; the genitive form of Aino is taught.  
-**Shuffled lowercase lexical tokens:** `ainon`, `kumppani`, `on`, `emma`. **Accepted complete order:** `Ainon kumppani on Emma.`. Capitalise the first assembled word and the supplied proper name Emma; this is guided composition.  
+**Shuffled lexical tokens:** `ainon`, `kumppani`, `on`, `Emma`. **Accepted complete order:** `Ainon kumppani on Emma.`. Capitalise the first assembled lexical token; the proper name Emma is always capitalised, including mid-sentence.  
 **Correct feedback:** Ainon kumppani on Emma. identifies Emma as Aino's partner.  
 **Wrong feedback:** Begin with the possessor Ainon, then kumppani on Emma.  
 **Near feedback:** None; no automatic near-miss credit.  
