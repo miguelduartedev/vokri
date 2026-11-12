@@ -132,3 +132,195 @@ Lessons 8.1 and 8.2 introduce five/four transport nouns, while 8.5–8.6 have th
 
 ## Part II — Fully authored lessons
 
+## Lesson 8.1 — Bus, train, tram, metro
+
+**Lesson ID:** `lesson.getting-around.bus-train-tram-metro` · `unit.getting-around` · `fi` · Order 1 · **Estimated:** 10–14 minutes (not measured). **Prerequisite:** `lesson.people-and-descriptions.people-review` (Unit 7 completed).  
+**Capability:** recognise and name five common transport types. **New production:** `vocab.bussi`, `vocab.juna`, `vocab.raitiovaunu`, `vocab.metro`, `vocab.taksi`. **New recognition:** `vocab.pyora`. **Earlier support:** `vocab.ja`. **Grammar deferred:** transport method cases until 8.5.  
+**Completion:** all required steps, including A01–A14, attempted or Not sure; no perfect-score gate. **Resume boundary:** after A05, before longer text-input recall.
+
+### Ordered learner experience
+
+Step IDs: `step.getting-around.bus-train-tram-metro.<suffix>`. Each text is complete; only *Formal encounter* creates a new learning exposure. No numeric route/timetable data is required.
+
+| # | Step suffix | LessonStep type | Exact learner-facing content or exercise reference | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Getting around starts with transport words.** You will learn five common ways people travel. These nouns are useful on signs and in everyday conversations; you'll learn 'by bus' and other transport forms in Lesson 8.5, not yet. | none | Yes |
+| 2 | `bus-train-tram` | `vocabulary_intro` | **bussi — bus; juna — train; raitiovaunu — tram/streetcar.** A tram often operates on city-street rails; a train is another kind of rail service. We are learning the transport nouns, not timetables or ticket types yet. | `vocab.bussi`, `vocab.juna`, `vocab.raitiovaunu` | Yes |
+| 3 | `metro-taxi` | `vocabulary_intro` | **metro — metro / underground; taksi — taxi.** The Finnish word metro is familiar in spelling; taksi uses ks rather than English x. They are not necessarily available in every town. | `vocab.metro`, `vocab.taksi` | Yes |
+| 4 | `practice-01` | `exercise` | A01 | none | Yes |
+| 5 | `practice-02` | `exercise` | A02 | none | Yes |
+| 6 | `two-mode-examples` | `example_set` | A fictional transport list might show **bussi, juna, raitiovaunu, metro, taksi**. Choose which service is intended by the story. No 'take' verb or case ending is needed for today's recognition. | none | Yes |
+| 7 | `practice-03` | `exercise` | A03 | none | Yes |
+| 8 | `pyora` | `vocabulary_intro` | **pyörä — bicycle / wheel.** In an everyday transport list, it usually means a bicycle. This is recognition-only; you won't have to spell it or conjugate a cycling verb. | `vocab.pyora` | Yes |
+| 9 | `practice-04` | `exercise` | A04 | none | Yes |
+| 10 | `practice-05` | `exercise` | A05 | none | Yes |
+| 11 | `word-form-notes` | `grammar_explanation` | **Dictionary form first.** A vehicle name like bussi is a lemma; the later form bussilla means travelling by bus. Don't guess transport endings yet. Focus now on recognising and retrieving the five nouns. | none | Yes |
+| 12 | `practice-06` | `exercise` | A06 | none | Yes |
+| 13 | `practice-07` | `exercise` | A07 | none | Yes |
+| 14 | `practice-08` | `exercise` | A08 | none | Yes |
+| 15 | `practice-09` | `exercise` | A09 | none | Yes |
+| 16 | `practice-10` | `exercise` | A10 | none | Yes |
+| 17 | `scenario-recap` | `example_set` | **Travel choice in context:** a tram uses a city-street rail route; a taxi is a hired car; a metro uses a designated metro service. Each example supports the precise meaning without asking about real city routes. | none | Yes |
+| 18 | `practice-11` | `exercise` | A11 | none | Yes |
+| 19 | `checkpoint` | `checkpoint` | **Lesson checkpoint A12–A14:** identify the transport selected by context, join two nouns without new grammar, and distinguish a train from bus/taxi. No case endings. | none | Yes |
+
+### All complete authored exercises
+
+Each record: `sourceType: original`, `editorialStatus: needs_review`, `reviewedBy: null`, `learningLanguage: fi`; N1 grading and stable shuffled option IDs. First-attempt matching gives per-pair target evidence, not one success for the whole board.
+
+**A01 — `ex.getting-around.bus-train-tram-metro.road-rail-match`** · `matching` · `recognition` · difficulty `foundation`  
+**Prompt:** Match each transport noun to its English name.  
+**Stimulus:** Three common forms of transport, shown as dictionary words.  
+**Matching pairs (3 first-attempt decisions):** **bussi ↔ bus** scoring `vocab.bussi`; **juna ↔ train** scoring `vocab.juna`; **raitiovaunu ↔ tram** scoring `vocab.raitiovaunu`. Shuffle columns independently.  
+**Correct feedback:** Bussi is bus, juna is train, and raitiovaunu is tram.  
+**Wrong feedback:** A tram is the city street-rail vehicle; a train and bus are different transport words.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** bussi → bus; juna → train; raitiovaunu → tram.  
+**Hint:** None. **Linked:** `vocab.bussi`, `vocab.juna`, `vocab.raitiovaunu`. **Scored:** `vocab.bussi`, `vocab.juna`, `vocab.raitiovaunu`. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**A02 — `ex.getting-around.bus-train-tram-metro.metro-taxi-match`** · `matching` · `recognition` · difficulty `foundation`  
+**Prompt:** Match these two additional transport nouns to their names.  
+**Stimulus:** The words are metro and taksi.  
+**Matching pairs (2 first-attempt decisions):** **metro ↔ metro / underground** scoring `vocab.metro`; **taksi ↔ taxi** scoring `vocab.taksi`. Shuffle columns independently.  
+**Correct feedback:** Metro names the metro system; taksi is a taxi.  
+**Wrong feedback:** A taxi is a hired car, not a metro service.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** metro → metro; taksi → taxi.  
+**Hint:** None. **Linked:** `vocab.metro`, `vocab.taksi`. **Scored:** `vocab.metro`, `vocab.taksi`. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**A03 — `ex.getting-around.bus-train-tram-metro.tram-recognise`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** Which English transport name corresponds to raitiovaunu?  
+**Stimulus:** raitiovaunu, a vehicle typically running on rails along city streets.  
+**Options (stable keyed IDs, shuffle visually):** `a` tram · `b` taxi · `c` bus. **Correct:** `a` tram.  
+**Wrong option `b`:** Taksi is the taxi word, not raitiovaunu.  
+**Wrong option `c`:** Bussi means bus; the vehicle is not a tram.  
+**Correct feedback:** Raitiovaunu is a tram, sometimes called a streetcar.  
+**Wrong feedback:** A raitiovaunu is a tram; taksi and bussi are different transport nouns.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Raitiovaunu means tram.  
+**Hint:** None. **Linked:** `vocab.raitiovaunu`. **Scored:** `vocab.raitiovaunu`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A04 — `ex.getting-around.bus-train-tram-metro.pyora-recognise`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** In a transport list, what does pyörä commonly mean?  
+**Stimulus:** pyörä, listed alongside bussi and taksi.  
+**Options (stable keyed IDs, shuffle visually):** `a` bicycle · `b` ticket · `c` station. **Correct:** `a` bicycle.  
+**Wrong option `b`:** Lippu means ticket in the taught transport sense.  
+**Wrong option `c`:** Asema means station, not a bicycle.  
+**Correct feedback:** Pyörä commonly means bicycle in a transport context; it can also mean wheel.  
+**Wrong feedback:** The transport meaning is bicycle; no Finnish spelling production is required.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Pyörä = bicycle (recognition-only).  
+**Hint:** None. **Linked:** `vocab.pyora`. **Scored:** `vocab.pyora`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A05 — `ex.getting-around.bus-train-tram-metro.city-tram-context`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** A city service operates on rails laid along city streets. Which Finnish word best names this tram?  
+**Stimulus:** Explicitly a tram, not a long-distance rail train or bus.  
+**Options (stable keyed IDs, shuffle visually):** `a` juna · `b` raitiovaunu · `c` bussi. **Correct:** `b` raitiovaunu.  
+**Wrong option `a`:** Juna means train; this context explicitly says tram.  
+**Wrong option `c`:** Bussi means bus; buses do not need street tram rails.  
+**Correct feedback:** Raitiovaunu is the specific tram word.  
+**Wrong feedback:** Use raitiovaunu for a tram; juna is a train.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Raitiovaunu.  
+**Hint:** None. **Linked:** `vocab.raitiovaunu`, `vocab.juna`, `vocab.bussi`. **Scored:** `vocab.raitiovaunu`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A06 — `ex.getting-around.bus-train-tram-metro.write-bussi`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary noun for bus.  
+**Stimulus:** bus  
+**Accepted after N1:** `bussi`. Do not accept unlisted dictionary spellings.  
+**Correct feedback:** Bussi is bus.  
+**Wrong feedback:** Write bussi with two s letters, not taksi or metro.  
+**Near feedback:** `busi` → Write the double s in bussi.  
+**Not sure:** Write bussi.  
+**Hint:** None. **Linked:** `vocab.bussi`. **Scored:** `vocab.bussi`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A07 — `ex.getting-around.bus-train-tram-metro.write-juna`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary noun for train.  
+**Stimulus:** train  
+**Accepted after N1:** `juna`. Do not accept unlisted dictionary spellings.  
+**Correct feedback:** Juna is train.  
+**Wrong feedback:** Juna names the train, not metro or tram.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Write juna.  
+**Hint:** None. **Linked:** `vocab.juna`. **Scored:** `vocab.juna`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A08 — `ex.getting-around.bus-train-tram-metro.write-raitiovaunu`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for tram.  
+**Stimulus:** tram / streetcar  
+**Accepted after N1:** `raitiovaunu`. Do not accept unlisted dictionary spellings.  
+**Correct feedback:** Raitiovaunu is the formal Finnish tram word.  
+**Wrong feedback:** Write raitiovaunu as one word. The shorter colloquial ratikka is not a new production target here.  
+**Near feedback:** `raitiovaun` → The taught form ends in -vaunu: raitiovaunu.  
+**Not sure:** Write raitiovaunu.  
+**Hint:** None. **Linked:** `vocab.raitiovaunu`. **Scored:** `vocab.raitiovaunu`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A09 — `ex.getting-around.bus-train-tram-metro.write-metro`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish noun for a metro system.  
+**Stimulus:** metro  
+**Accepted after N1:** `metro`. Do not accept unlisted dictionary spellings.  
+**Correct feedback:** Metro is spelled metro in standard Finnish.  
+**Wrong feedback:** Write metro; don't substitute the rail-train noun juna.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Write metro.  
+**Hint:** None. **Linked:** `vocab.metro`. **Scored:** `vocab.metro`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A10 — `ex.getting-around.bus-train-tram-metro.write-taksi`** · `text_input` · `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish noun for taxi.  
+**Stimulus:** taxi  
+**Accepted after N1:** `taksi`. Do not accept unlisted dictionary spellings.  
+**Correct feedback:** Taksi is the Finnish spelling of taxi.  
+**Wrong feedback:** Write taksi, not English taxi.  
+**Near feedback:** `taxi` → Finnish writes this with ks: taksi.  
+**Not sure:** Write taksi.  
+**Hint:** None. **Linked:** `vocab.taksi`. **Scored:** `vocab.taksi`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A11 — `ex.getting-around.bus-train-tram-metro.metro-in-context`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** A route description explicitly says the journey uses the city's metro service. Which Finnish noun fits?  
+**Stimulus:** A designated metro line, rather than a train or taxi.  
+**Options (stable keyed IDs, shuffle visually):** `a` taksi · `b` juna · `c` metro. **Correct:** `c` metro.  
+**Wrong option `a`:** Taksi is a hired car.  
+**Wrong option `b`:** Juna is train; the described service is specifically a metro.  
+**Correct feedback:** Metro is the appropriate noun for a metro service.  
+**Wrong feedback:** The context names the metro system, so choose metro.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Metro.  
+**Hint:** None. **Linked:** `vocab.metro`. **Scored:** `vocab.metro`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A12 — `ex.getting-around.bus-train-tram-metro.taxi-context`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** Someone hires an individual car with a driver instead of using public rail. Which Finnish transport noun fits?  
+**Stimulus:** A taxi, not a metro or train.  
+**Options (stable keyed IDs, shuffle visually):** `a` taksi · `b` metro · `c` juna. **Correct:** `a` taksi.  
+**Wrong option `b`:** Metro is rail transit, not an individually hired car.  
+**Wrong option `c`:** Juna is a train.  
+**Correct feedback:** Taksi describes the individual taxi service.  
+**Wrong feedback:** A hired taxi car is taksi.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Taksi.  
+**Hint:** None. **Linked:** `vocab.taksi`. **Scored:** `vocab.taksi`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+**A13 — `ex.getting-around.bus-train-tram-metro.bus-train-joined`** · `token_build` · `controlled_construction` · difficulty `controlled`  
+**Prompt:** Use the three supplied tiles to write 'bus and train' in Finnish.  
+**Stimulus:** A simple noun phrase using the earlier Unit 1 conjunction ja.  
+**Shuffled lexical tiles:** `juna`, `ja`, `bussi`. **Accepted complete sequences:** `bussi ja juna`, `juna ja bussi`. Tokens are provided; this is guided construction, not independent spelling.  
+**Correct feedback:** Bussi ja juna joins two familiar nouns using ja; either order is possible.  
+**Wrong feedback:** Place ja between the two transport words.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** bussi ja juna.  
+**Hint:** None. **Linked:** `vocab.bussi`, `vocab.juna`, `vocab.ja`. **Scored:** none. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**A14 — `ex.getting-around.bus-train-tram-metro.train-sign`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** A station sign is labelled JUNAT (trains). Which taught singular transport noun is the dictionary form?  
+**Stimulus:** The English context identifies trains. The plural sign itself is recognition context only.  
+**Options (stable keyed IDs, shuffle visually):** `a` juna · `b` bussi · `c` taksi. **Correct:** `a` juna.  
+**Wrong option `b`:** Bussi means bus, not train.  
+**Wrong option `c`:** Taksi means taxi.  
+**Correct feedback:** Juna is the singular dictionary noun for train; no productive plural is required.  
+**Wrong feedback:** The noun for a train is juna.  
+**Near feedback:** None; do not invent a near evaluation.  
+**Not sure:** Juna.  
+**Hint:** None. **Linked:** `vocab.juna`. **Scored:** `vocab.juna`. **Review eligible:** true, independent stimulus. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Transport words you can recognise.” **Copy:** “You can name a bus, train, tram, metro and taxi in Finnish. Next, you'll learn the places and tickets connected with journeys.” **Required steps:** 19; **required exercises:** 14; **matching pair decisions:** 5. No assertion of real transit service availability, case mastery, or permanent recall. **Next:** 8.2 Stops, stations and tickets.
+
