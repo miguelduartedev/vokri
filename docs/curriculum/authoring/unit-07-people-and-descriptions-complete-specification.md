@@ -546,3 +546,232 @@ All exercises: `sourceType: original`, `editorialStatus: needs_review`, `reviewe
 
 **Headline:** “A useful way to say ‘have’.” **Copy:** “You can say someone has a sibling or partner, and make specific taught possession sentences negative.” **Steps:** 24 total (23 required), **exercises:** 18, **matching pair decisions:** 2. **Next:** Lesson 7.3 — Whose? And with whom? **Native QA:** Finnish ä/long vowels, negative case forms and a mid-lesson resume boundary.
 
+## Lesson 7.3 — Whose? And with whom?
+
+**ID:** `lesson.people-and-descriptions.whose-and-with-whom` · `unit.people-and-descriptions` · `fi` · Order 3 · **Estimated 13–20 minutes** (untested). **Prerequisite:** Lesson 7.2. **New production:** `vocab.kanssa`. **New grammar:** `grammar.people.genitive-restricted`, `grammar.people.kanssa-genitive`. **Phrase:** `phrase.people.asun-kumppanin-kanssa`. **Review:** `vocab.asua`, `vocab.veli`, `vocab.sisko`, `vocab.kumppani`, `vocab.ystava`.  
+**Capability:** recognise limited genitive ownership and independently say that someone lives with a friend/partner. **Completion:** all required steps and C01–C17 attempted or Not sure. **Pause:** after C10, before introducing `kanssa`. No general genitive or possessive suffix algorithm.
+
+### Ordered learner experience
+
+IDs: `step.people-and-descriptions.whose-and-with-whom.<suffix>`. Names are fictional context, not scored vocabulary. One optional spoken recognition note does not block completion.
+
+| # | Step suffix | Step type | Exact learner-facing copy / exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Whose? And with whom?** You can already name relatives and use Minulla on. Now learn a small set of genitive forms for 'whose?' and use kanssa to say you live with someone. The noun can change before -n, so we'll practise real examples rather than a general case chart. | none | Yes |
+| 2 | `nouns-genitives` | `grammar_explanation` | **Whose?** Finnish often shows a possessor with a noun form ending in -n: **äiti → äidin**, **veli → veljen**, **sisko → siskon**. These are three complete forms to learn; äiti and veli change their stem. **Äidin nimi** means mother's name; **veljen nimi** means brother's name. | `grammar.people.genitive-restricted` | Yes |
+| 3 | `exercise-01` | `exercise` | C01 | none | Yes |
+| 4 | `exercise-02` | `exercise` | C02 | none | Yes |
+| 5 | `exercise-03` | `exercise` | C03 | none | Yes |
+| 6 | `proper-names` | `example_set` | **Aino → Ainon**, **Emma → Emman** (two deliberately taught example names). **Ainon sisko** — Aino's sister. **Emman veli** — Emma's brother. Proper names are context tokens, not new canonical vocabulary lemmas; not all names follow one universal pattern. | none | Yes |
+| 7 | `exercise-04` | `exercise` | C04 | none | Yes |
+| 8 | `exercise-05` | `exercise` | C05 | none | Yes |
+| 9 | `friends-genitives` | `grammar_explanation` | Useful further authored forms: **ystävä → ystävän**, **kaveri → kaverin**, **kumppani → kumppanin**, **isä → isän**. Some are transparent; others have changed stems. They will appear in short phrases and with kanssa. Don't attempt automatic case generation for other nouns. | none | Yes |
+| 10 | `exercise-06` | `exercise` | C06 | none | Yes |
+| 11 | `exercise-07` | `exercise` | C07 | none | Yes |
+| 12 | `exercise-08` | `exercise` | C08 | none | Yes |
+| 13 | `minulla-minun` | `grammar_explanation` | **Different jobs:** **minulla** belongs to the construction Minulla on… ('I have'). **minun** is a genitive pronoun meaning 'my/of me'. You need only recognise this difference here; productive possessive suffixes and expressions such as minun + suffix-marked noun are deferred. | none | Yes |
+| 14 | `exercise-09` | `exercise` | C09 | none | Yes |
+| 15 | `exercise-10` | `exercise` | C10 | none | Yes |
+| 16 | `introduce-kanssa` | `vocabulary_intro` | **kanssa — with.** Standard Finnish places this after a noun in an appropriate genitive: **kumppanin kanssa** (with my/a partner), **ystävän kanssa** (with a friend). **kumppani kanssa** is not the taught standard construction. | `vocab.kanssa`, `grammar.people.kanssa-genitive` | Yes |
+| 17 | `with-model` | `phrase_intro` | **Asun kumppanin kanssa.** — I live with my partner. You already learned asun in Unit 2. The important new part is **kumppanin kanssa**. Practise the exact phrase without trying to inflect arbitrary nouns. | `phrase.people.asun-kumppanin-kanssa` | Yes |
+| 18 | `exercise-11` | `exercise` | C11 | none | Yes |
+| 19 | `exercise-12` | `exercise` | C12 | none | Yes |
+| 20 | `exercise-13` | `exercise` | C13 | none | Yes |
+| 21 | `spoken-kanssa` | `spoken_note` | Optional recognition only: in casual speech kanssa can be shortened to **kaa** (e.g. kumppanin kaa). Standard written exercises require kanssa. **minun → mun** also appears in casual speech; don't practise a new possessive suffix paradigm. | none | No |
+| 22 | `exercise-14` | `exercise` | C14 | none | Yes |
+| 23 | `checkpoint` | `checkpoint` | **Lesson checkpoint C15–C17:** independently write a sentence with kanssa and a genitive, then express whose brother someone is. Don't generate forms beyond the authored set. | none | Yes |
+
+### Complete authored exercises
+
+Each record: `fi`, `sourceType: original`, `editorialStatus: needs_review`, full N1 answer rules. Per-pair matching of forms is capability-only to prevent repeating one genitive grammar score three times from a guided board.
+
+**C01 — `ex.people-and-descriptions.whose-and-with-whom.recognise-aeidin`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which dictionary noun has the taught genitive form äidin?  
+**Stimulus:** äidin (mother's / of mother)  
+**Options (stable IDs):** `a` äiti — mother · `b` isä — father · `c` sisko — sister. **Correct:** `a` äiti — mother.  
+**Wrong option `b`:** Isän is the taught form for father's.  
+**Wrong option `c`:** Siskon is the taught form for sister's.  
+**Correct feedback:** Äiti → äidin. The stem changes before the genitive -n.  
+**Wrong feedback:** Äidin comes from äiti, not by attaching -n to äiti unchanged.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** äiti → äidin.  
+**Hint:** None. **Linked:** `vocab.aiti`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C02 — `ex.people-and-descriptions.whose-and-with-whom.recognise-veljen`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which word has the taught genitive form veljen?  
+**Stimulus:** veljen, used in an expression such as 'brother's name'.  
+**Options (stable IDs):** `a` sisko · `b` veli · `c` perhe. **Correct:** `b` veli.  
+**Wrong option `a`:** Sisko becomes siskon.  
+**Wrong option `c`:** Perhe would be perheen; it is not the source of veljen.  
+**Correct feedback:** Veli → veljen; the word stem changes.  
+**Wrong feedback:** The genitive of veli is veljen, not velin.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** veli → veljen.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C03 — `ex.people-and-descriptions.whose-and-with-whom.genitive-pair-board`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match three dictionary nouns with their explicitly taught genitive forms.  
+**Stimulus:** This is finite form-recognition practice, not a general noun-case generator.  
+**Matching pairs (3 decisions):** **äiti ↔ äidin**; **sisko ↔ siskon**; **veli ↔ veljen**. **Each pair: `scoredTargetIds: []`; `knowledgeScoring: false`** for this guided form-relationship board.  
+**Correct feedback:** Äidin, siskon and veljen are the taught forms of äiti, sisko and veli.  
+**Wrong feedback:** Remember the changed stems: äiti → äidin and veli → veljen.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** äiti → äidin; sisko → siskon; veli → veljen.  
+**Hint:** None. **Linked:** `vocab.aiti`, `vocab.sisko`, `vocab.veli`, `grammar.people.genitive-restricted`. **Scored:** none. **Review eligible:** false; scaffolded or matching. **Editorial:** `needs_review`.  
+
+**C04 — `ex.people-and-descriptions.whose-and-with-whom.name-aino`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** You mean Aino's sister. Which two-word expression uses the taught proper-name genitive?  
+**Stimulus:** Aino's sister (fictional name).  
+**Options (stable IDs):** `a` Aino sisko · `b` Ainon sisko · `c` Ainoon sisko. **Correct:** `b` Ainon sisko.  
+**Wrong option `a`:** The possessor needs the genitive Ainon.  
+**Wrong option `c`:** Ainoon has a different ending; the taught genitive is Ainon.  
+**Correct feedback:** Ainon sisko means Aino's sister.  
+**Wrong feedback:** For the supplied name Aino, the taught genitive is Ainon.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Ainon sisko.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C05 — `ex.people-and-descriptions.whose-and-with-whom.name-emma`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type the taught genitive of the example name Emma, meaning Emma's.  
+**Stimulus:** Emma → Emma's  
+**Accepted after N1:** `Emman`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Emma → Emman in this taught example.  
+**Wrong feedback:** Use Emman, not Emma alone. This is an authored proper-name form, not a rule for all names.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Write Emman.  
+**Hint:** None. **Linked:** `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C06 — `ex.people-and-descriptions.whose-and-with-whom.friend-genitive`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which complete form is 'friend's' in the taught standard Finnish example?  
+**Stimulus:** ystävä → ? (a friend's name)  
+**Options (stable IDs):** `a` ystävä · `b` ystävän · `c` ystävänä. **Correct:** `b` ystävän.  
+**Wrong option `a`:** Ystävä is the dictionary noun, not the taught possessor form.  
+**Wrong option `c`:** Ystävänä is a different form, not the genitive we need.  
+**Correct feedback:** Ystävä → ystävän is the taught genitive form.  
+**Wrong feedback:** Use ystävän in the taught possession phrase.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Ystävän.  
+**Hint:** None. **Linked:** `vocab.ystava`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C07 — `ex.people-and-descriptions.whose-and-with-whom.type-veljen`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type the taught genitive of veli, 'brother's'.  
+**Stimulus:** veli → brother's  
+**Accepted after N1:** `veljen`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Veljen is correct; the stem changes from veli.  
+**Wrong feedback:** Write veljen, not veli+n or velin.  
+**Near feedback:** `velin` → The taught stem is velje-: veljen.  
+**Not sure:** Write veljen.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C08 — `ex.people-and-descriptions.whose-and-with-whom.understand-aino-sisko`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** What does 'Ainon sisko on Emma' mean?  
+**Stimulus:** Ainon sisko on Emma.  
+**Options (stable IDs):** `a` Emma is Aino's sister. · `b` Aino is Emma's sister. · `c` Emma is Aino's partner.. **Correct:** `a` Emma is Aino's sister..  
+**Wrong option `b`:** Ainon means Aino's, so the sentence identifies Aino's sister as Emma.  
+**Wrong option `c`:** Kumppani would name a partner; sisko means sister.  
+**Correct feedback:** Ainon sisko on Emma. identifies Aino's sister as Emma.  
+**Wrong feedback:** The genitive Ainon identifies whose sister is being described.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Emma is Aino's sister.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.genitive-restricted`, `vocab.olla`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C09 — `ex.people-and-descriptions.whose-and-with-whom.write-aino-sister`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'Aino's sister' as the exact taught Finnish two-word expression.  
+**Stimulus:** Aino's sister  
+**Accepted after N1:** `Ainon sisko`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Ainon sisko uses the proper-name genitive Ainon.  
+**Wrong feedback:** Write Ainon sisko, keeping the sister noun unchanged in this simple noun phrase.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Ainon sisko.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C10 — `ex.people-and-descriptions.whose-and-with-whom.minulla-minun`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In which expression does minulla mean 'I have' rather than 'my'?  
+**Stimulus:** Compare minulla (in a possession sentence) with minun (genitive pronoun).  
+**Options (stable IDs):** `a` Minulla on sisko. · `b` Minun — my (as a genitive form). · `c` Äidin nimi — mother's name.. **Correct:** `a` Minulla on sisko..  
+**Wrong option `b`:** Minun is a different genitive pronoun meaning my; it does not make the 'I have' construction alone.  
+**Wrong option `c`:** Äidin is the genitive of äiti, not the possessive-person form minulla.  
+**Correct feedback:** Minulla on expresses I have; minun belongs to 'my/of me' forms. Don't conflate them.  
+**Wrong feedback:** Minulla and minun have different grammatical jobs; we do not teach possessive suffixes now.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Minulla on sisko means I have a sister.  
+**Hint:** None. **Linked:** `grammar.people.possession-positive`, `grammar.people.genitive-restricted`. **Scored:** none. **Review eligible:** false; scaffolded or matching. **Editorial:** `needs_review`.  
+
+**C11 — `ex.people-and-descriptions.whose-and-with-whom.kanssa-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does kanssa express in the phrase kumppanin kanssa?  
+**Stimulus:** kumppanin kanssa  
+**Options (stable IDs):** `a` without a partner · `b` with a partner · `c` about a partner's age. **Correct:** `b` with a partner.  
+**Wrong option `a`:** Kanssa means with; without would be a different construction.  
+**Wrong option `c`:** Kanssa tells companionship, not age or description.  
+**Correct feedback:** Kumppanin kanssa means with a partner.  
+**Wrong feedback:** Kanssa means with and follows the authored form kumppanin.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Kumppanin kanssa — with a partner.  
+**Hint:** None. **Linked:** `vocab.kanssa`, `vocab.kumppani`, `grammar.people.kanssa-genitive`. **Scored:** `vocab.kanssa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C12 — `ex.people-and-descriptions.whose-and-with-whom.choose-kumppanin-kanssa`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which phrase correctly says 'with my partner' in the taught standard sentence fragment?  
+**Stimulus:** The preposition-like word is kanssa, and the noun needs its authored genitive.  
+**Options (stable IDs):** `a` kumppani kanssa · `b` kumppanin kanssa · `c` kumppania kanssa. **Correct:** `b` kumppanin kanssa.  
+**Wrong option `a`:** The noun must be kumppanin before kanssa, not the dictionary form.  
+**Wrong option `c`:** Kumppania is the partitive taught for negative possession, not the genitive needed here.  
+**Correct feedback:** Kumppanin kanssa is the correct standard form.  
+**Wrong feedback:** Use kumppanin, not kumppani or kumppania, before kanssa.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Kumppanin kanssa.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C13 — `ex.people-and-descriptions.whose-and-with-whom.type-kanssa`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word meaning 'with' in the taught postposition construction.  
+**Stimulus:** with — after an appropriately formed noun  
+**Accepted after N1:** `kanssa`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Kanssa follows its noun phrase, often in the genitive.  
+**Wrong feedback:** Write kanssa; it is not an English-style preposition placed before a bare noun.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Write kanssa.  
+**Hint:** None. **Linked:** `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `vocab.kanssa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C14 — `ex.people-and-descriptions.whose-and-with-whom.build-live-partner`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
+**Prompt:** Arrange the three supplied lexical tiles to say 'I live with my partner.'  
+**Stimulus:** The noun and verb forms are fully supplied; this is guided construction.  
+**Supplied lowercase lexical tiles:** `kanssa`, `asun`, `kumppanin`. **Accepted whole order:** `Asun kumppanin kanssa.`; sentence-initial capitalisation is applied after assembly.  
+**Correct feedback:** Asun kumppanin kanssa. uses the genitive noun before kanssa.  
+**Wrong feedback:** Use asun for I live and kumppanin kanssa for with a partner.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Asun kumppanin kanssa.  
+**Hint:** None. **Linked:** `vocab.kanssa`, `vocab.kumppani`, `vocab.asua`, `grammar.people.kanssa-genitive`, `phrase.people.asun-kumppanin-kanssa`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** false; scaffolded or matching. **Editorial:** `needs_review`.  
+
+**C15 — `ex.people-and-descriptions.whose-and-with-whom.independent-live-partner`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type the complete taught Finnish sentence 'I live with my partner.'  
+**Stimulus:** Fictional speaker. Use standard Finnish, not spoken kaa.  
+**Accepted after N1:** `Asun kumppanin kanssa.`, `Minä asun kumppanin kanssa.`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Asun kumppanin kanssa. reuses Unit 2 asun and the new genitive + kanssa.  
+**Wrong feedback:** The correct construction is Asun kumppanin kanssa. The dictionary noun kumppani changes to kumppanin.  
+**Near feedback:** `Asun kumppani kanssa` → Before kanssa, use the taught genitive kumppanin.  
+**Not sure:** Asun kumppanin kanssa.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `vocab.kanssa`, `vocab.asua`, `phrase.people.asun-kumppanin-kanssa`. **Scored:** `phrase.people.asun-kumppanin-kanssa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C16 — `ex.people-and-descriptions.whose-and-with-whom.independent-live-friend`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write 'I live with a friend' using the taught formal standard-Finnish form of ystävä.  
+**Stimulus:** One fictional friend, not a spouse/partner.  
+**Accepted after N1:** `Asun ystävän kanssa.`, `Minä asun ystävän kanssa.`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Asun ystävän kanssa. uses the taught genitive ystävän.  
+**Wrong feedback:** Use ystävän, not ystävä, before kanssa.  
+**Near feedback:** `Asun ystävä kanssa` → The friend form is ystävän before kanssa.  
+**Not sure:** Write Asun ystävän kanssa.  
+**Hint:** None. **Linked:** `vocab.ystava`, `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+**C17 — `ex.people-and-descriptions.whose-and-with-whom.final-name-and-person`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'Aino's brother is Olli' using the taught simple genitive form and familiar on.  
+**Stimulus:** Fictional Aino and Olli. All names are supplied as context.  
+**Accepted after N1:** `Ainon veli on Olli.`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Ainon veli on Olli. uses Ainon to identify whose brother Olli is.  
+**Wrong feedback:** Use Ainon, followed by the dictionary noun veli and the familiar on; this is not a negative possession sentence.  
+**Near feedback:** None; do not invent near credit.  
+**Not sure:** Ainon veli on Olli.  
+**Hint:** None. **Linked:** `grammar.people.genitive-restricted`, `vocab.veli`, `vocab.olla`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Whose, and with whom.” **Copy:** “You can recognise a few genitive forms and say that you live with a friend or partner.” **Required steps:** 22; **optional spoken note:** 1; **exercises:** 17; **matching pair decisions:** 3. **Next:** Lesson 7.4 — Describing someone. Genitive recognition is not mastery of arbitrary noun inflections.
+
