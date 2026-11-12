@@ -306,3 +306,243 @@ All records have `sourceType: original`, `editorialStatus: needs_review`, `revie
 
 **Headline:** “Family words, in Finnish.” **Copy:** “You can name basic family relationships and recognise a few more people words. Next you'll learn how to say someone has—or doesn't have—a particular person in their life.” **Required steps:** 19; **required exercises:** 14; **matching pair decisions:** 4. No personal disclosure and no unintroduced possession grammar. **Next:** 7.2 People close to you.
 
+## Lesson 7.2 — People close to you
+
+**ID:** `lesson.people-and-descriptions.people-close-to-you` · `unit.people-and-descriptions` · `fi` · Order 2 · **Estimated 13–20 minutes** (untested; resume after B10). **Prerequisite:** Lesson 7.1. **New production encounters:** `vocab.kumppani`, `vocab.kaveri`. **Role promotion:** `vocab.ystava` (Unit 2 recognition → Unit 7 production, same ID/history). **Grammar:** `grammar.people.possession-positive`, `grammar.people.possession-negative`; **phrase targets:** `phrase.people.minulla-on`, `phrase.people.sinulla-on`, `phrase.people.minulla-ei-ole`.  
+**Capability:** express a basic positive possession, address another possessor and make a taught sentence negative using an explicit noun form. **Completion:** all required steps and exercises B01–B18 attempted or Not sure. No learner-life disclosure or blanket noun-case generator.
+
+### Ordered learner experience
+
+IDs: `step.people-and-descriptions.people-close-to-you.<suffix>`. **Production promotion is not a second first encounter:** the same `vocab.ystava` retains its Unit 2 learning history.
+
+| # | Step suffix | Type | Exact teaching text or exercise reference | Formal new encounter | Role promotion | Required |
+|---:|---|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **People close to you.** You'll learn a neutral word for partner and two everyday friendship words, then learn how Finnish says 'I have' and 'I don't have'. We use fictional speakers so you don't have to describe your own relationships. | none | none | Yes |
+| 2 | `relationships` | `vocabulary_intro` | **kumppani — partner** (a neutral word, in a relationship context). **kaveri — friend/buddy**, often informal. **ystävä — friend** is the same word you recognised in Unit 2: now practise producing it independently. There is overlap between ystävä and kaveri; their English meanings are not strict opposites. | `vocab.kumppani`, `vocab.kaveri` | `vocab.ystava` | Yes |
+| 3 | `exercise-01` | `exercise` | B01 | none | none | Yes |
+| 4 | `exercise-02` | `exercise` | B02 | none | none | Yes |
+| 5 | `exercise-03` | `exercise` | B03 | none | none | Yes |
+| 6 | `exercise-04` | `exercise` | B04 | none | none | Yes |
+| 7 | `exercise-05` | `exercise` | B05 | none | none | Yes |
+| 8 | `exercise-06` | `exercise` | B06 | none | none | Yes |
+| 9 | `positive-grammar` | `grammar_explanation` | **Minulla on sisko.** — I have a sister. **Sinulla on veli.** — You have a brother. In these special possession sentences Finnish uses *on* with minulla/sinulla, not *olen/olet*. You've seen Minulla on nälkä as a fixed recognition chunk in Unit 5; now learn the reusable positive possession frame. | `grammar.people.possession-positive`, `phrase.people.minulla-on`, `phrase.people.sinulla-on` | none | Yes |
+| 10 | `positive-examples` | `example_set` | **Minulla on kumppani.** — I have a partner. **Sinulla on ystävä.** — You have a friend. These are examples about fictional people. There is no separate Finnish verb in our vocabulary list meaning English 'have'. | none | none | Yes |
+| 11 | `exercise-07` | `exercise` | B07 | none | none | Yes |
+| 12 | `exercise-08` | `exercise` | B08 | none | none | Yes |
+| 13 | `exercise-09` | `exercise` | B09 | none | none | Yes |
+| 14 | `exercise-10` | `exercise` | B10 | none | none | Yes |
+| 15 | `negative-grammar` | `grammar_explanation` | **Minulla ei ole siskoa.** — I don't have a sister. Compare **Minulla on sisko**. In taught negative possession, the noun takes a special partitive form. Learn **siskoa**, **veljeä** and **kumppania** as complete forms. The stem changes in veli → veljeä; there is no universal 'add-a' shortcut. | `grammar.people.possession-negative`, `phrase.people.minulla-ei-ole` | none | Yes |
+| 16 | `negative-examples` | `example_set` | **Minulla ei ole veljeä.** — I don't have a brother. **Minulla ei ole kumppania.** — I don't have a partner. **Minulla ei ole ystävää.** — I don't have a friend (recognition only for this last noun form). The negative phrase remains ei ole, not en ole. | none | none | Yes |
+| 17 | `exercise-11` | `exercise` | B11 | none | none | Yes |
+| 18 | `exercise-12` | `exercise` | B12 | none | none | Yes |
+| 19 | `spoken-possess` | `spoken_note` | Optional spoken recognition: standard **minulla on** is often **mulla on**, and **sinulla on** becomes **sulla on** in everyday speech. Continue producing standard Finnish in assessed answers; variants vary by region and register. | none | none | No |
+| 20 | `exercise-13` | `exercise` | B13 | none | none | Yes |
+| 21 | `exercise-14` | `exercise` | B14 | none | none | Yes |
+| 22 | `exercise-15` | `exercise` | B15 | none | none | Yes |
+| 23 | `checkpoint` | `checkpoint` | **Lesson checkpoint B16–B18:** decide who the possessor is, retrieve a friend/partner possession statement and independently produce a taught negative pattern. Your answer isn't a personal claim. | none | none | Yes |
+| 24 | `checkpoint-explainer` | `example_set` | **Before your checkpoint:** I have a sister → Minulla on sisko. I don't have a brother → Minulla ei ole veljeä. You will retrieve the two patterns independently without being asked to transform arbitrary unseen nouns. | none | none | Yes |
+
+### Complete authored exercises
+
+All exercises: `sourceType: original`, `editorialStatus: needs_review`, `reviewedBy: null`. Negative production is tested **only after** the exact forms siskoa / veljeä / kumppania were introduced. Matching of two noun/forms is recognition practice only; it does not duplicate the same grammar score on each pair.
+
+**B01 — `ex.people-and-descriptions.people-close-to-you.partner-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** A person mentions their kumppani. What relationship does the word most directly describe here?  
+**Stimulus:** kumppani in a personal relationship context.  
+**Options (stable IDs):** `a` partner · `b` sister · `c` father. **Correct:** `a` partner.  
+**Wrong option `b`:** Sisko is sister.  
+**Wrong option `c`:** Isä is father.  
+**Correct feedback:** Kumppani is a gender-neutral word for partner in this context.  
+**Wrong feedback:** Kumppani can describe a partner; sisko and isä are family nouns.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Kumppani means partner.  
+**Hint:** None. **Linked:** `vocab.kumppani`. **Scored:** `vocab.kumppani`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B02 — `ex.people-and-descriptions.people-close-to-you.friend-promotion`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** You recognised ystävä in Unit 2. Which meaning belongs to it?  
+**Stimulus:** ystävä — the same existing Finnish vocabulary item; now preparing for active recall.  
+**Options (stable IDs):** `a` friend · `b` father · `c` house. **Correct:** `a` friend.  
+**Wrong option `b`:** Father is isä.  
+**Wrong option `c`:** House is talo.  
+**Correct feedback:** Ystävä means friend. This is the same word you met earlier, now becoming a production target.  
+**Wrong feedback:** Ystävä is friend; no new duplicate vocabulary item is needed.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Ystävä means friend.  
+**Hint:** None. **Linked:** `vocab.ystava`. **Scored:** `vocab.ystava`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B03 — `ex.people-and-descriptions.people-close-to-you.buddy-context`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In an informal conversation, what can kaveri mean?  
+**Stimulus:** A casual friend or buddy, rather than necessarily a romantic partner.  
+**Options (stable IDs):** `a` an aunt · `b` a friend / buddy · `c` a clock. **Correct:** `b` a friend / buddy.  
+**Wrong option `a`:** An aunt is a different family relationship, not kaveri.  
+**Wrong option `c`:** Clock is kello from Unit 6.  
+**Correct feedback:** Kaveri is commonly a friend or buddy; ystävä also means friend, with overlapping meanings.  
+**Wrong feedback:** Kaveri is an everyday friend/buddy word; don't assume it always differs sharply from ystävä.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Kaveri means friend / buddy.  
+**Hint:** None. **Linked:** `vocab.kaveri`, `vocab.ystava`. **Scored:** `vocab.kaveri`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B04 — `ex.people-and-descriptions.people-close-to-you.write-kumppani`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word for a partner, without specifying gender.  
+**Stimulus:** partner (relationship context)  
+**Accepted N1 forms:** `kumppani`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Kumppani is a useful neutral word for partner.  
+**Wrong feedback:** Write kumppani. It does not identify the person's gender.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Kumppani.  
+**Hint:** None. **Linked:** `vocab.kumppani`. **Scored:** `vocab.kumppani`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B05 — `ex.people-and-descriptions.people-close-to-you.write-ystava`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word ystävä from your earlier recognition practice: 'friend'.  
+**Stimulus:** friend — retrieve the earlier-recognised word independently.  
+**Accepted N1 forms:** `ystävä`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Ystävä is now retrieved as production vocabulary; its earlier Unit 2 recognition history stays intact.  
+**Wrong feedback:** The word is ystävä with ä in both the middle and final syllable.  
+**Near feedback:** `ystava` → Keep Finnish ä letters: ystävä.  
+**Not sure feedback:** Write ystävä.  
+**Hint:** None. **Linked:** `vocab.ystava`. **Scored:** `vocab.ystava`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B06 — `ex.people-and-descriptions.people-close-to-you.write-kaveri`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish word for a buddy or casual friend.  
+**Stimulus:** buddy / friend (common everyday expression)  
+**Accepted N1 forms:** `kaveri`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Kaveri means buddy or friend.  
+**Wrong feedback:** Use kaveri. Ystävä also means friend but the prompt asks for the buddy term.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Write kaveri.  
+**Hint:** None. **Linked:** `vocab.kaveri`, `vocab.ystava`. **Scored:** `vocab.kaveri`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B07 — `ex.people-and-descriptions.people-close-to-you.have-vs-am`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which sentence expresses 'I have a sister'?  
+**Stimulus:** Fictional scenario; choose possession, not personal identity.  
+**Options (stable IDs):** `a` Minä olen sisko. · `b` Minulla on sisko. · `c` Sinulla on sisko.. **Correct:** `b` Minulla on sisko..  
+**Wrong option `a`:** Minä olen sisko says 'I am a sister', not 'I have a sister'.  
+**Wrong option `c`:** Sinulla on sisko says 'You have a sister', not 'I have'.  
+**Correct feedback:** Minulla on sisko expresses possession. The verb is on, not olen.  
+**Wrong feedback:** Use Minulla on for I have; Minä olen means I am.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Minulla on sisko.  
+**Hint:** None. **Linked:** `vocab.sisko`, `grammar.people.possession-positive`, `phrase.people.minulla-on`. **Scored:** `grammar.people.possession-positive`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B08 — `ex.people-and-descriptions.people-close-to-you.have-you-vs-i`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Choose the sentence meaning 'You have a brother'.  
+**Stimulus:** The person addressed is 'you', not the speaker.  
+**Options (stable IDs):** `a` Minulla on veli. · `b` Sinulla on veli. · `c` Sinä olet veli.. **Correct:** `b` Sinulla on veli..  
+**Wrong option `a`:** Minulla on veli means I have a brother.  
+**Wrong option `c`:** Sinä olet veli means you are a brother, not you have one.  
+**Correct feedback:** Sinulla on veli expresses that you have a brother. The verb is still on.  
+**Wrong feedback:** Sinulla on is the taught second-person possession construction.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Sinulla on veli.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.possession-positive`, `phrase.people.sinulla-on`. **Scored:** `phrase.people.sinulla-on`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B09 — `ex.people-and-descriptions.people-close-to-you.type-have-sister`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** A fictional person says 'I have a sister.' Type the full taught Finnish sentence.  
+**Stimulus:** I have a sister.  
+**Accepted N1 forms:** `Minulla on sisko.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Minulla on sisko. uses on with a nominative noun in the simple affirmative sentence.  
+**Wrong feedback:** Write Minulla on sisko; do not use Minä olen sisko or a negative partitive noun.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Minulla on sisko.  
+**Hint:** None. **Linked:** `grammar.people.possession-positive`, `phrase.people.minulla-on`, `vocab.sisko`. **Scored:** `phrase.people.minulla-on`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B10 — `ex.people-and-descriptions.people-close-to-you.type-you-partner`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** In a fictional scene, type 'You have a partner.'  
+**Stimulus:** You have a partner.  
+**Accepted N1 forms:** `Sinulla on kumppani.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Sinulla on kumppani. uses the same on for the second-person possessor.  
+**Wrong feedback:** Write Sinulla on kumppani. The subject is 'you', so not minulla.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Sinulla on kumppani.  
+**Hint:** None. **Linked:** `phrase.people.sinulla-on`, `vocab.kumppani`. **Scored:** `phrase.people.sinulla-on`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B11 — `ex.people-and-descriptions.people-close-to-you.negative-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Minulla ei ole siskoa mean?  
+**Stimulus:** A fictional speaker denies having a sister.  
+**Options (stable IDs):** `a` I am a sister. · `b` I have a sister. · `c` I don't have a sister.. **Correct:** `c` I don't have a sister..  
+**Wrong option `a`:** The statement says the speaker does not have a sister; this is not 'I am'.  
+**Wrong option `b`:** An affirmative version would use Minulla on sisko.  
+**Correct feedback:** Minulla ei ole siskoa is negative possession, and the noun is in the taught partitive form.  
+**Wrong feedback:** The negative uses ei ole plus the taught form siskoa.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** I don't have a sister.  
+**Hint:** None. **Linked:** `grammar.people.possession-negative`, `vocab.sisko`, `phrase.people.minulla-ei-ole`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B12 — `ex.people-and-descriptions.people-close-to-you.partitive-negative-pair`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match each singular family noun to the exact form shown in a negative possession sentence.  
+**Stimulus:** These are two **taught** forms, not a general suffix exercise.  
+**Matching pairs (2 decisions):** **sisko ↔ siskoa** (learning reference unscored guided form); **veli ↔ veljeä** (learning reference unscored guided form). **Per-pair `scoredTargetIds: []` and capability-only feedback for this guided form board.**  
+**Correct feedback:** Sisko → siskoa; veli → veljeä. Veli changes its stem in the partitive.  
+**Wrong feedback:** Negative possession uses siskoa or veljeä. Don't write the dictionary noun unchanged.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** sisko → siskoa; veli → veljeä.  
+**Hint:** None. **Linked:** `vocab.sisko`, `vocab.veli`, `grammar.people.possession-negative`. **Scored:** none. **Review eligible:** false, lesson dependent or guided. **Editorial:** `needs_review`.  
+
+**B13 — `ex.people-and-descriptions.people-close-to-you.negative-sister`** · `transform` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Make this taught possession sentence negative while keeping its meaning about a sister.  
+**Stimulus:** Minulla on sisko. → I don't have a sister.  
+**Accepted N1 forms:** `Minulla ei ole siskoa.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Minulla ei ole siskoa. uses the specific taught partitive form.  
+**Wrong feedback:** Replace on with ei ole, and use siskoa rather than the noun sisko.  
+**Near feedback:** `Minulla ei ole sisko.` → The negative needs the taught noun form siskoa.  
+**Not sure feedback:** Minulla ei ole siskoa.  
+**Hint:** None. **Linked:** `grammar.people.possession-negative`, `vocab.sisko`, `phrase.people.minulla-ei-ole`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B14 — `ex.people-and-descriptions.people-close-to-you.negative-brother`** · `transform` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Make this taught sentence negative: 'I have a brother.'  
+**Stimulus:** Minulla on veli. → I don't have a brother.  
+**Accepted N1 forms:** `Minulla ei ole veljeä.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Minulla ei ole veljeä. shows the correct changing stem veli → veljeä.  
+**Wrong feedback:** Use ei ole and the taught form veljeä, not veli or velia.  
+**Near feedback:** `Minulla ei ole veli.` → Negative possession requires veljeä, not the bare noun veli.; `Minulla ei ole velia.` → The taught partitive is veljeä, with the changed stem.  
+**Not sure feedback:** Minulla ei ole veljeä.  
+**Hint:** None. **Linked:** `grammar.people.possession-negative`, `vocab.veli`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B15 — `ex.people-and-descriptions.people-close-to-you.negative-partner`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Choose the correct taught negative sentence for 'I don't have a partner'.  
+**Stimulus:** A fictional person, not a question about the learner's personal life.  
+**Options (stable IDs):** `a` Minulla ei ole kumppani. · `b` Minulla ei ole kumppania. · `c` Minulla olen kumppania.. **Correct:** `b` Minulla ei ole kumppania..  
+**Wrong option `a`:** Negative possession needs kumppania, not the basic noun kumppani.  
+**Wrong option `c`:** The construction needs ei ole, not olen, and the correct noun form.  
+**Correct feedback:** Minulla ei ole kumppania is standard negative possession.  
+**Wrong feedback:** Use ei ole kumppania; don't leave the noun in its dictionary form.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Minulla ei ole kumppania.  
+**Hint:** None. **Linked:** `vocab.kumppani`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B16 — `ex.people-and-descriptions.people-close-to-you.identify-possessor`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** In 'Sinulla on ystävä', who is described as having a friend?  
+**Stimulus:** Sinulla on ystävä.  
+**Options (stable IDs):** `a` the speaker (I) · `b` the person addressed (you) · `c` a third person (he/she). **Correct:** `b` the person addressed (you).  
+**Wrong option `a`:** The speaker would use Minulla on.  
+**Wrong option `c`:** Sinulla is directed at 'you', not a third person.  
+**Correct feedback:** Sinulla identifies the person being addressed. Ystävä is the earlier word promoted to production.  
+**Wrong feedback:** Sinulla means 'you have' in this construction.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** The person addressed (you).  
+**Hint:** None. **Linked:** `grammar.people.possession-positive`, `vocab.ystava`. **Scored:** `grammar.people.possession-positive`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B17 — `ex.people-and-descriptions.people-close-to-you.checkpoint-have-friend`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'I have a friend' using the newly practised production word ystävä.  
+**Stimulus:** A fictional speaker has one friend.  
+**Accepted N1 forms:** `Minulla on ystävä.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Minulla on ystävä. combines the possession frame with a word now moved from recognition to production.  
+**Wrong feedback:** Use Minulla on ystävä, not Minä olen ystävä.  
+**Near feedback:** None (no unsupported near-miss credit).  
+**Not sure feedback:** Minulla on ystävä.  
+**Hint:** None. **Linked:** `vocab.ystava`, `phrase.people.minulla-on`, `grammar.people.possession-positive`. **Scored:** `vocab.ystava`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**B18 — `ex.people-and-descriptions.people-close-to-you.checkpoint-negative-sibling`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type 'I don't have a brother' without supplied Finnish choices.  
+**Stimulus:** A fictional speaker does not have a brother; use the taught exact negative form.  
+**Accepted N1 forms:** `Minulla ei ole veljeä.`. Do not accept missing/incorrect Finnish case endings.  
+**Correct feedback:** Minulla ei ole veljeä. applies the earlier taught negative-possession pattern independently.  
+**Wrong feedback:** Keep the exact taught noun form veljeä after ei ole.  
+**Near feedback:** `Minulla ei ole veli` → Use veljeä, not the dictionary noun.  
+**Not sure feedback:** Minulla ei ole veljeä.  
+**Hint:** None. **Linked:** `vocab.veli`, `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “A useful way to say ‘have’.” **Copy:** “You can say someone has a sibling or partner, and make specific taught possession sentences negative.” **Steps:** 24 total (23 required), **exercises:** 18, **matching pair decisions:** 2. **Next:** Lesson 7.3 — Whose? And with whom? **Native QA:** Finnish ä/long vowels, negative case forms and a mid-lesson resume boundary.
+
