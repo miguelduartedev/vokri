@@ -1366,3 +1366,98 @@ Lähden perjantaina.`. This multiline task is capability evidence only: `scoredT
 
 **Completion headline:** “A small part of your day, in Finnish.” **Copy:** “You can now tell a whole-hour time, say what you do in the morning, recognise weekdays and describe how often familiar activities happen. These skills will become stronger as your vocabulary returns in Review.” **No permanent-mastery claim.** Unit 6 contains 21 new production lemmas and seven recognition-only items; its six lessons can finish after attempted checkpoints, even with incorrect or Not sure answers. **Next:** Unit 7 — People & descriptions. **Optional Flashcards/Word Match:** still separate from the scheduled-review queue.
 
+## Part III — Standalone scheduled-Review variants
+
+Eight independent Review-only records cover seven recognition lemmas and the newly introduced fixed recognition phrase Nähdään huomenna! These records are not compulsory lesson steps. Each becomes available only after formal encounter, editorial approval and an actual due date. All use multiple_choice, intent recognition, difficulty foundation, reviewEligible true, sourceType original and editorialStatus needs_review. No Finnish typed production.
+
+**R01 — `ex.daily-life.review.nousta-get-up`** · `multiple_choice` · standalone recognition  
+**Prompt:** When describing a routine, what does nousta mean?  
+**Stimulus:** `nousta`; full independent context supplied.  
+**Options:** `a` to get up / rise · `b` to wake up · `c` to sleep. Accepted `a`; shuffle display order.  
+**Correct feedback:** Nousta means to get up or rise.  
+**Wrong b:** Herätä is waking; nousta is getting up.  
+**Wrong c:** Nukkua is sleeping.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Nousta means to get up or rise.  
+**Hint:** None. **Linked:** `vocab.nousta`. **Scored:** `vocab.nousta` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R02 — `ex.daily-life.review.eilen-yesterday`** · `multiple_choice` · standalone recognition  
+**Prompt:** What does eilen mean?  
+**Stimulus:** `eilen`; full independent context supplied.  
+**Options:** `a` yesterday · `b` tomorrow · `c` today. Accepted `a`; shuffle display order.  
+**Correct feedback:** Eilen means yesterday; no past-tense production is required.  
+**Wrong b:** Huomenna means tomorrow.  
+**Wrong c:** Tänään means today.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Eilen means yesterday; no past-tense production is required.  
+**Hint:** None. **Linked:** `vocab.eilen`. **Scored:** `vocab.eilen` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R03 — `ex.daily-life.review.paiva-day`** · `multiple_choice` · standalone recognition  
+**Prompt:** What does päivä mean?  
+**Stimulus:** `päivä`; full independent context supplied.  
+**Options:** `a` day · `b` week · `c` month. Accepted `a`; shuffle display order.  
+**Correct feedback:** Päivä means day.  
+**Wrong b:** Viikko means week.  
+**Wrong c:** Kuukausi means month.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Päivä means day.  
+**Hint:** None. **Linked:** `vocab.paiva`. **Scored:** `vocab.paiva` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R04 — `ex.daily-life.review.tunti-hour`** · `multiple_choice` · standalone recognition  
+**Prompt:** What duration does tunti name?  
+**Stimulus:** `tunti`; full independent context supplied.  
+**Options:** `a` hour · `b` minute · `c` day. Accepted `a`; shuffle display order.  
+**Correct feedback:** Tunti is an hour of duration; kello marks clock times.  
+**Wrong b:** Minuutti is a minute.  
+**Wrong c:** Päivä is a day.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Tunti is an hour of duration; kello marks clock times.  
+**Hint:** None. **Linked:** `vocab.tunti`. **Scored:** `vocab.tunti` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R05 — `ex.daily-life.review.minuutti-minute`** · `multiple_choice` · standalone recognition  
+**Prompt:** What time unit is minuutti?  
+**Stimulus:** `minuutti`; full independent context supplied.  
+**Options:** `a` minute · `b` hour · `c` week. Accepted `a`; shuffle display order.  
+**Correct feedback:** Minuutti means minute; no minute calculations are tested.  
+**Wrong b:** Tunti means hour.  
+**Wrong c:** Viikko means week.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Minuutti means minute; no minute calculations are tested.  
+**Hint:** None. **Linked:** `vocab.minuutti`. **Scored:** `vocab.minuutti` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R06 — `ex.daily-life.review.viikko-week`** · `multiple_choice` · standalone recognition  
+**Prompt:** What does viikko mean?  
+**Stimulus:** `viikko`; full independent context supplied.  
+**Options:** `a` week · `b` day · `c` month. Accepted `a`; shuffle display order.  
+**Correct feedback:** Viikko means week.  
+**Wrong b:** Päivä means day.  
+**Wrong c:** Kuukausi means month.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Viikko means week.  
+**Hint:** None. **Linked:** `vocab.viikko`. **Scored:** `vocab.viikko` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R07 — `ex.daily-life.review.kuukausi-month`** · `multiple_choice` · standalone recognition  
+**Prompt:** What does kuukausi mean?  
+**Stimulus:** `kuukausi`; full independent context supplied.  
+**Options:** `a` month · `b` minute · `c` week. Accepted `a`; shuffle display order.  
+**Correct feedback:** Kuukausi means month, but months' names are not required.  
+**Wrong b:** Minuutti is minute.  
+**Wrong c:** Viikko is week.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Kuukausi means month, but months' names are not required.  
+**Hint:** None. **Linked:** `vocab.kuukausi`. **Scored:** `vocab.kuukausi` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+**R08 — `ex.daily-life.review.nahdaan-huomenna`** · `multiple_choice` · standalone recognition  
+**Prompt:** What does Nähdään huomenna! mean?  
+**Stimulus:** `Nähdään huomenna!`; full independent context supplied.  
+**Options:** `a` See you tomorrow! · `b` See you yesterday! · `c` What time is it?. Accepted `a`; shuffle display order.  
+**Correct feedback:** Nähdään huomenna! is a recognition-only fixed farewell.  
+**Wrong b:** Huomenna means tomorrow, not yesterday.  
+**Wrong c:** Mitä kello on? is the question for the current time.  
+**Near feedback:** None; do not invent near credit. **Not sure:** Nähdään huomenna! is a recognition-only fixed farewell.  
+**Hint:** None. **Linked:** `phrase.daily-life.nahdaan-huomenna`. **Scored:** `phrase.daily-life.nahdaan-huomenna` only. **Review eligible:** true; self-contained. **Editorial:** needs_review.  
+
+## Part IV — Unit 6 capability assessment, review integrity and implementation boundaries
+
+**Capability traceability:** Lesson 6.6 G11 independently elicits a wake-up time, G12 a morning activity, G13 a weekday time form, G14 a frequency statement, G15 a constrained three-sentence routine, G16 a guided morning/frequency composition, and G17 independent 'often' retrieval. These test the five blueprint abilities, but are a sample of learning evidence, not proof of all 21 lemmas having permanent mastery.
+
+**Completion:** the six lesson checkpoints are attempted after all required steps; Not sure is a valid attempt. Only explicitly scored targets update the existing due Review scheduler. Optional Flashcards/Word Match do not clear due items or complete units. The three-line G15 task uses a *restricted* acceptance list and is capability-only (scoredTargetIds empty, knowledgeScoring false). Preserve line boundaries during validation: if N1 collapses newlines, use three scoped text_input answer rows in the existing exercise renderer; do not implement fuzzy or AI grading.
+
+**Lesson matching:** two- to four-pair lesson-local matching boards are permitted, even though optional Word Match requires at least four eligible pairs; each pair has first-attempt scoring, without duplicate board-wide successes. Recognition words are never required as unrestricted Finnish spelling. The fixed phrase Nähdään huomenna was not formally taught in Units 1–5 and is newly introduced **recognition-only** in Lesson 6.2, not mislabelled REVIEW.
+
+**Linguistic research:** [Uusi kielemme: Telling the Time](https://uusikielemme.fi/finnish-vocabulary/vocabulary-lists/telling-the-time-in-finnish-mita-kello-on) distinguishes Kello on viisi / Herään kello viisi / Herään viideltä; [Weekdays](https://uusikielemme.fi/finnish-vocabulary/vocabulary-lists/the-days-of-the-week-viikonpaivat) confirms keskiviikkona and distinguishes on Monday from habitual Mondays; [Expressions of Time](https://uusikielemme.fi/finnish-grammar/finnish-cases/interesting-inflection/expressions-of-time-ajanilmaukset) confirms aamulla and illalla; [First 100 Finnish Verbs](https://uusikielemme.fi/finnish-vocabulary/vocabulary-lists/your-first-100-finnish-verbs-finnish-for-beginners) confirms herään/nukun and the taught first-person verb forms. These are sources for grammatical forms, not independent teacher approval of newly authored Vokri sentences.
+
+**Scope:** Finnish Unit 6 only; no React Native code, new UI engine, Figma changes, lesson rewrites for Units 1–5, past tense, general conjugation/case engine, additional Swedish content, unrestricted weekday habits, or general hour endings. Editorial status remains needs_review until explicit Vokri owner approval; actual Expo performance, accessibility and beginner learning outcomes remain untested.
