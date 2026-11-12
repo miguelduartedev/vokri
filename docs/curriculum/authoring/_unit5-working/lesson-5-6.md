@@ -129,14 +129,14 @@ Full step IDs: `step.food-and-quantities.cafe-shop-review.` + suffix. All listed
 **Not sure:** Write Voinko maksaa kortilla?  
 **Hint:** null. **Linked:** `phrase.voinko-maksaa-kortilla`, `vocab.kortti`, `vocab.maksaa`. **Scored:** `phrase.voinko-maksaa-kortilla`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.
 
-**F12 — `ex.food-and-quantities.cafe-shop-review.final-buy-pay`** · `multiple_choice` · contextual action · difficulty contextual recognition  
-**Prompt:** You need to say ‘I am buying milk’, not ‘I'm paying by card’. Which taught sentence fits?  
-**Stimulus:** You are acquiring milk; not describing the payment method.  
-**Answer:** Shuffled stable options: `a` Maksan kortilla. · `b` Ostan maitoa. · `c` Se maksaa kaksi euroa.. Accepted ID `b`.  
-**Correct feedback:** Ostan maitoa. means I am buying milk.  
-**Incorrect feedback:** `a`: Maksan kortilla. tells how you pay. `c`: Se maksaa kaksi euroa. states the item's price.  
-**Near feedback:** None.  
-**Not sure:** Use Ostan maitoa.  
+**F12 — `ex.food-and-quantities.cafe-shop-review.final-buy-pay`** · `text_input` · contextual independent recall · difficulty independent recall  
+**Prompt:** At a shop, you are buying some milk. Type the taught Finnish sentence “I'm buying milk.”  
+**Stimulus:** I am buying milk; describe the purchase, not the payment method.  
+**Answer:** Accepted after N1: `Ostan maitoa.` or `Minä ostan maitoa.`.  
+**Correct feedback:** Ostan maitoa. says you're buying milk; Maksan kortilla. would explain how you pay.  
+**Incorrect feedback:** Use Ostan maitoa. The verb is ostan (“I buy”) and the taught milk form is maitoa.  
+**Near feedback:** `maksan maitoa` → Maksaa means pay/cost; to buy milk say Ostan maitoa.  
+**Not sure:** Write Ostan maitoa.  
 **Hint:** null. **Linked:** `vocab.ostaa`, `vocab.maito`, `vocab.maksaa`. **Scored:** `vocab.ostaa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.
 
 **F13 — `ex.food-and-quantities.cafe-shop-review.final-receipt`** · `multiple_choice` · recognition-only comprehension · difficulty contextual recognition  
