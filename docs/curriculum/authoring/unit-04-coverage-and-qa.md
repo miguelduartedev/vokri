@@ -20,12 +20,12 @@
 
 | Kind | Required records | Observations |
 |---|---:|---|
-| `multiple_choice` | 29 | Meaning/context/form selection; stable option-specific feedback |
+| `multiple_choice` | 37 | Meaning/context/form selection; stable option-specific feedback |
 | `text_input` | 28 | Dictionary form and taught complete phrase retrieval |
-| `token_build` | 7 | Guided sentence assembly, explicitly not independent spelling recall |
+| `token_build` | 6 | Guided sentence assembly, explicitly not independent spelling recall |
 | `matching` | 6 | 17 separately assessed pairs |
 | `transform` | 0 | No need to force an inappropriate untaught transformation |
-| **Total** | **70** | **Recalculate counts from the final specification before merge** |
+| **Total** | **77** | Six Review-only multiple-choice variants are additional, not compulsory. |
 
 ## 2. Production vocabulary coverage (all 16)
 
