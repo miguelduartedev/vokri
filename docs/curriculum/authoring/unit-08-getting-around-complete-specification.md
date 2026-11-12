@@ -1230,3 +1230,282 @@ All records use original content/needs_review, the existing N1 and scored-target
 
 **Headline:** “From where, and how?” **Copy:** “You can recognise a place someone comes from and describe travelling by bus or train with an explicitly taught form.” **Required steps:** 26; **required exercises:** 19; **matching pair decisions:** 6. This is a finite transport lesson, not mastery of six local cases or arbitrary verb paradigms. **Next:** 8.6 Simple directions.
 
+## Lesson 8.6 — Simple directions
+
+**Lesson ID:** `lesson.getting-around.simple-directions` · `unit.getting-around` · `fi` · Order 6 · **Estimated:** 17–26 minutes including stage capstone (untested; provide resume after F13 and F17). **Prerequisite:** Lessons 8.1–8.5 and all reached A1 Foundations material.  
+**Capability:** recognise and produce simple direction words, follow a short ordered route and demonstrate five Unit 8 goals; then complete a small cross-unit stage capstone. **New production:** `vocab.suoraan`, `vocab.takaisin`, `vocab.oikea`, `vocab.vasen`. **New phrases:** productive fixed `phrase.getting-around.mene-suoraan`, `phrase.getting-around.tulen-takaisin`; recognition-only `phrase.getting-around.kaanny-oikealle`, `phrase.getting-around.kaanny-vasemmalle`. **Optional spoken:** takaisin → takas. **No new canonical recognition-only lemmas.**  
+**Completion:** required steps and F01–F21 attempted or Not sure, without perfection gating; the A1 Foundations stage completion flag is separate from knowledge/mastery state or external CEFR certification.
+
+### Ordered learner experience
+
+Step IDs: `step.getting-around.simple-directions.<suffix>`. The final two `checkpoint` steps contain existing authored exercise records, **not a new exercise renderer or seventh lesson**. The spoken note is optional.
+
+| # | Step suffix | LessonStep type | Exact learner-facing content or exercise ref | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Simple directions — and the end of Foundations.** You'll learn straight ahead, back, right and left. Then you'll use real movement and transport phrases from Unit 8 and finish with a short story using language from earlier units. This is not a driving exam or a complete route-planning lesson. | none | Yes |
+| 2 | `straight-back` | `vocabulary_intro` | **suoraan — straight ahead/directly; takaisin — back/returning.** Straight ahead continues without turning; takaisin reverses towards a previous place. The standard written word is takaisin. | `vocab.suoraan`, `vocab.takaisin` | Yes |
+| 3 | `right-left` | `vocabulary_intro` | **oikea — right**, when the context is directions; it can also mean correct. **vasen — left.** The right/left pair is deliberately taught even though vasen has a lower overall frequency rank. Neither dictionary word is identical to the directional phrase oikealle/vasemmalle. | `vocab.oikea`, `vocab.vasen` | Yes |
+| 4 | `practice-01` | `exercise` | F01 | none | Yes |
+| 5 | `practice-02` | `exercise` | F02 | none | Yes |
+| 6 | `practice-03` | `exercise` | F03 | none | Yes |
+| 7 | `practice-04` | `exercise` | F04 | none | Yes |
+| 8 | `practice-05` | `exercise` | F05 | none | Yes |
+| 9 | `practice-06` | `exercise` | F06 | none | Yes |
+| 10 | `practice-07` | `exercise` | F07 | none | Yes |
+| 11 | `straight-command` | `phrase_intro` | **Mene suoraan.** — Go straight ahead. This **one fixed singular imperative** is productive as a phrase. You are not expected to derive arbitrary command forms of other verbs. | `phrase.getting-around.mene-suoraan` | Yes |
+| 12 | `practice-08` | `exercise` | F08 | none | Yes |
+| 13 | `turn-commands` | `phrase_intro` | Recognise these two fixed instructions: **Käänny oikealle.** — Turn right; **Käänny vasemmalle.** — Turn left. **oikealle/vasemmalle** are directional forms, not the base adjectives **oikea/vasen**. The verb käänny is a fixed command here; we are not adding a general productive kääntyä verb paradigm. | `phrase.getting-around.kaanny-oikealle`, `phrase.getting-around.kaanny-vasemmalle` | Yes |
+| 14 | `practice-09` | `exercise` | F09 | none | Yes |
+| 15 | `come-back-phrase` | `phrase_intro` | **Tulen takaisin.** — I'm coming back. You already know **tulen** from Unit 3; the new word is takaisin. The phrase is productive as a complete short statement. | `phrase.getting-around.tulen-takaisin` | Yes |
+| 16 | `practice-10` | `exercise` | F10 | none | Yes |
+| 17 | `spoken-takas` | `spoken_note` | Optional spoken recognition: **takaisin → takas**. You may also recognise familiar **menen → meen** and **tulen → tuun** from earlier units. Do not type colloquial spellings as standard-Finnish answers. | none | No |
+| 18 | `practice-11` | `exercise` | F11 | none | Yes |
+| 19 | `practice-12` | `exercise` | F12 | none | Yes |
+| 20 | `textual-route` | `example_set` | **Route:** 1. Mene suoraan. (Go straight.) 2. Käänny vasemmalle. (Turn left.) 3. Käänny oikealle. (Turn right.) A short list is enough to practise directions; a map or arrow-only diagram isn't required. | none | Yes |
+| 21 | `practice-13` | `exercise` | F13 | none | Yes |
+| 22 | `unit-capability-transition` | `explanation` | **Unit 8 checkpoint.** Next you'll use all five practical abilities: identify transport, ask where a station is, say you're going downtown, understand a from-phrase and follow basic direction order. Recall is tested without requiring new forms. | none | Yes |
+| 23 | `unit8-capability-check` | `checkpoint` | **Unit 8 practical checkpoint F14–F17:** choose the correct mode of transport, independently ask where the station is and say you go downtown, then recognise movement from a known place. Direction-sequence comprehension was checked immediately before this. | none | Yes |
+| 24 | `a1-stage-transition` | `explanation` | **A1 Foundations closing check.** Unit 8 is the final stage unit. A short, fictional story will reuse language from greetings, daily life, food and transport. Finishing this curriculum is valuable progress, but it is not an externally certified CEFR A1 exam. | none | Yes |
+| 25 | `a1-foundations-capstone` | `checkpoint` | **A1 Foundations stage capstone F18–F21:** understand a basic introduction, retrieve a daily food/drink sentence, describe a concrete house by colour and write a connected three-line story about a fictional journey. Capability-only; do not award multiple lexical mastery events. | none | Yes |
+| 26 | `three-line-guide` | `example_set` | **One short day in three lines.** The final exercise gives three English facts about Aino, a fictional person. Write one taught Finnish sentence per line. This is a *restricted capability assessment*, not unrestricted storytelling or an AI-graded conversation. | none | Yes |
+
+### All complete authored exercises, Unit 8 checkpoint and A1 capstone
+
+The first thirteen exercises introduce/assess simple directions. **F14–F17** cover the four remaining Unit 8 capabilities; **F18–F21** form the small, separate A1 Foundations capstone. All new records use `sourceType: original`, `editorialStatus: needs_review`, N1 deterministic acceptance and the existing five exercise kinds. F18–F21 are capability-only and do not create unrelated scheduled-Review successes.
+
+**F01 — `ex.getting-around.simple-directions.straight-back-pair`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the two travel-direction words to their meanings.  
+**Stimulus:** One word indicates continuing ahead; the other means returning/back.  
+**Matching pairs (2 first-attempt decisions):** **suoraan ↔ straight ahead / directly** scoring `vocab.suoraan`; **takaisin ↔ back / back again** scoring `vocab.takaisin`. Context is direction-specific, not generic 'correct answer' for oikea.  
+**Correct feedback:** Suoraan is straight ahead, while takaisin is back or returning.  
+**Wrong feedback:** These aren't synonyms: one says continue straight, the other describes returning.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** suoraan → straight ahead; takaisin → back.  
+**Hint:** None. **Linked:** `vocab.suoraan`, `vocab.takaisin`. **Scored:** `vocab.suoraan`, `vocab.takaisin`. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+**F02 — `ex.getting-around.simple-directions.right-left-pair`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the basic dictionary direction words to right and left.  
+**Stimulus:** The context is navigation, not 'a correct answer'.  
+**Matching pairs (2 first-attempt decisions):** **oikea ↔ right (direction)** scoring `vocab.oikea`; **vasen ↔ left (direction)** scoring `vocab.vasen`. Context is direction-specific, not generic 'correct answer' for oikea.  
+**Correct feedback:** Oikea is right in a navigation context; vasen is left.  
+**Wrong feedback:** Oikea can also mean correct, but the context here explicitly means right.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** oikea → right; vasen → left.  
+**Hint:** None. **Linked:** `vocab.oikea`, `vocab.vasen`. **Scored:** `vocab.oikea`, `vocab.vasen`. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+**F03 — `ex.getting-around.simple-directions.right-semantic`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** In directions, what does oikea mean?  
+**Stimulus:** A sign discusses turning right, not whether an answer is correct.  
+**Options (stable IDs, shuffled visually):** `a` right · `b` left · `c` straight ahead. **Correct:** `a` right.  
+**Wrong option `b`:** Vasen means left, not oikea.  
+**Wrong option `c`:** Suoraan means straight ahead.  
+**Correct feedback:** Oikea means right here; the same adjective can also mean correct in other contexts.  
+**Wrong feedback:** The direction meaning of oikea is right.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Oikea → right.  
+**Hint:** None. **Linked:** `vocab.oikea`. **Scored:** `vocab.oikea`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F04 — `ex.getting-around.simple-directions.write-suoraan`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for 'straight ahead' in a simple direction.  
+**Stimulus:** straight ahead  
+**Accepted after N1:** `suoraan`.   
+**Correct feedback:** Suoraan means straight ahead.  
+**Wrong feedback:** Write suoraan, not oikealle or vasemmalle.  
+**Near feedback:** `soraan` → The taught word is suoraan, beginning with suu-.  
+**Not sure:** Write suoraan.  
+**Hint:** None. **Linked:** `vocab.suoraan`. **Scored:** `vocab.suoraan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F05 — `ex.getting-around.simple-directions.write-takaisin`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the standard Finnish word meaning 'back / back again'.  
+**Stimulus:** back, returning  
+**Accepted after N1:** `takaisin`.   
+**Correct feedback:** Takaisin is the standard written form for back.  
+**Wrong feedback:** Write takaisin, not the colloquial shortening takas.  
+**Near feedback:** `takas` → Takas is a spoken reduction; write takaisin in standard Finnish.  
+**Not sure:** Write takaisin.  
+**Hint:** None. **Linked:** `vocab.takaisin`. **Scored:** `vocab.takaisin`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F06 — `ex.getting-around.simple-directions.write-oikea`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary form for 'right' in navigation (not 'to the right').  
+**Stimulus:** right (basic direction word)  
+**Accepted after N1:** `oikea`.   
+**Correct feedback:** Oikea is the dictionary word; oikealle is the directional form in a turn instruction.  
+**Wrong feedback:** Write oikea, not oikealle, because this task asks for the dictionary form.  
+**Near feedback:** `oikealle` → Oikealle is 'to the right'; the dictionary word asked for is oikea.  
+**Not sure:** Write oikea.  
+**Hint:** None. **Linked:** `vocab.oikea`. **Scored:** `vocab.oikea`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F07 — `ex.getting-around.simple-directions.write-vasen`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary form meaning 'left' in directions.  
+**Stimulus:** left (basic direction word)  
+**Accepted after N1:** `vasen`.   
+**Correct feedback:** Vasen means left; vasemmalle is the direction form in fixed turn instructions.  
+**Wrong feedback:** Write vasen, not oikea or vasemmalle.  
+**Near feedback:** `vasemmalle` → Vasemmalle means 'to the left', but this prompt asks for the dictionary form vasen.  
+**Not sure:** Write vasen.  
+**Hint:** None. **Linked:** `vocab.vasen`. **Scored:** `vocab.vasen`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F08 — `ex.getting-around.simple-directions.mene-suoraan-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the fixed command Mene suoraan. mean?  
+**Stimulus:** Mene suoraan.  
+**Options (stable IDs, shuffled visually):** `a` Go straight ahead. · `b` Turn right. · `c` Come back.. **Correct:** `a` Go straight ahead..  
+**Wrong option `b`:** Käänny oikealle is turn right; that's a different fixed instruction.  
+**Wrong option `c`:** Tule takaisin is a different meaning about returning.  
+**Correct feedback:** Mene suoraan. means Go straight ahead. This one command is taught as a useful chunk.  
+**Wrong feedback:** Mene suoraan tells someone to continue straight, not turn or return.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Go straight ahead.  
+**Hint:** None. **Linked:** `phrase.getting-around.mene-suoraan`, `vocab.suoraan`, `vocab.menna`. **Scored:** `phrase.getting-around.mene-suoraan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F09 — `ex.getting-around.simple-directions.turn-right-fixed`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does Käänny oikealle. mean?  
+**Stimulus:** Käänny oikealle. — a fixed recognition-only route instruction.  
+**Options (stable IDs, shuffled visually):** `a` Turn left. · `b` Turn right. · `c` Go straight.. **Correct:** `b` Turn right..  
+**Wrong option `a`:** Turn left is Käänny vasemmalle.  
+**Wrong option `c`:** Go straight is Mene suoraan.  
+**Correct feedback:** Käänny oikealle. means Turn right. Oikealle is not the base word oikea.  
+**Wrong feedback:** Käänny is the fixed command 'turn'; oikealle means to the right.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Turn right.  
+**Hint:** None. **Linked:** `phrase.getting-around.kaanny-oikealle`, `vocab.oikea`. **Scored:** `phrase.getting-around.kaanny-oikealle`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F10 — `ex.getting-around.simple-directions.come-back-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which English sentence matches Tulen takaisin.?  
+**Stimulus:** Tulen takaisin.  
+**Options (stable IDs, shuffled visually):** `a` I'm returning / coming back. · `b` I'm going straight ahead. · `c` I am already there.. **Correct:** `a` I'm returning / coming back..  
+**Wrong option `b`:** Suoraan means straight, not returning.  
+**Wrong option `c`:** Olen siellä means I'm there, a location statement.  
+**Correct feedback:** Tulen takaisin. says I'm coming back.  
+**Wrong feedback:** Takaisin means back; tulen is the familiar first-person verb from tulla.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** I'm coming back.  
+**Hint:** None. **Linked:** `phrase.getting-around.tulen-takaisin`, `vocab.takaisin`, `vocab.tulla`. **Scored:** `phrase.getting-around.tulen-takaisin`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F11 — `ex.getting-around.simple-directions.independent-straight-command`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type the fixed Finnish instruction 'Go straight ahead.'  
+**Stimulus:** A short route command, singular listener. Use the **one taught imperative chunk**, not general verb conjugation.  
+**Accepted after N1:** `Mene suoraan.`.   
+**Correct feedback:** Mene suoraan. is the fixed useful instruction you can produce.  
+**Wrong feedback:** Use Mene suoraan, not a made-up imperative or a right/left form.  
+**Near feedback:** `Menen suoraan` → Menen means 'I go'; the instruction to another person is Mene suoraan.  
+**Not sure:** Write Mene suoraan.  
+**Hint:** None. **Linked:** `phrase.getting-around.mene-suoraan`, `vocab.suoraan`. **Scored:** `phrase.getting-around.mene-suoraan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F12 — `ex.getting-around.simple-directions.independent-return`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write the Finnish sentence 'I'm coming back.'  
+**Stimulus:** I am returning now; use the known form tulen and the new standard word takaisin.  
+**Accepted after N1:** `Tulen takaisin.`, `Minä tulen takaisin.`.   
+**Correct feedback:** Tulen takaisin. expresses coming back.  
+**Wrong feedback:** Use tulen and takaisin; the spoken shortening takas is not the standard written answer.  
+**Near feedback:** `Tulen takas` → Takas is informal spoken recognition; write takaisin.  
+**Not sure:** Write Tulen takaisin.  
+**Hint:** None. **Linked:** `phrase.getting-around.tulen-takaisin`, `vocab.takaisin`, `vocab.tulla`. **Scored:** `phrase.getting-around.tulen-takaisin`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F13 — `ex.getting-around.simple-directions.route-sequence`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Read this sequence of three directions. Which English route follows the instructions in the same order?  
+**Stimulus:** 1. Mene suoraan. 2. Käänny vasemmalle. 3. Käänny oikealle.  
+**Options (stable IDs, shuffled visually):** `a` straight → left → right · `b` straight → right → left · `c` left → straight → right. **Correct:** `a` straight → left → right.  
+**Wrong option `b`:** This swaps the two turns; vasemmalle means to the left.  
+**Wrong option `c`:** The first instruction is straight, not a left turn.  
+**Correct feedback:** The correct ordered route is straight, then left, then right.  
+**Wrong feedback:** Read each short instruction in order. Vasemmalle is left and oikealle is right.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Straight, then left, then right.  
+**Hint:** None. **Linked:** `phrase.getting-around.mene-suoraan`, `phrase.getting-around.kaanny-vasemmalle`, `phrase.getting-around.kaanny-oikealle`, `grammar.getting-around.direction-instruction`. **Scored:** `grammar.getting-around.direction-instruction`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F14 — `ex.getting-around.simple-directions.unit8-transport-choice`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** A fictional route specifically requires a train. Which Finnish transport word should you select?  
+**Stimulus:** Train (not a bus or taxi).  
+**Options (stable IDs, shuffled visually):** `a` bussi · `b` juna · `c` taksi. **Correct:** `b` juna.  
+**Wrong option `a`:** Bussi is bus; the transport was specifically identified as train.  
+**Wrong option `c`:** Taksi is taxi, a hired car.  
+**Correct feedback:** Juna is the correct word for train.  
+**Wrong feedback:** Use juna for train; the other transport names are distinct.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Juna.  
+**Hint:** None. **Linked:** `vocab.juna`, `vocab.bussi`, `vocab.taksi`. **Scored:** `vocab.juna`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F15 — `ex.getting-around.simple-directions.unit8-ask-station`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Without Finnish answer choices, ask 'Where is the station?' in Finnish.  
+**Stimulus:** You are in an unfamiliar area and want the station's location.  
+**Accepted after N1:** `Missä asema on?`, `Missä on asema?`.   
+**Correct feedback:** Missä asema on? is a useful and fully taught location question.  
+**Wrong feedback:** Ask with missä (where at), asema (station) and on.  
+**Near feedback:** `Minne asema on` → Minne asks where to; a station's location uses missä.  
+**Not sure:** Write Missä asema on?  
+**Hint:** None. **Linked:** `phrase.getting-around.missa-asema-on`, `vocab.asema`. **Scored:** `phrase.getting-around.missa-asema-on`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F16 — `ex.getting-around.simple-directions.unit8-downtown`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Independently write 'I'm going downtown.'  
+**Stimulus:** A fictional journey towards the city centre.  
+**Accepted after N1:** `Menen keskustaan.`, `Minä menen keskustaan.`.   
+**Correct feedback:** Menen keskustaan is the taught destination expression.  
+**Wrong feedback:** Use keskustaan for movement to the city centre.  
+**Near feedback:** `Menen keskustassa` → Keskustassa is in downtown; going there is keskustaan.  
+**Not sure:** Write Menen keskustaan.  
+**Hint:** None. **Linked:** `phrase.getting-around.menen-keskustaan`, `vocab.keskusta`. **Scored:** `phrase.getting-around.menen-keskustaan`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F17 — `ex.getting-around.simple-directions.unit8-source`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the source expression Tulen kaupasta mean?  
+**Stimulus:** Tulen kaupasta. (Unit 4 shop, new recognition source form).  
+**Options (stable IDs, shuffled visually):** `a` I'm in the shop. · `b` I'm coming from the shop. · `c` I'm going to the shop.. **Correct:** `b` I'm coming from the shop..  
+**Wrong option `a`:** Olen kaupassa means I'm in the shop.  
+**Wrong option `c`:** Menen kauppaan means I'm going to the shop.  
+**Correct feedback:** Tulen kaupasta means I'm coming from the shop.  
+**Wrong feedback:** Kaupasta indicates from the shop, not in or to.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** I'm coming from the shop.  
+**Hint:** None. **Linked:** `vocab.kauppa`, `grammar.getting-around.location-source`. **Scored:** `grammar.getting-around.location-source`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**F18 — `ex.getting-around.simple-directions.a1-introduction`** · `multiple_choice` · intent `cumulative_recognition` · difficulty `cumulative`  
+**Prompt:** In a friendly introduction, what does Hei! Olen Aino. mean?  
+**Stimulus:** Hei! Olen Aino. (Unit 1 greeting and self-introduction; fictional Aino).  
+**Options (stable IDs, shuffled visually):** `a` Hi! I'm Aino. · `b` Goodbye! I am a taxi. · `c` I have a sister.. **Correct:** `a` Hi! I'm Aino..  
+**Wrong option `b`:** Taksi wasn't mentioned; Hei is a greeting, not goodbye.  
+**Wrong option `c`:** Minulla on sisko would say I have a sister; this sentence just introduces the person.  
+**Correct feedback:** Hei! Olen Aino. means Hi! I'm Aino.  
+**Wrong feedback:** Hei is a greeting and olen introduces yourself.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Hi! I'm Aino.  
+**Hint:** None. **Linked:** `vocab.hei`, `vocab.olla`, `phrase.hello.olen`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+**F19 — `ex.getting-around.simple-directions.a1-today-coffee`** · `text_input` · intent `cumulative_recall` · difficulty `cumulative`  
+**Prompt:** Type 'Today I drink coffee' using previously taught Unit 5 and Unit 6 forms.  
+**Stimulus:** A fictional person says what they drink today. Do not introduce new food grammar.  
+**Accepted after N1:** `Tänään juon kahvia.`, `Juon kahvia tänään.`, `Minä juon kahvia tänään.`, `Tänään minä juon kahvia.`.   
+**Correct feedback:** Tänään juon kahvia. reuses the food/drink and daily-life forms from earlier units.  
+**Wrong feedback:** Use tänään, juon and the Unit 5 drink form kahvia.  
+**Near feedback:** `Tänään juon kahvi` → Unit 5 taught kahvia for drinking coffee.  
+**Not sure:** Write Tänään juon kahvia.  
+**Hint:** None. **Linked:** `vocab.tanaan`, `vocab.juoda`, `vocab.kahvi`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+**F20 — `ex.getting-around.simple-directions.a1-red-house`** · `text_input` · intent `cumulative_recall` · difficulty `cumulative`  
+**Prompt:** Type 'The house is red' using Unit 4's house word and Unit 7's colour.  
+**Stimulus:** A fictional concrete singular house is red.  
+**Accepted after N1:** `Talo on punainen.`.   
+**Correct feedback:** Talo on punainen. combines a known place noun with a familiar colour adjective.  
+**Wrong feedback:** Use Talo on punainen; no plural adjective or mass-noun grammar is needed.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Write Talo on punainen.  
+**Hint:** None. **Linked:** `vocab.talo`, `vocab.punainen`, `grammar.people.colour-statement`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+**F21 — `ex.getting-around.simple-directions.a1-integrated-three-lines`** · `text_input` · intent `cumulative_capability` · difficulty `cumulative`  
+**Prompt:** Write exactly THREE short Finnish sentences on separate lines for the fictional person: (1) Hi! I'm Aino. (2) Today I drink coffee. (3) I'm going downtown.  
+**Stimulus:** Three independent English prompts in an integrated fictional day. Each sentence uses already authored content from Units 1, 3, 5, 6 and 8.  
+**Accepted after N1:** `Hei! Olen Aino.
+Tänään juon kahvia.
+Menen keskustaan.`. Multiline task is **one capability-only assessment** with three explicitly authored accepted sentences and preserved boundaries. Use 3 scoped text inputs if needed; no multi-target SRS credit.  
+**Correct feedback:** Your three-line mini-story introduces a person, describes an everyday drink and expresses a simple journey downtown. It reuses A1 Foundations knowledge coherently.  
+**Wrong feedback:** Use three taught sentences, one per line: Hei! Olen Aino. / Tänään juon kahvia. / Menen keskustaan. Do not add new grammar.  
+**Near feedback:** None; an incorrect direction is not an Almost result.  
+**Not sure:** Hei! Olen Aino. / Tänään juon kahvia. / Menen keskustaan.  
+**Hint:** None. **Linked:** `vocab.hei`, `vocab.olla`, `vocab.tanaan`, `vocab.juoda`, `vocab.kahvi`, `phrase.getting-around.menen-keskustaan`. **Scored:** none. **Review eligible:** false, guided or stage capability-only. **Editorial:** `needs_review`.  
+
+### Unit 8 capability and A1 Foundations stage completion
+
+**Five Unit 8 capabilities:** F14 recognises a train in transport context; F15 independently asks where the station is; F16 independently states a downtown destination; F17 identifies a form meaning *from the shop*; F13 follows a 3-step straight/left/right instruction. The other F01–F12 tasks independently retrieve dictionary directions and two fixed production chunks. These checks are short and concrete; no user-provided live route or map is needed.
+
+**A1 Foundations stage-capstone F18–F21:** F18 recognises a greeting/intro; F19 independently retrieves today's coffee sentence from Units 5–6; F20 independently retrieves a Unit 4/7 house-colour statement; F21 integrates three fixed independent lines about the fictional person Aino: greeting, everyday drink and downtown movement. This is **cross-unit capability evidence**, not a CEFR-certified exam or proof that every one of the 142 unique production lemmas is retained.
+
+**Completion copy:** “You've reached the end of A1 Foundations. You can introduce yourself, use simple everyday Finnish and understand basic travel directions. Your vocabulary will continue returning in scheduled Review.” **Required steps:** 25; **optional spoken note:** one; **required exercise records:** 21; **matching decisions:** 4. **Stage complete flag:** only after all eight units' required lesson/checkpoint tasks have been attempted, regardless of perfect scores; scheduled knowledge, familiarity and due items remain independent. The next curriculum stage is not authored by this document.
+
