@@ -271,7 +271,7 @@ All records have `sourceType: original`, `editorialStatus: needs_review`, `revie
 **Hint:** None. **Linked:** `vocab.aiti`, `vocab.han`, `vocab.olla`. **Scored:** `vocab.aiti`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
 
 **A12 — `ex.people-and-descriptions.your-family.two-parents`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
-**Prompt:** Arrange these two word tiles to write 'mother and father' in Finnish.  
+**Prompt:** Arrange these three word tiles to write 'mother and father' in Finnish.  
 **Stimulus:** These are family words, not a new sentence pattern.  
 **Shuffled lexical tiles:** `isä`, `ja`, `äiti`. **Accepted whole sequences:** `äiti ja isä`, `isä ja äiti`. The displayed tokens must allow both accepted orders; only existing target grammar is assessed.  
 **Correct feedback:** Äiti ja isä names mother and father. Either order is reasonable.  
@@ -710,7 +710,7 @@ Each record: `fi`, `sourceType: original`, `editorialStatus: needs_review`, full
 **Hint:** None. **Linked:** `vocab.kanssa`, `vocab.kumppani`, `grammar.people.kanssa-genitive`. **Scored:** `vocab.kanssa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
 
 **C12 — `ex.people-and-descriptions.whose-and-with-whom.choose-kumppanin-kanssa`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
-**Prompt:** Which phrase correctly says 'with my partner' in the taught standard sentence fragment?  
+**Prompt:** Which phrase correctly expresses 'with a partner' in the taught standard construction?  
 **Stimulus:** The preposition-like word is kanssa, and the noun needs its authored genitive.  
 **Options (stable IDs):** `a` kumppani kanssa · `b` kumppanin kanssa · `c` kumppania kanssa. **Correct:** `b` kumppanin kanssa.  
 **Wrong option `a`:** The noun must be kumppanin before kanssa, not the dictionary form.  
@@ -1289,7 +1289,7 @@ All records have `learningLanguage: fi`, `sourceType: original`, `editorialStatu
 **Hint:** None. **Linked:** `vocab.veli`, `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted`. **Review eligible:** true, independently understandable. **Editorial:** `needs_review`.  
 
 **F08 — `ex.people-and-descriptions.people-review.with-partner-choice`** · `multiple_choice` · intent `grammar` · difficulty `contextual`  
-**Prompt:** Which expression is correct standard Finnish for 'with a partner'?  
+**Prompt:** Which expression correctly says 'with a partner' in standard Finnish?  
 **Stimulus:** Use the taught genitive + kanssa construction.  
 **Options (stable IDs, shuffle):** `a` kumppani kanssa · `b` kumppanin kanssa · `c` kumppania kanssa. **Correct:** `b` kumppanin kanssa.  
 **Wrong option `a`:** Kumppani is the dictionary form; before kanssa use kumppanin.  
