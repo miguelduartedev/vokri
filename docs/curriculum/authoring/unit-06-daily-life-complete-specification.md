@@ -505,3 +505,210 @@ All records: `sourceType: original`, `editorialStatus: needs_review`, `reviewedB
 
 **Headline:** “Food, drink, today and tomorrow.” **Copy:** “You can use the taught forms syön and juon with familiar foods and say whether something happens today or tomorrow.” 20 required steps, 14 required exercise records, 2 matching decisions. Completing the lesson doesn't imply mastery of all food and time expressions. **Next:** Lesson 6.3 — What time is it? **Resume:** after B05 if needed.
 
+## Lesson 6.3 — What time is it?
+
+**ID:** `lesson.daily-life.what-time` · `unit.daily-life` · `fi` · Order 3 · **Estimated:** 11–16 minutes, untested. **Prerequisite:** `lesson.daily-life.eat-drink-today-tomorrow`.  
+**Capability:** State whole-hour clock times and recognise the difference between a time reading and when an activity happens. **New production:** `vocab.kello`, `vocab.aika`. **New recognition:** `vocab.paiva`, `vocab.tunti`, `vocab.minuutti`. **Related:** `grammar.daily-life.whole-hour-time`, `phrase.daily-life.kello-on-hour`, `phrase.daily-life.mita-kello-on`.  
+**Completion:** all required steps and C01–C15 attempted/Not sure. **Pause:** after C08, before recognition-only clock sentences. No full clock-case paradigm.
+
+### Ordered learner experience
+
+Every suffix below resolves to `step.daily-life.what-time.<suffix>`; all new targets are encountered only when deliberately introduced.
+
+| # | Step suffix | Type | Exact teaching text or exercise ID | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **What time is it?** You already recognise numbers. Now use whole hours on a clock, with one reliable pattern for stating the time and another for saying when an activity happens. This lesson does not teach half past, quarter past or a general case system. | none | Yes |
+| 2 | `clock-nouns` | `vocabulary_intro` | **kello — clock / o'clock; aika — time (general).** A time of day is normally introduced with kello. Aika means time in a broader sense; the words are not interchangeable in every sentence. | `vocab.kello`, `vocab.aika` | Yes |
+| 3 | `duration-recognition` | `vocabulary_intro` | Recognition only: **päivä — day**, **tunti — hour (duration)**, **minuutti — minute**. Distinguish a duration such as tunti from a clock time such as Kello on kolme. No number-of-minutes calculations are required. | `vocab.paiva`, `vocab.tunti`, `vocab.minuutti` | Yes |
+| 4 | `ask-time-chunk` | `phrase_intro` | **Mitä kello on?** — What time is it? Learn it as a complete question. The form mitä need not be analysed as a new case paradigm; recognising the question is enough. | `phrase.daily-life.mita-kello-on` | Yes |
+| 5 | `practice-01` | `exercise` | C01 | none | Yes |
+| 6 | `practice-02` | `exercise` | C02 | none | Yes |
+| 7 | `practice-03` | `exercise` | C03 | none | Yes |
+| 8 | `practice-04` | `exercise` | C04 | none | Yes |
+| 9 | `whole-hour` | `grammar_explanation` | **Kello on viisi.** — It's five o'clock. Use **Kello on + a taught whole-hour numeral**. The same pattern gives Kello on yksi, kaksi, kolme, neljä and viisi. This is not a lesson on minute readings. | `grammar.daily-life.whole-hour-time`, `phrase.daily-life.kello-on-hour` | Yes |
+| 10 | `practice-05` | `exercise` | C05 | none | Yes |
+| 11 | `practice-06` | `exercise` | C06 | none | Yes |
+| 12 | `practice-07` | `exercise` | C07 | none | Yes |
+| 13 | `practice-08` | `exercise` | C08 | none | Yes |
+| 14 | `number-six-to-ten` | `example_set` | **Kello on seitsemän.** (07:00) and **Kello on kahdeksan.** (08:00). You previously *recognised* numbers 6–10 in Unit 1; you can identify these supplied sentences but do not need to type those numbers unprompted. | none | Yes |
+| 15 | `practice-09` | `exercise` | C09 | none | Yes |
+| 16 | `practice-10` | `exercise` | C10 | none | Yes |
+| 17 | `practice-11` | `exercise` | C11 | none | Yes |
+| 18 | `wake-time` | `grammar_explanation` | **Two jobs:** **Kello on viisi.** states the current time. **Herään kello viisi.** says *when I wake up*. Finnish also has **Herään viideltä.** as a natural alternate, but it is recognition-only here; do **not** combine kello with viideltä or try to generate an ablative suffix for every number. | none | Yes |
+| 19 | `clock-review` | `example_set` | **Mitä kello on? — Kello on neljä.** This is a complete exchange with a supplied number. **Herään kello neljä.** is a different statement: it tells when the action happens. The latter is uncommon as a personal routine but grammatically useful for contrast. | none | Yes |
+| 20 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint C12–C15:** tell an activity time with supplied tiles and independent text, distinguish clock time from activity time, and retrieve a simple whole-hour statement. | none | Yes |
+
+### Complete authored exercises
+
+All: `sourceType: original`, `editorialStatus: needs_review`, `learningLanguage: fi`. No audio/clock visual component required. A digital time as text is sufficient and accessible.
+
+**C01 — `ex.daily-life.what-time.kello-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish word is used for a clock or to introduce an o'clock time?  
+**Stimulus:** Choose the new word for clock / o’clock.  
+**Options (stable IDs, shuffle visually):** `a` kello · `b` aika · `c` tunti. **Correct:** `a` kello.  
+**Wrong `b`:** Aika means time in a general sense.  
+**Wrong `c`:** Tunti is an hour of duration, not the normal word introducing a clock time.  
+**Correct feedback:** Kello is clock and starts expressions such as Kello on viisi.  
+**Wrong feedback:** The clock word is kello; aika is time generally.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Kello — clock / o'clock.  
+**Hint:** None. **Linked:** `vocab.kello`, `vocab.aika`, `vocab.tunti`. **Scored:** `vocab.kello`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C02 — `ex.daily-life.what-time.aika-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish word means time in a general sense?  
+**Stimulus:** You aren't asking for the hour on a clock.  
+**Options (stable IDs, shuffle visually):** `a` kello · `b` aika · `c` minuutti. **Correct:** `b` aika.  
+**Wrong `a`:** Kello is a clock or o'clock expression.  
+**Wrong `c`:** Minuutti is one minute, a particular duration.  
+**Correct feedback:** Aika is the general Finnish word for time.  
+**Wrong feedback:** Use aika for time generally; kello is for clocks and clock times.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Aika — time.  
+**Hint:** None. **Linked:** `vocab.aika`. **Scored:** `vocab.aika`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C03 — `ex.daily-life.what-time.duration-units`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match these recognition-only time nouns to their meanings.  
+**Stimulus:** You need only recognise these words, not type them.  
+**Matching pairs (3 first-attempt decisions):** **päivä ↔ day** (score `vocab.paiva`); **tunti ↔ hour (duration)** (score `vocab.tunti`); **minuutti ↔ minute** (score `vocab.minuutti`); independent column shuffle.  
+**Correct feedback:** Päivä is day, tunti is an hour, and minuutti is a minute.  
+**Wrong feedback:** Don't confuse tunti, a unit of duration, with kello, the clock/time expression.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** päivä → day; tunti → hour; minuutti → minute.  
+**Hint:** None. **Linked:** `vocab.paiva`, `vocab.tunti`, `vocab.minuutti`. **Scored:** `vocab.paiva`, `vocab.tunti`, `vocab.minuutti`. **Review eligible:** false, scaffolded/multi-target. **Editorial:** `needs_review`.  
+
+**C04 — `ex.daily-life.what-time.clock-question`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the fixed Finnish question Mitä kello on? ask?  
+**Stimulus:** Mitä kello on?  
+**Options (stable IDs, shuffle visually):** `a` What time is it? · `b` What day is it? · `c` Where is the clock?. **Correct:** `a` What time is it?.  
+**Wrong `b`:** This asks about the time, not the weekday.  
+**Wrong `c`:** This is a time question, not a question about the location of a clock.  
+**Correct feedback:** Mitä kello on? asks for the time. Learn it as a whole question.  
+**Wrong feedback:** This fixed question means “What time is it?”  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Mitä kello on? — What time is it?  
+**Hint:** None. **Linked:** `phrase.daily-life.mita-kello-on`, `vocab.kello`. **Scored:** `phrase.daily-life.mita-kello-on`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C05 — `ex.daily-life.what-time.five-oclock`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** A digital clock shows 05:00. Which Finnish sentence says it is five o'clock?  
+**Stimulus:** 05:00 (whole hour)  
+**Options (stable IDs, shuffle visually):** `a` Kello on viisi. · `b` Kello on kaksi. · `c` Herään kello viisi.. **Correct:** `a` Kello on viisi..  
+**Wrong `b`:** Kaksi means two, not five.  
+**Wrong `c`:** Herään kello viisi tells when someone wakes; it doesn't simply state the current clock time.  
+**Correct feedback:** Kello on viisi. states the time; the form viisi is already productive from Unit 1.  
+**Wrong feedback:** To state the current time use Kello on viisi.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Kello on viisi.  
+**Hint:** None. **Linked:** `vocab.kello`, `grammar.daily-life.whole-hour-time`, `vocab.viisi`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C06 — `ex.daily-life.what-time.retrieve-kello`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish noun used for a clock and o'clock expressions.  
+**Stimulus:** clock / o'clock  
+**Accepted after N1:** `kello`. Instructions explicitly restrict to the taught `kello` construction; no arbitrary morphological guesses.  
+**Correct feedback:** Kello is the new dictionary word.  
+**Wrong feedback:** The correct noun is kello. Tunti is an hour of duration.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Write kello.  
+**Hint:** None. **Linked:** `vocab.kello`. **Scored:** `vocab.kello`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C07 — `ex.daily-life.what-time.retrieve-aika`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish noun for “time” in a general sense.  
+**Stimulus:** time (general noun)  
+**Accepted after N1:** `aika`. Instructions explicitly restrict to the taught `kello` construction; no arbitrary morphological guesses.  
+**Correct feedback:** Aika is the general noun for time.  
+**Wrong feedback:** Use aika; kello is a clock/clock-time word.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Write aika.  
+**Hint:** None. **Linked:** `vocab.aika`. **Scored:** `vocab.aika`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C08 — `ex.daily-life.what-time.write-three`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** A digital clock shows 03:00. Type the full taught Finnish sentence for the time.  
+**Stimulus:** 03:00 — It's three o'clock.  
+**Accepted after N1:** `Kello on kolme.`. Instructions explicitly restrict to the taught `kello` construction; no arbitrary morphological guesses.  
+**Correct feedback:** Kello on kolme. states the current whole-hour time.  
+**Wrong feedback:** Use Kello on plus the known number kolme.  
+**Near feedback:** `Kello kolme` → Include on: Kello on kolme.  
+**Not sure:** Write Kello on kolme.  
+**Hint:** None. **Linked:** `phrase.daily-life.kello-on-hour`, `vocab.kello`, `vocab.kolme`. **Scored:** `phrase.daily-life.kello-on-hour`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C09 — `ex.daily-life.what-time.seven-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What time does Kello on seitsemän. express?  
+**Stimulus:** Kello on seitsemän.  
+**Options (stable IDs, shuffle visually):** `a` 07:00 · `b` 05:00 · `c` 03:00. **Correct:** `a` 07:00.  
+**Wrong `b`:** Viisi would be five o'clock.  
+**Wrong `c`:** Kolme would be three o'clock.  
+**Correct feedback:** Seitsemän means seven. This is a recognition task, not a spelling test.  
+**Wrong feedback:** Kello on seitsemän. means seven o'clock.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** The answer is 07:00.  
+**Hint:** None. **Linked:** `vocab.seitseman`, `grammar.daily-life.whole-hour-time`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C10 — `ex.daily-life.what-time.eight-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which clock sentence describes 08:00?  
+**Stimulus:** 08:00 — choose a supplied Finnish sentence.  
+**Options (stable IDs, shuffle visually):** `a` Kello on kuusi. · `b` Kello on kahdeksan. · `c` Kello on kymmenen.. **Correct:** `b` Kello on kahdeksan..  
+**Wrong `a`:** Kuusi is six; 06:00 is not the displayed time.  
+**Wrong `c`:** Kymmenen is ten; 10:00 is a different whole hour.  
+**Correct feedback:** Kahdeksan means eight; 08:00 is Kello on kahdeksan.  
+**Wrong feedback:** Use the supplied seven-to-ten number forms only for recognition.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Kello on kahdeksan.  
+**Hint:** None. **Linked:** `vocab.kahdeksan`, `grammar.daily-life.whole-hour-time`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C11 — `ex.daily-life.what-time.hour-duration`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** A timetable describes an activity lasting one hour. Which noun means an hour of duration?  
+**Stimulus:** An hour as a length of time, not a time-of-day reading.  
+**Options (stable IDs, shuffle visually):** `a` kello · `b` tunti · `c` aika. **Correct:** `b` tunti.  
+**Wrong `a`:** Kello is a clock or clock-time word.  
+**Wrong `c`:** Aika means time generally, not specifically an hour.  
+**Correct feedback:** Tunti is an hour of duration; kello is used for clock times.  
+**Wrong feedback:** An hour of duration is tunti.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Tunti = hour.  
+**Hint:** None. **Linked:** `vocab.tunti`, `vocab.kello`. **Scored:** `vocab.tunti`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C12 — `ex.daily-life.what-time.wake-five-tiles`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
+**Prompt:** Build “I wake up at five o'clock” using all three supplied tiles.  
+**Stimulus:** Use the taught kello + hour construction; do not inflect the numeral.  
+**Shuffled tiles:** `viisi`, `Herään`, `kello`. **Accepted complete sequences:** `Herään kello viisi.`. Guided construction, no independent spelling claim.  
+**Correct feedback:** Herään kello viisi. states when you wake up; kello on viisi states the current time.  
+**Wrong feedback:** Start with herään; place kello immediately before the hour viisi.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Herään kello viisi.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.kello`, `grammar.daily-life.whole-hour-time`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** false, scaffolded/multi-target. **Editorial:** `needs_review`.  
+
+**C13 — `ex.daily-life.what-time.type-wake-five`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type “I wake up at five o'clock” using the taught word kello.  
+**Stimulus:** I wake up at five o'clock. Use the kello construction (not viideltä).  
+**Accepted after N1:** `Herään kello viisi.`, `Minä herään kello viisi.`. Instructions explicitly restrict to the taught `kello` construction; no arbitrary morphological guesses.  
+**Correct feedback:** Herään kello viisi. combines the taught verb with a fixed whole-hour time.  
+**Wrong feedback:** Use herään kello viisi. The alternate viideltä construction is correct Finnish but outside this particular instructed answer form.  
+**Near feedback:** `Herään viideltä` → This is another natural Finnish expression, but this task explicitly asks for the taught kello construction.  
+**Not sure:** Write Herään kello viisi.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.kello`, `grammar.daily-life.whole-hour-time`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C14 — `ex.daily-life.what-time.time-or-activity`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence only states what time it is, without saying what someone does?  
+**Stimulus:** Compare a clock reading with a waking-up statement.  
+**Options (stable IDs, shuffle visually):** `a` Herään kello viisi. · `b` Kello on viisi. · `c` Nukun kotona.. **Correct:** `b` Kello on viisi..  
+**Wrong `a`:** Herään kello viisi tells when an activity happens.  
+**Wrong `c`:** Nukun kotona says where someone sleeps, not the clock time.  
+**Correct feedback:** Kello on viisi. gives the clock reading; Herään kello viisi. says when waking happens.  
+**Wrong feedback:** To say what time it currently is, start with Kello on.  
+**Near feedback:** None; do not invent a near result.  
+**Not sure:** Kello on viisi.  
+**Hint:** None. **Linked:** `grammar.daily-life.whole-hour-time`, `vocab.herata`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**C15 — `ex.daily-life.what-time.two-oclock`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** A clock shows 02:00. Write the full Finnish sentence “It's two o'clock.”  
+**Stimulus:** 02:00 — It's two o'clock.  
+**Accepted after N1:** `Kello on kaksi.`. Instructions explicitly restrict to the taught `kello` construction; no arbitrary morphological guesses.  
+**Correct feedback:** Kello on kaksi. is a complete statement of the whole hour.  
+**Wrong feedback:** Begin with Kello on, then use the known word kaksi.  
+**Near feedback:** `Kello kaksi` → Include on: Kello on kaksi.  
+**Not sure:** Write Kello on kaksi.  
+**Hint:** None. **Linked:** `phrase.daily-life.kello-on-hour`, `vocab.kello`, `vocab.kaksi`. **Scored:** `phrase.daily-life.kello-on-hour`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “The clock makes sense.” **Copy:** “You can tell whole-hour times and use a simple kello expression to say when you wake up.” 20 required steps, 15 required exercise records, 3 matching decisions. Only 1–5 require unrestricted typed number production; 6–10 stay recognition. **Next:** Lesson 6.4 — Monday to Thursday.
+
