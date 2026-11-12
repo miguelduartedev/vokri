@@ -752,14 +752,14 @@ Each record: `fi`, `sourceType: original`, `editorialStatus: needs_review`, full
 **Hint:** None. **Linked:** `vocab.kumppani`, `vocab.kanssa`, `vocab.asua`, `phrase.people.asun-kumppanin-kanssa`. **Scored:** `phrase.people.asun-kumppanin-kanssa`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
 
 **C16 — `ex.people-and-descriptions.whose-and-with-whom.independent-live-friend`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
-**Prompt:** Write 'I live with a friend' using the taught formal standard-Finnish form of ystävä.  
-**Stimulus:** One fictional friend, not a spouse/partner.  
-**Accepted after N1:** `Asun ystävän kanssa.`, `Minä asun ystävän kanssa.`. No unguided arbitrary genitive or pronoun case variants.  
-**Correct feedback:** Asun ystävän kanssa. uses the taught genitive ystävän.  
-**Wrong feedback:** Use ystävän, not ystävä, before kanssa.  
-**Near feedback:** `Asun ystävä kanssa` → The friend form is ystävän before kanssa.  
-**Not sure:** Write Asun ystävän kanssa.  
-**Hint:** None. **Linked:** `vocab.ystava`, `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
+**Prompt:** Write 'I live with a buddy' in standard Finnish, using the taught noun kaveri and its genitive form.  
+**Stimulus:** Fictional buddy / casual friend; recall kaveri → kaverin. Do not use the generic ystävä wording in this specifically kaveri-focused exercise.  
+**Accepted after N1:** `Asun kaverin kanssa.`, `Minä asun kaverin kanssa.`. No unguided arbitrary genitive or pronoun case variants.  
+**Correct feedback:** Asun kaverin kanssa. correctly uses the genitive kaverin before kanssa.  
+**Wrong feedback:** Use kaverin, not kaveri, before kanssa.  
+**Near feedback:** `Asun kaveri kanssa` → The buddy noun takes the taught genitive kaverin.  
+**Not sure:** Write Asun kaverin kanssa.  
+**Hint:** None. **Linked:** `vocab.kaveri`, `vocab.kanssa`, `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive`. **Review eligible:** true; self-contained. **Editorial:** `needs_review`.  
 
 **C17 — `ex.people-and-descriptions.whose-and-with-whom.final-name-and-person`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
 **Prompt:** Type 'Aino's brother is Olli' using the taught simple genitive form and familiar on.  
