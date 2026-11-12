@@ -1390,3 +1390,121 @@ Ainon talo on sininen.`. Three separately evaluated lines; `knowledgeScoring: fa
 
 **Blueprint ability trace:** F02 = independently say “I have a sister”; F04/F05 = make affirmative possession negative with exact taught siskoa/veljeä; F11 = say someone is young and F10 tall; F06/F07/F14 = recognise or independently retrieve simple genitives; F12 = type a colour statement about a familiar object. **F15** integrates the finite curriculum in a three-sentence fictional profile, evaluated as one capability outcome without automatic lexical mastery. F16 provides a fresh negative-partner scenario. **Final headline:** “People and places, in simple Finnish.” **Copy:** “You can say someone has—or doesn't have—a sibling, describe a person, recognise whose relative is being discussed and describe an object by colour. The words will return in scheduled Review as they become due.” **Required steps:** 16; **exercises:** 16. **Next:** Unit 8 — Getting Around. Completion doesn't imply spontaneous speaking, human teacher assessment or permanent familiarity.
 
+## Part III — Independently authored scheduled-Review variants
+
+Nine **standalone Review-only** records provide six recognition-only vocabulary checks plus three important grammar/chunk checks. These records are **not compulsory seventh-lesson work** and are not generic optional Word Match sessions. Their targets must have been formally encountered, approved through Vokri's project-owner workflow and selected as due by the existing scheduled Review engine. Every record is `multiple_choice`, intent `recognition`, difficulty `foundation`, `reviewEligible: true`, `learningLanguage: fi`, `editorialStatus: needs_review`, `sourceType: original`. Option IDs remain stable under shuffling; no Finnish unrestricted spelling of recognition-only items is required.
+
+**R01 — `ex.people-and-descriptions.review.poika-boy-son`** · `multiple_choice` · independent recognition  
+**Prompt:** A fictional family story uses poika. Which English meaning fits?  
+**Stimulus:** poika — role in a family context.  
+**Options (stable IDs, shuffle visually):** `a` boy / son · `b` father · `c` sister. **Accepted:** `a` boy / son.  
+**Wrong option `b`:** Father is isä, not poika.  
+**Wrong option `c`:** Sister is sisko, not poika.  
+**Correct feedback:** Poika means boy and can mean son in a family context.  
+**Wrong feedback:** Poika means boy and can mean son in a family context.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Poika means boy and can mean son in a family context.  
+**Hint:** None. **Linked:** `vocab.poika`. **Scored:** `vocab.poika` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R02 — `ex.people-and-descriptions.review.tytto-girl-daughter`** · `multiple_choice` · independent recognition  
+**Prompt:** A fictional family story uses tyttö. What does it mean?  
+**Stimulus:** tyttö — a child described in a family context.  
+**Options (stable IDs, shuffle visually):** `a` mother · `b` girl / daughter · `c` brother. **Accepted:** `b` girl / daughter.  
+**Wrong option `a`:** Mother is äiti.  
+**Wrong option `c`:** Brother is veli, not tyttö.  
+**Correct feedback:** Tyttö means girl and can mean daughter.  
+**Wrong feedback:** Tyttö means girl and can mean daughter.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Tyttö means girl and can mean daughter.  
+**Hint:** None. **Linked:** `vocab.tytto`. **Scored:** `vocab.tytto` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R03 — `ex.people-and-descriptions.review.kaunis-beautiful`** · `multiple_choice` · independent recognition  
+**Prompt:** Which English adjective matches kaunis in a description?  
+**Stimulus:** kaunis — standard Finnish adjective.  
+**Options (stable IDs, shuffle visually):** `a` beautiful · `b` old · `c` short. **Accepted:** `a` beautiful.  
+**Wrong option `b`:** Old is vanha.  
+**Wrong option `c`:** Short is lyhyt in the taught height context.  
+**Correct feedback:** Kaunis means beautiful; recognition only for now.  
+**Wrong feedback:** Kaunis means beautiful; recognition only for now.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Kaunis means beautiful; recognition only for now.  
+**Hint:** None. **Linked:** `vocab.kaunis`. **Scored:** `vocab.kaunis` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R04 — `ex.people-and-descriptions.review.mukava-nice`** · `multiple_choice` · independent recognition  
+**Prompt:** Which English meaning most directly matches mukava describing a person?  
+**Stimulus:** mukava, e.g., a pleasant person.  
+**Options (stable IDs, shuffle visually):** `a` tall · `b` nice / pleasant · `c` red. **Accepted:** `b` nice / pleasant.  
+**Wrong option `a`:** Tall is pitkä.  
+**Wrong option `c`:** Red is punainen.  
+**Correct feedback:** Mukava can mean nice or pleasant, depending on context.  
+**Wrong feedback:** Mukava can mean nice or pleasant, depending on context.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Mukava can mean nice or pleasant, depending on context.  
+**Hint:** None. **Linked:** `vocab.mukava`. **Scored:** `vocab.mukava` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R05 — `ex.people-and-descriptions.review.silma-eye`** · `multiple_choice` · independent recognition  
+**Prompt:** Which body-part noun is silmä?  
+**Stimulus:** silmä, singular.  
+**Options (stable IDs, shuffle visually):** `a` eye · `b` hair strand · `c` hand. **Accepted:** `a` eye.  
+**Wrong option `b`:** Hius is a single hair strand.  
+**Wrong option `c`:** Hand is a different noun.  
+**Correct feedback:** Silmä means eye; no plural production is required.  
+**Wrong feedback:** Silmä means eye; no plural production is required.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Silmä means eye; no plural production is required.  
+**Hint:** None. **Linked:** `vocab.silma`. **Scored:** `vocab.silma` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R06 — `ex.people-and-descriptions.review.hius-strand`** · `multiple_choice` · independent recognition  
+**Prompt:** What does the singular word hius refer to?  
+**Stimulus:** hius in a simple singular vocabulary example.  
+**Options (stable IDs, shuffle visually):** `a` an individual hair strand · `b` a nose · `c` an eye. **Accepted:** `a` an individual hair strand.  
+**Wrong option `b`:** Nose is a different body-part noun.  
+**Wrong option `c`:** Silmä means eye.  
+**Correct feedback:** Hius is a single hair/strand; describing someone's hair generally needs further grammar.  
+**Wrong feedback:** Hius is a single hair/strand; describing someone's hair generally needs further grammar.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Hius is a single hair/strand; describing someone's hair generally needs further grammar.  
+**Hint:** None. **Linked:** `vocab.hius`. **Scored:** `vocab.hius` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R07 — `ex.people-and-descriptions.review.negative-sister-check`** · `multiple_choice` · independent recognition  
+**Prompt:** What does Minulla ei ole siskoa mean?  
+**Stimulus:** Minulla ei ole siskoa. (independent review prompt)  
+**Options (stable IDs, shuffle visually):** `a` I have a sister. · `b` I don't have a sister. · `c` I am a sister.. **Accepted:** `b` I don't have a sister..  
+**Wrong option `a`:** An affirmative sentence would be Minulla on sisko.  
+**Wrong option `c`:** A personal description would use a different on-sentence.  
+**Correct feedback:** Minulla ei ole siskoa is a taught negative possession sentence; siskoa is partitive.  
+**Wrong feedback:** Minulla ei ole siskoa is a taught negative possession sentence; siskoa is partitive.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Minulla ei ole siskoa is a taught negative possession sentence; siskoa is partitive.  
+**Hint:** None. **Linked:** `grammar.people.possession-negative`. **Scored:** `grammar.people.possession-negative` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R08 — `ex.people-and-descriptions.review.aino-genitive-check`** · `multiple_choice` · independent recognition  
+**Prompt:** What does Ainon veli mean?  
+**Stimulus:** Ainon veli — the name Aino is a fictional example.  
+**Options (stable IDs, shuffle visually):** `a` Aino is a brother. · `b` Aino's brother · `c` Aino's sister. **Accepted:** `b` Aino's brother.  
+**Wrong option `a`:** This phrase expresses whose brother, not that Aino is one.  
+**Wrong option `c`:** Sister would be sisko, not veli.  
+**Correct feedback:** Ainon is a genitive form; Ainon veli means Aino's brother.  
+**Wrong feedback:** Ainon is a genitive form; Ainon veli means Aino's brother.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Ainon is a genitive form; Ainon veli means Aino's brother.  
+**Hint:** None. **Linked:** `grammar.people.genitive-restricted`. **Scored:** `grammar.people.genitive-restricted` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+**R09 — `ex.people-and-descriptions.review.friend-with-check`** · `multiple_choice` · independent recognition  
+**Prompt:** What does Asun ystävän kanssa mean?  
+**Stimulus:** Asun ystävän kanssa. (standard Finnish)  
+**Options (stable IDs, shuffle visually):** `a` I live with a friend. · `b` I am a friend. · `c` I don't have a friend.. **Accepted:** `a` I live with a friend..  
+**Wrong option `b`:** This sentence describes living with someone, not being a friend.  
+**Wrong option `c`:** Negative possession would use Minulla ei ole ystävää.  
+**Correct feedback:** Asun ystävän kanssa means I live with a friend; ystävän is the taught genitive before kanssa.  
+**Wrong feedback:** Asun ystävän kanssa means I live with a friend; ystävän is the taught genitive before kanssa.  
+**Near feedback:** None; do not invent partial-credit synonyms. **Not sure:** Asun ystävän kanssa means I live with a friend; ystävän is the taught genitive before kanssa.  
+**Hint:** None. **Linked:** `grammar.people.kanssa-genitive`. **Scored:** `grammar.people.kanssa-genitive` only. **Review eligible:** true; standalone and independent. **Editorial:** `needs_review`.  
+
+## Part IV — Final capability mapping, continued review and optional practice
+
+**Unit 7 blueprint abilities:** Lesson 7.6 F02 demonstrates independently saying one has a sister; F04/F05 transform an affirmative statement into a *taught* negative with the correct siskoa/veljeä; F10/F11 describe a fictional person as tall/young; F06/F07/F14 recognise or independently retrieve a simple -n genitive; F12 independently describes a red house. F15 is a three-line fictional profile combining two named people, a relationship, an adjective and a colour. It is **capability-only** (`knowledgeScoring: false`, `scoredTargetIds: []`) and does not grant successes for every word in the profile. F16 checks negative possession with a different taught noun.
+
+**Canonical vocabulary roles:** New production-role targets total **20**; of these, `vocab.ystava` was introduced as a recognition item in Unit 2 and is promoted to production in Unit 7. Only **19 genuinely new canonical lemmas** are encountered. Do not reset earlier knowledge or create a second target for the same Finnish lemma. Six additional recognition-only lemmas retain non-production status. A vocabulary appearing in a sentence does not necessarily get scored.
+
+**Word Match safety:** A lesson-local matching board can contain two or three *uniquely authored* pairs. In optional Word Match, `ystävä` and `kaveri` have overlapping English meanings: do not put both on the same board with generic “friend” glosses. Match only with approved contextual disambiguators, or separate them. Similarly, `pitkä` may mean tall or long and `lyhyt` short; use context-specific glosses. Canonical and inflected forms stay attached to the same learning item, not duplicate vocabulary IDs.
+
+**Scheduled Review:** Complete a unit after attempting all required steps and checkpoints or explicitly selecting Not sure, not after perfect performance. Only authored `scoredTargetIds` receive first-attempt knowledge evidence. The nine independent Review variants above are eligible only when due after actual encounter; optional Flashcards, My Words and Word Match do not clear due dates, complete lessons or advance permanent mastery.
+
+**Restricted multiline profile:** F15 is a three-sentence text exercise with explicit prompts/accepted forms; implement three scoped text inputs if the current N1 normalisation collapses line boundaries. Do not add unrestricted AI grading or a new conversation-game renderer. The four lexical tiles in F13 deliberately supply proper name **Emma** already capitalised while the first lexical tile **ainon** is capitalised upon sentence assembly.
+
+**Research provenance:** Existing Finnish grammar references for the content include [Uusi kielemme: possession](https://uusikielemme.fi/finnish-grammar/syntax/sentence-types/possession-having-something), [Uusi kielemme: genitive](https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/the-genitive-case-genetiivi), [Uusi kielemme: postpositions](https://uusikielemme.fi/finnish-grammar/finnish-cases/location-cases/the-inflection-of-postpositions-taivutus), [Uusi kielemme: singular predicative descriptions](https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/the-complement-predikatiivi), [Aalto's family genitives](https://openlearning.aalto.fi/mod/page/view.php?id=9897&lang=sv_fi) and [Korpela's Finnish partitive handbook](https://jkorpela.fi/finnish/Partitive.html). These verify general forms and usage, **not** proof of independent teacher approval of all newly authored Vokri examples.
+
+**Release status:** Vokri-owner editorial approval is sufficient for this documentation pipeline. Native Finnish-teacher certification, device testing, practical learning outcomes, iOS/Android keyboard and accessibility tests have not occurred. All content is `needs_review` until explicit owner approval. No existing app code or curriculum source files were modified in this content authoring PR.
