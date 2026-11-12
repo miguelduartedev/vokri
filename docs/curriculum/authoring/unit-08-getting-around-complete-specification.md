@@ -759,3 +759,211 @@ Use unchanged N1, explicit accepted strings and per-option feedback. Do not rewr
 
 **Headline:** “I'm going downtown.” **Copy:** “You can name the city and its centre and say Menen keskustaan using a taught destination form.” **Required steps:** 21; **required exercises:** 16; **matching decisions:** 4. The learner is not yet independently generating any place's destination case. **Next:** 8.4 Here, there and where to.
 
+## Lesson 8.4 — Here, there and where to
+
+**Lesson ID:** `lesson.getting-around.here-there-where-to` · `unit.getting-around` · `fi` · Order 4 · **Estimated:** 9–14 minutes (untested). **Prerequisite:** Lesson 8.3 and Unit 4's täällä/siellä, missä/minne.  
+**Capability:** distinguish being here/there from moving here/there. **New production:** `vocab.tanne`, `vocab.sinne`. **New fixed recognition:** `phrase.getting-around.tule-tanne`. **Grammar concept:** `grammar.getting-around.here-there-movement`. **Review:** `vocab.taalla`, `vocab.siella`, `vocab.minne`, `vocab.missa`, `vocab.menna`, `vocab.tulla`.  
+**Completion:** required steps and D01–D15 attempted or Not sure. **Pause:** after D06 before typing the new adverbs. No imperative conjugation table.
+
+### Ordered learner experience
+
+Every step has stable ID `step.getting-around.here-there-where-to.<suffix>`. Earlier location words are review, not newly encountered lemmas. The fixed recognition-only command is introduced before assessment.
+
+| # | Step suffix | LessonStep type | Exact learner-facing content or exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Here and there can describe two different things.** You already know *täällä* and *siellä* as places. Now learn *tänne* and *sinne* for moving towards those places, using familiar verbs like menen. | none | Yes |
+| 2 | `tanne` | `vocabulary_intro` | **tänne — towards here / to here.** It indicates movement in the speaker's direction. Compare the Unit 4 location word **täällä — here, already at this place**. | `vocab.tanne` | Yes |
+| 3 | `practice-01` | `exercise` | D01 | none | Yes |
+| 4 | `sinne` | `vocabulary_intro` | **sinne — towards there / to there.** Compare **siellä — there, already at that place** from Unit 4. They are related but not interchangeable in movement sentences. | `vocab.sinne` | Yes |
+| 5 | `practice-02` | `exercise` | D02 | none | Yes |
+| 6 | `practice-03` | `exercise` | D03 | none | Yes |
+| 7 | `practice-04` | `exercise` | D04 | none | Yes |
+| 8 | `movement-model` | `grammar_explanation` | Four useful contrasts: **Olen täällä** (I'm here), **Tule tänne** (come here), **Olen siellä** (I'm there), **Menen sinne** (I'm going there). Ask whether the sentence describes location or a destination. | `grammar.getting-around.here-there-movement` | Yes |
+| 9 | `practice-05` | `exercise` | D05 | none | Yes |
+| 10 | `practice-06` | `exercise` | D06 | none | Yes |
+| 11 | `practice-07` | `exercise` | D07 | none | Yes |
+| 12 | `practice-08` | `exercise` | D08 | none | Yes |
+| 13 | `come-here` | `phrase_intro` | **Tule tänne.** — Come here. The word tule is a familiar verb used as one **fixed imperative chunk**. Learn the meaning; do not conjugate a general imperative table yet. This particular command is recognition-only. | `phrase.getting-around.tule-tanne` | Yes |
+| 14 | `practice-09` | `exercise` | D09 | none | Yes |
+| 15 | `practice-10` | `exercise` | D10 | none | Yes |
+| 16 | `movement-reuse` | `example_set` | **Menen sinne.** — I'm going there. **Olen täällä.** — I'm here. These combine Unit 3 verbs and Unit 4 location language with the new motion words. Don't score the old verb separately just because it appears in the sentence. | none | Yes |
+| 17 | `practice-11` | `exercise` | D11 | none | Yes |
+| 18 | `checkpoint` | `checkpoint` | **Lesson checkpoint D12–D15:** independently retrieve movement to there, review the destination question, distinguish staying here from moving and select a fixed come-here instruction. | none | Yes |
+| 19 | `review-questions` | `example_set` | **Minne menet?** asks where someone is going. **Missä se on?** asks where something is. Both questions were formally taught in Unit 4; this is their later reuse, not their first encounter. | none | Yes |
+
+### All complete authored exercises
+
+All use original content/needs_review, the shared N1 acceptance and answer-specific feedback. Two matching boards are **guided semantic comparisons**, not multiple independent scores for the same grammar concept.
+
+**D01 — `ex.getting-around.here-there-where-to.taalla-location`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Someone says Olen täällä. Are they describing a place or movement towards it?  
+**Stimulus:** Olen täällä. — a sentence from the earlier location learning.  
+**Options (stable IDs, shuffle):** `a` being here at this location · `b` coming here from somewhere else · `c` going there. **Correct:** `a` being here at this location.  
+**Wrong option `b`:** Coming towards here uses a direction such as tänne, not the location word täällä.  
+**Wrong option `c`:** Going there uses sinne.  
+**Correct feedback:** Täällä identifies a location: here.  
+**Wrong feedback:** Täällä means here at a place, not motion to it.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Olen täällä. — I'm here.  
+**Hint:** None. **Linked:** `vocab.taalla`, `vocab.olla`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D02 — `ex.getting-around.here-there-where-to.tanne-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does tänne indicate?  
+**Stimulus:** A speaker wants someone to move in their direction.  
+**Options (stable IDs, shuffle):** `a` towards here / to this place · `b` already here · `c` towards a place over there. **Correct:** `a` towards here / to this place.  
+**Wrong option `b`:** Täällä means already here.  
+**Wrong option `c`:** Sinne means towards there, not towards this speaker.  
+**Correct feedback:** Tänne expresses movement towards here.  
+**Wrong feedback:** Tänne is directional, unlike the existing location word täällä.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Tänne = towards here.  
+**Hint:** None. **Linked:** `vocab.tanne`, `vocab.taalla`. **Scored:** `vocab.tanne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D03 — `ex.getting-around.here-there-where-to.siella-location`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** The sentence Olen siellä describes what?  
+**Stimulus:** Olen siellä.  
+**Options (stable IDs, shuffle):** `a` I'm travelling there. · `b` I'm there, at that location. · `c` I'm coming back.. **Correct:** `b` I'm there, at that location..  
+**Wrong option `a`:** Travel to there uses sinne, not the location word siellä.  
+**Wrong option `c`:** Takaisin means back, introduced later, not location.  
+**Correct feedback:** Siellä means there at a place.  
+**Wrong feedback:** Being there uses siellä; movement to there uses sinne.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Olen siellä. — I'm there.  
+**Hint:** None. **Linked:** `vocab.siella`, `vocab.olla`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D04 — `ex.getting-around.here-there-where-to.sinne-direction`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which word means 'towards there' rather than 'at that location'?  
+**Stimulus:** Someone is going to a place away from the speaker.  
+**Options (stable IDs, shuffle):** `a` siellä · `b` sinne · `c` täällä. **Correct:** `b` sinne.  
+**Wrong option `a`:** Siellä means there at the location, not towards it.  
+**Wrong option `c`:** Täällä means here at the speaker's location.  
+**Correct feedback:** Sinne means movement to there.  
+**Wrong feedback:** Use sinne for going there; siellä says someone is there.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Sinne = towards there.  
+**Hint:** None. **Linked:** `vocab.sinne`, `vocab.siella`. **Scored:** `vocab.sinne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D05 — `ex.getting-around.here-there-where-to.here-pair`** · `matching` · intent `concept_recognition` · difficulty `contextual`  
+**Prompt:** Match these two 'here' words to the situation each describes.  
+**Stimulus:** The English descriptions deliberately distinguish position and motion.  
+**Matching pairs (2 decisions):** **täällä ↔ here (already at this place)**; unscored comparison of a known/new adverb; **tänne ↔ to here (moving towards it)**; unscored comparison of a known/new adverb. `knowledgeScoring: false` for this board, because the target is later retrieved without a visible meaning.  
+**Correct feedback:** Täällä is a location; tänne is movement towards that location.  
+**Wrong feedback:** Ask whether someone is already here or moving here.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** täällä = at here; tänne = towards here.  
+**Hint:** None. **Linked:** `vocab.taalla`, `vocab.tanne`, `grammar.getting-around.here-there-movement`. **Scored:** none. **Review eligible:** false, guided board or tokens. **Editorial:** `needs_review`.  
+
+**D06 — `ex.getting-around.here-there-where-to.there-pair`** · `matching` · intent `concept_recognition` · difficulty `contextual`  
+**Prompt:** Match the two 'there' words with the appropriate location or destination meaning.  
+**Stimulus:** Select either a position or a movement towards a place.  
+**Matching pairs (2 decisions):** **siellä ↔ there (at that location)**; unscored comparison of a known/new adverb; **sinne ↔ to there (towards it)**; unscored comparison of a known/new adverb. `knowledgeScoring: false` for this board, because the target is later retrieved without a visible meaning.  
+**Correct feedback:** Siellä is where someone is; sinne is where they are going.  
+**Wrong feedback:** The moving-towards meaning belongs to sinne.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** siellä = at there; sinne = to there.  
+**Hint:** None. **Linked:** `vocab.siella`, `vocab.sinne`, `grammar.getting-around.here-there-movement`. **Scored:** none. **Review eligible:** false, guided board or tokens. **Editorial:** `needs_review`.  
+
+**D07 — `ex.getting-around.here-there-where-to.type-tanne`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word meaning 'towards here / to this place'.  
+**Stimulus:** towards here, not already here  
+**Accepted after N1:** `tänne`. Do not accept location words for destination words.  
+**Correct feedback:** Tänne expresses movement towards the speaker.  
+**Wrong feedback:** Write tänne, not täällä; preserve ä and double n.  
+**Near feedback:** `tanne` → Use ä: tänne.; `täne` → Write double n: tänne.  
+**Not sure:** Write tänne.  
+**Hint:** None. **Linked:** `vocab.tanne`. **Scored:** `vocab.tanne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D08 — `ex.getting-around.here-there-where-to.type-sinne`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word meaning 'to there / towards there'.  
+**Stimulus:** towards another place, not simply located there  
+**Accepted after N1:** `sinne`. Do not accept location words for destination words.  
+**Correct feedback:** Sinne means to there.  
+**Wrong feedback:** Write sinne; siellä means there at the location.  
+**Near feedback:** `sine` → Write double n: sinne.  
+**Not sure:** Write sinne.  
+**Hint:** None. **Linked:** `vocab.sinne`. **Scored:** `vocab.sinne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D09 — `ex.getting-around.here-there-where-to.tule-tanne-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does the fixed command Tule tänne. mean?  
+**Stimulus:** Tule tänne. — a specific instruction, not a conjugation exercise.  
+**Options (stable IDs, shuffle):** `a` Come here. · `b` I'm here. · `c` Go there.. **Correct:** `a` Come here..  
+**Wrong option `b`:** Olen täällä means I'm here; Tule is a command to come.  
+**Wrong option `c`:** Go there would express movement elsewhere, not towards this speaker.  
+**Correct feedback:** Tule tänne. means Come here. Tule is a fixed command from the known verb tulla.  
+**Wrong feedback:** Tule tänne asks someone to come towards the speaker.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Come here.  
+**Hint:** None. **Linked:** `phrase.getting-around.tule-tanne`, `vocab.tanne`, `vocab.tulla`. **Scored:** `phrase.getting-around.tule-tanne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D10 — `ex.getting-around.here-there-where-to.menen-sinne-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which English sentence matches Menen sinne.?  
+**Stimulus:** Menen sinne.  
+**Options (stable IDs, shuffle):** `a` I'm there already. · `b` I'm going there. · `c` I'm coming here.. **Correct:** `b` I'm going there..  
+**Wrong option `a`:** Olen siellä describes already being there.  
+**Wrong option `c`:** Tulen tänne would indicate coming towards here, not going there.  
+**Correct feedback:** Menen sinne. means I'm going there.  
+**Wrong feedback:** Menen shows going; sinne tells where to.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** I'm going there.  
+**Hint:** None. **Linked:** `vocab.sinne`, `vocab.menna`, `grammar.getting-around.here-there-movement`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D11 — `ex.getting-around.here-there-where-to.build-go-there`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
+**Prompt:** Build 'I'm going there' from the two supplied tiles.  
+**Stimulus:** Use the taught movement word, not the location word siellä.  
+**Shuffled lowercase lexical tiles:** `sinne`, `menen`. **Accepted complete sentence:** `Menen sinne.`; capitalize sentence-initial tile after assembly.  
+**Correct feedback:** Menen sinne. describes motion to another place.  
+**Wrong feedback:** Use menen plus the direction word sinne.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Menen sinne.  
+**Hint:** None. **Linked:** `vocab.sinne`, `vocab.menna`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** false, guided board or tokens. **Editorial:** `needs_review`.  
+
+**D12 — `ex.getting-around.here-there-where-to.write-going-there`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Independently write 'I'm going there' using the taught forms.  
+**Stimulus:** Movement towards a place away from the speaker.  
+**Accepted after N1:** `Menen sinne.`, `Minä menen sinne.`. Do not accept location words for destination words.  
+**Correct feedback:** Menen sinne is a useful, short movement sentence.  
+**Wrong feedback:** Use sinne for a destination; siellä would mean already there.  
+**Near feedback:** `Menen siellä` → The destination is sinne, not the location word siellä.  
+**Not sure:** Write Menen sinne.  
+**Hint:** None. **Linked:** `vocab.sinne`, `vocab.menna`. **Scored:** `vocab.sinne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D13 — `ex.getting-around.here-there-where-to.minne-question-review`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which English question corresponds to the earlier taught Minne menet?  
+**Stimulus:** Minne menet? — existing Unit 4 phrase.  
+**Options (stable IDs, shuffle):** `a` Where are you going? · `b` Where are you? · `c` Where did you come from?. **Correct:** `a` Where are you going?.  
+**Wrong option `b`:** Missä asks for a location, whereas minne asks a destination.  
+**Wrong option `c`:** This is not a past-tense question about the source.  
+**Correct feedback:** Minne menet? asks where you are going.  
+**Wrong feedback:** Minne means where to, not simply where.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Where are you going?  
+**Hint:** None. **Linked:** `vocab.minne`, `vocab.menna`. **Scored:** `grammar.getting-around.location-destination`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D14 — `ex.getting-around.here-there-where-to.already-here`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** A person says 'I'm here' without moving. Which Finnish sentence is correct?  
+**Stimulus:** Position at the speaker's current place.  
+**Options (stable IDs, shuffle):** `a` Menen sinne. · `b` Olen täällä. · `c` Tule tänne.. **Correct:** `b` Olen täällä..  
+**Wrong option `a`:** Menen sinne is movement to there, not being here.  
+**Wrong option `c`:** Tule tänne is a command to come here, not a location statement.  
+**Correct feedback:** Olen täällä expresses being here.  
+**Wrong feedback:** For location use täällä with olen.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Olen täällä.  
+**Hint:** None. **Linked:** `vocab.taalla`, `grammar.getting-around.here-there-movement`. **Scored:** `grammar.getting-around.here-there-movement`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**D15 — `ex.getting-around.here-there-where-to.come-here-situation`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** You want someone to move towards your location. Which of these already taught expressions gives that instruction?  
+**Stimulus:** The speaker stays here while another person comes towards them.  
+**Options (stable IDs, shuffle):** `a` Tule tänne. · `b` Olen täällä. · `c` Menen sinne.. **Correct:** `a` Tule tänne..  
+**Wrong option `b`:** Olen täällä only states location; it doesn't ask anyone to come.  
+**Wrong option `c`:** Menen sinne says I go there, movement away from the speaker.  
+**Correct feedback:** Tule tänne. is the taught fixed command to come here.  
+**Wrong feedback:** Use Tule tänne when the other person is meant to move towards you.  
+**Near feedback:** None; wrong direction is not a near-success.  
+**Not sure:** Tule tänne.  
+**Hint:** None. **Linked:** `phrase.getting-around.tule-tanne`, `vocab.tanne`. **Scored:** `phrase.getting-around.tule-tanne`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Here or towards here?” **Copy:** “You can tell when someone is at a place and when they are going towards it.” **Required steps:** 19; **exercises:** 15; **matching pair decisions:** 4. The command Tule tänne is recognised as a fixed phrase, not a general imperative skill. **Next:** 8.5 From there and by bus.
+
