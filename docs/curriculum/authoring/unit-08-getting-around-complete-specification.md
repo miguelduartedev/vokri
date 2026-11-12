@@ -1491,9 +1491,12 @@ The first thirteen exercises introduce/assess simple directions. **F14–F17** c
 **F21 — `ex.getting-around.simple-directions.a1-integrated-three-lines`** · `text_input` · intent `cumulative_capability` · difficulty `cumulative`  
 **Prompt:** Write exactly THREE short Finnish sentences on separate lines for the fictional person: (1) Hi! I'm Aino. (2) Today I drink coffee. (3) I'm going downtown.  
 **Stimulus:** Three independent English prompts in an integrated fictional day. Each sentence uses already authored content from Units 1, 3, 5, 6 and 8.  
-**Accepted after N1:** `Hei! Olen Aino.
-Tänään juon kahvia.
-Menen keskustaan.`. Multiline task is **one capability-only assessment** with three explicitly authored accepted sentences and preserved boundaries. Use 3 scoped text inputs if needed; no multi-target SRS credit.  
+**Accepted after N1, as three independent scoped text fields (in the stated order):**  
+- **Line 1:** `Hei! Olen Aino.` OR `Moi! Olen Aino.` (both are valid Unit 1 informal greetings).  
+- **Line 2:** `Tänään juon kahvia.` OR `Juon kahvia tänään.` OR `Minä juon kahvia tänään.` OR `Tänään minä juon kahvia.`.  
+- **Line 3:** `Menen keskustaan.` OR `Minä menen keskustaan.`.  
+**Canonical display model (one valid combination):** `Hei! Olen Aino.` / `Tänään juon kahvia.` / `Menen keskustaan.`.  
+**Validation:** All three fields must independently match **one explicitly listed variant** via N1, in the specified line order. This is one capability-only result, `knowledgeScoring: false`, `scoredTargetIds: []`; no combinatorial sentence-string parser, fuzzy NLP or multi-target SRS credit.  
 **Correct feedback:** Your three-line mini-story introduces a person, describes an everyday drink and expresses a simple journey downtown. It reuses A1 Foundations knowledge coherently.  
 **Wrong feedback:** Use three taught sentences, one per line: Hei! Olen Aino. / Tänään juon kahvia. / Menen keskustaan. Do not add new grammar.  
 **Near feedback:** None; an incorrect direction is not an Almost result.  
