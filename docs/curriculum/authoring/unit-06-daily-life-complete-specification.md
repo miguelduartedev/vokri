@@ -1140,3 +1140,228 @@ All are `fi`/`sourceType: original`/`editorialStatus: needs_review`; determinist
 
 **Headline:** “A whole week, a simple plan.” **Copy:** “You now know all seven weekdays and can use lähden to describe setting off.” **Required steps:** 19; **optional spoken note:** 1; **required exercises:** 16; **matching pair decisions:** 7. Completion is not permanent mastery. **Next:** Lesson 6.6 — How often?
 
+## Lesson 6.6 — How often?
+
+**ID:** `lesson.daily-life.how-often` · `unit.daily-life` · `fi` · Order 6 · **Estimated:** 12–18 minutes, untested. **Prerequisite:** `lesson.daily-life.friday-sunday`. **Capability:** Say how frequently an action happens and independently build a three-sentence guided daily routine. **New production:** `vocab.aina`, `vocab.usein`, `vocab.joskus`. **No new recognition-only lemmas.** **Grammar:** `grammar.daily-life.frequency-placement` and cumulative fixed time/day constructs. **Pause:** before the seven-task final capability check.  
+**Completion:** visit required steps and attempt G01–G17 (or Not sure). No perfect score, no new Unit 7 grammar.
+
+### Ordered learner experience
+
+Full step IDs `step.daily-life.how-often.<suffix>`; every displayed text is authored below. Earlier words do not generate fresh encounter events.
+
+| # | Step suffix | Type | Exact learner-facing text or exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **How often? Your small daily routine.** Now add three words that tell how regularly you do things. You already know times, weekdays and first-person verbs; finish by putting those familiar forms into a short three-sentence description of part of your day. | none | Yes |
+| 2 | `frequency-words` | `vocabulary_intro` | **aina — always; usein — often; joskus — sometimes.** These are not exact percentages. They can fit naturally near a verb or at the beginning of a statement. | `vocab.aina`, `vocab.usein`, `vocab.joskus` | Yes |
+| 3 | `practice-01` | `exercise` | G01 | none | Yes |
+| 4 | `practice-02` | `exercise` | G02 | none | Yes |
+| 5 | `practice-03` | `exercise` | G03 | none | Yes |
+| 6 | `practice-04` | `exercise` | G04 | none | Yes |
+| 7 | `frequency-uses` | `grammar_explanation` | **Juon usein kahvia.** — I often drink coffee. **Joskus juon teetä.** — Sometimes I drink tea. **Juon aina vettä.** — I always drink water. Frequency describes how often an action happens; no new case grammar is needed. | `grammar.daily-life.frequency-placement` | Yes |
+| 8 | `practice-05` | `exercise` | G05 | none | Yes |
+| 9 | `practice-06` | `exercise` | G06 | none | Yes |
+| 10 | `practice-07` | `exercise` | G07 | none | Yes |
+| 11 | `contrast` | `example_set` | **Aamulla juon kahvia.** — In the morning I drink coffee. **Perjantaina lähden.** — On Friday I leave. **Herään kello viisi.** — I wake up at five o'clock. These are familiar parts of a routine; they're reused, not newly introduced. | none | Yes |
+| 12 | `practice-08` | `exercise` | G08 | none | Yes |
+| 13 | `practice-09` | `exercise` | G09 | none | Yes |
+| 14 | `practice-10` | `exercise` | G10 | none | Yes |
+| 15 | `recap` | `grammar_explanation` | **Before the final check:** a clock time, an activity in the morning, a weekday and a frequency word are separate meaning choices. Use the exact taught forms, not hypothetical case endings or future/past conjugations. | none | Yes |
+| 16 | `unit-capability-check` | `checkpoint` | **Final Unit 6 capability check G11–G17:** independently produce a wake-up time, a morning action, a weekday statement, a frequency sentence and an integrated three-line routine. Scoring only covers independently retrieved targets, and the supplied routine context remains visible. | none | Yes |
+| 17 | `three-lines-help` | `explanation` | **Three lines, one small routine.** Write a three-sentence description of the supplied routine. Each sentence uses taught forms from this unit. The three English cues are fixed so acceptance remains deterministic; this is *not* unrestricted free writing and it does not score every word as newly mastered. | none | Yes |
+
+### Complete authored exercises and unit capability checkpoint
+
+All records use existing five exercise kinds only; `editorialStatus: needs_review`, `sourceType: original`, `learningLanguage: fi`. G11–G17 constitute the seven-task final assessment, not a seventh lesson or new UI engine. The final three-line text input uses a **restricted accepted set** rather than unbounded natural language.
+
+**G01 — `ex.daily-life.how-often.frequency-meaning`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the new frequency words with their meanings.  
+**Stimulus:** How regularly does an action happen?  
+**Matching pairs (3 first-attempt decisions):** **aina ↔ always**, score `vocab.aina`; **usein ↔ often**, score `vocab.usein`; **joskus ↔ sometimes**, score `vocab.joskus`.  
+**Correct feedback:** Aina always, usein often, joskus sometimes.  
+**Wrong feedback:** They describe different frequencies; not exact numerical percentages.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** aina always; usein often; joskus sometimes.  
+**Hint:** None. **Linked:** `vocab.aina`, `vocab.usein`, `vocab.joskus`. **Scored:** `vocab.aina`, `vocab.usein`, `vocab.joskus`. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
+
+**G02 — `ex.daily-life.how-often.always-context`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish word best expresses “always”?  
+**Stimulus:** This action happens every time in this example.  
+**Options (stable IDs; shuffle visually):** `a` joskus · `b` usein · `c` aina. **Correct:** `c` aina.  
+**Wrong option `a`:** Joskus means sometimes, not always.  
+**Wrong option `b`:** Usein means often, not always.  
+**Correct feedback:** Aina means always, without assigning it a numeric percentage.  
+**Wrong feedback:** Always is aina.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Aina — always.  
+**Hint:** None. **Linked:** `vocab.aina`. **Scored:** `vocab.aina`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G03 — `ex.daily-life.how-often.often-context`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish word means “often”?  
+**Stimulus:** This happens regularly but not necessarily every time.  
+**Options (stable IDs; shuffle visually):** `a` usein · `b` aina · `c` joskus. **Correct:** `a` usein.  
+**Wrong option `b`:** Aina means always, stronger than often.  
+**Wrong option `c`:** Joskus means sometimes, not often.  
+**Correct feedback:** Usein means often.  
+**Wrong feedback:** Usein is often; always is aina.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Usein — often.  
+**Hint:** None. **Linked:** `vocab.usein`. **Scored:** `vocab.usein`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G04 — `ex.daily-life.how-often.sometimes-context`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which word matches “sometimes”?  
+**Stimulus:** Not every day; occasionally.  
+**Options (stable IDs; shuffle visually):** `a` aina · `b` joskus · `c` usein. **Correct:** `b` joskus.  
+**Wrong option `a`:** Aina means always.  
+**Wrong option `c`:** Usein means often.  
+**Correct feedback:** Joskus means sometimes.  
+**Wrong feedback:** Joskus is sometimes.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Joskus — sometimes.  
+**Hint:** None. **Linked:** `vocab.joskus`. **Scored:** `vocab.joskus`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G05 — `ex.daily-life.how-often.type-aina`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for “always.”  
+**Stimulus:** always  
+**Accepted via N1:** `aina`.   
+**Correct feedback:** Aina means always.  
+**Wrong feedback:** Write aina, not usein or joskus.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Write aina.  
+**Hint:** None. **Linked:** `vocab.aina`. **Scored:** `vocab.aina`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G06 — `ex.daily-life.how-often.type-usein`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for “often.”  
+**Stimulus:** often  
+**Accepted via N1:** `usein`.   
+**Correct feedback:** Usein means often.  
+**Wrong feedback:** The word for often is usein.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Write usein.  
+**Hint:** None. **Linked:** `vocab.usein`. **Scored:** `vocab.usein`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G07 — `ex.daily-life.how-often.type-joskus`** · `text_input` · intent `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for “sometimes.”  
+**Stimulus:** sometimes  
+**Accepted via N1:** `joskus`.   
+**Correct feedback:** Joskus means sometimes.  
+**Wrong feedback:** The Finnish word is joskus.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Write joskus.  
+**Hint:** None. **Linked:** `vocab.joskus`. **Scored:** `vocab.joskus`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G08 — `ex.daily-life.how-often.often-coffee`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type “I often drink coffee.”  
+**Stimulus:** Use the previously taught kahvia and the new often word.  
+**Accepted via N1:** `Juon usein kahvia.`, `Minä juon usein kahvia.`, `Usein juon kahvia.`, `Usein minä juon kahvia.`.   
+**Correct feedback:** Juon usein kahvia. combines an everyday verb with a frequency expression.  
+**Wrong feedback:** Use juon, usein and kahvia. The earlier noun form kahvia doesn't need changing.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Juon usein kahvia.  
+**Hint:** None. **Linked:** `vocab.usein`, `vocab.juoda`, `vocab.kahvi`. **Scored:** `vocab.usein`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G09 — `ex.daily-life.how-often.sometimes-tea`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type “Sometimes I drink tea.”  
+**Stimulus:** Use the taught Finnish sentence with sometimes and tea.  
+**Accepted via N1:** `Joskus juon teetä.`, `Juon joskus teetä.`, `Minä juon joskus teetä.`, `Joskus minä juon teetä.`.   
+**Correct feedback:** Joskus juon teetä. is a natural Finnish frequency sentence.  
+**Wrong feedback:** Combine joskus, juon and teetä; teetä was taught in Unit 5.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Joskus juon teetä.  
+**Hint:** None. **Linked:** `vocab.joskus`, `vocab.juoda`, `vocab.tee`. **Scored:** `vocab.joskus`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G10 — `ex.daily-life.how-often.always-vs-often`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence means “I always drink water”?  
+**Stimulus:** Always, not often or sometimes.  
+**Options (stable IDs; shuffle visually):** `a` Juon usein vettä. · `b` Juon joskus vettä. · `c` Juon aina vettä.. **Correct:** `c` Juon aina vettä..  
+**Wrong option `a`:** Usein means often; it doesn't guarantee every time.  
+**Wrong option `b`:** Joskus means sometimes.  
+**Correct feedback:** Juon aina vettä. means I always drink water.  
+**Wrong feedback:** Use aina for always.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Juon aina vettä.  
+**Hint:** None. **Linked:** `vocab.aina`, `vocab.juoda`, `vocab.vesi`. **Scored:** `vocab.aina`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G11 — `ex.daily-life.how-often.final-wake-hour`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write the full Finnish sentence “I wake up at five o'clock” using the taught kello pattern.  
+**Stimulus:** Independent recall: I wake up at five o'clock.  
+**Accepted via N1:** `Herään kello viisi.`, `Minä herään kello viisi.`.   
+**Correct feedback:** Herään kello viisi. describes your wake-up time.  
+**Wrong feedback:** Use herään kello viisi; don't require the unintroduced viideltä form.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Herään kello viisi.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.kello`, `grammar.daily-life.whole-hour-time`. **Scored:** `grammar.daily-life.whole-hour-time`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G12 — `ex.daily-life.how-often.final-morning-activity`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write “In the morning, I drink coffee” in Finnish.  
+**Stimulus:** Use aamulla, juon and kahvia.  
+**Accepted via N1:** `Aamulla juon kahvia.`, `Juon kahvia aamulla.`, `Minä juon kahvia aamulla.`, `Aamulla minä juon kahvia.`.   
+**Correct feedback:** Aamulla juon kahvia. describes a simple morning activity.  
+**Wrong feedback:** Use the fixed form aamulla and familiar juon kahvia.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Aamulla juon kahvia.  
+**Hint:** None. **Linked:** `vocab.aamu`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.daypart-fixed-forms`. **Scored:** `grammar.daily-life.daypart-fixed-forms`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G13 — `ex.daily-life.how-often.final-weekday-choice`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which sentence says “I'm at home on Wednesday”?  
+**Stimulus:** One particular Wednesday.  
+**Options (stable IDs; shuffle visually):** `a` Keskiviikkona olen kotona. · `b` Keskiviikko olen kotona. · `c` Perjantaina olen kotona.. **Correct:** `a` Keskiviikkona olen kotona..  
+**Wrong option `b`:** Keskiviikko is the dictionary form; use keskiviikkona as the time form.  
+**Wrong option `c`:** Perjantaina means on Friday.  
+**Correct feedback:** Keskiviikkona olen kotona. is the taught time expression.  
+**Wrong feedback:** Wednesday as a time expression is keskiviikkona.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Keskiviikkona olen kotona.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`, `grammar.daily-life.weekday-time-forms`, `vocab.koti`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G14 — `ex.daily-life.how-often.final-frequency`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write “I sometimes eat bread” in Finnish.  
+**Stimulus:** Use joskus and the Unit 5 partitive form leipää.  
+**Accepted via N1:** `Syön joskus leipää.`, `Joskus syön leipää.`, `Minä syön joskus leipää.`, `Joskus minä syön leipää.`.   
+**Correct feedback:** Syön joskus leipää. combines time frequency and an everyday food activity.  
+**Wrong feedback:** Use joskus, syön and the taught food form leipää.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Syön joskus leipää.  
+**Hint:** None. **Linked:** `vocab.joskus`, `vocab.syoda`, `vocab.leipa`. **Scored:** `vocab.joskus`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**G15 — `ex.daily-life.how-often.final-three-sentence-routine`** · `text_input` · intent `cumulative` · difficulty `cumulative`  
+**Prompt:** Write exactly THREE short Finnish sentences on separate lines: (1) I wake up at five o'clock. (2) In the morning I drink coffee. (3) On Friday I leave.  
+**Stimulus:** Use ONLY the familiar models herään kello viisi; aamulla juon kahvia; perjantaina lähden. Don't add extra words.  
+**Accepted via N1:** `Herään kello viisi.
+Aamulla juon kahvia.
+Perjantaina lähden.`, `Minä herään kello viisi.
+Aamulla juon kahvia.
+Perjantaina lähden.`, `Herään kello viisi.
+Juon kahvia aamulla.
+Lähden perjantaina.`. This multiline task is capability evidence only: `scoredTargetIds: []`, `knowledgeScoring: false`. Do not accidentally strip line separators in N1.  
+**Correct feedback:** Your three-sentence routine connects a wake-up time, morning drink and Friday departure. It is more than three isolated word translations.  
+**Wrong feedback:** Follow the three requested lines: Herään kello viisi. / Aamulla juon kahvia. / Perjantaina lähden. Keep each as a complete sentence.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** One complete model: Herään kello viisi. / Aamulla juon kahvia. / Perjantaina lähden.  
+**Hint:** None. **Linked:** `vocab.herata`, `vocab.kello`, `vocab.aamu`, `vocab.juoda`, `vocab.kahvi`, `vocab.perjantai`, `vocab.lahtea`, `grammar.daily-life.whole-hour-time`. **Scored:** none. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
+
+**G16 — `ex.daily-life.how-often.final-day-and-frequency`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
+**Prompt:** Arrange the supplied tiles to say “On Monday I often drink coffee.”  
+**Stimulus:** All of the words are supplied, so this is guided integration rather than unaided spelling.  
+**Shuffled tokens:** `kahvia`, `Maanantaina`, `usein`, `juon`. **Accepted complete sentences:** `Maanantaina juon usein kahvia.`, `Juon usein kahvia maanantaina.`. Supplied word tiles do not prove unaided spelling.  
+**Correct feedback:** Maanantaina juon usein kahvia. is grammatically natural for a statement about a particular Monday.  
+**Wrong feedback:** Use maanantaina as the date phrase and juon usein kahvia as the main statement; don't reinterpret it as 'every Monday'.  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Maanantaina juon usein kahvia.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.usein`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.frequency-placement`. **Scored:** `grammar.daily-life.frequency-placement`. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
+
+**G17 — `ex.daily-life.how-often.final-independent-freq`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
+**Prompt:** Without choices, write the Finnish word for “often.”  
+**Stimulus:** often  
+**Accepted via N1:** `usein`.   
+**Correct feedback:** Usein describes frequent repetition.  
+**Wrong feedback:** Often is usein, not aina (always).  
+**Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
+**Not sure:** Usein.  
+**Hint:** None. **Linked:** `vocab.usein`. **Scored:** `vocab.usein`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+### End-of-unit capability check and completion
+
+**G11–G17 assessment traces:** G11 wake-up time; G12 morning activity; G13 on-Wednesday comprehension; G14 sometimes-frequency sentence; G15 restricted three-line mini-routine; G16 integrates an authored weekday/time/frequency sentence with supplied tiles; G17 independent “often” retrieval. This directly evidences all five required blueprint abilities while distinguishing independent production from guided construction. G15 tests integrated capability only; do not emit seven simultaneous vocabulary-knowledge successes because familiar phrases appear together.
+
+**Completion headline:** “A small part of your day, in Finnish.” **Copy:** “You can now tell a whole-hour time, say what you do in the morning, recognise weekdays and describe how often familiar activities happen. These skills will become stronger as your vocabulary returns in Review.” **No permanent-mastery claim.** Unit 6 contains 21 new production lemmas and seven recognition-only items; its six lessons can finish after attempted checkpoints, even with incorrect or Not sure answers. **Next:** Unit 7 — People & descriptions. **Optional Flashcards/Word Match:** still separate from the scheduled-review queue.
+
