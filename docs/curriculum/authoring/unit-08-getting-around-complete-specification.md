@@ -324,3 +324,222 @@ Each record: `sourceType: original`, `editorialStatus: needs_review`, `reviewedB
 
 **Headline:** “Transport words you can recognise.” **Copy:** “You can name a bus, train, tram, metro and taxi in Finnish. Next, you'll learn the places and tickets connected with journeys.” **Required steps:** 19; **required exercises:** 14; **matching pair decisions:** 5. No assertion of real transit service availability, case mastery, or permanent recall. **Next:** 8.2 Stops, stations and tickets.
 
+## Lesson 8.2 — Stops, stations and tickets
+
+**Lesson ID:** `lesson.getting-around.stops-stations-tickets` · `unit.getting-around` · `fi` · Order 2 · **Estimated:** 10–16 minutes (untested). **Prerequisite:** Lesson 8.1.  
+**Capability:** identify a station, stop, ticket and route and independently ask where a station is. **New production:** `vocab.asema`, `vocab.pysakki`, `vocab.lippu`, `vocab.reitti`. **New recognition:** `vocab.matkalippu`, `vocab.laituri`. **New phrase production:** `phrase.getting-around.missa-asema-on`. **New fixed recognition:** `phrase.getting-around.minne-tama-bussi-menee`. **Review:** Unit 4 missä/minne and earlier bussi.  
+**Completion:** all required steps and B01–B16 attempted or Not sure, no perfection gate. **Pause:** after B10 before two distinct question types.
+
+### Ordered learner experience
+
+Full step IDs: `step.getting-around.stops-stations-tickets.<suffix>`. Only formal introductions add new learning records. Questions are fixed patterns, not an inferred person-conjugation paradigm.
+
+| # | Step suffix | LessonStep type | Exact learner-facing copy / exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Stops, stations and tickets.** Knowing the vehicle is useful; now learn the place where it stops and the ticket/route words that appear in simple journey information. We use generic examples, not actual live departure times. | none | Yes |
+| 2 | `station-stop` | `vocabulary_intro` | **asema — station; pysäkki — stop.** A railway station is commonly an asema; a roadside bus stop is a pysäkki. These words can overlap in specific compound names, so don't treat them as an absolute size rule. | `vocab.asema`, `vocab.pysakki` | Yes |
+| 3 | `ticket-route` | `vocabulary_intro` | **lippu — ticket** (in this travel context); **reitti — route** (the path of a service). Lippu can have other meanings elsewhere, but today we're discussing travel. | `vocab.lippu`, `vocab.reitti` | Yes |
+| 4 | `practice-01` | `exercise` | B01 | none | Yes |
+| 5 | `practice-02` | `exercise` | B02 | none | Yes |
+| 6 | `practice-03` | `exercise` | B03 | none | Yes |
+| 7 | `practice-04` | `exercise` | B04 | none | Yes |
+| 8 | `travel-ticket` | `vocabulary_intro` | Recognition-only: **matkalippu — travel ticket**. You can understand it on a sign or in a message; the shorter lippu is your production word. | `vocab.matkalippu` | Yes |
+| 9 | `practice-05` | `exercise` | B05 | none | Yes |
+| 10 | `platform` | `vocabulary_intro` | Recognition-only: **laituri — platform** at a railway station, or pier in another context. The train context tells us which meaning is intended. No location-case inflection is required. | `vocab.laituri` | Yes |
+| 11 | `practice-06` | `exercise` | B06 | none | Yes |
+| 12 | `practice-07` | `exercise` | B07 | none | Yes |
+| 13 | `practice-08` | `exercise` | B08 | none | Yes |
+| 14 | `practice-09` | `exercise` | B09 | none | Yes |
+| 15 | `practice-10` | `exercise` | B10 | none | Yes |
+| 16 | `ask-station` | `phrase_intro` | **Missä asema on?** — Where is the station? This is a useful question with **missä** from Unit 4. The variant **Missä on asema?** is also natural, and a polite speaker may begin with **Anteeksi** (sorry/excuse me). | `phrase.getting-around.missa-asema-on` | Yes |
+| 17 | `practice-11` | `exercise` | B11 | none | Yes |
+| 18 | `practice-12` | `exercise` | B12 | none | Yes |
+| 19 | `bus-question` | `phrase_intro` | **Minne tämä bussi menee?** — Where does this bus go? Learn this **as a complete recognition-first question**. The form menee is a third-person form; you do not need to conjugate other Finnish verbs to ask it. | `phrase.getting-around.minne-tama-bussi-menee` | Yes |
+| 20 | `practice-13` | `exercise` | B13 | none | Yes |
+| 21 | `checkpoint` | `checkpoint` | **Lesson checkpoint B14–B16:** independently ask where a station is, interpret a platform reference and choose the correct question for a station-versus-destination situation. | none | Yes |
+| 22 | `question-contrast` | `example_set` | **Missä asema on?** asks about the station's location. **Minne tämä bussi menee?** asks about a bus's destination. They use familiar missä/minne but ask different things. | none | Yes |
+
+### All complete authored exercises
+
+Records are `sourceType: original`, `editorialStatus: needs_review` and `learningLanguage: fi`, using N1 accepted-answer rules and option-specific feedback. A recognition-only phrase cannot imply the full productive third-person verb rule.
+
+**B01 — `ex.getting-around.stops-stations-tickets.stop-station-match`** · `matching` · `recognition` · difficulty `foundation`  
+**Prompt:** Match two transport places to their basic meanings.  
+**Stimulus:** This exercise is a typical stop versus station context, not an absolute rule for all facilities.  
+**Matching pairs (2 first-attempt decisions):** **asema ↔ station** scoring `vocab.asema`; **pysäkki ↔ stop** scoring `vocab.pysakki`. Independent column shuffle.  
+**Correct feedback:** Asema is station, pysäkki is a stop.  
+**Wrong feedback:** A station may be a larger facility; a pysäkki is a stop. Real facilities can overlap.  
+**Near feedback:** None.  
+**Not sure:** asema → station; pysäkki → stop.  
+**Hint:** None. **Linked:** `vocab.asema`, `vocab.pysakki`. **Scored:** `vocab.asema`, `vocab.pysakki`. **Review eligible:** false, matching/guided. **Editorial:** `needs_review`.  
+
+**B02 — `ex.getting-around.stops-stations-tickets.ticket-route-match`** · `matching` · `recognition` · difficulty `foundation`  
+**Prompt:** Match the travel ticket and route words to their meanings.  
+**Stimulus:** Ticket as proof of travel and route as the path a service takes.  
+**Matching pairs (2 first-attempt decisions):** **lippu ↔ ticket** scoring `vocab.lippu`; **reitti ↔ route** scoring `vocab.reitti`. Independent column shuffle.  
+**Correct feedback:** Lippu is a ticket here; reitti is a route.  
+**Wrong feedback:** A ticket is something you use for travel; a route describes where travel goes.  
+**Near feedback:** None.  
+**Not sure:** lippu → ticket; reitti → route.  
+**Hint:** None. **Linked:** `vocab.lippu`, `vocab.reitti`. **Scored:** `vocab.lippu`, `vocab.reitti`. **Review eligible:** false, matching/guided. **Editorial:** `needs_review`.  
+
+**B03 — `ex.getting-around.stops-stations-tickets.bus-stop-context`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** You are waiting at a typical bus stop. Which new Finnish word names that stop?  
+**Stimulus:** A roadside bus stop rather than the whole station building.  
+**Options (stable IDs, shuffle visually):** `a` asema · `b` pysäkki · `c` reitti. **Correct:** `b` pysäkki.  
+**Wrong option `a`:** Asema names a station; the context specifically says a roadside stop.  
+**Wrong option `c`:** Reitti is the route, not the place to wait.  
+**Correct feedback:** Pysäkki is the stop where you wait for a bus.  
+**Wrong feedback:** Use pysäkki for this specific stop context, not asema or reitti.  
+**Near feedback:** None.  
+**Not sure:** Pysäkki.  
+**Hint:** None. **Linked:** `vocab.pysakki`, `vocab.asema`. **Scored:** `vocab.pysakki`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B04 — `ex.getting-around.stops-stations-tickets.ticket-context`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** What does lippu mean in this transport context?  
+**Stimulus:** A person needs a valid lippu before travelling.  
+**Options (stable IDs, shuffle visually):** `a` ticket · `b` road · `c` stop. **Correct:** `a` ticket.  
+**Wrong option `b`:** Tie is road and is introduced in the next lesson.  
+**Wrong option `c`:** Pysäkki is a stop, not a ticket.  
+**Correct feedback:** Lippu is ticket in this travel context. The word has other meanings elsewhere.  
+**Wrong feedback:** Lippu means ticket here, not road or stop.  
+**Near feedback:** None.  
+**Not sure:** Lippu means ticket here.  
+**Hint:** None. **Linked:** `vocab.lippu`. **Scored:** `vocab.lippu`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B05 — `ex.getting-around.stops-stations-tickets.matkalippu`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** What is a matkalippu?  
+**Stimulus:** matkalippu in a travel information display (recognition only)  
+**Options (stable IDs, shuffle visually):** `a` travel ticket · `b` train platform · `c` taxi. **Correct:** `a` travel ticket.  
+**Wrong option `b`:** Laituri means platform/pier in appropriate contexts.  
+**Wrong option `c`:** Taksi means taxi.  
+**Correct feedback:** Matkalippu is a travel ticket; lippu is the more general ticket noun.  
+**Wrong feedback:** The word describes a travel ticket. You do not need to type it in Finnish.  
+**Near feedback:** None.  
+**Not sure:** Matkalippu means travel ticket.  
+**Hint:** None. **Linked:** `vocab.matkalippu`, `vocab.lippu`. **Scored:** `vocab.matkalippu`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B06 — `ex.getting-around.stops-stations-tickets.laituri`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** At a railway station, what can laituri mean?  
+**Stimulus:** A sign names a train's laituri.  
+**Options (stable IDs, shuffle visually):** `a` a platform · `b` a bus ticket · `c` a taxi. **Correct:** `a` a platform.  
+**Wrong option `b`:** Ticket is lippu / matkalippu, not laituri.  
+**Wrong option `c`:** Taxi is taksi, not laituri.  
+**Correct feedback:** Laituri is a train platform in this context. It can mean a pier elsewhere.  
+**Wrong feedback:** At a railway station, laituri refers to a platform.  
+**Near feedback:** None.  
+**Not sure:** Laituri → platform (train context).  
+**Hint:** None. **Linked:** `vocab.laituri`, `vocab.asema`. **Scored:** `vocab.laituri`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B07 — `ex.getting-around.stops-stations-tickets.write-asema`** · `text_input` · `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish dictionary word for station.  
+**Stimulus:** station (generic transport context)  
+**Accepted N1:** `asema`. No invented grammatical variants.  
+**Correct feedback:** Asema is station.  
+**Wrong feedback:** Write asema, not pysäkki (stop).  
+**Near feedback:** None.  
+**Not sure:** Write asema.  
+**Hint:** None. **Linked:** `vocab.asema`. **Scored:** `vocab.asema`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B08 — `ex.getting-around.stops-stations-tickets.write-pysakki`** · `text_input` · `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish noun for a stop.  
+**Stimulus:** stop (bus stop context)  
+**Accepted N1:** `pysäkki`. No invented grammatical variants.  
+**Correct feedback:** Pysäkki names a stop.  
+**Wrong feedback:** The noun has ä and a double k: pysäkki.  
+**Near feedback:** `pysakki` → The first vowel is ä: pysäkki.; `pysäki` → Pysäkki has a double k.  
+**Not sure:** Write pysäkki.  
+**Hint:** None. **Linked:** `vocab.pysakki`. **Scored:** `vocab.pysakki`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B09 — `ex.getting-around.stops-stations-tickets.write-lippu`** · `text_input` · `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for a transport ticket.  
+**Stimulus:** ticket (travel meaning)  
+**Accepted N1:** `lippu`. No invented grammatical variants.  
+**Correct feedback:** Lippu means ticket here.  
+**Wrong feedback:** Use lippu with two p letters.  
+**Near feedback:** `lipu` → There are two p letters: lippu.  
+**Not sure:** Write lippu.  
+**Hint:** None. **Linked:** `vocab.lippu`. **Scored:** `vocab.lippu`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B10 — `ex.getting-around.stops-stations-tickets.write-reitti`** · `text_input` · `cued_recall` · difficulty `contextual`  
+**Prompt:** Type the Finnish word for a transport route.  
+**Stimulus:** route — the path that a service follows  
+**Accepted N1:** `reitti`. No invented grammatical variants.  
+**Correct feedback:** Reitti is a route.  
+**Wrong feedback:** Write reitti; a route is not a ticket or station.  
+**Near feedback:** `reiti` → Write both t letters: reitti.  
+**Not sure:** Write reitti.  
+**Hint:** None. **Linked:** `vocab.reitti`. **Scored:** `vocab.reitti`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B11 — `ex.getting-around.stops-stations-tickets.station-question-meaning`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** What does Missä asema on? ask?  
+**Stimulus:** Missä asema on?  
+**Options (stable IDs, shuffle visually):** `a` Where is the station? · `b` Where is this bus going? · `c` Do you have a ticket?. **Correct:** `a` Where is the station?.  
+**Wrong option `b`:** A bus destination is asked using a different question starting with minne.  
+**Wrong option `c`:** Lippu concerns a ticket; the sentence asks about asema.  
+**Correct feedback:** Missä asema on? asks where the station is.  
+**Wrong feedback:** Missä indicates a location; asema is station.  
+**Near feedback:** None.  
+**Not sure:** Where is the station?  
+**Hint:** None. **Linked:** `phrase.getting-around.missa-asema-on`, `vocab.asema`, `vocab.missa`. **Scored:** `phrase.getting-around.missa-asema-on`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B12 — `ex.getting-around.stops-stations-tickets.build-station-question`** · `token_build` · `controlled_construction` · difficulty `contextual`  
+**Prompt:** Arrange the three supplied tiles into the taught question 'Where is the station?'.  
+**Stimulus:** The question uses words already taught, now as a useful complete expression.  
+**Shuffled lexical tiles:** `on`, `missä`, `asema`. **Accepted complete sequence:** `Missä asema on?`. The renderer capitalises the first assembled word.  
+**Correct feedback:** Missä asema on? is a complete and natural station question.  
+**Wrong feedback:** Use Missä at the beginning, then asema and on.  
+**Near feedback:** None.  
+**Not sure:** Missä asema on?  
+**Hint:** None. **Linked:** `phrase.getting-around.missa-asema-on`, `vocab.asema`. **Scored:** none. **Review eligible:** false, matching/guided. **Editorial:** `needs_review`.  
+
+**B13 — `ex.getting-around.stops-stations-tickets.where-bus-goes`** · `multiple_choice` · `recognition` · difficulty `foundation`  
+**Prompt:** Which English question matches Minne tämä bussi menee?  
+**Stimulus:** Minne tämä bussi menee? (fixed recognition phrase; no new third-person verb table)  
+**Options (stable IDs, shuffle visually):** `a` Where does this bus go? · `b` Where is the station? · `c` Where can I buy a ticket?. **Correct:** `a` Where does this bus go?.  
+**Wrong option `b`:** Missä asema on? is the station question.  
+**Wrong option `c`:** Lippu would refer to ticket; this asks about the bus destination.  
+**Correct feedback:** Minne tämä bussi menee? asks the bus's destination; menee is a fixed third-person form here.  
+**Wrong feedback:** Minne asks where to; this phrase asks where the bus goes.  
+**Near feedback:** None.  
+**Not sure:** Where does this bus go?  
+**Hint:** None. **Linked:** `phrase.getting-around.minne-tama-bussi-menee`, `vocab.bussi`, `vocab.minne`. **Scored:** `phrase.getting-around.minne-tama-bussi-menee`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B14 — `ex.getting-around.stops-stations-tickets.independent-station-question`** · `text_input` · `controlled_production` · difficulty `contextual`  
+**Prompt:** Without seeing Finnish words, type the taught question 'Where is the station?'.  
+**Stimulus:** Where is the station?  
+**Accepted N1:** `Missä asema on?`, `Missä on asema?`. No invented grammatical variants.  
+**Correct feedback:** Missä asema on? is the main taught form; Missä on asema? is also natural.  
+**Wrong feedback:** Use missä, asema and on. The question asks a location, not a destination.  
+**Near feedback:** `Missa asema on?` → Write ä in missä.; `Minne asema on?` → Minne means where to; the question asks where the station is.  
+**Not sure:** Write Missä asema on?  
+**Hint:** None. **Linked:** `phrase.getting-around.missa-asema-on`, `vocab.asema`, `vocab.missa`. **Scored:** `phrase.getting-around.missa-asema-on`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B15 — `ex.getting-around.stops-stations-tickets.station-platform-distinction`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** A railway ticket shows which laituri to use. What are you looking for?  
+**Stimulus:** The train's numbered platform at a station; the noun laituri is supplied.  
+**Options (stable IDs, shuffle visually):** `a` the platform · `b` the city bus route · `c` the ticket price. **Correct:** `a` the platform.  
+**Wrong option `b`:** Reitti is a route, not a train platform.  
+**Wrong option `c`:** The noun laituri describes the platform, not the fare.  
+**Correct feedback:** At a railway station, laituri is a platform.  
+**Wrong feedback:** This is the place to board a train, not the route or price.  
+**Near feedback:** None.  
+**Not sure:** The train platform.  
+**Hint:** None. **Linked:** `vocab.laituri`, `vocab.asema`. **Scored:** `vocab.laituri`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+**B16 — `ex.getting-around.stops-stations-tickets.which-question`** · `multiple_choice` · `contextual_application` · difficulty `contextual`  
+**Prompt:** You are lost and need the location of a station, not a bus's destination. Which Finnish question should you use?  
+**Stimulus:** The station is somewhere nearby; you need to know where.  
+**Options (stable IDs, shuffle visually):** `a` Minne tämä bussi menee? · `b` Missä asema on? · `c` Menen keskustaan.. **Correct:** `b` Missä asema on?.  
+**Wrong option `a`:** This asks where the bus goes, not where the station is.  
+**Wrong option `c`:** This says you are going downtown; it isn't a question.  
+**Correct feedback:** Missä asema on? asks for the station's location.  
+**Wrong feedback:** Use the missä question to ask where a station is.  
+**Near feedback:** None.  
+**Not sure:** Missä asema on?  
+**Hint:** None. **Linked:** `phrase.getting-around.missa-asema-on`, `phrase.getting-around.minne-tama-bussi-menee`. **Scored:** `phrase.getting-around.missa-asema-on`. **Review eligible:** true, self-contained. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “You can ask for the station.” **Copy:** “You know words for station, stop, ticket and route, and you can ask where a station is. Next you'll learn how to describe a destination downtown.” **Required steps:** 22; **exercises:** 16; **matching pair decisions:** 4. No assumption that every stop is a full station. **Next:** 8.3 Around the city.
+
