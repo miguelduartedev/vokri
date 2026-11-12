@@ -928,3 +928,215 @@ Each exercise carries `editorialStatus: needs_review` and `sourceType: original`
 
 **Headline:** “Four days, two ways to say them.” **Copy:** “You can name Monday to Thursday and understand how Finnish expresses something happening on one of those days.” 19 required steps, 16 exercises, 4 matching decisions. **Next:** Lesson 6.5 — Friday to Sunday. No perfect-score gate and no false recurring-every-week grammar claim.
 
+## Lesson 6.5 — Friday to Sunday
+
+**ID:** `lesson.daily-life.friday-sunday` · `unit.daily-life` · `fi` · Order 5 · **Duration:** 11–17 minutes (untested). **Prerequisite:** `lesson.daily-life.monday-thursday`. **Capability:** recognise/retrieve the full weekday set and describe leaving on a particular day. **New production:** `vocab.perjantai`, `vocab.lauantai`, `vocab.sunnuntai`, `vocab.lahtea`. **Review grammar:** `grammar.daily-life.weekday-time-forms`. **Pause:** after E08.  
+**Completion:** required steps and all E01–E16 attempted, including Not sure. No perfect-score gate.
+
+### Ordered learner experience
+
+All step IDs are `step.daily-life.friday-sunday.<suffix>`. Only new formal introductions create encounters; spoken note is optional.
+
+| # | Step suffix | Type | Exact learner-facing content / exercise ref | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **Friday to Sunday — and setting off.** Complete the seven-day set and learn the useful verb for leaving. You know menen (I go); lähden (I leave) focuses on departure. Practise names first, then time expressions. | none | Yes |
+| 2 | `days` | `vocabulary_intro` | **perjantai — Friday; lauantai — Saturday; sunnuntai — Sunday.** These are the final three weekday nouns; they are written with lowercase initials except at the beginning of a sentence. | `vocab.perjantai`, `vocab.lauantai`, `vocab.sunnuntai` | Yes |
+| 3 | `practice-01` | `exercise` | E01 | none | Yes |
+| 4 | `practice-02` | `exercise` | E02 | none | Yes |
+| 5 | `practice-03` | `exercise` | E03 | none | Yes |
+| 6 | `leave` | `vocabulary_intro` | **lähteä — to leave / set off.** The action focuses on departure, rather than simply heading to a destination. The first-person form is lähden, introduced shortly. | `vocab.lahtea` | Yes |
+| 7 | `practice-04` | `exercise` | E04 | none | Yes |
+| 8 | `practice-05` | `exercise` | E05 | none | Yes |
+| 9 | `practice-06` | `exercise` | E06 | none | Yes |
+| 10 | `practice-07` | `exercise` | E07 | none | Yes |
+| 11 | `practice-08` | `exercise` | E08 | none | Yes |
+| 12 | `time-forms` | `grammar_explanation` | **perjantaina — on Friday; lauantaina — on Saturday; sunnuntaina — on Sunday.** These refer to a particular day's activity; a habitual every-Friday pattern is not taught yet. | none | Yes |
+| 13 | `first-person` | `grammar_explanation` | **Lähden.** — I leave / set off. This is the exact first-person form of lähteä. Don't invent a generic suffix rule; **Menen kotiin.** instead focuses on the destination. | none | Yes |
+| 14 | `practice-09` | `exercise` | E09 | none | Yes |
+| 15 | `practice-10` | `exercise` | E10 | none | Yes |
+| 16 | `practice-11` | `exercise` | E11 | none | Yes |
+| 17 | `examples` | `example_set` | **Perjantaina lähden.** — On Friday I leave. **Sunnuntaina olen kotona.** — I'm at home on Sunday. **Lähden sunnuntaina.** — I leave on Sunday. These use earlier words without changing their encounter status. | none | Yes |
+| 18 | `spoken` | `spoken_note` | Optional recognition: **lähden → lähen** is common in speech. Recognise the already encountered forms **menen → meen** and **tulen → tuun**. Don't type colloquial spellings. | none | No |
+| 19 | `practice-12` | `exercise` | E12 | none | Yes |
+| 20 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint E13–E16:** distinguish Fridays from Saturdays, retrieve weekday nouns, and connect time phrases to familiar sentences. | none | Yes |
+
+### Complete authored exercises
+
+All are `fi`/`sourceType: original`/`editorialStatus: needs_review`; deterministic N1 acceptance and prior scheduler contract apply.
+
+**E01 — `ex.daily-life.friday-sunday.match-weekend`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match the three new weekday nouns to their meanings.  
+**Stimulus:** Friday, Saturday and Sunday.  
+**Matching pairs (3 first-attempt decisions):** **perjantai ↔ Friday**, scored `vocab.perjantai`; **lauantai ↔ Saturday**, scored `vocab.lauantai`; **sunnuntai ↔ Sunday**, scored `vocab.sunnuntai`. Shuffle columns independently; per-pair first-attempt events only.  
+**Correct feedback:** These are Friday perjantai, Saturday lauantai and Sunday sunnuntai.  
+**Wrong feedback:** Check the particular day, not only the shared -tai ending.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** perjantai Friday; lauantai Saturday; sunnuntai Sunday.  
+**Hint:** None. **Linked:** `vocab.perjantai`, `vocab.lauantai`, `vocab.sunnuntai`. **Scored:** `vocab.perjantai`, `vocab.lauantai`, `vocab.sunnuntai`. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**E02 — `ex.daily-life.friday-sunday.friday-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish noun means Friday?  
+**Stimulus:** Friday  
+**Options (stable IDs):** `a` lauantai · `b` perjantai · `c` sunnuntai. **Correct option:** `b` perjantai.  
+**Wrong option `a`:** Lauantai is Saturday.  
+**Wrong option `c`:** Sunnuntai is Sunday.  
+**Correct feedback:** Perjantai is Friday.  
+**Wrong feedback:** Friday is perjantai, before lauantai.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Perjantai means Friday.  
+**Hint:** None. **Linked:** `vocab.perjantai`. **Scored:** `vocab.perjantai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E03 — `ex.daily-life.friday-sunday.sunday-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which day is sunnuntai?  
+**Stimulus:** sunnuntai  
+**Options (stable IDs):** `a` Sunday · `b` Saturday · `c` Thursday. **Correct option:** `a` Sunday.  
+**Wrong option `b`:** Lauantai is Saturday.  
+**Wrong option `c`:** Torstai is Thursday.  
+**Correct feedback:** Sunnuntai is Sunday.  
+**Wrong feedback:** Sunnuntai is the Sunday noun.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Sunnuntai means Sunday.  
+**Hint:** None. **Linked:** `vocab.sunnuntai`. **Scored:** `vocab.sunnuntai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E04 — `ex.daily-life.friday-sunday.leaving-meaning`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does lähteä mean in an everyday routine?  
+**Stimulus:** A person is setting off from somewhere.  
+**Options (stable IDs):** `a` to arrive · `b` to leave / set off · `c` to sleep. **Correct option:** `b` to leave / set off.  
+**Wrong option `a`:** Tulla means come; it does not focus on setting off.  
+**Wrong option `c`:** Nukkua means sleep.  
+**Correct feedback:** Lähteä focuses on leaving or setting off.  
+**Wrong feedback:** Use lähteä for departing, rather than mennä for going toward a destination.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Lähteä means to leave or set off.  
+**Hint:** None. **Linked:** `vocab.lahtea`, `vocab.menna`. **Scored:** `vocab.lahtea`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E05 — `ex.daily-life.friday-sunday.write-friday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Friday.  
+**Stimulus:** Friday  
+**Accepted after N1:** `perjantai`.  
+**Correct feedback:** Perjantai means Friday.  
+**Wrong feedback:** Write perjantai, not lauantai.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Write perjantai.  
+**Hint:** None. **Linked:** `vocab.perjantai`. **Scored:** `vocab.perjantai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E06 — `ex.daily-life.friday-sunday.write-saturday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Saturday.  
+**Stimulus:** Saturday  
+**Accepted after N1:** `lauantai`.  
+**Correct feedback:** Lauantai is Saturday.  
+**Wrong feedback:** Use lauantai, the day between Friday and Sunday.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Write lauantai.  
+**Hint:** None. **Linked:** `vocab.lauantai`. **Scored:** `vocab.lauantai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E07 — `ex.daily-life.friday-sunday.write-sunday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Sunday.  
+**Stimulus:** Sunday  
+**Accepted after N1:** `sunnuntai`.  
+**Correct feedback:** Sunnuntai means Sunday.  
+**Wrong feedback:** Write sunnuntai and keep the double n.  
+**Near feedback:** `sununtai` → The word has a double n: sunnuntai.  
+**Not sure:** Write sunnuntai.  
+**Hint:** None. **Linked:** `vocab.sunnuntai`. **Scored:** `vocab.sunnuntai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E08 — `ex.daily-life.friday-sunday.on-saturday`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Your one-time plan happens on Saturday. Which phrase fits?  
+**Stimulus:** ____ juon kahvia. — On Saturday, I drink coffee.  
+**Options (stable IDs):** `a` lauantai · `b` lauantaina · `c` perjantaina. **Correct option:** `b` lauantaina.  
+**Wrong option `a`:** Lauantai is the dictionary noun; lauantaina is the taught time form.  
+**Wrong option `c`:** Perjantaina means on Friday.  
+**Correct feedback:** Lauantaina means on Saturday.  
+**Wrong feedback:** Use the complete taught time form lauantaina.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Lauantaina means on Saturday.  
+**Hint:** None. **Linked:** `vocab.lauantai`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E09 — `ex.daily-life.friday-sunday.leaving-or-going`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which statement focuses on leaving, rather than going to a destination?  
+**Stimulus:** You are setting off now.  
+**Options (stable IDs):** `a` Menen kotiin. · `b` Lähden. · `c` Olen kotona.. **Correct option:** `b` Lähden..  
+**Wrong option `a`:** Menen kotiin focuses on going home.  
+**Wrong option `c`:** Olen kotona states a location, not departure.  
+**Correct feedback:** Lähden means I leave / set off.  
+**Wrong feedback:** Use lähden to focus on setting off; menen focuses on going.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Choose Lähden.  
+**Hint:** None. **Linked:** `vocab.lahtea`, `vocab.menna`. **Scored:** `vocab.lahtea`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E10 — `ex.daily-life.friday-sunday.write-lahden`** · `text_input` · intent `controlled_production` · difficulty `controlled`  
+**Prompt:** Type “I leave” using the taught one-word Finnish form.  
+**Stimulus:** I leave / I set off  
+**Accepted after N1:** `lähden`.  
+**Correct feedback:** Lähden is the first-person form of lähteä.  
+**Wrong feedback:** Write lähden, not the dictionary form lähteä.  
+**Near feedback:** `lahden` → Keep ä in lähden.  
+**Not sure:** Write lähden.  
+**Hint:** None. **Linked:** `vocab.lahtea`. **Scored:** `vocab.lahtea`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E11 — `ex.daily-life.friday-sunday.friday-leave`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
+**Prompt:** Use both tiles to say “On Friday I leave.”  
+**Stimulus:** One specific Friday, not a habitual every-Friday statement.  
+**Supplied shuffled tokens:** `Perjantaina`, `lähden`. **Accepted whole sequences:** `Perjantaina lähden.`, `Lähden perjantaina.`. This tests arrangement with provided forms, not unaided spelling.  
+**Correct feedback:** Perjantaina lähden is a natural short statement.  
+**Wrong feedback:** Use the taught forms perjantaina and lähden; either order is natural.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Perjantaina lähden.  
+**Hint:** None. **Linked:** `vocab.perjantai`, `vocab.lahtea`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**E12 — `ex.daily-life.friday-sunday.sunday-departure`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write “I leave on Sunday” using taught forms.  
+**Stimulus:** A particular Sunday.  
+**Accepted after N1:** `Lähden sunnuntaina.`, `Sunnuntaina lähden.`, `Minä lähden sunnuntaina.`, `Sunnuntaina minä lähden.`.  
+**Correct feedback:** Lähden sunnuntaina says you are leaving on Sunday.  
+**Wrong feedback:** Use lähden and sunnuntaina, not the dictionary noun sunnuntai.  
+**Near feedback:** `Lähden sunnuntai` → Use the temporal form sunnuntaina.  
+**Not sure:** Write Lähden sunnuntaina.  
+**Hint:** None. **Linked:** `vocab.lahtea`, `vocab.sunnuntai`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E13 — `ex.daily-life.friday-sunday.mixed-weekdays`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match four days from across the full week.  
+**Stimulus:** Review: Monday, Wednesday, Friday, Sunday.  
+**Matching pairs (4 first-attempt decisions):** **maanantai ↔ Monday**, scored `vocab.maanantai`; **keskiviikko ↔ Wednesday**, scored `vocab.keskiviikko`; **perjantai ↔ Friday**, scored `vocab.perjantai`; **sunnuntai ↔ Sunday**, scored `vocab.sunnuntai`. Shuffle columns independently; per-pair first-attempt events only.  
+**Correct feedback:** All four day names match their meanings.  
+**Wrong feedback:** Distinguish keskiviikko (Wednesday) from perjantai (Friday).  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** maanantai Monday; keskiviikko Wednesday; perjantai Friday; sunnuntai Sunday.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.keskiviikko`, `vocab.perjantai`, `vocab.sunnuntai`. **Scored:** `vocab.maanantai`, `vocab.keskiviikko`, `vocab.perjantai`, `vocab.sunnuntai`. **Review eligible:** false, guided or multi-pair. **Editorial:** `needs_review`.  
+
+**E14 — `ex.daily-life.friday-sunday.friday-specific`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** What does Perjantaina olen kotona mean?  
+**Stimulus:** Perjantaina olen kotona.  
+**Options (stable IDs):** `a` I'm at home on Friday. · `b` I'm at home on Saturday. · `c` I'm at home every Friday.. **Correct option:** `a` I'm at home on Friday..  
+**Wrong option `b`:** Saturday would be lauantaina.  
+**Wrong option `c`:** Perjantaina need not mean every Friday; habitual -isin is deferred.  
+**Correct feedback:** The sentence is about being at home on Friday.  
+**Wrong feedback:** Perjantaina is on Friday; it does not necessarily describe every Friday.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** I'm at home on Friday.  
+**Hint:** None. **Linked:** `vocab.perjantai`, `grammar.daily-life.weekday-time-forms`, `vocab.koti`. **Scored:** `vocab.perjantai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E15 — `ex.daily-life.friday-sunday.weekday-seven-check`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Write the Finnish dictionary word for Sunday, without answer options.  
+**Stimulus:** Sunday (noun)  
+**Accepted after N1:** `sunnuntai`.  
+**Correct feedback:** Sunnuntai is Sunday; sunnuntaina would mean on Sunday.  
+**Wrong feedback:** For the dictionary noun use sunnuntai, not sunnuntaina.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Sunnuntai.  
+**Hint:** None. **Linked:** `vocab.sunnuntai`. **Scored:** `vocab.sunnuntai`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+**E16 — `ex.daily-life.friday-sunday.weekday-old-check`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Write the Finnish dictionary noun for Wednesday.  
+**Stimulus:** Wednesday (noun)  
+**Accepted after N1:** `keskiviikko`.  
+**Correct feedback:** Keskiviikko is Wednesday; keskiviikkona is its time form.  
+**Wrong feedback:** Use keskiviikko, including the double k.  
+**Near feedback:** None, unless explicitly authored.  
+**Not sure:** Keskiviikko.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`. **Scored:** `vocab.keskiviikko`. **Review eligible:** true, independently comprehensible. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “A whole week, a simple plan.” **Copy:** “You now know all seven weekdays and can use lähden to describe setting off.” **Required steps:** 19; **optional spoken note:** 1; **required exercises:** 16; **matching pair decisions:** 7. Completion is not permanent mastery. **Next:** Lesson 6.6 — How often?
+
