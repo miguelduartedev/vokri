@@ -107,6 +107,7 @@ These are **explicitly authored teaching forms**, not the output of a general mo
 - **N1 deterministic text normalisation:** Unicode NFC, trim/collapse whitespace, case-insensitive when the exercise allows, ignore permitted terminal punctuation only. Preserve `ä/ö` versus `a/o`, long-vowel spelling, word boundaries and the lexical stem. Near forms require explicit authored triggers; do not use edit-distance or AI grading.
 - Correct, wrong and Not sure are separate visible feedback states. Under the existing legacy `correct|almost|not_sure` scheduler interface, a fully wrong answer may temporarily use the **non-success** `almost` event **without displaying “Almost!”**. See implementation notes; never give false success or rewrite the shared scheduler silently.
 - Multiple-choice answer keys bind **option IDs**, not displayed position. Shuffled options retain keyed per-option incorrect feedback.
+- In token-build exercises, tiles contain the **lowercase lexical form** (e.g. `aamulla`), and the renderer applies sentence-initial capitalization after assembly. Thus either taught word order is constructible without changing token spelling mid-sentence. If an implementation cannot capitalize after assembly, keep a single achievable order rather than silently declaring impossible alternatives accepted.
 - Matching pairs are separately validated and scored on **first attempt** only. A corrected retry is guided practice, not an extra independent recall success. Lesson-local matching can contain two/three pairs; the optional Word Match feature's four-pair setup minimum does not apply.
 - Only explicit `scoredTargetIds` update the selected target. A supplied sentence/dialogue does not grant recall to every word it contains. A capability-only checkpoint has `scoredTargetIds: []` with `knowledgeScoring: false`.
 - A lesson completes after **all required steps have been visited** and all required exercises and its checkpoint have been **attempted or answered Not sure**; no perfect-score gate. Pause/resume is supported at natural teaching boundaries.
@@ -271,7 +272,7 @@ Every exercise below has `sourceType: original`, `editorialStatus: needs_review`
 **A11 — `ex.daily-life.morning-evening.build-morning`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
 **Prompt:** Put these two tiles in a natural order to say “I wake up in the morning.”  
 **Stimulus:** The verb and time expression are supplied.  
-**Shuffled tiles:** `aamulla`, `Herään`. **Accepted complete sequences:** `Herään aamulla.`, `Aamulla herään.`. Tokens are provided; this is guided construction, not independent spelling.  
+**Shuffled tiles (lexical lowercase):** `aamulla`, `herään`. **Accepted complete sequences:** `Herään aamulla.`, `Aamulla herään.`. Tokens are provided; this is guided construction, not independent spelling.  
 **Correct feedback:** Herään aamulla and Aamulla herään both work naturally.  
 **Wrong feedback:** Keep the taught verb herään and time expression aamulla together.  
 **Near feedback:** None; don't invent near responses.  
@@ -473,7 +474,7 @@ All records: `sourceType: original`, `editorialStatus: needs_review`, `reviewedB
 **B12 — `ex.daily-life.eat-drink-today-tomorrow.today-tea-tiles`** · `token_build` · `controlled_construction` · difficulty `controlled`  
 **Prompt:** Build a sentence meaning “Today I drink tea” with all three supplied tiles.  
 **Stimulus:** Use today's word, the I-form and the taught partitive of tea.  
-**Shuffled tiles:** `teetä`, `juon`, `Tänään`; **accepted whole sequences:** `Tänään juon teetä.`, `Juon teetä tänään.`. This is guided token arrangement, not unaided spelling.  
+**Shuffled tiles (lexical lowercase):** `teetä`, `juon`, `tänään`; **accepted whole sequences:** `Tänään juon teetä.`, `Juon teetä tänään.`. This is guided token arrangement, not unaided spelling.  
 **Correct:** Tänään juon teetä. combines today with an everyday drink.  
 **Wrong:** The verb is juon, tea in a request/drink context is teetä, and today is tänään.  
 **Near:** None; do not invent an Almost trigger.  
@@ -670,7 +671,7 @@ All: `sourceType: original`, `editorialStatus: needs_review`, `learningLanguage:
 **C12 — `ex.daily-life.what-time.wake-five-tiles`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
 **Prompt:** Build “I wake up at five o'clock” using all three supplied tiles.  
 **Stimulus:** Use the taught kello + hour construction; do not inflect the numeral.  
-**Shuffled tiles:** `viisi`, `Herään`, `kello`. **Accepted complete sequences:** `Herään kello viisi.`. Guided construction, no independent spelling claim.  
+**Shuffled tiles (lexical lowercase):** `viisi`, `herään`, `kello`. **Accepted complete sequences:** `Herään kello viisi.`. Guided construction, no independent spelling claim.  
 **Correct feedback:** Herään kello viisi. states when you wake up; kello on viisi states the current time.  
 **Wrong feedback:** Start with herään; place kello immediately before the hour viisi.  
 **Near feedback:** None; do not invent a near result.  
@@ -874,7 +875,7 @@ Each exercise carries `editorialStatus: needs_review` and `sourceType: original`
 **D12 — `ex.daily-life.monday-thursday.build-monday-coffee`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
 **Prompt:** Build “On Monday, I drink coffee” from the given complete forms.  
 **Stimulus:** All three tiles are supplied; use the taught specific-day expression.  
-**Shuffled tiles:** `kahvia`, `Maanantaina`, `juon`. **Accepted complete orders:** `Maanantaina juon kahvia.`, `Juon kahvia maanantaina.`; guided construction, not independent spelling.  
+**Shuffled tiles (lexical lowercase):** `kahvia`, `maanantaina`, `juon`. **Accepted complete orders:** `Maanantaina juon kahvia.`, `Juon kahvia maanantaina.`; guided construction, not independent spelling.  
 **Correct feedback:** Maanantaina juon kahvia. combines a weekday time expression with the familiar drink sentence.  
 **Wrong feedback:** Use Maanantaina + juon + kahvia, or put the weekday at the end.  
 **Near feedback:** None; avoid fabricated near credit.  
@@ -1078,7 +1079,7 @@ All are `fi`/`sourceType: original`/`editorialStatus: needs_review`; determinist
 **E11 — `ex.daily-life.friday-sunday.friday-leave`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
 **Prompt:** Use both tiles to say “On Friday I leave.”  
 **Stimulus:** One specific Friday, not a habitual every-Friday statement.  
-**Supplied shuffled tokens:** `Perjantaina`, `lähden`. **Accepted whole sequences:** `Perjantaina lähden.`, `Lähden perjantaina.`. This tests arrangement with provided forms, not unaided spelling.  
+**Supplied shuffled tokens (lexical lowercase):** `perjantaina`, `lähden`. **Accepted whole sequences:** `Perjantaina lähden.`, `Lähden perjantaina.`. This tests arrangement with provided forms, not unaided spelling.  
 **Correct feedback:** Perjantaina lähden is a natural short statement.  
 **Wrong feedback:** Use the taught forms perjantaina and lähden; either order is natural.  
 **Near feedback:** None, unless explicitly authored.  
@@ -1343,7 +1344,7 @@ Lähden perjantaina.`. This multiline task is capability evidence only: `scoredT
 **G16 — `ex.daily-life.how-often.final-day-and-frequency`** · `token_build` · intent `controlled_construction` · difficulty `contextual`  
 **Prompt:** Arrange the supplied tiles to say “I often drink coffee in the morning.”  
 **Stimulus:** All forms are taught; this is guided integration of an everyday activity, daypart and frequency.  
-**Shuffled tokens:** `kahvia`, `Aamulla`, `usein`, `juon`. **Accepted complete sentences:** `Aamulla juon usein kahvia.`, `Juon usein kahvia aamulla.`. Supplied word tiles do not prove unaided spelling.  
+**Shuffled tokens (lexical lowercase):** `kahvia`, `aamulla`, `usein`, `juon`. **Accepted complete sentences:** `Aamulla juon usein kahvia.`, `Juon usein kahvia aamulla.`. Supplied word tiles do not prove unaided spelling.  
 **Correct feedback:** Aamulla juon usein kahvia. is a natural repeated morning activity, not an event tied to one Monday.  
 **Wrong feedback:** Combine the fixed expression aamulla with juon usein kahvia.  
 **Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
