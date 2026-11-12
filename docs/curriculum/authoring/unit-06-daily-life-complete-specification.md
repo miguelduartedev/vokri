@@ -71,7 +71,7 @@ Read this alongside [Exercise Authoring Standard v1](./exercise-authoring-standa
 | `vocab.ilta` | `illalla` | in the evening — fixed time expression |
 | `vocab.maanantai` | `maanantaina` | on Monday (specific Monday) |
 | `vocab.tiistai` | `tiistaina` | on Tuesday |
-| `vocab.keskiviikko` | `keskiviikkona` | on Wednesday (note the extra k in the stem) |
+| `vocab.keskiviikko` | `keskiviikkona` | on Wednesday (preserves the double k in the stem) |
 | `vocab.torstai` | `torstaina` | on Thursday |
 | `vocab.perjantai` | `perjantaina` | on Friday |
 | `vocab.lauantai` | `lauantaina` | on Saturday |
@@ -317,7 +317,7 @@ Every exercise below has `sourceType: original`, `editorialStatus: needs_review`
 ## Lesson 6.2 — Eat, drink, today, tomorrow
 
 **ID:** `lesson.daily-life.eat-drink-today-tomorrow` · `unit.daily-life` · `fi` · Order 2 · **Duration:** 10–15 minutes (untested). **Prerequisite:** `lesson.daily-life.morning-evening`.  
-**Capability:** Say what you eat/drink today or tomorrow using known food/drink forms. **New production:** `vocab.syoda`, `vocab.juoda`, `vocab.tanaan`, `vocab.huomenna`. **New recognition:** `vocab.eilen`. **Earlier unit reuse:** `vocab.kahvi`, `vocab.tee`, `vocab.vesi`, `vocab.leipa`, `vocab.ruoka`.  
+**Capability:** Say what you eat/drink today or tomorrow using known food/drink forms. **New production:** `vocab.syoda`, `vocab.juoda`, `vocab.tanaan`, `vocab.huomenna`. **New recognition:** `vocab.eilen` and the fixed, nonproductive chunk `phrase.daily-life.nahdaan-huomenna`. **Earlier unit reuse:** `vocab.kahvi`, `vocab.tee`, `vocab.vesi`, `vocab.leipa`, `vocab.ruoka`.  
 **Completion:** all required steps and B01–B14 attempted or Not sure. **Pause:** After B05 before independent text recall. No perfect score, no new case lesson.
 
 ### Ordered learner experience
@@ -329,23 +329,24 @@ Full ID prefix `step.daily-life.eat-drink-today-tomorrow.` plus each suffix. Onl
 | 1 | `opening` | `explanation` | **Today and tomorrow.** You know foods and drinks from Unit 5. Now add two verbs so you can say what you eat and drink, and two time words so you can talk about today or tomorrow. | none | Yes |
 | 2 | `dictionary-verbs` | `vocabulary_intro` | **syödä — to eat; juoda — to drink.** These are dictionary forms. Finnish changes the verb when you say what *I* do; you'll learn those exact forms shortly. | `vocab.syoda`, `vocab.juoda` | Yes |
 | 3 | `time-words` | `vocabulary_intro` | **tänään — today; huomenna — tomorrow.** These short time words can appear before or after a familiar present-tense activity. | `vocab.tanaan`, `vocab.huomenna` | Yes |
-| 4 | `yesterday-recognition` | `vocabulary_intro` | **eilen — yesterday.** Recognition only. You'll understand this when reading a calendar, but you do **not** need Finnish past-tense production in Unit 6. | `vocab.eilen` | Yes |
-| 5 | `practice-01` | `exercise` | B01 | none | Yes |
-| 6 | `practice-02` | `exercise` | B02 | none | Yes |
-| 7 | `practice-03` | `exercise` | B03 | none | Yes |
-| 8 | `practice-04` | `exercise` | B04 | none | Yes |
-| 9 | `i-eat-i-drink` | `grammar_explanation` | **Talking about yourself:** syödä becomes **syön** (“I eat”); juoda becomes **juon** (“I drink”). Memorise these two useful forms, not an invented universal rule. You learned similar person changes earlier. | none | Yes |
-| 10 | `practice-05` | `exercise` | B05 | none | Yes |
-| 11 | `food-reuse` | `example_set` | **Juon kahvia.** — I drink coffee. **Syön leipää.** — I eat bread. The drink/food forms kahvia and leipää were taught in Unit 5; they are not newly introduced or independently scored here. | none | Yes |
-| 12 | `practice-06` | `exercise` | B06 | none | Yes |
-| 13 | `practice-07` | `exercise` | B07 | none | Yes |
-| 14 | `practice-08` | `exercise` | B08 | none | Yes |
-| 15 | `practice-09` | `exercise` | B09 | none | Yes |
-| 16 | `practice-10` | `exercise` | B10 | none | Yes |
-| 17 | `practice-11` | `exercise` | B11 | none | Yes |
-| 18 | `temporal-context` | `grammar_explanation` | **No future tense required here.** Finnish often uses a present form with **huomenna** to talk about a future plan: **Huomenna juon vettä.** Keep this as a practical beginner sentence; do not learn a separate future conjugation. | none | Yes |
-| 19 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint B12–B14:** Build a taught day-and-drink sentence, distinguish today/tomorrow, and retrieve a complete phrase. All tasks are individually assessed. | none | Yes |
-| 20 | `review-contrast` | `example_set` | **Tänään syön ruokaa.** — Today I eat food. **Huomenna juon teetä.** — Tomorrow I drink tea. The contrast is the time word and the action, not an unfamiliar noun inflection. | none | Yes |
+| 4 | `see-you-tomorrow` | `phrase_intro` | **Nähdään huomenna!** — See you tomorrow! Recognition only: this complete everyday farewell has not been taught in Units 1–5. The learner need not analyse nähdään, spell it, or conjugate nähdä; learn the meaning as a whole phrase. | `phrase.daily-life.nahdaan-huomenna` | No |
+| 5 | `yesterday-recognition` | `vocabulary_intro` | **eilen — yesterday.** Recognition only. You'll understand this when reading a calendar, but you do **not** need Finnish past-tense production in Unit 6. | `vocab.eilen` | Yes |
+| 6 | `practice-01` | `exercise` | B01 | none | Yes |
+| 7 | `practice-02` | `exercise` | B02 | none | Yes |
+| 8 | `practice-03` | `exercise` | B03 | none | Yes |
+| 9 | `practice-04` | `exercise` | B04 | none | Yes |
+| 10 | `i-eat-i-drink` | `grammar_explanation` | **Talking about yourself:** syödä becomes **syön** (“I eat”); juoda becomes **juon** (“I drink”). Memorise these two useful forms, not an invented universal rule. You learned similar person changes earlier. | none | Yes |
+| 11 | `practice-05` | `exercise` | B05 | none | Yes |
+| 12 | `food-reuse` | `example_set` | **Juon kahvia.** — I drink coffee. **Syön leipää.** — I eat bread. The drink/food forms kahvia and leipää were taught in Unit 5; they are not newly introduced or independently scored here. | none | Yes |
+| 13 | `practice-06` | `exercise` | B06 | none | Yes |
+| 14 | `practice-07` | `exercise` | B07 | none | Yes |
+| 15 | `practice-08` | `exercise` | B08 | none | Yes |
+| 16 | `practice-09` | `exercise` | B09 | none | Yes |
+| 17 | `practice-10` | `exercise` | B10 | none | Yes |
+| 18 | `practice-11` | `exercise` | B11 | none | Yes |
+| 19 | `temporal-context` | `grammar_explanation` | **No future tense required here.** Finnish often uses a present form with **huomenna** to talk about a future plan: **Huomenna juon vettä.** Keep this as a practical beginner sentence; do not learn a separate future conjugation. | none | Yes |
+| 20 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint B12–B14:** Build a taught day-and-drink sentence, distinguish today/tomorrow, and retrieve a complete phrase. All tasks are individually assessed. | none | Yes |
+| 21 | `review-contrast` | `example_set` | **Tänään syön ruokaa.** — Today I eat food. **Huomenna juon teetä.** — Tomorrow I drink tea. The contrast is the time word and the action, not an unfamiliar noun inflection. | none | Yes |
 
 ### Complete authored exercises
 
@@ -503,7 +504,7 @@ All records: `sourceType: original`, `editorialStatus: needs_review`, `reviewedB
 
 ### Lesson completion
 
-**Headline:** “Food, drink, today and tomorrow.” **Copy:** “You can use the taught forms syön and juon with familiar foods and say whether something happens today or tomorrow.” 20 required steps, 14 required exercise records, 2 matching decisions. Completing the lesson doesn't imply mastery of all food and time expressions. **Next:** Lesson 6.3 — What time is it? **Resume:** after B05 if needed.
+**Headline:** “Food, drink, today and tomorrow.” **Copy:** “You can use the taught forms syön and juon with familiar foods and say whether something happens today or tomorrow.” 21 required steps, 14 required exercise records, 2 matching decisions. Completing the lesson doesn't imply mastery of all food and time expressions. **Next:** Lesson 6.3 — What time is it? **Resume:** after B05 if needed.
 
 ## Lesson 6.3 — What time is it?
 
@@ -1346,7 +1347,7 @@ Lähden perjantaina.`. This multiline task is capability evidence only: `scoredT
 **Correct feedback:** Aamulla juon usein kahvia. is a natural repeated morning activity, not an event tied to one Monday.  
 **Wrong feedback:** Combine the fixed expression aamulla with juon usein kahvia.  
 **Near feedback:** None unless explicitly authored; do not interpret unrelated grammatical errors as near.  
-**Not sure:** Maanantaina juon usein kahvia.  
+**Not sure:** Aamulla juon usein kahvia.  
 **Hint:** None. **Linked:** `vocab.aamu`, `vocab.usein`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.frequency-placement`. **Scored:** `grammar.daily-life.frequency-placement`. **Review eligible:** false (guided/capability integration). **Editorial:** `needs_review`.  
 
 **G17 — `ex.daily-life.how-often.final-independent-freq`** · `text_input` · intent `controlled_production` · difficulty `contextual`  
