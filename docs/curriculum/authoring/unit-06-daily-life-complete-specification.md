@@ -712,3 +712,219 @@ All: `sourceType: original`, `editorialStatus: needs_review`, `learningLanguage:
 
 **Headline:** “The clock makes sense.” **Copy:** “You can tell whole-hour times and use a simple kello expression to say when you wake up.” 20 required steps, 15 required exercise records, 3 matching decisions. Only 1–5 require unrestricted typed number production; 6–10 stay recognition. **Next:** Lesson 6.4 — Monday to Thursday.
 
+## Lesson 6.4 — Monday to Thursday
+
+**ID:** `lesson.daily-life.monday-thursday` · `unit.daily-life` · `fi` · Order 4 · **Estimated duration:** 11–17 minutes, untested. **Prerequisite:** `lesson.daily-life.what-time`.  
+**Capability:** Recognise and retrieve Monday–Thursday and use taught forms for activities on particular weekdays. **New production:** `vocab.maanantai`, `vocab.tiistai`, `vocab.keskiviikko`, `vocab.torstai`. **New recognition:** `vocab.viikko`, `vocab.kuukausi`. **Grammar:** `grammar.daily-life.weekday-time-forms`.  
+**Completion:** all 19 required steps and D01–D16 attempted or Not sure. **Pause:** after D09 before teaching time forms. Do not introduce habitual `maanantaisin` as a mandatory target.
+
+### Ordered learner experience
+
+Prefix `step.daily-life.monday-thursday.` + suffix; **Formal encounter** only at actual new introduction, never by incidental use in a token bank.
+
+| # | Step suffix | Type | Exact learner-facing content or exercise | Formal encounter | Required |
+|---:|---|---|---|---|---|
+| 1 | `opening` | `explanation` | **The first half of the week.** The days of the week help place familiar actions on a calendar. First learn the names Monday–Thursday, then learn their useful “on [day]” forms. No full case table or perfect memorised ordering quiz is needed. | none | Yes |
+| 2 | `four-days` | `vocabulary_intro` | **maanantai — Monday; tiistai — Tuesday; keskiviikko — Wednesday; torstai — Thursday.** Finnish weekday names are written with lowercase initials except at the start of sentences. | `vocab.maanantai`, `vocab.tiistai`, `vocab.keskiviikko`, `vocab.torstai` | Yes |
+| 3 | `exercise-01` | `exercise` | D01 | none | Yes |
+| 4 | `exercise-02` | `exercise` | D02 | none | Yes |
+| 5 | `exercise-03` | `exercise` | D03 | none | Yes |
+| 6 | `week-month` | `vocabulary_intro` | Recognition only: **viikko — week; kuukausi — month.** These name longer calendar periods. You don't need to list months or produce these nouns from English yet. | `vocab.viikko`, `vocab.kuukausi` | Yes |
+| 7 | `exercise-04` | `exercise` | D04 | none | Yes |
+| 8 | `exercise-05` | `exercise` | D05 | none | Yes |
+| 9 | `exercise-06` | `exercise` | D06 | none | Yes |
+| 10 | `exercise-07` | `exercise` | D07 | none | Yes |
+| 11 | `exercise-08` | `exercise` | D08 | none | Yes |
+| 12 | `exercise-09` | `exercise` | D09 | none | Yes |
+| 13 | `weekday-forms` | `grammar_explanation` | **On a particular day.** Finnish changes the weekday word when talking about an event on that day: **maanantaina**, **tiistaina**, **keskiviikkona**, **torstaina**. Learn these complete forms. Notice the carefully authored **keskiviikkona**; a general essive-case system comes later. | `grammar.daily-life.weekday-time-forms` | Yes |
+| 14 | `weekday-examples` | `example_set` | **Maanantaina juon kahvia.** — On Monday I drink coffee. **Tiistaina olen kotona.** — On Tuesday I am at home. These can refer to a particular Monday/Tuesday; they do not automatically mean *every Monday/Tuesday*. No new location grammar is being introduced. | none | Yes |
+| 15 | `exercise-10` | `exercise` | D10 | none | Yes |
+| 16 | `exercise-11` | `exercise` | D11 | none | Yes |
+| 17 | `exercise-12` | `exercise` | D12 | none | Yes |
+| 18 | `wednesday-thursday` | `example_set` | **Keskiviikkona olen kotona.** — I'm at home on Wednesday. **Torstaina juon teetä.** — On Thursday I drink tea. Both reuse prior vocabulary. Don't create extra item IDs for new temporal forms. | none | Yes |
+| 19 | `final-checkpoint` | `checkpoint` | **Lesson checkpoint D13–D16:** choose weekday time expressions, independently use Tuesday and Thursday, and distinguish a specific Wednesday from a recurring habit. Each constituent exercise has its own feedback. | none | Yes |
+
+### Complete authored exercises
+
+Each exercise carries `editorialStatus: needs_review` and `sourceType: original`; role distinction and N1 grading remain unchanged. `keskiviikkona` is intentionally taught as a complete form rather than a guessed suffix rule.
+
+**D01 — `ex.daily-life.monday-thursday.match-first-four`** · `matching` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Match Monday through Thursday with the correct Finnish weekday nouns.  
+**Stimulus:** Four dictionary-form weekday names.  
+**Matching pairs (4 first-attempt decisions):** (1) **maanantai ↔ Monday** scoring `vocab.maanantai`; (2) **tiistai ↔ Tuesday** scoring `vocab.tiistai`; (3) **keskiviikko ↔ Wednesday** scoring `vocab.keskiviikko`; (4) **torstai ↔ Thursday** scoring `vocab.torstai`; independently shuffle columns.  
+**Correct feedback:** The first four weekday nouns are maanantai, tiistai, keskiviikko and torstai.  
+**Wrong feedback:** Look at the full Finnish forms, not just their shared final letters.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Monday maanantai; Tuesday tiistai; Wednesday keskiviikko; Thursday torstai.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.tiistai`, `vocab.keskiviikko`, `vocab.torstai`. **Scored:** `vocab.maanantai`, `vocab.tiistai`, `vocab.keskiviikko`, `vocab.torstai`. **Review eligible:** false, guided board/task. **Editorial:** `needs_review`.  
+
+**D02 — `ex.daily-life.monday-thursday.choose-monday`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** Which Finnish weekday is Monday?  
+**Stimulus:** Monday (dictionary noun)  
+**Options (stable IDs, shuffle visually):** `a` torstai · `b` maanantai · `c` tiistai. **Correct:** `b` maanantai.  
+**Wrong option `a`:** Torstai is Thursday.  
+**Wrong option `c`:** Tiistai is Tuesday, the day after Monday.  
+**Correct feedback:** Maanantai is Monday.  
+**Wrong feedback:** Monday is maanantai; Tuesday is tiistai.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Choose maanantai.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.tiistai`. **Scored:** `vocab.maanantai`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D03 — `ex.daily-life.monday-thursday.choose-wednesday`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** You read keskiviikko in a calendar. Which weekday does it name?  
+**Stimulus:** keskiviikko  
+**Options (stable IDs, shuffle visually):** `a` Wednesday · `b` Tuesday · `c` Thursday. **Correct:** `a` Wednesday.  
+**Wrong option `b`:** Tuesday is tiistai.  
+**Wrong option `c`:** Thursday is torstai.  
+**Correct feedback:** Keskiviikko is Wednesday, between tiistai and torstai.  
+**Wrong feedback:** Keskiviikko means Wednesday.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Keskiviikko is Wednesday.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`. **Scored:** `vocab.keskiviikko`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D04 — `ex.daily-life.monday-thursday.viikko-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does viikko mean?  
+**Stimulus:** viikko (recognition only)  
+**Options (stable IDs, shuffle visually):** `a` a weekday · `b` a week · `c` a month. **Correct:** `b` a week.  
+**Wrong option `a`:** A weekday may be maanantai, tiistai, etc.; viikko means the whole week.  
+**Wrong option `c`:** Kuukausi is a month, a longer period.  
+**Correct feedback:** Viikko means week, not a specific weekday.  
+**Wrong feedback:** Viikko is week.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Viikko means week.  
+**Hint:** None. **Linked:** `vocab.viikko`. **Scored:** `vocab.viikko`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D05 — `ex.daily-life.monday-thursday.kuukausi-recognition`** · `multiple_choice` · intent `recognition` · difficulty `foundation`  
+**Prompt:** What does kuukausi mean?  
+**Stimulus:** kuukausi (recognition only)  
+**Options (stable IDs, shuffle visually):** `a` a minute · `b` a month · `c` a week. **Correct:** `b` a month.  
+**Wrong option `a`:** Minuutti is a minute; kuukausi is much longer.  
+**Wrong option `c`:** Viikko is a week, not a month.  
+**Correct feedback:** Kuukausi means month; months' names are not production vocabulary in Unit 6.  
+**Wrong feedback:** Kuukausi means month.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Kuukausi is month.  
+**Hint:** None. **Linked:** `vocab.kuukausi`, `vocab.viikko`. **Scored:** `vocab.kuukausi`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D06 — `ex.daily-life.monday-thursday.write-monday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Monday.  
+**Stimulus:** Monday  
+**Accepted (N1):** `maanantai`. No unlisted stem or case variants.  
+**Correct feedback:** Maanantai means Monday.  
+**Wrong feedback:** Monday is maanantai, not tiistai.  
+**Near feedback:** `manantai` → There are two a letters at the start: maanantai.  
+**Not sure:** Write maanantai.  
+**Hint:** None. **Linked:** `vocab.maanantai`. **Scored:** `vocab.maanantai`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D07 — `ex.daily-life.monday-thursday.write-tuesday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Tuesday.  
+**Stimulus:** Tuesday  
+**Accepted (N1):** `tiistai`. No unlisted stem or case variants.  
+**Correct feedback:** Tiistai is Tuesday.  
+**Wrong feedback:** Write tiistai, not maanantai.  
+**Near feedback:** `tistai` → Tiistai has two i letters near the start.  
+**Not sure:** Write tiistai.  
+**Hint:** None. **Linked:** `vocab.tiistai`. **Scored:** `vocab.tiistai`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D08 — `ex.daily-life.monday-thursday.write-wednesday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Wednesday.  
+**Stimulus:** Wednesday  
+**Accepted (N1):** `keskiviikko`. No unlisted stem or case variants.  
+**Correct feedback:** Keskiviikko means Wednesday.  
+**Wrong feedback:** Write keskiviikko. Its middle and ending matter; the temporal form will be keskiviikkona.  
+**Near feedback:** `keskivikko` → Keskiviikko has a long double k near the end: -viikko.  
+**Not sure:** Write keskiviikko.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`. **Scored:** `vocab.keskiviikko`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D09 — `ex.daily-life.monday-thursday.write-thursday`** · `text_input` · intent `cued_recall` · difficulty `controlled`  
+**Prompt:** Type the Finnish dictionary word for Thursday.  
+**Stimulus:** Thursday  
+**Accepted (N1):** `torstai`. No unlisted stem or case variants.  
+**Correct feedback:** Torstai is Thursday.  
+**Wrong feedback:** Write torstai, not keskiviikko.  
+**Near feedback:** `torstaii` → Torstai ends in one final i.  
+**Not sure:** Write torstai.  
+**Hint:** None. **Linked:** `vocab.torstai`. **Scored:** `vocab.torstai`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D10 — `ex.daily-life.monday-thursday.on-monday`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** You want to say an event happens on Monday (a particular Monday). Which taught form fits?  
+**Stimulus:** ____ juon kahvia. — On Monday, I drink coffee.  
+**Options (stable IDs, shuffle visually):** `a` maanantaina · `b` maanantai · `c` tiistaina. **Correct:** `a` maanantaina.  
+**Wrong option `b`:** Maanantai is the dictionary weekday; maanantaina is the taught 'on Monday' form.  
+**Wrong option `c`:** Tiistaina means on Tuesday, a different day.  
+**Correct feedback:** Maanantaina means on Monday; this is an explicitly taught form.  
+**Wrong feedback:** Use maanantaina, not the noun maanantai.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Maanantaina.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D11 — `ex.daily-life.monday-thursday.wednesday-form`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which is the taught form for “on Wednesday”?  
+**Stimulus:** on Wednesday (one specific day)  
+**Options (stable IDs, shuffle visually):** `a` keskiviikkana · `b` keskiviikko · `c` keskiviikkona. **Correct:** `c` keskiviikkona.  
+**Wrong option `a`:** The taught form is keskiviikkona, with -kkona; not -kkana.  
+**Wrong option `b`:** Keskiviikko is the dictionary weekday, not the temporal expression.  
+**Correct feedback:** Keskiviikkona is the correct form for on Wednesday.  
+**Wrong feedback:** The taught weekday time form is keskiviikkona, not keskiviikkana.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Keskiviikkona.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D12 — `ex.daily-life.monday-thursday.build-monday-coffee`** · `token_build` · intent `controlled_construction` · difficulty `controlled`  
+**Prompt:** Build “On Monday, I drink coffee” from the given complete forms.  
+**Stimulus:** All three tiles are supplied; use the taught specific-day expression.  
+**Shuffled tiles:** `kahvia`, `Maanantaina`, `juon`. **Accepted complete orders:** `Maanantaina juon kahvia.`, `Juon kahvia maanantaina.`; guided construction, not independent spelling.  
+**Correct feedback:** Maanantaina juon kahvia. combines a weekday time expression with the familiar drink sentence.  
+**Wrong feedback:** Use Maanantaina + juon + kahvia, or put the weekday at the end.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Maanantaina juon kahvia.  
+**Hint:** None. **Linked:** `vocab.maanantai`, `vocab.juoda`, `vocab.kahvi`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** false, guided board/task. **Editorial:** `needs_review`.  
+
+**D13 — `ex.daily-life.monday-thursday.tuesday-form`** · `multiple_choice` · intent `grammar` · difficulty `controlled`  
+**Prompt:** Which phrase means “on Tuesday”?  
+**Stimulus:** A single planned Tuesday, not “every Tuesday”.  
+**Options (stable IDs, shuffle visually):** `a` tiistai · `b` maanantaina · `c` tiistaina. **Correct:** `c` tiistaina.  
+**Wrong option `a`:** Tiistai is the dictionary noun Tuesday; the taught time expression is tiistaina.  
+**Wrong option `b`:** Maanantaina means on Monday.  
+**Correct feedback:** Tiistaina is on Tuesday.  
+**Wrong feedback:** Use tiistaina for on Tuesday.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** Tiistaina.  
+**Hint:** None. **Linked:** `vocab.tiistai`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D14 — `ex.daily-life.monday-thursday.tuesday-bread`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Type “On Tuesday, I eat bread” using the forms taught in Units 5–6.  
+**Stimulus:** Use tiistaina, syön and leipää; express one particular Tuesday.  
+**Accepted (N1):** `Tiistaina syön leipää.`, `Syön leipää tiistaina.`, `Minä syön leipää tiistaina.`, `Tiistaina minä syön leipää.`. No unlisted stem or case variants.  
+**Correct feedback:** Tiistaina syön leipää. uses the correct weekday form and the familiar food expression.  
+**Wrong feedback:** Use tiistaina for on Tuesday, syön for I eat and leipää for bread.  
+**Near feedback:** `tiistai syön leipää` → Use the time expression tiistaina, not the dictionary noun tiistai.  
+**Not sure:** Write Tiistaina syön leipää.  
+**Hint:** None. **Linked:** `vocab.tiistai`, `vocab.syoda`, `vocab.leipa`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D15 — `ex.daily-life.monday-thursday.wednesday-context`** · `multiple_choice` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Which English meaning fits Keskiviikkona olen kotona.?  
+**Stimulus:** Keskiviikkona olen kotona.  
+**Options (stable IDs, shuffle visually):** `a` I'm at home on Wednesday. · `b` I'm at home on Thursday. · `c` I'm at home every Wednesday.. **Correct:** `a` I'm at home on Wednesday..  
+**Wrong option `b`:** Thursday is torstaina, not keskiviikkona.  
+**Wrong option `c`:** This -na phrase can refer to a particular Wednesday; it doesn't automatically mean a recurring every-Wednesday habit.  
+**Correct feedback:** The sentence means “I'm at home on Wednesday” (a particular Wednesday).  
+**Wrong feedback:** Keskiviikkona means on Wednesday, not automatically every Wednesday.  
+**Near feedback:** None; avoid fabricated near credit.  
+**Not sure:** I'm at home on Wednesday.  
+**Hint:** None. **Linked:** `vocab.keskiviikko`, `grammar.daily-life.weekday-time-forms`, `vocab.koti`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+**D16 — `ex.daily-life.monday-thursday.thursday-tea`** · `text_input` · intent `contextual_application` · difficulty `contextual`  
+**Prompt:** Write “On Thursday, I drink tea” using the taught forms.  
+**Stimulus:** One particular Thursday; use torstaina, juon and teetä.  
+**Accepted (N1):** `Torstaina juon teetä.`, `Juon teetä torstaina.`, `Minä juon teetä torstaina.`, `Torstaina minä juon teetä.`. No unlisted stem or case variants.  
+**Correct feedback:** Torstaina juon teetä is a natural statement about one Thursday.  
+**Wrong feedback:** Use torstaina, not torstai; the known drink sentence is juon teetä.  
+**Near feedback:** `Torstai juon teetä` → The expression needs torstaina for “on Thursday”.  
+**Not sure:** Write Torstaina juon teetä.  
+**Hint:** None. **Linked:** `vocab.torstai`, `vocab.juoda`, `vocab.tee`, `grammar.daily-life.weekday-time-forms`. **Scored:** `grammar.daily-life.weekday-time-forms`. **Review eligible:** true, standalone. **Editorial:** `needs_review`.  
+
+### Lesson completion
+
+**Headline:** “Four days, two ways to say them.” **Copy:** “You can name Monday to Thursday and understand how Finnish expresses something happening on one of those days.” 19 required steps, 16 exercises, 4 matching decisions. **Next:** Lesson 6.5 — Friday to Sunday. No perfect-score gate and no false recurring-every-week grammar claim.
+
