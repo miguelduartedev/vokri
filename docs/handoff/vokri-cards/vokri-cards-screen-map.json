@@ -1,0 +1,5969 @@
+{
+  "schemaVersion": "1.0.0",
+  "app": "Vokri Cards",
+  "figmaFileKey": "vJPxcNnHyCOAp57MBh46O7",
+  "page": {
+    "figmaNodeId": "407:766",
+    "url": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766",
+    "name": "Vokri Cards — Standalone App"
+  },
+  "status": "verified editable Figma designs, not working Expo screens",
+  "summary": {
+    "mobileScreenCount": 119,
+    "sections": 11,
+    "prototypeConnectionCount": 319,
+    "referencesToNonMobileScreenNodes": []
+  },
+  "screens": [
+    {
+      "id": "vc.today.vc-today-active-light.408-897",
+      "name": "VC / Today / Active / Light",
+      "figmaNodeId": "408:897",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=408-897",
+      "phase": "VC / 01 — Today · Light States",
+      "featureArea": "today",
+      "classification": "route",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "410:4729",
+        "413:1444",
+        "416:1874",
+        "416:2064",
+        "420:2476",
+        "414:1422",
+        "414:1503",
+        "414:1584",
+        "415:1599",
+        "415:1672",
+        "415:1722",
+        "415:1777",
+        "415:1832",
+        "418:2259",
+        "418:2332",
+        "418:2382",
+        "419:2471",
+        "419:2539",
+        "426:2926",
+        "426:3044",
+        "426:3121",
+        "426:3148",
+        "434:2989",
+        "434:3473",
+        "434:3538",
+        "434:3689",
+        "436:3726",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "426:2738",
+        "413:1444",
+        "434:2989"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I408:910;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "408:922",
+          "control": "12 due reviews",
+          "destinationNodeId": "426:2738"
+        },
+        {
+          "sourceNodeId": "408:929",
+          "control": "5 suggested new words",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I408:939;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I408:939;408:827",
+          "control": "VC / NavItem / My Words/Default",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "Settings icon button",
+        "12 due reviews",
+        "5 suggested new words",
+        "VC / NavItem / Discover/Default",
+        "VC / NavItem / My Words/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-first-use-light.409-866",
+      "name": "VC / Today / First Use / Light",
+      "figmaNodeId": "409:866",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-866",
+      "phase": "VC / 01 — Today · Light States",
+      "featureArea": "today",
+      "classification": "route",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "436:3726",
+        "413:1444",
+        "434:2966"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I409:879;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "409:891",
+          "control": "State-aware primary action",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I409:903;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I409:903;408:827",
+          "control": "VC / NavItem / My Words/Default",
+          "destinationNodeId": "434:2966"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "Settings icon button",
+        "State-aware primary action",
+        "VC / NavItem / Discover/Default",
+        "VC / NavItem / My Words/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-all-caught-up-light.409-924",
+      "name": "VC / Today / All Caught Up / Light",
+      "figmaNodeId": "409:924",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-924",
+      "phase": "VC / 01 — Today · Light States",
+      "featureArea": "today",
+      "classification": "route",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:949",
+          "control": "State-aware primary action",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I409:965;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "State-aware primary action",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-resume-session-light.409-986",
+      "name": "VC / Today / Resume Session / Light",
+      "figmaNodeId": "409:986",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-986",
+      "phase": "VC / 01 — Today · Light States",
+      "featureArea": "today",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "426:3148",
+        "426:2738",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1011",
+          "control": "Resumable session · 6 / 10",
+          "destinationNodeId": "426:3148"
+        },
+        {
+          "sourceNodeId": "409:1016",
+          "control": "12 separate due words",
+          "destinationNodeId": "426:2738"
+        },
+        {
+          "sourceNodeId": "I409:1028;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "Resumable session · 6 / 10",
+        "12 separate due words",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-no-reviews-yet-light.409-1049",
+      "name": "VC / Today / No Reviews Yet / Light",
+      "figmaNodeId": "409:1049",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-1049",
+      "phase": "VC / 01 — Today · Light States",
+      "featureArea": "today",
+      "classification": "route",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1074",
+          "control": "State-aware primary action",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I409:1090;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "State-aware primary action",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-active-dark.409-1111",
+      "name": "VC / Today / Active / Dark",
+      "figmaNodeId": "409:1111",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-1111",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "417:2238",
+        "417:2265"
+      ],
+      "expectedDestinationIds": [
+        "410:4729",
+        "417:2238"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1117",
+          "control": "12 due reviews",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "I410:1300;410:1279",
+          "control": "Discover / Default",
+          "destinationNodeId": "417:2238"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "12 due reviews",
+        "Discover / Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-active-narrow.409-1177",
+      "name": "VC / Today / Active / Narrow",
+      "figmaNodeId": "409:1177",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-1177",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 360,
+        "height": 844
+      },
+      "entryPointIds": [
+        "417:2048"
+      ],
+      "expectedDestinationIds": [
+        "410:4729",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1202",
+          "control": "Compact 312-width due card",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "I409:1219;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "Compact 312-width due card",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-active-wide.409-1240",
+      "name": "VC / Today / Active / Wide",
+      "figmaNodeId": "409:1240",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-1240",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 430,
+        "height": 844
+      },
+      "entryPointIds": [
+        "417:2128"
+      ],
+      "expectedDestinationIds": [
+        "410:4729",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1265",
+          "control": "Wide due card",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "I409:1282;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "Wide due card",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-today-active-short-viewport.409-1303",
+      "name": "VC / Today / Active / Short Viewport",
+      "figmaNodeId": "409:1303",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=409-1303",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 390,
+        "height": 760
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "410:4729",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "409:1329",
+          "control": "12 due reviews in scroll",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "I409:1346;408:819",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [
+        "12 due reviews in scroll",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.today.vc-navigation-states.410-4630",
+      "name": "VC / Navigation / States",
+      "figmaNodeId": "410:4630",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=410-4630",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "route",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 430,
+        "height": 485
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.today.vc-components-today.410-4700",
+      "name": "VC / Components / Today",
+      "figmaNodeId": "410:4700",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=410-4700",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "today",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/today",
+      "dimensions": {
+        "width": 430,
+        "height": 822
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-prototype-flashcards-handoff-phase-3.410-4729",
+      "name": "VC / Prototype / Flashcards Handoff / Phase 3",
+      "figmaNodeId": "410:4729",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=410-4729",
+      "phase": "VC / 02 — Modes, Responsive & Navigation",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "409:1111",
+        "409:1177",
+        "409:1240",
+        "409:1303",
+        "414:1503",
+        "414:1584",
+        "415:1672",
+        "418:2332"
+      ],
+      "expectedDestinationIds": [
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "410:4752",
+          "control": "Return to Today",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Return to Today"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.shared.vc-components-primary-button-sample.408-780",
+      "name": "VC / Components / Primary button sample",
+      "figmaNodeId": "408:780",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=408-780",
+      "phase": "VC / 03 — Reusable Components",
+      "featureArea": "shared",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 340,
+        "height": 60
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Today card, bottom tabs"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.discover.vc-discover-default-light.413-1444",
+      "name": "VC / Discover / Default / Light",
+      "figmaNodeId": "413:1444",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=413-1444",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "408:897",
+        "409:866",
+        "409:924",
+        "409:986",
+        "409:1049",
+        "409:1177",
+        "409:1240",
+        "409:1303",
+        "416:1874",
+        "416:2064",
+        "420:2476",
+        "414:1422",
+        "414:1503",
+        "414:1584",
+        "415:1672",
+        "415:1722",
+        "415:1777",
+        "415:1832",
+        "418:2332",
+        "418:2382",
+        "419:2471",
+        "419:2539",
+        "426:2926",
+        "434:2989",
+        "434:3473",
+        "434:3538",
+        "434:3689"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "416:1963",
+        "414:1422",
+        "419:2471",
+        "419:2539",
+        "416:1874",
+        "420:2476",
+        "408:897",
+        "434:2989"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I413:1457;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "413:1471",
+          "control": "Search Finnish or English",
+          "destinationNodeId": "416:1963"
+        },
+        {
+          "sourceNodeId": "413:1476",
+          "control": "Featured / Finnish Essentials",
+          "destinationNodeId": "414:1422"
+        },
+        {
+          "sourceNodeId": "413:1483",
+          "control": "Deck / Everyday Verbs",
+          "destinationNodeId": "419:2471"
+        },
+        {
+          "sourceNodeId": "413:1488",
+          "control": "Deck / Food & Drink",
+          "destinationNodeId": "419:2539"
+        },
+        {
+          "sourceNodeId": "413:1498",
+          "control": "Topic / Transport",
+          "destinationNodeId": "416:1874"
+        },
+        {
+          "sourceNodeId": "413:1507",
+          "control": "Copy / Explore all 2,000 Finn",
+          "destinationNodeId": "420:2476"
+        },
+        {
+          "sourceNodeId": "I413:1515;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "I413:1515;408:848",
+          "control": "VC / NavItem / My Words/Default",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Settings icon button",
+        "Search Finnish or English",
+        "Featured / Finnish Essentials",
+        "Deck / Everyday Verbs",
+        "Deck / Food & Drink",
+        "Topic / Transport",
+        "Copy / Explore all 2,000 Finn",
+        "VC / NavItem / Today/Default",
+        "VC / NavItem / My Words/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-topic-filter-selected-light.416-1874",
+      "name": "VC / Discover / Topic & Filter Selected / Light",
+      "figmaNodeId": "416:1874",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=416-1874",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444",
+        "420:2476"
+      ],
+      "expectedDestinationIds": [
+        "416:1963",
+        "413:1444",
+        "415:1722",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "416:1901",
+          "control": "Search all words",
+          "destinationNodeId": "416:1963"
+        },
+        {
+          "sourceNodeId": "416:1908",
+          "control": "Optional All topic",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "416:1916",
+          "control": "Filtered transport / juna",
+          "destinationNodeId": "415:1722"
+        },
+        {
+          "sourceNodeId": "I416:1942;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Search all words",
+        "Optional All topic",
+        "Filtered transport / juna",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-search-active-light.416-1963",
+      "name": "VC / Discover / Search Active / Light",
+      "figmaNodeId": "416:1963",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=416-1963",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444",
+        "416:1874",
+        "416:2064",
+        "420:2476"
+      ],
+      "expectedDestinationIds": [
+        "415:1722",
+        "416:2064"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "416:1997",
+          "control": "Search result / juna",
+          "destinationNodeId": "415:1722"
+        },
+        {
+          "sourceNodeId": "419:2392",
+          "control": "Prototype / Try unmatched query",
+          "destinationNodeId": "416:2064"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Search result / juna",
+        "Prototype / Try unmatched query"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-search-empty-light.416-2064",
+      "name": "VC / Discover / Search Empty / Light",
+      "figmaNodeId": "416:2064",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=416-2064",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "416:1963"
+      ],
+      "expectedDestinationIds": [
+        "416:1963",
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "416:2090",
+          "control": "Unmatched search query",
+          "destinationNodeId": "416:1963"
+        },
+        {
+          "sourceNodeId": "416:2100",
+          "control": "Clear the query",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I416:2103;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Unmatched search query",
+        "Clear the query",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-narrow.417-2048",
+      "name": "VC / Discover / Narrow",
+      "figmaNodeId": "417:2048",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=417-2048",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 360,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "409:1177"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I417:2107;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "409:1177"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-wide.417-2128",
+      "name": "VC / Discover / Wide",
+      "figmaNodeId": "417:2128",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=417-2128",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 430,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "409:1240"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I417:2189;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "409:1240"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-default-dark.417-2238",
+      "name": "VC / Discover / Default / Dark",
+      "figmaNodeId": "417:2238",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=417-2238",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "409:1111",
+        "417:2265"
+      ],
+      "expectedDestinationIds": [
+        "417:2265",
+        "409:1111"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "417:2247",
+          "control": "Featured / Finnish Essentials",
+          "destinationNodeId": "417:2265"
+        },
+        {
+          "sourceNodeId": "I417:2357;417:2211",
+          "control": "Discover dark nav / Today/Default",
+          "destinationNodeId": "409:1111"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Featured / Finnish Essentials",
+        "Discover dark nav / Today/Default"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-discover-all-vocabulary-sample.420-2476",
+      "name": "VC / Discover / All Vocabulary / Sample",
+      "figmaNodeId": "420:2476",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=420-2476",
+      "phase": "VC / 04 — Discover & Catalogue",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "416:1963",
+        "416:1874",
+        "415:1722",
+        "415:1777",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "420:2481",
+          "control": "Copy / DISCOVER  /  TRANSPORT",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "420:2484",
+          "control": "Search all words",
+          "destinationNodeId": "416:1963"
+        },
+        {
+          "sourceNodeId": "420:2486",
+          "control": "Filter to Transport",
+          "destinationNodeId": "416:1874"
+        },
+        {
+          "sourceNodeId": "420:2490",
+          "control": "Catalogue / juna",
+          "destinationNodeId": "415:1722"
+        },
+        {
+          "sourceNodeId": "420:2491",
+          "control": "Catalogue / herätä",
+          "destinationNodeId": "415:1777"
+        },
+        {
+          "sourceNodeId": "I420:2496;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Copy / DISCOVER  /  TRANSPORT",
+        "Search all words",
+        "Filter to Transport",
+        "Catalogue / juna",
+        "Catalogue / herätä",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-finnish-essentials-first-visit.414-1422",
+      "name": "VC / Deck / Finnish Essentials / First Visit",
+      "figmaNodeId": "414:1422",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=414-1422",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444",
+        "415:1599"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "415:1599",
+        "415:1722",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "414:1435",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "414:1450",
+          "control": "Primary deck action",
+          "destinationNodeId": "415:1599"
+        },
+        {
+          "sourceNodeId": "414:1452",
+          "control": "Secondary deck action",
+          "destinationNodeId": "415:1599"
+        },
+        {
+          "sourceNodeId": "414:1470",
+          "control": "Word / juna / default",
+          "destinationNodeId": "415:1722"
+        },
+        {
+          "sourceNodeId": "I414:1482;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Primary deck action",
+        "Secondary deck action",
+        "Word / juna / default",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-finnish-essentials-in-progress.414-1503",
+      "name": "VC / Deck / Finnish Essentials / In Progress",
+      "figmaNodeId": "414:1503",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=414-1503",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "418:2259",
+        "426:3044"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "410:4729",
+        "418:2259",
+        "415:1722",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "414:1516",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "414:1531",
+          "control": "Primary deck action",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "414:1533",
+          "control": "Secondary deck action",
+          "destinationNodeId": "418:2259"
+        },
+        {
+          "sourceNodeId": "414:1551",
+          "control": "Word / juna / default",
+          "destinationNodeId": "415:1722"
+        },
+        {
+          "sourceNodeId": "I414:1563;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Primary deck action",
+        "Secondary deck action",
+        "Word / juna / default",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-finnish-essentials-all-added.414-1584",
+      "name": "VC / Deck / Finnish Essentials / All Added",
+      "figmaNodeId": "414:1584",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=414-1584",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "415:1672",
+        "418:2332"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "410:4729",
+        "418:2382",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "414:1597",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "414:1612",
+          "control": "Primary deck action",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "414:1614",
+          "control": "Secondary deck action",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "414:1632",
+          "control": "Word / juna / study",
+          "destinationNodeId": "418:2382"
+        },
+        {
+          "sourceNodeId": "I414:1644;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Primary deck action",
+        "Secondary deck action",
+        "Word / juna / study",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-word-selection.415-1599",
+      "name": "VC / Deck / Word Selection",
+      "figmaNodeId": "415:1599",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=415-1599",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "414:1422"
+      ],
+      "expectedDestinationIds": [
+        "414:1422",
+        "415:1672",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "415:1612",
+          "control": "Discover back navigation",
+          "destinationNodeId": "414:1422"
+        },
+        {
+          "sourceNodeId": "415:1647",
+          "control": "5 selected / Add to study action",
+          "destinationNodeId": "415:1672"
+        },
+        {
+          "sourceNodeId": "I415:1651;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "5 selected / Add to study action",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-words-added.415-1672",
+      "name": "VC / Deck / Words Added",
+      "figmaNodeId": "415:1672",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=415-1672",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "415:1599"
+      ],
+      "expectedDestinationIds": [
+        "414:1584",
+        "410:4729",
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "415:1685",
+          "control": "Discover back navigation",
+          "destinationNodeId": "414:1584"
+        },
+        {
+          "sourceNodeId": "415:1692",
+          "control": "Addition confirmation",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "415:1699",
+          "control": "Keep exploring button",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I415:1701;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Addition confirmation",
+        "Keep exploring button",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-word-detail-not-added.415-1722",
+      "name": "VC / Word Detail / Not Added",
+      "figmaNodeId": "415:1722",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=415-1722",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/word/[itemId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "416:1874",
+        "416:1963",
+        "420:2476",
+        "414:1422",
+        "414:1503"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "418:2382",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "415:1735",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "415:1751",
+          "control": "Add word to study",
+          "destinationNodeId": "418:2382"
+        },
+        {
+          "sourceNodeId": "415:1753",
+          "control": "Browse more vocabulary",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I415:1756;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Add word to study",
+        "Browse more vocabulary",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-word-detail-herata-not-added.415-1777",
+      "name": "VC / Word Detail / Herätä / Not Added",
+      "figmaNodeId": "415:1777",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=415-1777",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/word/[itemId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "420:2476",
+        "419:2471",
+        "419:2539"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "415:1832",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "415:1790",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "415:1806",
+          "control": "Add word to study",
+          "destinationNodeId": "415:1832"
+        },
+        {
+          "sourceNodeId": "415:1808",
+          "control": "Browse more vocabulary",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I415:1811;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Add word to study",
+        "Browse more vocabulary",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-word-detail-herata-in-study.415-1832",
+      "name": "VC / Word Detail / Herätä / In Study",
+      "figmaNodeId": "415:1832",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=415-1832",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/word/[itemId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "415:1777"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "415:1845",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "415:1864",
+          "control": "Back to Discover",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I415:1867;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Back to Discover",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-finnish-essentials-dark.417-2265",
+      "name": "VC / Deck / Finnish Essentials / Dark",
+      "figmaNodeId": "417:2265",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=417-2265",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "417:2238"
+      ],
+      "expectedDestinationIds": [
+        "417:2238",
+        "409:1111"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "417:2267",
+          "control": "Discover back navigation",
+          "destinationNodeId": "417:2238"
+        },
+        {
+          "sourceNodeId": "I417:2381;417:2211",
+          "control": "Discover dark nav / Today/Default",
+          "destinationNodeId": "409:1111"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Discover dark nav / Today/Default"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-word-selection-three-new.418-2259",
+      "name": "VC / Deck / Word Selection / Three New",
+      "figmaNodeId": "418:2259",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=418-2259",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "414:1503"
+      ],
+      "expectedDestinationIds": [
+        "414:1503",
+        "418:2332",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "418:2272",
+          "control": "Discover back navigation",
+          "destinationNodeId": "414:1503"
+        },
+        {
+          "sourceNodeId": "418:2307",
+          "control": "3 selected / Add to study",
+          "destinationNodeId": "418:2332"
+        },
+        {
+          "sourceNodeId": "I418:2311;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "3 selected / Add to study",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-words-added-three-new.418-2332",
+      "name": "VC / Deck / Words Added / Three New",
+      "figmaNodeId": "418:2332",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=418-2332",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "418:2259"
+      ],
+      "expectedDestinationIds": [
+        "414:1584",
+        "410:4729",
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "418:2345",
+          "control": "Discover back navigation",
+          "destinationNodeId": "414:1584"
+        },
+        {
+          "sourceNodeId": "418:2352",
+          "control": "Three words added confirmation",
+          "destinationNodeId": "410:4729"
+        },
+        {
+          "sourceNodeId": "418:2359",
+          "control": "Keep exploring",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I418:2361;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Three words added confirmation",
+        "Keep exploring",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-word-detail-juna-in-study.418-2382",
+      "name": "VC / Word Detail / Juna / In Study",
+      "figmaNodeId": "418:2382",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=418-2382",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/word/[itemId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "414:1584",
+        "415:1722"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "418:2384",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "418:2395",
+          "control": "Back to Discover",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I418:2397;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Back to Discover",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-everyday-verbs-preview.419-2471",
+      "name": "VC / Deck / Everyday Verbs / Preview",
+      "figmaNodeId": "419:2471",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=419-2471",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "415:1777",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "419:2484",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "419:2494",
+          "control": "Browse word / herätä",
+          "destinationNodeId": "415:1777"
+        },
+        {
+          "sourceNodeId": "419:2507",
+          "control": "Back to collections",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I419:2510;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Browse word / herätä",
+        "Back to collections",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-food-drink-preview.419-2539",
+      "name": "VC / Deck / Food & Drink / Preview",
+      "figmaNodeId": "419:2539",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=419-2539",
+      "phase": "VC / 05 — Decks & Word Details",
+      "featureArea": "discover",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "413:1444"
+      ],
+      "expectedDestinationIds": [
+        "413:1444",
+        "415:1777",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "419:2541",
+          "control": "Discover back navigation",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "419:2550",
+          "control": "Preview word / kahvi",
+          "destinationNodeId": "415:1777"
+        },
+        {
+          "sourceNodeId": "419:2554",
+          "control": "Back to collections",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "I419:2556;408:833",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "Preview word / kahvi",
+        "Back to collections",
+        "VC / NavItem / Today/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-01-first-card.426-2738",
+      "name": "VC / Review / 01 — First Card",
+      "figmaNodeId": "426:2738",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2738",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "408:897",
+        "409:986",
+        "426:3121"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2759"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2741",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2754",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "426:2759"
+        },
+        {
+          "sourceNodeId": "426:2757",
+          "control": "Action / Show answer",
+          "destinationNodeId": "426:2759"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-02-answer-revealed.426-2759",
+      "name": "VC / Review / 02 — Answer Revealed",
+      "figmaNodeId": "426:2759",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2759",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2738",
+        "426:2886",
+        "426:2905"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2820",
+        "426:2842",
+        "426:2864"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2762",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2779",
+          "control": "Rating / Again",
+          "destinationNodeId": "426:2820"
+        },
+        {
+          "sourceNodeId": "426:2780",
+          "control": "Rating / Almost",
+          "destinationNodeId": "426:2842"
+        },
+        {
+          "sourceNodeId": "426:2781",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "426:2864"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-03-again.426-2820",
+      "name": "VC / Review / 03 — Again",
+      "figmaNodeId": "426:2820",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2820",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2759"
+      ],
+      "expectedDestinationIds": [
+        "426:2886"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2840",
+          "control": "Action / Next card",
+          "destinationNodeId": "426:2886"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Next card"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-04-almost.426-2842",
+      "name": "VC / Review / 04 — Almost",
+      "figmaNodeId": "426:2842",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2842",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2759"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2886"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2845",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2862",
+          "control": "Action / Next card",
+          "destinationNodeId": "426:2886"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Action / Next card"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-05-knew-it.426-2864",
+      "name": "VC / Review / 05 — Knew It",
+      "figmaNodeId": "426:2864",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2864",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2759"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2886"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2867",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2884",
+          "control": "Action / Next card",
+          "destinationNodeId": "426:2886"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Action / Next card"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-06-next-card.426-2886",
+      "name": "VC / Review / 06 — Next Card",
+      "figmaNodeId": "426:2886",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2886",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2820",
+        "426:2842",
+        "426:2864",
+        "429:3018"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2759"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2889",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2903",
+          "control": "Action / Show answer",
+          "destinationNodeId": "426:2759"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-07-another-look.426-2905",
+      "name": "VC / Review / 07 — Another Look",
+      "figmaNodeId": "426:2905",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2905",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2759"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2908",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2924",
+          "control": "Action / Show answer",
+          "destinationNodeId": "426:2759"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-review-08-complete.426-2926",
+      "name": "VC / Review / 08 — Complete",
+      "figmaNodeId": "426:2926",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2926",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "413:1444",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2957",
+          "control": "Action / Practise again",
+          "destinationNodeId": "413:1444"
+        },
+        {
+          "sourceNodeId": "426:2961",
+          "control": "Action / Done",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Practise again",
+        "Action / Done"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-09-new-first-card.426-2963",
+      "name": "VC / Learn / 09 — New First Card",
+      "figmaNodeId": "426:2963",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2963",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2984"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2966",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:2979",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "426:2984"
+        },
+        {
+          "sourceNodeId": "426:2982",
+          "control": "Action / Show answer",
+          "destinationNodeId": "426:2984"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-10-new-answer-revealed.426-2984",
+      "name": "VC / Learn / 10 — New Answer Revealed",
+      "figmaNodeId": "426:2984",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-2984",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2963"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:3007"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:2987",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "426:3004",
+          "control": "Rating / Again",
+          "destinationNodeId": "426:3007"
+        },
+        {
+          "sourceNodeId": "426:3005",
+          "control": "Rating / Almost",
+          "destinationNodeId": "426:3007"
+        },
+        {
+          "sourceNodeId": "426:3006",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "426:3007"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-11-first-pass-finished.426-3007",
+      "name": "VC / Learn / 11 — First Pass Finished",
+      "figmaNodeId": "426:3007",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3007",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2984",
+        "429:3104"
+      ],
+      "expectedDestinationIds": [
+        "429:3066"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:3042",
+          "control": "Action / Revisit 3 words",
+          "destinationNodeId": "429:3066"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Revisit 3 words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-12-session-complete.426-3044",
+      "name": "VC / Learn / 12 — Session Complete",
+      "figmaNodeId": "426:3044",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3044",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "414:1503",
+        "408:897"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:3075",
+          "control": "Action / Practise again",
+          "destinationNodeId": "414:1503"
+        },
+        {
+          "sourceNodeId": "426:3079",
+          "control": "Action / Done",
+          "destinationNodeId": "408:897"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Practise again",
+        "Action / Done"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.discover.vc-deck-13-finnish-essentials.426-3081",
+      "name": "VC / Deck / 13 — Finnish Essentials",
+      "figmaNodeId": "426:3081",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3081",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "discover",
+      "classification": "route",
+      "proposedExpoRoute": "/discover/deck/[deckId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Deck, search, filter"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-direction-14-english-to-finnish.426-3102",
+      "name": "VC / Direction / 14 — English to Finnish",
+      "figmaNodeId": "426:3102",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3102",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-session-15-exit-confirmation.426-3121",
+      "name": "VC / Session / 15 — Exit Confirmation",
+      "figmaNodeId": "426:3121",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3121",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:2738",
+        "426:2759",
+        "426:2842",
+        "426:2864",
+        "426:2886",
+        "426:2905",
+        "426:2963",
+        "426:2984",
+        "429:3018",
+        "429:3104",
+        "439:4561"
+      ],
+      "expectedDestinationIds": [
+        "408:897",
+        "426:2738"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:3142",
+          "control": "Action / Leave session",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "426:3146",
+          "control": "Action / Continue studying",
+          "destinationNodeId": "426:2738"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Leave session",
+        "Action / Continue studying"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-session-16-resume-session.426-3148",
+      "name": "VC / Session / 16 — Resume Session",
+      "figmaNodeId": "426:3148",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3148",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "409:986"
+      ],
+      "expectedDestinationIds": [
+        "408:897",
+        "429:2982"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "426:3170",
+          "control": "Action / Start a new session",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "426:3174",
+          "control": "Action / Resume flashcards",
+          "destinationNodeId": "429:2982"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Start a new session",
+        "Action / Resume flashcards"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-session-17-resumed-card-6-of-10.429-2982",
+      "name": "VC / Session / 17 — Resumed Card / 6 of 10",
+      "figmaNodeId": "429:2982",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=429-2982",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:3148"
+      ],
+      "expectedDestinationIds": [
+        "429:3018"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "429:2996",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "429:3018"
+        },
+        {
+          "sourceNodeId": "429:2999",
+          "control": "Action / Show answer",
+          "destinationNodeId": "429:3018"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-session-18-resumed-card-revealed-6-of-10.429-3018",
+      "name": "VC / Session / 18 — Resumed Card Revealed / 6 of 10",
+      "figmaNodeId": "429:3018",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=429-3018",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "429:2982"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:2886"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "429:3021",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "429:3036",
+          "control": "Rating / Again",
+          "destinationNodeId": "426:2886"
+        },
+        {
+          "sourceNodeId": "429:3037",
+          "control": "Rating / Almost",
+          "destinationNodeId": "426:2886"
+        },
+        {
+          "sourceNodeId": "429:3038",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "426:2886"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-19-new-words-another-look.429-3066",
+      "name": "VC / Learn / 19 — New Words Another Look",
+      "figmaNodeId": "429:3066",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=429-3066",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "426:3007"
+      ],
+      "expectedDestinationIds": [
+        "429:3104"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "429:3082",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "429:3104"
+        },
+        {
+          "sourceNodeId": "429:3085",
+          "control": "Action / Show answer",
+          "destinationNodeId": "429:3104"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-learn-20-new-words-revisit-revealed.429-3104",
+      "name": "VC / Learn / 20 — New Words Revisit Revealed",
+      "figmaNodeId": "429:3104",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=429-3104",
+      "phase": "VC / 07 — Flashcards & Scheduled Review",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "429:3066"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "426:3007"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "429:3107",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "429:3124",
+          "control": "Rating / Again",
+          "destinationNodeId": "426:3007"
+        },
+        {
+          "sourceNodeId": "429:3125",
+          "control": "Rating / Almost",
+          "destinationNodeId": "426:3007"
+        },
+        {
+          "sourceNodeId": "429:3126",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "426:3007"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-dark-01-review-front.426-3392",
+      "name": "VC / Dark / 01 — Review Front",
+      "figmaNodeId": "426:3392",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3392",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-dark-02-review-revealed.426-3413",
+      "name": "VC / Dark / 02 — Review Revealed",
+      "figmaNodeId": "426:3413",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3413",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-responsive-03-narrow-front-360.426-3436",
+      "name": "VC / Responsive / 03 — Narrow Front 360",
+      "figmaNodeId": "426:3436",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3436",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 360,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-responsive-04-wide-revealed-430.426-3457",
+      "name": "VC / Responsive / 04 — Wide Revealed 430",
+      "figmaNodeId": "426:3457",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3457",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 430,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-responsive-05-long-answer-720h.426-3478",
+      "name": "VC / Responsive / 05 — Long Answer 720h",
+      "figmaNodeId": "426:3478",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3478",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 390,
+        "height": 720
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.flashcards.vc-mixed-06-direction-sample.426-3499",
+      "name": "VC / Mixed / 06 — Direction Sample",
+      "figmaNodeId": "426:3499",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=426-3499",
+      "phase": "VC / 08 — Flashcards States, Components & QA",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.my-words.vc-my-words-01-empty.434-2966",
+      "name": "VC / My Words / 01 — Empty",
+      "figmaNodeId": "434:2966",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-2966",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "409:866"
+      ],
+      "expectedDestinationIds": [
+        "434:3515",
+        "434:3158",
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:2975",
+          "control": "Chip / Course",
+          "destinationNodeId": "434:3515"
+        },
+        {
+          "sourceNodeId": "434:2985",
+          "control": "Action / Add your first word",
+          "destinationNodeId": "434:3158"
+        },
+        {
+          "sourceNodeId": "I434:4383;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Course",
+        "Action / Add your first word",
+        "Settings icon button"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-02-populated.434-2989",
+      "name": "VC / My Words / 02 — Populated",
+      "figmaNodeId": "434:2989",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-2989",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "408:897",
+        "413:1444",
+        "434:3073",
+        "434:3133",
+        "434:3361",
+        "434:3473",
+        "434:3538",
+        "438:3723",
+        "438:3747",
+        "438:3793",
+        "439:4454",
+        "439:4710",
+        "436:4057",
+        "447:4185"
+      ],
+      "expectedDestinationIds": [
+        "434:3473",
+        "434:3158",
+        "434:3031",
+        "434:3133",
+        "434:3100",
+        "436:3726",
+        "408:897",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:2998",
+          "control": "Chip / Course",
+          "destinationNodeId": "434:3473"
+        },
+        {
+          "sourceNodeId": "434:3004",
+          "control": "Chip / ＋ Add word",
+          "destinationNodeId": "434:3158"
+        },
+        {
+          "sourceNodeId": "434:3006",
+          "control": "Field / Search My Words",
+          "destinationNodeId": "434:3031"
+        },
+        {
+          "sourceNodeId": "434:3020",
+          "control": "My Words / saved 1",
+          "destinationNodeId": "434:3133"
+        },
+        {
+          "sourceNodeId": "434:3021",
+          "control": "My Words / saved 2",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "I434:4353;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "I434:4362;408:854",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "I434:4362;408:861",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Course",
+        "Chip / ＋ Add word",
+        "Field / Search My Words",
+        "My Words / saved 1",
+        "My Words / saved 2",
+        "Settings icon button",
+        "VC / NavItem / Today/Default",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-03-search-active.434-3031",
+      "name": "VC / My Words / 03 — Search Active",
+      "figmaNodeId": "434:3031",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3031",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2989",
+        "434:3689"
+      ],
+      "expectedDestinationIds": [
+        "434:3473",
+        "434:3100"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3040",
+          "control": "Chip / Course",
+          "destinationNodeId": "434:3473"
+        },
+        {
+          "sourceNodeId": "434:3063",
+          "control": "My Words / saved 2",
+          "destinationNodeId": "434:3100"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Course",
+        "My Words / saved 2"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-04-no-results.434-3073",
+      "name": "VC / My Words / 04 — No Results",
+      "figmaNodeId": "434:3073",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3073",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3158"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3095",
+          "control": "Action / Clear search",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "434:3097",
+          "control": "Action / Add a new word",
+          "destinationNodeId": "434:3158"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Clear search",
+        "Action / Add a new word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-05-personal-entry-detail.434-3100",
+      "name": "VC / My Words / 05 — Personal Entry Detail",
+      "figmaNodeId": "434:3100",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3100",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2989",
+        "434:3031",
+        "434:3336",
+        "434:3361",
+        "434:3385",
+        "434:3423",
+        "434:3448",
+        "434:3538",
+        "434:3689"
+      ],
+      "expectedDestinationIds": [
+        "434:3656",
+        "434:3385",
+        "434:3423"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3119",
+          "control": "Note / Available",
+          "destinationNodeId": "434:3656"
+        },
+        {
+          "sourceNodeId": "439:4390",
+          "control": "Action / Add to study",
+          "destinationNodeId": "434:3656"
+        },
+        {
+          "sourceNodeId": "434:3127",
+          "control": "Action / Edit entry",
+          "destinationNodeId": "434:3385"
+        },
+        {
+          "sourceNodeId": "434:3129",
+          "control": "Action / Delete entry",
+          "destinationNodeId": "434:3423"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Note / Available",
+        "Action / Add to study",
+        "Action / Edit entry",
+        "Action / Delete entry"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-06-long-sentence-detail.434-3133",
+      "name": "VC / My Words / 06 — Long Sentence Detail",
+      "figmaNodeId": "434:3133",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3133",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2989",
+        "434:3689",
+        "438:3747",
+        "447:4147"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "447:4147"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3136",
+          "control": "Back / Sentence · Long-form detail",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "434:3154",
+          "control": "Action / Edit sentence",
+          "destinationNodeId": "447:4147"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Back / Sentence · Long-form detail",
+        "Action / Edit sentence"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-07-add-word.434-3158",
+      "name": "VC / Capture / 07 — Add Word",
+      "figmaNodeId": "434:3158",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3158",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2966",
+        "434:2989",
+        "434:3073",
+        "434:3191",
+        "434:3227",
+        "434:3304",
+        "434:3336"
+      ],
+      "expectedDestinationIds": [
+        "434:3191",
+        "434:3227",
+        "434:3265",
+        "434:3336"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3172",
+          "control": "Chip / Phrase",
+          "destinationNodeId": "434:3191"
+        },
+        {
+          "sourceNodeId": "434:3174",
+          "control": "Chip / Sentence",
+          "destinationNodeId": "434:3227"
+        },
+        {
+          "sourceNodeId": "434:3184",
+          "control": "Action / ＋  Add optional details",
+          "destinationNodeId": "434:3265"
+        },
+        {
+          "sourceNodeId": "434:3188",
+          "control": "Action / Save word",
+          "destinationNodeId": "434:3336"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Phrase",
+        "Chip / Sentence",
+        "Action / ＋  Add optional details",
+        "Action / Save word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-08-add-phrase.434-3191",
+      "name": "VC / Capture / 08 — Add Phrase",
+      "figmaNodeId": "434:3191",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3191",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3158",
+        "434:3227"
+      ],
+      "expectedDestinationIds": [
+        "434:3158",
+        "434:3227",
+        "434:3265",
+        "438:3723"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3203",
+          "control": "Chip / Word",
+          "destinationNodeId": "434:3158"
+        },
+        {
+          "sourceNodeId": "434:3207",
+          "control": "Chip / Sentence",
+          "destinationNodeId": "434:3227"
+        },
+        {
+          "sourceNodeId": "434:3217",
+          "control": "Action / ＋  Add optional details",
+          "destinationNodeId": "434:3265"
+        },
+        {
+          "sourceNodeId": "434:3224",
+          "control": "Action / Save phrase",
+          "destinationNodeId": "438:3723"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Word",
+        "Chip / Sentence",
+        "Action / ＋  Add optional details",
+        "Action / Save phrase"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-09-add-sentence.434-3227",
+      "name": "VC / Capture / 09 — Add Sentence",
+      "figmaNodeId": "434:3227",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3227",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3158",
+        "434:3191"
+      ],
+      "expectedDestinationIds": [
+        "434:3158",
+        "434:3191",
+        "434:3265",
+        "438:3747"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3239",
+          "control": "Chip / Word",
+          "destinationNodeId": "434:3158"
+        },
+        {
+          "sourceNodeId": "434:3241",
+          "control": "Chip / Phrase",
+          "destinationNodeId": "434:3191"
+        },
+        {
+          "sourceNodeId": "434:3255",
+          "control": "Action / ＋  Add context or notes",
+          "destinationNodeId": "434:3265"
+        },
+        {
+          "sourceNodeId": "434:3262",
+          "control": "Action / Save sentence",
+          "destinationNodeId": "438:3747"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / Word",
+        "Chip / Phrase",
+        "Action / ＋  Add context or notes",
+        "Action / Save sentence"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-10-optional-details.434-3265",
+      "name": "VC / Capture / 10 — Optional Details",
+      "figmaNodeId": "434:3265",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3265",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3158",
+        "434:3191",
+        "434:3227"
+      ],
+      "expectedDestinationIds": [
+        "434:3336"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3301",
+          "control": "Action / Save with details",
+          "destinationNodeId": "434:3336"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Save with details"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-11-missing-meaning.434-3304",
+      "name": "VC / Capture / 11 — Missing Meaning",
+      "figmaNodeId": "434:3304",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3304",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "434:3158"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3307",
+          "control": "Back / Missing meaning",
+          "destinationNodeId": "434:3158"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Back / Missing meaning"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-12-possible-duplicate.434-3336",
+      "name": "VC / Capture / 12 — Possible Duplicate",
+      "figmaNodeId": "434:3336",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3336",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3158",
+        "434:3265"
+      ],
+      "expectedDestinationIds": [
+        "434:3100",
+        "434:3361",
+        "434:3158"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3352",
+          "control": "Action / View existing entry",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3354",
+          "control": "Action / Keep as a separate entry",
+          "destinationNodeId": "434:3361"
+        },
+        {
+          "sourceNodeId": "434:3356",
+          "control": "Action / Back to editing",
+          "destinationNodeId": "434:3158"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / View existing entry",
+        "Action / Keep as a separate entry",
+        "Action / Back to editing"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-13-entry-saved.434-3361",
+      "name": "VC / Capture / 13 — Entry Saved",
+      "figmaNodeId": "434:3361",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3361",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3336"
+      ],
+      "expectedDestinationIds": [
+        "434:3100",
+        "434:3656",
+        "434:2989"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3377",
+          "control": "Action / View saved entry",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3379",
+          "control": "Action / Add another word",
+          "destinationNodeId": "434:3656"
+        },
+        {
+          "sourceNodeId": "434:3381",
+          "control": "Action / Back to My Words",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / View saved entry",
+        "Action / Add another word",
+        "Action / Back to My Words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-entry-14-edit-word.434-3385",
+      "name": "VC / Entry / 14 — Edit Word",
+      "figmaNodeId": "434:3385",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3385",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/entry/[entryId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3100",
+        "434:3448"
+      ],
+      "expectedDestinationIds": [
+        "434:3100"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3420",
+          "control": "Action / Save changes",
+          "destinationNodeId": "434:3100"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Save changes"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-entry-15-delete-confirmation.434-3423",
+      "name": "VC / Entry / 15 — Delete Confirmation",
+      "figmaNodeId": "434:3423",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3423",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words/entry/[entryId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3100"
+      ],
+      "expectedDestinationIds": [
+        "434:3689",
+        "434:3100"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3442",
+          "control": "Action / Delete this entry",
+          "destinationNodeId": "434:3689"
+        },
+        {
+          "sourceNodeId": "434:3444",
+          "control": "Action / Keep word",
+          "destinationNodeId": "434:3100"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Delete this entry",
+        "Action / Keep word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-entry-16-unsaved-changes.434-3448",
+      "name": "VC / Entry / 16 — Unsaved Changes",
+      "figmaNodeId": "434:3448",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3448",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/entry/[entryId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "434:3100",
+        "434:3385"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3467",
+          "control": "Action / Delete this entry",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3469",
+          "control": "Action / Keep word",
+          "destinationNodeId": "434:3385"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Delete this entry",
+        "Action / Keep word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-17-overview.434-3473",
+      "name": "VC / Collections / 17 — Overview",
+      "figmaNodeId": "434:3473",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3473",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2989",
+        "434:3031"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3580",
+        "434:3538",
+        "436:3726",
+        "408:897",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3484",
+          "control": "Chip / My Words",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "434:3488",
+          "control": "Chip / ＋ Add word",
+          "destinationNodeId": "434:3580"
+        },
+        {
+          "sourceNodeId": "434:3504",
+          "control": "My Words / saved 1",
+          "destinationNodeId": "434:3538"
+        },
+        {
+          "sourceNodeId": "434:3505",
+          "control": "My Words / saved 2",
+          "destinationNodeId": "434:3538"
+        },
+        {
+          "sourceNodeId": "434:3512",
+          "control": "Action / Practise My Words  ↗",
+          "destinationNodeId": "434:3580"
+        },
+        {
+          "sourceNodeId": "I434:4473;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "I434:4482;408:854",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "I434:4482;408:861",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / My Words",
+        "Chip / ＋ Add word",
+        "My Words / saved 1",
+        "My Words / saved 2",
+        "Action / Practise My Words  ↗",
+        "Settings icon button",
+        "VC / NavItem / Today/Default",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-18-empty-collection.434-3515",
+      "name": "VC / Collections / 18 — Empty Collection",
+      "figmaNodeId": "434:3515",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3515",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:2966"
+      ],
+      "expectedDestinationIds": [
+        "434:3580"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3534",
+          "control": "Action / Add your first word",
+          "destinationNodeId": "434:3580"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Add your first word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-19-collection-detail.434-3538",
+      "name": "VC / Collections / 19 — Collection Detail",
+      "figmaNodeId": "434:3538",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3538",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3473",
+        "434:3613",
+        "434:3631",
+        "436:3608"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3613",
+        "434:3656",
+        "434:3100",
+        "439:4346",
+        "436:3608",
+        "434:3631",
+        "436:3726",
+        "408:897",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3549",
+          "control": "Chip / My Words",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "434:3553",
+          "control": "Chip / ＋ Add word",
+          "destinationNodeId": "434:3613"
+        },
+        {
+          "sourceNodeId": "434:3569",
+          "control": "My Words / saved 1",
+          "destinationNodeId": "434:3656"
+        },
+        {
+          "sourceNodeId": "434:3570",
+          "control": "My Words / saved 2",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3577",
+          "control": "Action / Practise My Words  ↗",
+          "destinationNodeId": "439:4346"
+        },
+        {
+          "sourceNodeId": "439:3793",
+          "control": "Action / Rename collection",
+          "destinationNodeId": "436:3608"
+        },
+        {
+          "sourceNodeId": "439:3795",
+          "control": "Action / Delete collection",
+          "destinationNodeId": "434:3631"
+        },
+        {
+          "sourceNodeId": "I434:4533;408:806",
+          "control": "Settings icon button",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "I434:4542;408:854",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "I434:4542;408:861",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / My Words",
+        "Chip / ＋ Add word",
+        "My Words / saved 1",
+        "My Words / saved 2",
+        "Action / Practise My Words  ↗",
+        "Action / Rename collection",
+        "Action / Delete collection",
+        "Settings icon button",
+        "VC / NavItem / Today/Default",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-20-create-or-rename.434-3580",
+      "name": "VC / Collections / 20 — Create or Rename",
+      "figmaNodeId": "434:3580",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3580",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3473",
+        "434:3515",
+        "438:3793"
+      ],
+      "expectedDestinationIds": [
+        "436:3583"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3610",
+          "control": "Action / Save word",
+          "destinationNodeId": "436:3583"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Save word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-21-manage-membership.434-3613",
+      "name": "VC / Collections / 21 — Manage Membership",
+      "figmaNodeId": "434:3613",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3613",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3538",
+        "436:3583"
+      ],
+      "expectedDestinationIds": [
+        "434:3538"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3615",
+          "control": "Discover back navigation",
+          "destinationNodeId": "434:3538"
+        },
+        {
+          "sourceNodeId": "434:3629",
+          "control": "5 selected / Add to study action",
+          "destinationNodeId": "434:3538"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Discover back navigation",
+        "5 selected / Add to study action"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-22-delete-collection.434-3631",
+      "name": "VC / Collections / 22 — Delete Collection",
+      "figmaNodeId": "434:3631",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3631",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3538"
+      ],
+      "expectedDestinationIds": [
+        "438:3793",
+        "434:3538"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3650",
+          "control": "Action / Delete this entry",
+          "destinationNodeId": "438:3793"
+        },
+        {
+          "sourceNodeId": "434:3652",
+          "control": "Action / Keep word",
+          "destinationNodeId": "434:3538"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Delete this entry",
+        "Action / Keep word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-entry-23-in-study.434-3656",
+      "name": "VC / Entry / 23 — In Study",
+      "figmaNodeId": "434:3656",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3656",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/entry/[entryId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3100",
+        "434:3361",
+        "434:3538",
+        "439:4454",
+        "439:4491",
+        "439:4710"
+      ],
+      "expectedDestinationIds": [
+        "439:4346"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4392",
+          "control": "Action / Study new card",
+          "destinationNodeId": "439:4346"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Study new card"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-my-words-24-after-delete.434-3689",
+      "name": "VC / My Words / 24 — After Delete",
+      "figmaNodeId": "434:3689",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=434-3689",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3423"
+      ],
+      "expectedDestinationIds": [
+        "434:3031",
+        "434:3133",
+        "434:3100",
+        "439:4346",
+        "436:3726",
+        "408:897",
+        "413:1444"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "434:3706",
+          "control": "Field / Search My Words",
+          "destinationNodeId": "434:3031"
+        },
+        {
+          "sourceNodeId": "434:3720",
+          "control": "My Words / saved 1",
+          "destinationNodeId": "434:3133"
+        },
+        {
+          "sourceNodeId": "434:3721",
+          "control": "My Words / saved 3",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3722",
+          "control": "My Words / saved 4",
+          "destinationNodeId": "434:3100"
+        },
+        {
+          "sourceNodeId": "434:3727",
+          "control": "Action / Practise My Words  ↗",
+          "destinationNodeId": "439:4346"
+        },
+        {
+          "sourceNodeId": "434:4563",
+          "control": "VC / Header / Brand and Settings",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "I434:4572;408:854",
+          "control": "VC / NavItem / Today/Default",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "I434:4572;408:861",
+          "control": "VC / NavItem / Discover/Default",
+          "destinationNodeId": "413:1444"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Field / Search My Words",
+        "My Words / saved 1",
+        "My Words / saved 3",
+        "My Words / saved 4",
+        "Action / Practise My Words  ↗",
+        "VC / Header / Brand and Settings",
+        "VC / NavItem / Today/Default",
+        "VC / NavItem / Discover/Default"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-25-empty-collection-detail.436-3583",
+      "name": "VC / Collections / 25 — Empty Collection Detail",
+      "figmaNodeId": "436:3583",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3583",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3580"
+      ],
+      "expectedDestinationIds": [
+        "434:3613"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:3602",
+          "control": "Action / Add your first word",
+          "destinationNodeId": "434:3613"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Add your first word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-26-rename-collection.436-3608",
+      "name": "VC / Collections / 26 — Rename Collection",
+      "figmaNodeId": "436:3608",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3608",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3538"
+      ],
+      "expectedDestinationIds": [
+        "434:3538"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:3655",
+          "control": "Action / Save word",
+          "destinationNodeId": "434:3538"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Save word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-27-phrase-saved.438-3723",
+      "name": "VC / Capture / 27 — Phrase Saved",
+      "figmaNodeId": "438:3723",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=438-3723",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3191"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "439:4622"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "438:3739",
+          "control": "Action / View saved entry",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "438:3741",
+          "control": "Action / Add another word",
+          "destinationNodeId": "439:4622"
+        },
+        {
+          "sourceNodeId": "438:3743",
+          "control": "Action / Back to My Words",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / View saved entry",
+        "Action / Add another word",
+        "Action / Back to My Words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-capture-28-sentence-saved.438-3747",
+      "name": "VC / Capture / 28 — Sentence Saved",
+      "figmaNodeId": "438:3747",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=438-3747",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/my-words/create",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3227"
+      ],
+      "expectedDestinationIds": [
+        "434:3133",
+        "439:4666",
+        "434:2989"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "438:3763",
+          "control": "Action / View saved entry",
+          "destinationNodeId": "434:3133"
+        },
+        {
+          "sourceNodeId": "438:3765",
+          "control": "Action / Add another word",
+          "destinationNodeId": "439:4666"
+        },
+        {
+          "sourceNodeId": "438:3767",
+          "control": "Action / Back to My Words",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / View saved entry",
+        "Action / Add another word",
+        "Action / Back to My Words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-collections-29-after-deletion.438-3793",
+      "name": "VC / Collections / 29 — After Deletion",
+      "figmaNodeId": "438:3793",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=438-3793",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3631"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3580"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "438:3804",
+          "control": "Chip / My Words",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "438:3808",
+          "control": "Chip / ＋ Add word",
+          "destinationNodeId": "434:3580"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Chip / My Words",
+        "Chip / ＋ Add word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-30-personal-card-first.439-4346",
+      "name": "VC / Integration / 30 — Personal Card First",
+      "figmaNodeId": "439:4346",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4346",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3538",
+        "434:3656",
+        "434:3689",
+        "439:4491"
+      ],
+      "expectedDestinationIds": [
+        "439:4491",
+        "439:4367"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4349",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "439:4491"
+        },
+        {
+          "sourceNodeId": "439:4362",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "439:4367"
+        },
+        {
+          "sourceNodeId": "439:4365",
+          "control": "Action / Show answer",
+          "destinationNodeId": "439:4367"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-31-personal-card-revealed.439-4367",
+      "name": "VC / Integration / 31 — Personal Card Revealed",
+      "figmaNodeId": "439:4367",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4367",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4346"
+      ],
+      "expectedDestinationIds": [
+        "439:4491",
+        "439:4540",
+        "439:4454"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4370",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "439:4491"
+        },
+        {
+          "sourceNodeId": "439:4387",
+          "control": "Rating / Again",
+          "destinationNodeId": "439:4540"
+        },
+        {
+          "sourceNodeId": "439:4388",
+          "control": "Rating / Almost",
+          "destinationNodeId": "439:4540"
+        },
+        {
+          "sourceNodeId": "439:4389",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "439:4454"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-integration-32-personal-word-session-complete.439-4454",
+      "name": "VC / Integration / 32 — Personal Word Session Complete",
+      "figmaNodeId": "439:4454",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4454",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4367"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3656"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4485",
+          "control": "Action / Practise again",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "439:4489",
+          "control": "Action / Done",
+          "destinationNodeId": "434:3656"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Action / Practise again",
+        "Action / Done"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-33-personal-word-exit-confirmation.439-4491",
+      "name": "VC / Integration / 33 — Personal Word Exit Confirmation",
+      "figmaNodeId": "439:4491",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4491",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4346",
+        "439:4367",
+        "439:4540",
+        "439:4643",
+        "439:4687"
+      ],
+      "expectedDestinationIds": [
+        "434:3656",
+        "439:4346"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4512",
+          "control": "Action / Leave session",
+          "destinationNodeId": "434:3656"
+        },
+        {
+          "sourceNodeId": "439:4516",
+          "control": "Action / Continue studying",
+          "destinationNodeId": "439:4346"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Leave session",
+        "Action / Continue studying"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-34-personal-word-another-look.439-4540",
+      "name": "VC / Integration / 34 — Personal Word Another Look",
+      "figmaNodeId": "439:4540",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4540",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4367"
+      ],
+      "expectedDestinationIds": [
+        "439:4491",
+        "439:4561"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4543",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "439:4491"
+        },
+        {
+          "sourceNodeId": "439:4556",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "439:4561"
+        },
+        {
+          "sourceNodeId": "439:4559",
+          "control": "Action / Show answer",
+          "destinationNodeId": "439:4561"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-35-personal-word-revisit-revealed.439-4561",
+      "name": "VC / Integration / 35 — Personal Word Revisit Revealed",
+      "figmaNodeId": "439:4561",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4561",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4540"
+      ],
+      "expectedDestinationIds": [
+        "426:3121",
+        "439:4710"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4564",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "426:3121"
+        },
+        {
+          "sourceNodeId": "439:4581",
+          "control": "Rating / Again",
+          "destinationNodeId": "439:4710"
+        },
+        {
+          "sourceNodeId": "439:4582",
+          "control": "Rating / Almost",
+          "destinationNodeId": "439:4710"
+        },
+        {
+          "sourceNodeId": "439:4583",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "439:4710"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-36-personal-phrase-first.439-4622",
+      "name": "VC / Integration / 36 — Personal Phrase First",
+      "figmaNodeId": "439:4622",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4622",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "438:3723"
+      ],
+      "expectedDestinationIds": [
+        "439:4643"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4638",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "439:4643"
+        },
+        {
+          "sourceNodeId": "439:4641",
+          "control": "Action / Show answer",
+          "destinationNodeId": "439:4643"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-37-personal-phrase-revealed.439-4643",
+      "name": "VC / Integration / 37 — Personal Phrase Revealed",
+      "figmaNodeId": "439:4643",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4643",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4622"
+      ],
+      "expectedDestinationIds": [
+        "439:4491",
+        "447:4185"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4646",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "439:4491"
+        },
+        {
+          "sourceNodeId": "439:4663",
+          "control": "Rating / Again",
+          "destinationNodeId": "447:4185"
+        },
+        {
+          "sourceNodeId": "439:4664",
+          "control": "Rating / Almost",
+          "destinationNodeId": "447:4185"
+        },
+        {
+          "sourceNodeId": "439:4665",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "447:4185"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-38-personal-sentence-first.439-4666",
+      "name": "VC / Integration / 38 — Personal Sentence First",
+      "figmaNodeId": "439:4666",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4666",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "438:3747"
+      ],
+      "expectedDestinationIds": [
+        "439:4687"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4682",
+          "control": "Flashcard / word / front",
+          "destinationNodeId": "439:4687"
+        },
+        {
+          "sourceNodeId": "439:4685",
+          "control": "Action / Show answer",
+          "destinationNodeId": "439:4687"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Flashcard / word / front",
+        "Action / Show answer"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-39-personal-sentence-revealed.439-4687",
+      "name": "VC / Integration / 39 — Personal Sentence Revealed",
+      "figmaNodeId": "439:4687",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4687",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4666"
+      ],
+      "expectedDestinationIds": [
+        "439:4491",
+        "447:4185"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4690",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "439:4491"
+        },
+        {
+          "sourceNodeId": "439:4707",
+          "control": "Rating / Again",
+          "destinationNodeId": "447:4185"
+        },
+        {
+          "sourceNodeId": "439:4708",
+          "control": "Rating / Almost",
+          "destinationNodeId": "447:4185"
+        },
+        {
+          "sourceNodeId": "439:4709",
+          "control": "Rating / Knew it",
+          "destinationNodeId": "447:4185"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Rating / Again",
+        "Rating / Almost",
+        "Rating / Knew it"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-integration-40-personal-word-complete-after-revisit.439-4710",
+      "name": "VC / Integration / 40 — Personal Word Complete After Revisit",
+      "figmaNodeId": "439:4710",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4710",
+      "phase": "VC / 09 — My Words & Personal Collections",
+      "featureArea": "my-words",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4561"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "434:3656"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "439:4741",
+          "control": "Action / Practise again",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "439:4745",
+          "control": "Action / Done",
+          "destinationNodeId": "434:3656"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Action / Practise again",
+        "Action / Done"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-settings-01-default.436-3726",
+      "name": "VC / Settings / 01 — Default",
+      "figmaNodeId": "436:3726",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3726",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "route",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "408:897",
+        "409:866",
+        "413:1444",
+        "434:2966",
+        "434:2989",
+        "434:3473",
+        "434:3538",
+        "434:3689",
+        "436:3776",
+        "436:3826",
+        "436:3876",
+        "436:3900",
+        "436:3950",
+        "436:4057",
+        "436:4081",
+        "439:3819",
+        "439:3894"
+      ],
+      "expectedDestinationIds": [
+        "408:897",
+        "439:3819",
+        "439:3894",
+        "436:3826",
+        "436:3900",
+        "436:4081"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I436:3728;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "436:4232",
+          "control": "VC / Setting / Default card direction",
+          "destinationNodeId": "439:3819"
+        },
+        {
+          "sourceNodeId": "436:4237",
+          "control": "VC / Setting / Appearance",
+          "destinationNodeId": "439:3894"
+        },
+        {
+          "sourceNodeId": "436:4243",
+          "control": "VC / Setting / Export My Words",
+          "destinationNodeId": "436:3826"
+        },
+        {
+          "sourceNodeId": "436:4248",
+          "control": "VC / Setting / Import My Words",
+          "destinationNodeId": "436:3900"
+        },
+        {
+          "sourceNodeId": "436:3764",
+          "control": "Reset learning progress",
+          "destinationNodeId": "436:4081"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "VC / Setting / Default card direction",
+        "VC / Setting / Appearance",
+        "VC / Setting / Export My Words",
+        "VC / Setting / Import My Words",
+        "Reset learning progress"
+      ],
+      "implementationPriority": "P0",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-settings-02-dark.436-3776",
+      "name": "VC / Settings / 02 — Dark",
+      "figmaNodeId": "436:3776",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3776",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:3894"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "439:3819",
+        "439:3894",
+        "436:3826",
+        "436:3900",
+        "436:4081"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I436:3778;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:4257",
+          "control": "VC / Setting / Default card direction",
+          "destinationNodeId": "439:3819"
+        },
+        {
+          "sourceNodeId": "436:4262",
+          "control": "VC / Setting / Appearance",
+          "destinationNodeId": "439:3894"
+        },
+        {
+          "sourceNodeId": "436:4268",
+          "control": "VC / Setting / Export My Words",
+          "destinationNodeId": "436:3826"
+        },
+        {
+          "sourceNodeId": "436:4273",
+          "control": "VC / Setting / Import My Words",
+          "destinationNodeId": "436:3900"
+        },
+        {
+          "sourceNodeId": "436:3814",
+          "control": "Reset learning progress",
+          "destinationNodeId": "436:4081"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "VC / Setting / Default card direction",
+        "VC / Setting / Appearance",
+        "VC / Setting / Export My Words",
+        "VC / Setting / Import My Words",
+        "Reset learning progress"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-data-03-export-my-words.436-3826",
+      "name": "VC / Data / 03 — Export My Words",
+      "figmaNodeId": "436:3826",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3826",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3726",
+        "436:3776",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "436:3876"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I436:3828;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:4312",
+          "control": "Action / Export JSON file",
+          "destinationNodeId": "436:3876"
+        },
+        {
+          "sourceNodeId": "436:4314",
+          "control": "Action / Back to Settings",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "Action / Export JSON file",
+        "Action / Back to Settings"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-04-export-complete.436-3876",
+      "name": "VC / Data / 04 — Export Complete",
+      "figmaNodeId": "436:3876",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3876",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3826"
+      ],
+      "expectedDestinationIds": [
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:3894",
+          "control": "Action / Add another word",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:3896",
+          "control": "Action / Back to My Words",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Action / Add another word",
+        "Action / Back to My Words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-05-import-a-file.436-3900",
+      "name": "VC / Data / 05 — Import a File",
+      "figmaNodeId": "436:3900",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3900",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "route",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3726",
+        "436:3776",
+        "436:3950",
+        "436:4025",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "436:3950"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I436:3902;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:4329",
+          "control": "Action / Choose a file",
+          "destinationNodeId": "436:3950"
+        },
+        {
+          "sourceNodeId": "436:4331",
+          "control": "Action / Back to Settings",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "Action / Choose a file",
+        "Action / Back to Settings"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-06-import-preview.436-3950",
+      "name": "VC / Data / 06 — Import Preview",
+      "figmaNodeId": "436:3950",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-3950",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3900",
+        "436:4000"
+      ],
+      "expectedDestinationIds": [
+        "436:3900",
+        "436:4000",
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I436:3952;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3900"
+        },
+        {
+          "sourceNodeId": "436:4350",
+          "control": "Action / Review duplicates",
+          "destinationNodeId": "436:4000"
+        },
+        {
+          "sourceNodeId": "436:4352",
+          "control": "Action / Cancel import",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "Action / Review duplicates",
+        "Action / Cancel import"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-07-import-conflict.436-4000",
+      "name": "VC / Data / 07 — Import Conflict",
+      "figmaNodeId": "436:4000",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-4000",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3950"
+      ],
+      "expectedDestinationIds": [
+        "436:4057",
+        "436:3950"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:4016",
+          "control": "Action / View existing entry",
+          "destinationNodeId": "436:4057"
+        },
+        {
+          "sourceNodeId": "436:4020",
+          "control": "Action / Back to editing",
+          "destinationNodeId": "436:3950"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Action / View existing entry",
+        "Action / Back to editing"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-08-invalid-file.436-4025",
+      "name": "VC / Data / 08 — Invalid File",
+      "figmaNodeId": "436:4025",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-4025",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "436:3900"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:4054",
+          "control": "Action / Save word",
+          "destinationNodeId": "436:3900"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Action / Save word"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-data-09-import-complete.436-4057",
+      "name": "VC / Data / 09 — Import Complete",
+      "figmaNodeId": "436:4057",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-4057",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:4000"
+      ],
+      "expectedDestinationIds": [
+        "434:2989",
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:4073",
+          "control": "Action / View saved entry",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "436:4075",
+          "control": "Action / Add another word",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:4077",
+          "control": "Action / Back to My Words",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Action / View saved entry",
+        "Action / Add another word",
+        "Action / Back to My Words"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-settings-10-reset-study-progress.436-4081",
+      "name": "VC / Settings / 10 — Reset Study Progress",
+      "figmaNodeId": "436:4081",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=436-4081",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3726",
+        "436:3776",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "436:4095",
+          "control": "Button / Destructive",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "436:4096",
+          "control": "Button / Secondary",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Button / Destructive",
+        "Button / Secondary"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-settings-11-default-card-direction.439-3819",
+      "name": "VC / Settings / 11 — Default Card Direction",
+      "figmaNodeId": "439:3819",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-3819",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "flashcards",
+      "classification": "route",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3726",
+        "436:3776",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I439:3821;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "439:4003",
+          "control": "Action / Select Finnish → English",
+          "destinationNodeId": "436:3726"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "Action / Select Finnish → English"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-settings-12-appearance-selection.439-3894",
+      "name": "VC / Settings / 12 — Appearance Selection",
+      "figmaNodeId": "439:3894",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-3894",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "route",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "436:3726",
+        "436:3776",
+        "439:4221"
+      ],
+      "expectedDestinationIds": [
+        "436:3726",
+        "436:3776"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I439:3896;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "439:4017",
+          "control": "Action / Select System",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "439:4020",
+          "control": "Action / Select Light",
+          "destinationNodeId": "436:3726"
+        },
+        {
+          "sourceNodeId": "439:4023",
+          "control": "Action / Select Dark",
+          "destinationNodeId": "436:3776"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "Action / Select System",
+        "Action / Select Light",
+        "Action / Select Dark"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.settings.vc-qa-responsive-01-add-word-360.439-4112",
+      "name": "VC / QA / Responsive 01 — Add Word 360",
+      "figmaNodeId": "439:4112",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4112",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 360,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.settings.vc-qa-responsive-02-edit-word-430.439-4145",
+      "name": "VC / QA / Responsive 02 — Edit Word 430",
+      "figmaNodeId": "439:4145",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4145",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 430,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.settings.vc-qa-responsive-03-add-sentence-430.439-4183",
+      "name": "VC / QA / Responsive 03 — Add Sentence 430",
+      "figmaNodeId": "439:4183",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4183",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "reference-variant",
+      "proposedExpoRoute": null,
+      "dimensions": {
+        "width": 430,
+        "height": 844
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [],
+      "prototypeActions": [],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": "Static reference, responsive QA frame or unlinked state; see QA report"
+    },
+    {
+      "id": "vc.settings.vc-qa-responsive-04-settings-390-720.439-4221",
+      "name": "VC / QA / Responsive 04 — Settings 390×720",
+      "figmaNodeId": "439:4221",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=439-4221",
+      "phase": "VC / 10 — Settings, Local Data & QA",
+      "featureArea": "settings",
+      "classification": "reference-variant",
+      "proposedExpoRoute": "/settings",
+      "dimensions": {
+        "width": 390,
+        "height": 720
+      },
+      "entryPointIds": [],
+      "expectedDestinationIds": [
+        "408:897",
+        "439:3819",
+        "439:3894",
+        "436:3826",
+        "436:3900",
+        "436:4081"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "I439:4223;242:1022",
+          "control": "Back / 44px touch target",
+          "destinationNodeId": "408:897"
+        },
+        {
+          "sourceNodeId": "439:4233",
+          "control": "VC / Setting / Default card direction",
+          "destinationNodeId": "439:3819"
+        },
+        {
+          "sourceNodeId": "439:4239",
+          "control": "VC / Setting / Appearance",
+          "destinationNodeId": "439:3894"
+        },
+        {
+          "sourceNodeId": "439:4268",
+          "control": "VC / Setting / Export My Words",
+          "destinationNodeId": "436:3826"
+        },
+        {
+          "sourceNodeId": "439:4274",
+          "control": "VC / Setting / Import My Words",
+          "destinationNodeId": "436:3900"
+        },
+        {
+          "sourceNodeId": "439:4284",
+          "control": "Reset learning progress",
+          "destinationNodeId": "436:4081"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Preference, input, confirmation"
+      ],
+      "interactionStates": [
+        "Back / 44px touch target",
+        "VC / Setting / Default card direction",
+        "VC / Setting / Appearance",
+        "VC / Setting / Export My Words",
+        "VC / Setting / Import My Words",
+        "Reset learning progress"
+      ],
+      "implementationPriority": "P2",
+      "sourceOfTruth": "existing-approved-figma-phase",
+      "notes": null
+    },
+    {
+      "id": "vc.my-words.vc-essential-state-edit-personal-sentence.447-4147",
+      "name": "VC / Essential State / Edit Personal Sentence",
+      "figmaNodeId": "447:4147",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4147",
+      "phase": "VC / 11 — Final Integration, Prototype QA & Expo Handoff",
+      "featureArea": "my-words",
+      "classification": "route",
+      "proposedExpoRoute": "/my-words/entry/[entryId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "434:3133"
+      ],
+      "expectedDestinationIds": [
+        "434:3133"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "447:4150",
+          "control": "Back / Edit saved word",
+          "destinationNodeId": "434:3133"
+        },
+        {
+          "sourceNodeId": "447:4182",
+          "control": "Action / Save changes",
+          "destinationNodeId": "434:3133"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Personal card, form, collection"
+      ],
+      "interactionStates": [
+        "Back / Edit saved word",
+        "Action / Save changes"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "prompt-5-corrective-variant",
+      "notes": null
+    },
+    {
+      "id": "vc.flashcards.vc-essential-state-personal-expression-session-complete.447-4185",
+      "name": "VC / Essential State / Personal Expression Session Complete",
+      "figmaNodeId": "447:4185",
+      "figmaUrl": "https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4185",
+      "phase": "VC / 11 — Final Integration, Prototype QA & Expo Handoff",
+      "featureArea": "flashcards",
+      "classification": "transient-state",
+      "proposedExpoRoute": "/flashcards/[sessionId]",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "entryPointIds": [
+        "439:4643",
+        "439:4687"
+      ],
+      "expectedDestinationIds": [
+        "434:2989"
+      ],
+      "prototypeActions": [
+        {
+          "sourceNodeId": "447:4188",
+          "control": "Close / Flashcards",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "447:4216",
+          "control": "Action / Practise again",
+          "destinationNodeId": "434:2989"
+        },
+        {
+          "sourceNodeId": "447:4220",
+          "control": "Action / Done",
+          "destinationNodeId": "434:2989"
+        }
+      ],
+      "designSystemDependencies": [
+        "VC/Theme",
+        "Nordic Editorial/Newsreader + Inter",
+        "Flashcard, ratings, progress"
+      ],
+      "interactionStates": [
+        "Close / Flashcards",
+        "Action / Practise again",
+        "Action / Done"
+      ],
+      "implementationPriority": "P1",
+      "sourceOfTruth": "prompt-5-corrective-variant",
+      "notes": null
+    }
+  ]
+}
