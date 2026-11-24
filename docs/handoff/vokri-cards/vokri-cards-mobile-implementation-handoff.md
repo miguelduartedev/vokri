@@ -1,5 +1,7 @@
 # Vokri Cards — Standalone Mobile Implementation Handoff
 
+**Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
+
 **Phase:** Prompt 5/5 — final Figma integration · **Status:** editable design and documentation handoff, **not implemented** Expo functionality · **Date:** 21 November 2026.  
 **Product:** Vokri Cards, Finnish-first local-first standalone flashcards. Swedish is a **future separate target language**; it must not be presented as containing ready-made decks until that content is verified.  
 **Design:** [Vokri Cards Figma page, node 407:766](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766) · [Final editable Phase 5 handoff, node 447:4058](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058).  

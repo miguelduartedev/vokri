@@ -1,5 +1,7 @@
 # Vokri Cards — Prompt 5/5 Final Figma Integration & QA Report
 
+**Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
+
 **Audit date:** 21 November 2026 · **Scope:** Vokri Cards Figma page [407:766](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766). **Final editable handoff:** [447:4058](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058).  
 **Evidence type:** actual Figma node/prototype interrogation, representative rendered screenshots and new GitHub design-to-code documents — **not executed iOS/Android, React Native, live notifications, JSON parsing, storage or learner tests**.
 
