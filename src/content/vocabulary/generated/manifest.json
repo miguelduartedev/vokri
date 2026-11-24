@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "identityMap": {
+    "version": 1,
+    "sha256": "b60e42083463a91f2f7bca9455175bdaa2262df43676539c6542864ba1f66cc8"
+  },
+  "languages": [
+    {
+      "languageId": "fi",
+      "count": 2000,
+      "source": "docs/curriculum/vocabulary/finnish_2000_curated.csv",
+      "sourceSha256": "8fd0216a0fdeae221b8635523c179b2281f4a3989ddf0d5fac905d2a3443d55c",
+      "contentSha256": "9d55040ae1bbcb1fb1134078c1cf7a564a1155ae4290b7507c173ff5c559084f",
+      "bytes": 984538,
+      "attribution": "docs/curriculum/vocabulary/README.md"
+    },
+    {
+      "languageId": "sv",
+      "count": 2000,
+      "source": "docs/curriculum/vocabulary/swedish_2000_curated.csv",
+      "sourceSha256": "db8a7b6500cd073c6691e96899a29042e335e23d9af12cba2a0314e5efd55467",
+      "contentSha256": "a9108427d22fccbc68ecd86750091e9b069bca0d7a99c17d0a9e4ff2ef77eee8",
+      "bytes": 1279374,
+      "attribution": "docs/curriculum/vocabulary/swedish_2000_curated_README.md"
+    }
+  ]
+}

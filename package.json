@@ -13,8 +13,11 @@
     "ios": "expo start --ios",
     "typecheck": "tsc --noEmit",
     "lint": "expo lint",
-    "test": "jest --runInBand",
-    "bundle": "expo export --platform android --platform ios"
+    "test": "jest --runInBand && node --test scripts/vocabulary/pipeline.test.mts",
+    "bundle": "expo export --platform android --platform ios",
+    "vocabulary:generate": "node scripts/vocabulary/cli.mts generate",
+    "vocabulary:validate": "node scripts/vocabulary/cli.mts validate",
+    "vocabulary:check": "node scripts/vocabulary/cli.mts check"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.4.2",
@@ -42,6 +45,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^24.19.2",
     "@types/react": "~19.3.0",
+    "csv-parse": "^7.0.3",
     "eslint": "^9.39.5",
     "eslint-config-expo": "~58.0.4",
     "expo-doctor": "^1.21.8",
