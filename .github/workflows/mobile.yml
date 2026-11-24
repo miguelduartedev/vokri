@@ -10,12 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: npm
       - run: npm install --global npm@11.19.1
       - run: npm ci
+      - run: npm run vocabulary:check -- --base "$VOCABULARY_BASE"
+        env:
+          VOCABULARY_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test

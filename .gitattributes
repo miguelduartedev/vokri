@@ -1,0 +1,4 @@
+# The manifest fingerprints the exact source bytes, including their original line endings.
+docs/curriculum/vocabulary/*_2000_curated.csv -text
+scripts/vocabulary/finnish-identities.json text eol=lf
+src/content/vocabulary/generated/*.json text eol=lf
