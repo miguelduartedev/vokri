@@ -16,6 +16,7 @@ export default function TabLayout() {
       backBehavior="history"
       screenOptions={{
         headerShown: false,
+        tabBarHideOnKeyboard: true,
         tabBarLabelPosition: 'below-icon',
         tabBarActiveTintColor: colors.ink,
         tabBarInactiveTintColor: colors.secondary,

@@ -8,24 +8,17 @@ import { Button, Surface, Type } from '../ui/primitives';
 import { useTheme } from '../ui/theme';
 import { CardsHeader } from './controls';
 
-export function TabPage({ page }: { page: 'today' | 'discover' | 'my-words' }) {
+export function TabPage({ page }: { page: 'today' | 'my-words' }) {
   const { state } = usePreferences();
   const { colors } = useTheme();
   if (state.status !== 'ready' || !state.preferences.activeLearningLanguage) return null;
   const language = state.preferences.activeLearningLanguage;
   const name = languages[language].name;
   const today = page === 'today';
-  const discover = page === 'discover';
-  const title = today
-    ? name + ' begins\nwith one word.'
-    : discover
-      ? 'Words worth\nremembering.'
-      : 'My Words.';
+  const title = today ? name + ' begins\nwith one word.' : 'My Words.';
   const caption = today
     ? 'Start with a few useful words. We’ll bring them back.'
-    : discover
-      ? 'Explore ' + name + ' at your own pace.'
-      : 'The ' + name + ' expressions you want to remember.';
+    : 'The ' + name + ' expressions you want to remember.';
   const explore = (
     <Button
       align={today ? 'left' : 'center'}
@@ -42,11 +35,7 @@ export function TabPage({ page }: { page: 'today' | 'discover' | 'my-words' }) {
         <CardsHeader language={language} />
         <View style={{ marginTop: 12, gap: 8 }}>
           <Type variant="eyebrow" color={colors.secondary}>
-            {today
-              ? 'WELCOME / ' + name.toUpperCase()
-              : discover
-                ? 'DISCOVER / ' + name.toUpperCase()
-                : 'YOUR VOCABULARY'}
+            {today ? 'WELCOME / ' + name.toUpperCase() : 'YOUR VOCABULARY'}
           </Type>
           <Type variant="display" accessibilityRole="header">
             {title}
@@ -72,18 +61,6 @@ export function TabPage({ page }: { page: 'today' | 'discover' | 'my-words' }) {
               No {name} reviews yet.
             </Type>
           </View>
-        ) : discover ? (
-          <Surface style={{ marginTop: 28, backgroundColor: colors.action, padding: 22 }}>
-            <Type variant="eyebrow" color={colors.onAction}>
-              VOCABULARY
-            </Type>
-            <Type variant="title" color={colors.onAction}>
-              {name} vocabulary
-            </Type>
-            <Type color={colors.onAction}>
-              The {name} catalogue is being prepared. Words and collections will appear here.
-            </Type>
-          </Surface>
         ) : (
           <View style={{ gap: 16, marginTop: 32 }}>
             <Type variant="title">Saved entries</Type>

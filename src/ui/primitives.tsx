@@ -53,6 +53,10 @@ export function Type({
 }
 
 const icons = {
+  collectionArrow: require('../../assets/icons/collection-arrow.svg'),
+  search: require('../../assets/icons/search.svg'),
+  filter: require('../../assets/icons/filter.svg'),
+  close: require('../../assets/icons/close.svg'),
   today: require('../../assets/icons/today.svg'),
   discover: require('../../assets/icons/discover.svg'),
   'my-words': require('../../assets/icons/my-words.svg'),

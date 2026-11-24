@@ -25,7 +25,14 @@ function makeIndex(language: LearningLanguage) {
   const byId = new Map(items.map((item) => [item.wordId, item]));
   const searchable = items.map(({ wordId, lemma, displayForm, english }) => ({
     ref: Object.freeze({ languageId: language, wordId }),
-    fields: [lemma, displayForm, english].map(normalize),
+    lexical: [normalize(lemma), normalize(displayForm)],
+    meaning: normalize(english),
+    glosses: normalize(english)
+      .split(';')
+      .map((s) => s.trim()),
+    words: normalize(english)
+      .split(/[^\p{L}\p{N}]+/u)
+      .filter(Boolean),
   }));
   return { items: Object.freeze(items), byId, searchable };
 }
@@ -68,8 +75,15 @@ export function searchVocabulary(
 ): readonly Readonly<VocabularyRef>[] {
   const needle = normalize(query);
   if (!needle) return Object.freeze([]);
-  const matches = index(language).searchable.filter((entry) =>
-    entry.fields.some((field) => field.includes(needle)),
-  );
-  return Object.freeze(matches.map((entry) => entry.ref));
+  // Stable insertion into relevance bands preserves pedagogical rank within each band.
+  const bands: Readonly<VocabularyRef>[][] = [[], [], [], [], []];
+  for (const entry of index(language).searchable) {
+    if (entry.lexical.includes(needle)) bands[0].push(entry.ref);
+    else if (entry.meaning === needle || entry.glosses.includes(needle)) bands[1].push(entry.ref);
+    else if (entry.lexical.some((form) => form.startsWith(needle))) bands[2].push(entry.ref);
+    else if (entry.words.some((word) => word.startsWith(needle))) bands[3].push(entry.ref);
+    else if (entry.meaning.includes(needle) || entry.lexical.some((form) => form.includes(needle)))
+      bands[4].push(entry.ref);
+  }
+  return Object.freeze(bands.flat());
 }

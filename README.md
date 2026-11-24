@@ -17,8 +17,8 @@ Open the project in a compatible Expo Go client for SDK 58. Scan the Metro QR co
 ## Current experience
 
 - Choose Finnish (Suomi) or Swedish (Svenska) on first launch. Continue saves the choice on the device. Returning learners land on Today after preference hydration.
-- Navigate Today, Discover and My Words. Today’s first-use action opens Discover. Discover and My Words explain the current availability of content.
-- Open Settings from the header. Switch language from the header chip or Settings, and choose System, Light or Dark appearance. Changing language preserves appearance and stays on the current screen.
+- Navigate Today, Discover and My Words. Today’s first-use action opens Discover. Discover offers curated decks, topic browsing, search, tier filters and word details for the active language.
+- Open Settings from the header. Switch language from the header chip or Settings, and choose System, Light or Dark appearance. Changing language preserves appearance. Discover starts a fresh browsing context for the selected language.
 - The native UI uses bundled Newsreader and Inter, local design icons, safe areas, scalable text and accessible selection controls. [Font licenses](assets/licenses) · [Multilingual design addendum](docs/handoff/vokri-cards/vokri-cards-multilingual-implementation-addendum.md)
 
 ## Checks
@@ -42,4 +42,4 @@ GitHub Actions runs clean installation, vocabulary validation and reproducibilit
 
 Expo Router routes live in `app/`. Cards-specific screens and navigation composition live in `src/cards/`. Shared language and vocabulary references live in `src/domain/`, storage and state in `src/preferences/`, and navigation-independent controls and theme in `src/ui/`.
 
-The shared vocabulary engine exposes 2,000 Finnish and 2,000 Swedish entries through stable references, language-scoped search, tier and topic filters, and optional grammar. PR #17 can use it for Discover, curated decks and word details. Flashcards, scheduled Review and personal collections follow in later milestones. [Vocabulary engine and commands](docs/architecture/vocabulary-engine.md) · [Source audit and validation](docs/architecture/vocabulary-engine-validation.md) · [Cards-first roadmap](docs/architecture/vokri-cards-first-implementation-plan.md)
+The shared vocabulary engine exposes 2,000 Finnish and 2,000 Swedish entries through stable references, language-scoped search, tier and topic filters, and optional grammar. Discover uses it for six curated decks and the complete bilingual catalogue. [Discover architecture and deck inventory](docs/architecture/vokri-cards-discover.md) · [Discover QA and screenshots](docs/handoff/vokri-cards/discover-qa.md) Flashcards, scheduled Review and personal collections follow in later milestones. [Vocabulary engine and commands](docs/architecture/vocabulary-engine.md) · [Source audit and validation](docs/architecture/vocabulary-engine-validation.md) · [Cards-first roadmap](docs/architecture/vokri-cards-first-implementation-plan.md)
