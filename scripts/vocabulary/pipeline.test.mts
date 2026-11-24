@@ -327,3 +327,27 @@ test('real CLI detects stale, missing and extra assets and invalid source withou
     rmSync(temp, { force: true, recursive: true });
   }
 });
+
+test('Swedish historical identity rejects disappearance, swaps, duplicate IDs and unacknowledged spelling/POS changes', async () => {
+  const { verifySwedishHistory } = await import('./swedish-history.ts');
+  const sample = (...rows: string[]) =>
+    'word_id,lemma,part_of_speech,rank,english\n' + rows.join('\n');
+  const base = sample('w1,äta,verb,1,eat', 'w2,bok,noun,2,book');
+  for (const changed of [
+    sample('w1,äta,verb,1,eat'),
+    sample('w2,äta,verb,1,eat', 'w1,bok,noun,2,book'),
+    sample('w1,äta,verb,1,eat', 'w1,bok,noun,2,book'),
+    sample('w1,ät,verb,1,eat', 'w2,bok,noun,2,book'),
+    sample('w1,äta,noun,1,eat', 'w2,bok,noun,2,book'),
+  ])
+    assert.throws(() => verifySwedishHistory(base, changed), /Swedish/);
+  verifySwedishHistory(base, sample('w2,bok,noun,1,new gloss', 'w1,äta,verb,2,to eat'));
+  verifySwedishHistory(base, sample('w2,bok,noun,2,book', 'w1,ät,verb,1,eat'), [
+    {
+      wordId: 'w1',
+      from: ['äta', 'verb'],
+      to: ['ät', 'verb'],
+      reason: 'Synthetic fixture correction',
+    },
+  ]);
+});

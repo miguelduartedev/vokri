@@ -13,6 +13,8 @@ import { fileURLToPath } from 'node:url';
 import { buildVocabulary, mapFile, outputDirectory } from './generate.ts';
 import { identityMapSchema, verifyPreviousMap } from './identities.ts';
 
+import { verifySwedishHistory } from './swedish-history.ts';
+
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const directory = join(root, outputDirectory);
 function run() {
@@ -28,6 +30,11 @@ function run() {
     const git = (...args: string[]) =>
       execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 4_000_000 });
     const commit = git('rev-parse', '--verify', '--end-of-options', base + '^{commit}').trim();
+    const swedishSource = 'docs/curriculum/vocabulary/swedish_2000_curated.csv';
+    verifySwedishHistory(
+      git('show', commit + ':' + swedishSource),
+      readFileSync(join(root, swedishSource), 'utf8'),
+    );
     if (git('ls-tree', '--name-only', commit, '--', mapFile).trim()) {
       verifyPreviousMap(
         identityMapSchema.parse(JSON.parse(git('show', commit + ':' + mapFile))),

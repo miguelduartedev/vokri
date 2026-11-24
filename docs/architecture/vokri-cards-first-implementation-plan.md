@@ -12,7 +12,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | --- | --- |
 | 15 | Runnable offline preference and navigation foundation for both languages |
 | 16 | Shared vocabulary ingestion, stable IDs and editorial metadata on the foundation |
-| 17 | Discover, search, filters, decks and details from the validated catalogue |
+| 17 | [Bilingual Discover, six curated decks, search, topic/tier filters and vocabulary details](vokri-cards-discover.md) |
 | 18 | First functioning study experience using explicit enrolment and Learn New sessions |
 | 19 | Private alpha with scheduled Review, derived Today, checkpointing and resume |
 | 20 | My Words editing for personal words, phrases and sentences |

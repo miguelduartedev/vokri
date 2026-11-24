@@ -111,15 +111,15 @@ test('Swedish articles, optional morphology, plural-only and mass forms follow t
   }
 });
 
-test('search matches canonical, display and English fields once each in rank order', () => {
+test('search matches canonical, display and English fields once each in relevance order', () => {
   const ref = { languageId: 'sv', wordId: 'sv-bok-9992bfa7' };
   for (const query of ['bok', '  EN BOK ', 'Book']) {
     const refs = searchVocabulary('sv', query);
     expect(refs).toContainEqual(ref);
     expect(refs.every((r) => r.languageId === 'sv')).toBe(true);
     expect(new Set(refs.map((r) => r.wordId)).size).toBe(refs.length);
-    const ranks = refs.map((r) => getVocabularyItem(r)!.rank);
-    expect(ranks).toEqual([...ranks].sort((a, b) => a - b));
+    expect(refs[0]).toEqual(ref);
+    expect(searchVocabulary('sv', query)).toEqual(refs);
   }
   expect(searchVocabulary('fi', '  ')).toEqual([]);
   expect(searchVocabulary('sv', 'absent-word-000')).toEqual([]);
