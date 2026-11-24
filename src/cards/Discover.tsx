@@ -1,13 +1,20 @@
 import { router } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Keyboard, TextInput, View, useWindowDimensions } from 'react-native';
+import {
+  AccessibilityInfo,
+  FlatList,
+  Keyboard,
+  TextInput,
+  View,
+  useWindowDimensions,
+} from 'react-native';
 import { languages, type LearningLanguage } from '../domain/languages';
 import { getDecks, type CuratedDeck } from '../domain/vocabulary/decks';
 import { browseVocabulary, vocabularyTopics } from '../domain/vocabulary/catalogue';
 import { getVocabularyCount } from '../domain/vocabulary/registry';
 import { tiers, type VocabularyTier } from '../domain/vocabulary/schema';
 import { Control, Icon, Type } from '../ui/primitives';
-import { Sheet, useSheetTrigger } from '../ui/preferences';
+import { Sheet } from '../ui/preferences';
 import { VocabularyRow } from '../ui/vocabulary';
 import { useTheme } from '../ui/theme';
 import { CardsHeader } from './controls';
@@ -142,10 +149,9 @@ export function Discover({
   const compactSearch = focused && height - keyboardHeight < 550;
   const [topic, setTopic] = useState(initialTopic);
   const [tier, setTier] = useState<VocabularyTier>();
-  const [panel, setPanel] = useState<'Topic' | 'Tier'>('Topic');
-  const topicSheet = useSheetTrigger();
-  const tierSheet = useSheetTrigger();
-  const sheet = panel === 'Topic' ? topicSheet : tierSheet;
+  const [panel, setPanel] = useState<'Topic' | 'Tier'>();
+  const topicTrigger = useRef<React.ComponentRef<typeof View>>(null);
+  const tierTrigger = useRef<React.ComponentRef<typeof View>>(null);
   const topics = useMemo(() => vocabularyTopics(language, tier), [language, tier]);
   const possibleTiers = useMemo(
     () => tiers.filter((t) => browseVocabulary(language, '', topic, t).length),
@@ -170,7 +176,13 @@ export function Discover({
   function choosePanel(which: 'Topic' | 'Tier') {
     Keyboard.dismiss();
     setPanel(which);
-    (which === 'Topic' ? topicSheet : tierSheet).show();
+  }
+  function closePanel() {
+    const trigger = panel === 'Topic' ? topicTrigger : tierTrigger;
+    setPanel(undefined);
+    requestAnimationFrame(() => {
+      if (trigger.current) AccessibilityInfo.sendAccessibilityEvent(trigger.current, 'focus');
+    });
   }
   function moveToStart() {
     list.current?.scrollToOffset({ offset: 0, animated: false });
@@ -269,13 +281,13 @@ export function Discover({
         <>
           <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
             <Chip
-              trigger={topicSheet.trigger}
+              trigger={topicTrigger}
               label={topic ?? 'All topics'}
               selected={!!topic}
               onPress={() => choosePanel('Topic')}
             />
             <Control
-              ref={tierSheet.trigger}
+              ref={tierTrigger}
               accessibilityLabel={'Filter by tier, ' + (tier ?? 'All tiers')}
               onPress={() => choosePanel('Tier')}
               style={{
@@ -364,13 +376,13 @@ export function Discover({
           ) : undefined
         }
       />
-      {sheet.open && (
+      {panel && (
         <Sheet
           title={panel}
           description={
             panel === 'Topic' ? 'Browse a topic in ' + name + '.' : 'Choose a vocabulary tier.'
           }
-          onClose={sheet.close}
+          onClose={closePanel}
         >
           {(panel === 'Topic'
             ? [[undefined, 'All topics'], ...topics.map(([t, n]) => [t, t + ' · ' + n])]
@@ -383,7 +395,7 @@ export function Discover({
               onPress={() => {
                 if (panel === 'Topic') setTopic(value);
                 else setTier(value as VocabularyTier | undefined);
-                sheet.close();
+                closePanel();
                 moveToStart();
               }}
             />
