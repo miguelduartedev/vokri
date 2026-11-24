@@ -1,5 +1,7 @@
 # Vokri — Mobile-First Tech Stack & Build Plan
 
+**Implementation order, November 2026.** The [Cards-first roadmap](./vokri-cards-first-implementation-plan.md) governs the first shipping product and its bilingual vocabulary infrastructure. The full-course specifications below continue to govern structured learning.
+
 **Updated 11 November 2026.** Vokri is the current working product name, not yet a commercially cleared final brand. **Finnish (`fi`) is the only learning language in V1. Swedish (`sv`) is a separate future course, not a second app or a Swedish translation of the app UI.** Launch as a React Native + Expo iOS/Android app first; web is deferred.
 
 This document replaces the earlier web-first implementation order. Preserve the original principle of sharing typed learning/content/domain logic, but do not build a Next.js skeleton, PWA, web E2E or full Turborepo workspace merely to anticipate future needs.

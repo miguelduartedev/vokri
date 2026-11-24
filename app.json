@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Vokri Cards",
+    "slug": "vokri-cards",
+    "scheme": "vokri-cards",
+    "version": "0.1.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

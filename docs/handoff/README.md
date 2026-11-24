@@ -1,5 +1,7 @@
 # Vokri — Expo mobile handoff
 
+**Current implementation.** Start with the [Cards-first roadmap](../architecture/vokri-cards-first-implementation-plan.md) and [multilingual addendum](./vokri-cards/vokri-cards-multilingual-implementation-addendum.md).
+
 **Working project name:** Vokri (provisional). **Visual direction:** Nordic Editorial. **Initial learning language:** Finnish (`fi`). **Planned future learning language:** Swedish (`sv`).
 
 These are implementation handoff materials for a **mobile-first React Native + Expo + TypeScript** app. This is not finished application code or a sign-off for production release.

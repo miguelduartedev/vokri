@@ -1,5 +1,7 @@
 # Vokri — Content + Learning Data Architecture Specification
 
+**Implementation order, November 2026.** The [Cards-first roadmap](./vokri-cards-first-implementation-plan.md) governs the first shipping product and its bilingual vocabulary infrastructure. The full-course specifications below continue to govern structured learning.
+
 This specification treats the [Finnish A1 Foundations curriculum blueprint](../curriculum/a1_foundations_curriculum_blueprint.md) as the pedagogical source of truth, the [curated Finnish 2,000-lemma CSV](../curriculum/vocabulary/finnish_2000_curated.csv) as the lexical backbone, and Nordic Editorial Figma plus the mobile handoff as the product/UI contract.
 
 > **Current scope — 11 November 2026:** Finnish (`fi`) is the **only implemented learning language in V1**, built with **React Native + Expo**. Swedish (`sv`) is a **future separate target language to learn**, not a request for Swedish interface localisation, lesson content or a nonfunctional selector. The earlier Suomi branding and web-first build order are superseded by the working name **Vokri** and the [mobile-first build plan](./mobile_first_tech_stack_plan.md).

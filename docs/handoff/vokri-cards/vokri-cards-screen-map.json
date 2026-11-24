@@ -8,6 +8,7 @@
     "name": "Vokri Cards — Standalone App"
   },
   "status": "verified editable Figma designs, not working Expo screens",
+  "multilingualAddendum": "./vokri-cards-multilingual-implementation-addendum.md",
   "summary": {
     "mobileScreenCount": 119,
     "sections": 11,
