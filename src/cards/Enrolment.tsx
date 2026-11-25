@@ -1,3 +1,4 @@
+import { OrganizeButton } from './collection-controls';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Modal, ScrollView, View } from 'react-native';
@@ -25,6 +26,7 @@ export function WordEnrolment({ language, id }: { language: LearningLanguage; id
       ) : (
         <Button label="Add to study" onPress={() => run(() => store.enrol(language, [id]))} />
       )}
+      <OrganizeButton language={language} wordId={id} />
       {!!error && <Type accessibilityRole="alert">{error}</Type>}
     </View>
   );

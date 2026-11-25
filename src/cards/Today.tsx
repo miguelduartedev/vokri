@@ -74,8 +74,10 @@ function DailyDashboard({ language }: { language: LearningLanguage }) {
     });
   const active = dueWords > 0;
   const ink = active ? (dark ? colors.onSelected : colors.onAction) : colors.ink;
-  const deckTitle =
-    session?.originKind === 'deck' && getDeck(language, session.originId ?? '')?.title;
+  const originTitle =
+    session?.originKind === 'collection'
+      ? store.collection(language, session.originId ?? '')?.name
+      : session?.originKind === 'deck' && getDeck(language, session.originId ?? '')?.title;
   const pass = session?.phase === 'revisit' ? 'revisit' : 'first';
   const frozen = session
     ? store.cards(session.id).filter((card) => card.pass === pass && !card.skipped)
@@ -131,7 +133,7 @@ function DailyDashboard({ language }: { language: LearningLanguage }) {
                 {session.phase === 'completed' ? 'SESSION FINISHED' : 'PAUSED SESSION'}
               </Type>
               <Type variant="title">
-                {deckTitle ||
+                {originTitle ||
                   (session.mode === 'review_due' ? name + ' review' : name + ' flashcards')}
               </Type>
               <Type variant="caption">

@@ -3,6 +3,7 @@ import path from 'node:path';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, fireEvent, renderRouter, screen, waitFor } from 'expo-router/testing-library';
 import { preferencesKey } from '@/preferences/store';
+import { openLearningStore } from '@/learning/native';
 import { palettes } from '@/ui/theme';
 
 jest.mock('@react-native-async-storage/async-storage', () =>
@@ -24,7 +25,7 @@ const routes = path.resolve(__dirname, '../app');
 afterAll(() => mockDatabase?.closeSync());
 beforeEach(async () => {
   mockDatabase?.execSync(
-    'DELETE FROM ratings; DELETE FROM session_cards; DELETE FROM sessions; DELETE FROM enrolments; DELETE FROM personal_entries;',
+    'DELETE FROM ratings; DELETE FROM session_cards; DELETE FROM sessions; DELETE FROM enrolments; DELETE FROM personal_entries; DELETE FROM collections;',
   );
   await AsyncStorage.removeItem(preferencesKey);
 });
@@ -401,4 +402,94 @@ it('offers the curated match and preserves the separate draft across a failed co
   expect(await screen.findByText('In study · New')).toBeOnTheScreen();
   expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM enrolments')).toEqual([{ n: 2 }]);
   expect(mockDatabase.getAllSync('SELECT * FROM ratings')).toEqual([]);
+});
+
+it('organizes a curated word from My Words, enrols it explicitly and returns to its collection after study', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'fi', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/my-words' });
+  await fireEvent.press(await screen.findByRole('button', { name: 'Collections' }));
+  await fireEvent.press(await screen.findByRole('button', { name: 'Create a collection' }));
+  await fireEvent.press(await screen.findByText('Create collection'));
+  expect(await screen.findByText('Enter a collection name.')).toBeOnTheScreen();
+  await fireEvent.changeText(screen.getByLabelText('Collection name'), 'Course work');
+  mockDatabase.execSync(
+    "CREATE TRIGGER reject_collection BEFORE INSERT ON collections BEGIN SELECT RAISE(ABORT,'failure'); END",
+  );
+  try {
+    await fireEvent.press(screen.getByText('Create collection'));
+    expect(await screen.findByText(/Your text is still here/)).toBeOnTheScreen();
+    expect(screen.getByDisplayValue('Course work')).toBeOnTheScreen();
+  } finally {
+    mockDatabase.execSync('DROP TRIGGER reject_collection');
+  }
+  await fireEvent.press(screen.getByText('Create collection'));
+  await fireEvent.press(await screen.findByRole('button', { name: 'Add items' }));
+  await fireEvent.changeText(screen.getByLabelText('Find vocabulary'), 'hei');
+  await fireEvent.press(await screen.findByRole('checkbox', { name: 'hei' }));
+  await fireEvent.press(screen.getByText('Save membership'));
+  expect(await screen.findByText('1 item · 0 in study · 0 due')).toBeOnTheScreen();
+  expect(mockDatabase.getAllSync('SELECT * FROM enrolments')).toHaveLength(0);
+  await fireEvent.press(screen.getByText('Add 1 to study'));
+  await fireEvent.press(await screen.findByText('Learn New'));
+  await fireEvent.press(await screen.findByText('Start session'));
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByText('Show answer'));
+  await fireEvent.press(await screen.findByText('Knew It'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  await fireEvent.press(await screen.findByText('Back to collection'));
+  expect(await screen.findByRole('header', { name: 'Course work' })).toBeOnTheScreen();
+  expect(screen.getByText('1 item · 1 in study · 0 due')).toBeOnTheScreen();
+});
+it('requires a noun when the article selector supplies the only text, and accepts an intentionally typed standalone article', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/personal/edit?language=sv' });
+  await fireEvent.press(await screen.findByText('ett'));
+  await fireEvent.changeText(screen.getByLabelText('English meaning'), 'one');
+  await fireEvent.press(screen.getByText('Save word'));
+  expect(await screen.findByText('Enter the noun after its article.')).toBeOnTheScreen();
+  expect(mockDatabase.getAllSync('SELECT * FROM personal_entries')).toHaveLength(0);
+  await fireEvent.changeText(screen.getByLabelText('Swedish expression'), 'ett');
+  await fireEvent.press(screen.getByText('Save word'));
+  if (screen.queryByText('Keep as a separate entry'))
+    await fireEvent.press(screen.getByText('Keep as a separate entry'));
+  expect(await screen.findByText('Saved · Not in study')).toBeOnTheScreen();
+  expect(mockDatabase.getAllSync('SELECT displayForm FROM personal_entries')).toEqual([
+    { displayForm: 'ett' },
+  ]);
+});
+
+it('restores a frozen card from Today and returns to the overview when its collection was deleted', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/today' });
+  await screen.findByText('Explore Swedish words');
+  const store = await openLearningStore(),
+    word = 'sv-bok-9992bfa7';
+  await act(async () => {
+    const id = store.saveCollection('sv', 'Earlier chapter', '');
+    store.changeMemberships('sv', [{ collectionId: id, wordId: word, selected: true }]);
+    store.enrol('sv', [word]);
+    store.start('sv', { kind: 'collection', id }, 'production');
+    const session = store.current('sv')!,
+      card = store.cards(session.id)[0];
+    store.present('sv', session.id, card);
+    store.reveal('sv', session.id, card);
+    store.deleteCollection('sv', id);
+  });
+  await fireEvent.press(await screen.findByText('Resume session'));
+  await fireEvent.press(await screen.findByText('Resume flashcards'));
+  expect(await screen.findByText('en bok')).toBeOnTheScreen();
+  await fireEvent.press(screen.getByText('Knew It'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  await fireEvent.press(await screen.findByText('Back to collections'));
+  expect(await screen.findByText('A place for your words.')).toBeOnTheScreen();
+  expect(store.today('sv')).toMatchObject({ enrolled: 1, introduced: 1 });
 });

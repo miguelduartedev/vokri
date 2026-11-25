@@ -29,6 +29,7 @@ export type LearningItem =
         | 'wordId'
         | 'displayForm'
         | 'english'
+        | 'type'
         | 'revision'
         | 'lemma'
         | 'context'

@@ -98,17 +98,8 @@ export function upgradeToTwo(db: LearningDatabase) {
   db.execSync('PRAGMA user_version=2');
 }
 
-export function migrateLearning(db: LearningDatabase) {
-  db.execSync('PRAGMA foreign_keys=ON');
-  db.withTransactionSync(() => {
-    const [{ user_version: version }] = db.getAllSync<{ user_version: number }>(
-      'PRAGMA user_version',
-    );
-    if (version > 3) throw new Error('This learning database requires a newer app.');
-    if (version === 0) createVersionOne(db);
-    if (version < 2) upgradeToTwo(db);
-    if (version < 3)
-      db.execSync(`
+export function upgradeToThree(db: LearningDatabase) {
+  db.execSync(`
       CREATE TABLE personal_entries (
         languageId TEXT NOT NULL CHECK(languageId IN ('fi','sv')), wordId TEXT PRIMARY KEY CHECK(wordId GLOB 'personal:*'),
         type TEXT NOT NULL CHECK(type IN ('Word','Phrase','Sentence')), displayForm TEXT NOT NULL, english TEXT NOT NULL,
@@ -135,5 +126,60 @@ export function migrateLearning(db: LearningDatabase) {
           (c.contentRevision IS NULL OR (p.archivedAt IS NULL AND p.revision=c.contentRevision));
       PRAGMA user_version=3;
     `);
-  });
+}
+
+function upgradeToFour(db: LearningDatabase) {
+  // SQLite cannot extend the origin CHECK in place. Keep the child tables and views
+  // under their original names while replacing only the small session header table.
+  db.execSync(`
+    CREATE TEMP TABLE saved_sessions AS SELECT * FROM sessions;
+    DROP TABLE sessions;
+    CREATE TABLE sessions (
+      id TEXT PRIMARY KEY NOT NULL, languageId TEXT NOT NULL CHECK(languageId IN ('fi','sv')),
+      originKind TEXT NOT NULL CHECK(originKind IN ('today','deck','word','collection')), originId TEXT,
+      choice TEXT NOT NULL CHECK(choice IN ('recognition','production','mixed')),
+      phase TEXT NOT NULL CHECK(phase IN ('first','offer','revisit','completed','abandoned')),
+      cursor INTEGER NOT NULL DEFAULT 0, createdAt TEXT NOT NULL, endedAt TEXT, closedAt TEXT,
+      mode TEXT NOT NULL DEFAULT 'learn_new' CHECK(mode IN ('learn_new','review_due')),
+      CHECK(originKind != 'collection' OR originId IS NOT NULL), UNIQUE(id,languageId)
+    );
+    INSERT INTO sessions SELECT id,languageId,originKind,originId,choice,phase,cursor,createdAt,endedAt,closedAt,mode FROM saved_sessions;
+    DROP TABLE saved_sessions;
+    CREATE UNIQUE INDEX one_open_session ON sessions(languageId) WHERE closedAt IS NULL;
+    CREATE TABLE collections (
+      languageId TEXT NOT NULL CHECK(languageId IN ('fi','sv')), id TEXT NOT NULL,
+      name TEXT NOT NULL CHECK(length(trim(name))>0), nameKey TEXT NOT NULL, description TEXT NOT NULL,
+      createdAt TEXT NOT NULL, updatedAt TEXT NOT NULL, PRIMARY KEY(languageId,id), UNIQUE(languageId,nameKey)
+    );
+    CREATE TABLE collection_members (
+      languageId TEXT NOT NULL, collectionId TEXT NOT NULL, wordId TEXT NOT NULL,
+      PRIMARY KEY(languageId,collectionId,wordId),
+      FOREIGN KEY(languageId,collectionId) REFERENCES collections(languageId,id) ON DELETE CASCADE
+    );
+    CREATE INDEX collections_by_word ON collection_members(languageId,wordId);
+    PRAGMA user_version=4;
+  `);
+}
+
+export function migrateLearning(db: LearningDatabase) {
+  db.execSync('PRAGMA foreign_keys=ON');
+  const version = () =>
+    db.getAllSync<{ user_version: number }>('PRAGMA user_version')[0].user_version;
+  if (version() === 4) return;
+  // Disable enforcement only on this connection for the parent-table replacement.
+  db.execSync('PRAGMA foreign_keys=OFF');
+  try {
+    db.withTransactionSync(() => {
+      const previous = version();
+      if (previous > 4) throw new Error('This learning database requires a newer app.');
+      if (previous === 0) createVersionOne(db);
+      if (previous < 2) upgradeToTwo(db);
+      if (previous < 3) upgradeToThree(db);
+      if (previous < 4) upgradeToFour(db);
+      if (db.getAllSync('PRAGMA foreign_key_check').length)
+        throw new Error('Invalid learning references.');
+    });
+  } finally {
+    db.execSync('PRAGMA foreign_keys=ON');
+  }
 }

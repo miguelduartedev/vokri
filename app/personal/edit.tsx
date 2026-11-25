@@ -1,3 +1,4 @@
+import { CheckRow, useCollectionStore } from '@/cards/collection-controls';
 import { Redirect, router, useLocalSearchParams, usePreventRemove } from 'expo-router';
 import { useRef, useState } from 'react';
 import { Alert, Keyboard, View } from 'react-native';
@@ -35,10 +36,13 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
     [done, setDone] = useState(false);
   const [duplicates, setDuplicates] = useState<ReturnType<typeof store.matches>>([]),
     [combined, setCombined] = useState(false);
+  const collections = useCollectionStore().collections(language);
+  const [selected, setSelected] = useState<string[]>([]);
+  const [articleOnly, setArticleOnly] = useState(false);
   const busy = useRef(false);
   const name = languages[language].name;
   const unguard = usePreventRemove(
-    !done && JSON.stringify(initial) !== JSON.stringify(draft),
+    !done && (selected.length > 0 || JSON.stringify(initial) !== JSON.stringify(draft)),
     ({ repeat }) =>
       Alert.alert('Discard changes?', 'Your unsaved text will be lost.', [
         { text: 'Keep editing', style: 'cancel' },
@@ -53,6 +57,7 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
       ]),
   );
   function change<K extends keyof PersonalDraft>(key: K, value: PersonalDraft[K]) {
+    if (key === 'displayForm') setArticleOnly(false);
     setDraft((prev) => ({ ...prev, [key]: value }));
     setError('');
   }
@@ -60,7 +65,12 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
     if (busy.current) return;
     busy.current = true;
     try {
-      store.saveEntry(language, id, draft, { original, enrol, confirmReset });
+      store.saveEntry(language, id, draft, {
+        original,
+        enrol,
+        confirmReset,
+        collections: selected,
+      });
       setDone(true);
       unguard();
       if (original && router.canGoBack()) router.back();
@@ -77,6 +87,10 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
   function save(enrol: boolean, keepSeparate = false) {
     Keyboard.dismiss();
     setError('');
+    if (articleOnly) {
+      setError('Enter the noun after its article.');
+      return;
+    }
     if (!validDraft(draft)) {
       setError('Enter both the ' + name + ' expression and its English meaning.');
       return;
@@ -165,13 +179,11 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
                       ? 'ett'
                       : 'No article'
                 }
-                onSelect={(article) =>
-                  change(
-                    'displayForm',
-                    (article === 'No article' ? '' : article + ' ') +
-                      draft.displayForm.replace(/^(en|ett)\s+/i, ''),
-                  )
-                }
+                onSelect={(article) => {
+                  const bare = draft.displayForm.replace(/^(en|ett)\s+/i, '');
+                  change('displayForm', (article === 'No article' ? '' : article + ' ') + bare);
+                  setArticleOnly(article !== 'No article' && !bare.trim());
+                }}
               />
             </View>
           )}
@@ -183,6 +195,23 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
           />
           {details && (
             <>
+              {!original && collections.length > 0 && (
+                <>
+                  <Type variant="label">Collections (optional)</Type>
+                  {collections.map((c) => (
+                    <CheckRow
+                      key={c.id}
+                      name={c.name}
+                      checked={selected.includes(c.id)}
+                      toggle={() =>
+                        setSelected((prev) =>
+                          prev.includes(c.id) ? prev.filter((id) => id !== c.id) : [...prev, c.id],
+                        )
+                      }
+                    />
+                  ))}
+                </>
+              )}
               {field('note', 'Personal note')}
               {field('context', 'Example or context')}
               {field('lemma', 'Dictionary form', false)}
