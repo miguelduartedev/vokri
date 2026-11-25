@@ -56,7 +56,7 @@ export function createVersionOne(db: LearningDatabase) {
   `);
 }
 
-function upgradeToTwo(db: LearningDatabase) {
+export function upgradeToTwo(db: LearningDatabase) {
   db.execSync(`
     ALTER TABLE sessions ADD COLUMN mode TEXT NOT NULL DEFAULT 'learn_new'
       CHECK(mode IN ('learn_new','review_due'));
@@ -104,8 +104,36 @@ export function migrateLearning(db: LearningDatabase) {
     const [{ user_version: version }] = db.getAllSync<{ user_version: number }>(
       'PRAGMA user_version',
     );
-    if (version > 2) throw new Error('This learning database requires a newer app.');
+    if (version > 3) throw new Error('This learning database requires a newer app.');
     if (version === 0) createVersionOne(db);
     if (version < 2) upgradeToTwo(db);
+    if (version < 3)
+      db.execSync(`
+      CREATE TABLE personal_entries (
+        languageId TEXT NOT NULL CHECK(languageId IN ('fi','sv')), wordId TEXT PRIMARY KEY CHECK(wordId GLOB 'personal:*'),
+        type TEXT NOT NULL CHECK(type IN ('Word','Phrase','Sentence')), displayForm TEXT NOT NULL, english TEXT NOT NULL,
+        lemma TEXT NOT NULL, context TEXT NOT NULL, forms TEXT NOT NULL, note TEXT NOT NULL,
+        revision INTEGER NOT NULL DEFAULT 1, createdAt TEXT NOT NULL, updatedAt TEXT NOT NULL, archivedAt TEXT
+      );
+      ALTER TABLE session_cards ADD COLUMN contentRevision INTEGER;
+      ALTER TABLE session_cards ADD COLUMN targetSnapshot TEXT;
+      ALTER TABLE session_cards ADD COLUMN englishSnapshot TEXT;
+      CREATE TRIGGER freeze_personal AFTER INSERT ON session_cards WHEN NEW.wordId GLOB 'personal:*' BEGIN
+        UPDATE session_cards SET (contentRevision,targetSnapshot,englishSnapshot) =
+          (SELECT revision,displayForm,english FROM personal_entries WHERE languageId=NEW.languageId AND wordId=NEW.wordId AND archivedAt IS NULL)
+          WHERE sessionId=NEW.sessionId AND pass=NEW.pass AND position=NEW.position;
+      END;
+      CREATE VIEW learning_evidence_v3 AS SELECT e.sequence,e.eventId,3 AS schemaVersion,e.source,e.sessionId,e.pass,e.position,
+        e.languageId,e.wordId,e.direction,e.shownAt,e.revealedAt,e.rating,e.ratedAt,c.contentRevision,c.targetSnapshot,c.englishSnapshot
+        FROM learning_evidence_v2 e JOIN session_cards c USING(sessionId,pass,position);
+      CREATE VIEW current_learning_evidence AS SELECT e.* FROM learning_evidence_v3 e
+        LEFT JOIN personal_entries p USING(languageId,wordId)
+        WHERE e.contentRevision IS NULL OR (p.archivedAt IS NULL AND p.revision=e.contentRevision);
+      CREATE VIEW current_first_pass_exposures AS
+        SELECT c.* FROM session_cards c LEFT JOIN personal_entries p USING(languageId,wordId)
+        WHERE pass='first' AND revealedAt IS NOT NULL AND
+          (c.contentRevision IS NULL OR (p.archivedAt IS NULL AND p.revision=c.contentRevision));
+      PRAGMA user_version=3;
+    `);
   });
 }

@@ -2,6 +2,7 @@ import { router, useFocusEffect } from 'expo-router';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { BackHandler, ScrollView, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { blankDraft, personalPrefix, type LearningItem } from '@/domain/learning/personal';
 import { getVocabularyItem } from '@/domain/vocabulary/registry';
 import { getDeck } from '@/domain/vocabulary/decks';
 import { languages, type LearningLanguage } from '@/domain/languages';
@@ -28,6 +29,8 @@ function returnTo(language: LearningLanguage, origin: Origin) {
       pathname: '/discover/deck/[deckId]',
       params: { language, deckId: origin.id },
     });
+  if (origin.kind === 'word' && origin.id.startsWith(personalPrefix))
+    return router.dismissTo({ pathname: '/personal/[id]', params: { id: origin.id, language } });
   if (origin.kind === 'word' && getVocabularyItem({ languageId: language, wordId: origin.id }))
     return router.dismissTo({
       pathname: '/discover/word/[wordId]',
@@ -76,7 +79,23 @@ export function Study({
   const scroll = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const cards = session ? store.cards(session.id) : [];
   const card = cards.find((c) => c.pass === session?.phase && c.position === session.cursor);
-  const item = card && getVocabularyItem({ languageId: language, wordId: card.wordId });
+  let item: LearningItem | undefined = card && store.resolve(language, card.wordId);
+  const historical =
+    !!card?.contentRevision &&
+    (item?.source !== 'personal' || item.content.revision !== card.contentRevision);
+  if (card?.rating && historical)
+    item = {
+      source: 'personal',
+      content: {
+        ...blankDraft,
+        displayForm: card.targetSnapshot!,
+        english: card.englishSnapshot!,
+        wordId: card.wordId,
+        languageId: language,
+        revision: card.contentRevision!,
+      },
+    };
+
   const sessionId = session?.id;
   const pass = card?.pass;
   const position = card?.position;
@@ -98,10 +117,15 @@ export function Study({
     scroll.current?.scrollTo({ y: 0, animated: false });
   }, [sessionId, pass, position, view, session?.phase]);
   const source = session ? sessionOrigin(session) : origin;
+  const missingPersonalOrigin =
+    source.kind === 'word' &&
+    source.id.startsWith(personalPrefix) &&
+    !store.personal(language, source.id);
   function leave(destination: Origin = source) {
     run(() => {
       if (session?.phase === 'completed') store.dismiss(language, session.id);
-      returnTo(language, destination);
+      if (destination === source && missingPersonalOrigin) router.dismissTo('/my-words');
+      else returnTo(language, destination);
     });
   }
   function back() {
@@ -117,8 +141,8 @@ export function Study({
     });
     return () => sub.remove();
   });
-  const first = cards.filter((c) => c.pass === 'first');
-  const revisits = cards.filter((c) => c.pass === 'revisit');
+  const first = cards.filter((c) => c.pass === 'first' && !c.skipped);
+  const revisits = cards.filter((c) => c.pass === 'revisit' && !c.skipped);
   const studied = first.filter((c) => c.rating).length;
   const revisited = revisits.filter((c) => c.rating).length;
   let count = 0;
@@ -245,7 +269,8 @@ export function Study({
         <Surface>
           {revisits.map((c) => (
             <Type key={c.position}>
-              {getVocabularyItem({ languageId: language, wordId: c.wordId })?.displayForm ??
+              {c.targetSnapshot ??
+                store.resolve(language, c.wordId)?.content.displayForm ??
                 'Unavailable word'}
               {review && ' · ' + c.direction}
             </Type>
@@ -277,16 +302,19 @@ export function Study({
       </>
     );
   } else if (session.phase === 'completed') {
-    title = review ? 'Review complete.' : 'New words to return to.';
+    title =
+      studied === 0 ? 'Session finished.' : review ? 'Review complete.' : 'New words to return to.';
     stage = 'SESSION FINISHED';
     counter = studied + ' studied';
     progress = 1;
     body = (
       <>
         <Type>
-          {review
-            ? 'Your ratings set the next review for each direction.'
-            : 'Your ratings are saved on this device.'}
+          {studied === 0
+            ? 'You can start another session from Today.'
+            : review
+              ? 'Your ratings set the next review for each direction.'
+              : 'Your ratings are saved on this device.'}
         </Type>
         <Surface>
           <Type>
@@ -318,7 +346,13 @@ export function Study({
         {source.kind !== 'today' && (
           <Button
             variant="secondary"
-            label={source.kind === 'deck' ? 'Back to collection' : 'Back to word'}
+            label={
+              source.kind === 'deck'
+                ? 'Back to collection'
+                : missingPersonalOrigin
+                  ? 'Back to My Words'
+                  : 'Back to word'
+            }
             onPress={() => leave()}
           />
         )}
@@ -327,18 +361,23 @@ export function Study({
     );
   } else if (card && item) {
     const total = card.pass === 'first' ? first.length : revisits.length;
-    counter = card.position + 1 + ' of ' + total;
+    const index = (card.pass === 'first' ? first : revisits).findIndex(
+      (c) => c.position === card.position,
+    );
+    counter = index + 1 + ' of ' + total;
     stage =
       card.pass === 'first'
         ? review
           ? 'REVIEW · FIRST PASS'
           : 'LEARNING · FIRST PASS'
         : 'ANOTHER LOOK';
-    progress = (card.position + (card.rating ? 1 : 0)) / total;
+    progress = (index + (card.rating ? 1 : 0)) / total;
     const reveal = () => run(() => store.reveal(language, session.id, card));
     const deckTitle = source.kind === 'deck' ? getDeck(language, source.id)?.title : undefined;
     const schedule =
-      card.rating && card.pass === 'first' ? store.reviewState(language, card) : undefined;
+      card.rating && !historical && card.pass === 'first'
+        ? store.reviewState(language, card)
+        : undefined;
     body = (
       <>
         {!card.rating && (
@@ -346,7 +385,9 @@ export function Study({
             {(deckTitle ?? name).toUpperCase()} ·{' '}
             {card.pass === 'first'
               ? review
-                ? 'SCHEDULED REVIEW'
+                ? card.firstPractice
+                  ? 'FIRST PRACTICE · ' + card.direction.toUpperCase()
+                  : 'SCHEDULED REVIEW'
                 : 'NEW WORDS'
               : 'SAME-SESSION REVISIT'}
           </Type>
@@ -367,6 +408,11 @@ export function Study({
             <Type accessibilityLiveRegion="polite" color="#183B35" variant="label">
               {card.rating} · Rating saved
             </Type>
+            {review && card.pass === 'first' && !!card.firstPractice && (
+              <Type variant="caption" color="#183B35">
+                First practice · {card.direction}
+              </Type>
+            )}
             {schedule && (
               <Type variant="caption" color="#183B35">
                 Next {card.direction} review · {localDueTime(schedule.dueAt)}
@@ -466,7 +512,7 @@ export function Study({
         )}
         {body}
         {cards.some((c) => c.skipped) && (
-          <Type accessibilityLiveRegion="polite">An unavailable word was skipped.</Type>
+          <Type accessibilityLiveRegion="polite">A changed or unavailable entry was skipped.</Type>
         )}
         <View style={{ flex: 1, minHeight: 4 }} />
         {presentError && (

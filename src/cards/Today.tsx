@@ -55,7 +55,7 @@ function dashboardCopy(name: string, enrolled: number, due: number, nextDueAt?: 
 
 function DailyDashboard({ language }: { language: LearningLanguage }) {
   const { colors, dark } = useTheme();
-  const { session, enrolled, due, dueWords, newWords, nextDueAt, familiarWords } =
+  const { session, enrolled, introduced, due, dueWords, newWords, nextDueAt, familiarWords } =
     useDailyLearning(language);
   const name = languages[language].name;
   const deck = getDecks(language)[0];
@@ -77,7 +77,9 @@ function DailyDashboard({ language }: { language: LearningLanguage }) {
   const deckTitle =
     session?.originKind === 'deck' && getDeck(language, session.originId ?? '')?.title;
   const pass = session?.phase === 'revisit' ? 'revisit' : 'first';
-  const frozen = session ? store.cards(session.id).filter((card) => card.pass === pass) : [];
+  const frozen = session
+    ? store.cards(session.id).filter((card) => card.pass === pass && !card.skipped)
+    : [];
   const copy = dashboardCopy(name, enrolled, dueWords, nextDueAt);
   const heading = session
     ? session.phase === 'completed'
@@ -86,7 +88,9 @@ function DailyDashboard({ language }: { language: LearningLanguage }) {
     : copy.heading;
   const caption = session
     ? session.phase === 'completed'
-      ? 'Your ratings are saved on this device.'
+      ? frozen.some((card) => card.rating)
+        ? 'Your ratings are saved on this device.'
+        : 'Your session summary is ready.'
       : 'Your session is here when you’re ready.'
     : copy.caption;
   const primaryLearn = !!newWords.length && !active && !session;
@@ -211,7 +215,8 @@ function DailyDashboard({ language }: { language: LearningLanguage }) {
                 YOUR VOCABULARY
               </Type>
               <Type variant="caption">
-                {enrolled} in study · {familiarWords} familiar in both directions
+                {enrolled} in study · {introduced} introduced · {familiarWords} familiar in both
+                directions
               </Type>
               {deck && (
                 <Control

@@ -1,12 +1,26 @@
 # Vokri Cards — Standalone Data, Review & Session Contract (V1)
 
-**Current implementation.** Finnish and Swedish use the daily review contract below. The PR #18 section records the original Learn New and SQLite v1 behavior. The numbered design proposals are historical.
+**Current implementation.** Finnish and Swedish share the personal vocabulary and daily review contracts below. The PR #18 section records the original Learn New and SQLite v1 behavior. The numbered design proposals are historical.
 
 **Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
 
 **Original design proposal, 21 November 2026.** The standalone application is Finnish-first (`fi`) and local-first; Swedish (`sv`) is a separate future target language, **not** an automatically populated switch or second interface translation. The contract reconciles actual [Vokri Cards Figma](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766), [Phase 5 handoff](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058), [existing Vokri learning architecture](../../architecture/content_learning_data_architecture_specification.md) and the [full Vokri optional-practice contract](../vocabulary-practice/vocabulary-practice-data-contract.md).
 
 **The key deliberate adaptation:** In *full Vokri*, optional Flashcards practice does **not** commit scheduled Review outcomes. In **standalone Vokri Cards**, Flashcards is the **main** learning tool and a first-pass Again/Almost/Knew It rating **must** commit the app's one official spaced-review outcome (subject to the idempotency contract below). No second scheduler is created.
+
+## Personal vocabulary · PR #20
+
+**Identity and capture.** All study references use `(languageId, wordId)`. Bundled IDs retain their existing assignments. SQLite generates a personal ID from 16 random bytes in the reserved `personal:` namespace. It survives spelling and translation edits. A future collection can store the same pair and resolve it through `LearningStore.resolve`. The resolver returns either a curated item with its editorial metadata or a personal item with its learner-authored fields.
+
+My Words stores an entire word, phrase or sentence as one learning item. Target expression and English meaning are required. Notes, example/context, dictionary form and language-specific forms are optional. A Swedish noun article is part of its authored expression. Search covers target and meaning. Duplicate checks look within the active language, compare personal and curated expressions and lemmas, and put exact bilingual matches first. Comparison uses NFC, folded case and collapsed whitespace while preserving accents and the original display text. Learners can open the existing item or keep a separate sense.
+
+**Learning.** Save writes content. Add to study writes an enrolment. The combined action commits both together. Browse, save and enrol produce zero evidence. Learn New and Review use the same session limits, directional engine and pending exposure policy for both sources. First practice is determined from earlier first-pass ratings in the same direction and content revision. Today counts an item as introduced once at least one direction has a first-pass rating for its current content.
+
+**SQLite v3.** An additive transaction creates `personal_entries` and adds nullable content revision, target snapshot and English snapshot to session occurrences. Existing curated records keep their original keys, timestamps, deadlines and checkpoints. Inserting a personal occurrence freezes its revision and bilingual content. When displaying its answer, the app can also show the current learner-authored notes. The v1 and v2 evidence views remain readable. The v3 evidence view adds revision and snapshot fields to each rating.
+
+**Edits and deletion.** Updating type, notes or forms preserves learning progress. Canonically equivalent Unicode and whitespace changes on either side also preserve it. Other changes to the expression or translation advance the revision, clear both directional schedules and keep the enrolment. If the current revision has a frozen session card, the learner must confirm the restart. The same transaction skips affected unrated first-pass and revisit occurrences, advances a blocked cursor and leaves other cards available. Accepted ratings and their original prompts remain readable. Archiving removes the entry from My Words, active enrolment counts and review selection, with the same checkpoint handling. Entering the expression again creates a fresh ID.
+
+For a future projection rebuild, consume `current_first_pass_exposures` and first-pass records in `current_learning_evidence` in evidence order. These views exclude obsolete and archived personal content. Use `learning_evidence_v3` for historical reporting. [Native QA and screenshots](./my-words-qa.md)
 
 ## Daily review and Today · PR #19
 

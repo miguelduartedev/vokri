@@ -6,7 +6,7 @@ Vokri Cards is Vokri’s first application. Learners choose Finnish or Swedish, 
 
 One iOS/Android Expo application uses Expo Router, React Native and strict TypeScript. The UI uses Nordic Editorial tokens and locally bundled Newsreader and Inter. A small React provider exposes a pure TypeScript preference store to both the app and its tests. The native composition root supplies AsyncStorage. Zod validates the versioned record. Jest Expo runs domain and navigation tests together. The installed versions and commands live in the [root README](../../README.md).
 
-Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Learning now shares directional evidence, resumable session persistence and the deterministic review engine. Later milestones add personal vocabulary and collection identities. Introduce each with its first working consumer. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
+Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Learning now shares directional evidence, resumable session persistence and the deterministic review engine. Personal words, phrases and sentences resolve through the same learning store as curated items. Collection membership comes in the next milestone. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
 
 | Expected PR | Deliverable and dependency |
 | --- | --- |
@@ -15,7 +15,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 17 | [Bilingual Discover, six curated decks, search, topic/tier filters and vocabulary details](vokri-cards-discover.md) |
 | 18 | Explicit enrolment, Learn New, persistent directional evidence and resumable flashcards |
 | 19 | [Private alpha with scheduled Review, live Today and SQLite v2 recovery](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) |
-| 20 | My Words editing for personal words, phrases and sentences |
+| 20 | [My Words, personal capture and SQLite v3 content revisions](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-vocabulary--pr-20) |
 | 21 | Personal collections and study using canonical membership references |
 | 22 | Language-scoped interchange, data management and backup decisions |
 | 23 | Feature-complete V1 candidate after cross-feature, accessibility and native regression QA |
@@ -23,7 +23,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 
 ## Durable lexical identity
 
-Use a pair of `languageId` and opaque `wordId` for all future content references. Catalogue order, translation, deck membership and learner-facing expression can change independently. Memberships point to the same item from every deck, collection and future course. Personal entries will have their own stable IDs.
+Use a pair of `languageId` and opaque `wordId` for all future content references. Catalogue order, translation, deck membership and learner-facing expression can change independently. Memberships point to the same item from every deck, collection and future course. Personal entries have stable IDs in the reserved `personal:` namespace.
 
 Swedish imports must copy the source `word_id` exactly, for example `sv-jag-f0c08efd`. Finnish lacks this column. The shared engine uses a version-controlled assignment table with NFC lemma, source part of speech and an explicit stable sense discriminator for ambiguous entries. The original assignments reserve authored unit references first. For example, the Unit 1 mapping is `minä → vocab.mina`, and Units 2 and 7 agree on `ystävä → vocab.ystava`. Flag conflicting references for editorial resolution and preserve aliases to previously shipped IDs.
 

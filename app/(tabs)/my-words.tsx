@@ -1,5 +1,1 @@
-import { TabPage } from '@/cards/TabPage';
-
-export default function MyWords() {
-  return <TabPage />;
-}
+export { MyWords as default } from '@/cards/MyWords';

@@ -1,11 +1,13 @@
 import { Redirect, useLocalSearchParams } from 'expo-router';
 import { Study } from '@/cards/Study';
 import { usePreferences } from '@/preferences/context';
-import { getVocabularyItem } from '@/domain/vocabulary/registry';
+import { useLearning } from '@/learning/provider';
 import { getDeck } from '@/domain/vocabulary/decks';
+import { personalPrefix } from '@/domain/learning/personal';
 import type { Origin } from '@/domain/learning/model';
 
 export default function StudyRoute() {
+  const store = useLearning();
   const { state } = usePreferences();
   const params = useLocalSearchParams<{
     language: string;
@@ -39,8 +41,10 @@ export default function StudyRoute() {
       }
     }
   } else if (params.origin === 'word') {
-    const word = getVocabularyItem({ languageId: language, wordId: params.id });
-    if (!word) return <Redirect href="/discover" />;
+    const word = store.resolve(language, params.id ?? '')?.content;
+    if (!word && !store.current(language))
+      return <Redirect href={params.id?.startsWith(personalPrefix) ? '/my-words' : '/discover'} />;
+    if (!word) return <Redirect href="/today" />;
     origin = { kind: 'word', id: word.wordId };
     context = [word.wordId];
   }
