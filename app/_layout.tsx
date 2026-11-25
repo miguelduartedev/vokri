@@ -1,3 +1,4 @@
+import { LearningProvider } from '@/learning/provider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Inter_400Regular } from '@expo-google-fonts/inter/400Regular';
 import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
@@ -56,6 +57,7 @@ function Navigation({ fontsReady }: { fontsReady: boolean }) {
         <Stack.Protected guard={selected}>
           <Stack.Screen name="(tabs)" />
           <Stack.Screen name="settings" />
+          <Stack.Screen name="study" options={{ gestureEnabled: false }} />
         </Stack.Protected>
       </Stack>
     );
@@ -82,7 +84,9 @@ function Startup() {
       preference={state.status === 'ready' ? state.preferences.appearance : 'system'}
       fonts={loaded && !fallback}
     >
-      <Navigation fontsReady={loaded || !!error || fallback} />
+      <LearningProvider>
+        <Navigation fontsReady={loaded || !!error || fallback} />
+      </LearningProvider>
     </ThemeProvider>
   );
 }

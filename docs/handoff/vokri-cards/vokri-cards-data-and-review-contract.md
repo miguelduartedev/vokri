@@ -1,10 +1,62 @@
 # Vokri Cards — Standalone Data, Review & Session Contract (V1)
 
+**Current implementation.** The [Learn New contract](#implemented-learn-new-contract--pr-18) describes the shipped database, evidence and recovery semantics for PR #18.
+
 **Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
 
-**Design-to-code contract; 21 November 2026. Not implemented.** The standalone application is Finnish-first (`fi`) and local-first; Swedish (`sv`) is a separate future target language, **not** an automatically populated switch or second interface translation. The contract reconciles actual [Vokri Cards Figma](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766), [Phase 5 handoff](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058), [existing Vokri learning architecture](../../architecture/content_learning_data_architecture_specification.md) and the [full Vokri optional-practice contract](../vocabulary-practice/vocabulary-practice-data-contract.md).
+**Original design proposal, 21 November 2026.** The standalone application is Finnish-first (`fi`) and local-first; Swedish (`sv`) is a separate future target language, **not** an automatically populated switch or second interface translation. The contract reconciles actual [Vokri Cards Figma](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766), [Phase 5 handoff](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058), [existing Vokri learning architecture](../../architecture/content_learning_data_architecture_specification.md) and the [full Vokri optional-practice contract](../vocabulary-practice/vocabulary-practice-data-contract.md).
 
 **The key deliberate adaptation:** In *full Vokri*, optional Flashcards practice does **not** commit scheduled Review outcomes. In **standalone Vokri Cards**, Flashcards is the **main** learning tool and a first-pass Again/Almost/Knew It rating **must** commit the app's one official spaced-review outcome (subject to the idempotency contract below). No second scheduler is created.
+
+## Implemented Learn New contract · PR #18
+
+This section governs the running bilingual Learn New feature. The earlier design proposals below continue to describe later milestones. A learner can enrol a word explicitly, practise it offline and return to the same session after closing the app. Discover uses the canonical registry for all lexical content. Opening a deck, searching, filtering and reading a detail create no learning records.
+
+### Storage and migrations
+
+The Expo composition root opens one local `language-learning.db` connection. SQL transactions keep enrolment batches, ratings and session replacements consistent. The preference record stays in AsyncStorage. Its optional per-language direction field defaults to recognition on existing installations and preserves the active language, appearance and extension fields. PR #17 shipped preferences and immutable content only, so the learner migration begins with an empty database.
+
+| SQLite v1 relation | Identity and purpose |
+| --- | --- |
+| `enrolments` | Primary key `(languageId, wordId)`, first enrolment time. Re-adding an existing word preserves its original row. |
+| `sessions` | Random 128-bit local ID, language, origin kind and stable origin ID, direction choice, phase, cursor and timestamps. A partial unique index permits one open session per language, including a completed summary awaiting dismissal. |
+| `session_cards` | Key `(sessionId, pass, position)`, canonical word reference, frozen direction, first display and first reveal times, skipped flag. Each pass contains each word at most once. |
+| `ratings` | One accepted self-report per card occurrence, response, UTC timestamp and local sequence. Foreign keys connect its word, language and concrete direction through the frozen card. |
+| `learning_evidence_v1` | Stable read view of each accepted interaction. It exposes event ID, version, sequence, source, session, pass, position, language, word, direction, presentation, exposure, rating and rating time. |
+
+Opening runs ordered migrations under a transaction using SQLite's `user_version`. A failed migration rolls back and can be retried. A newer version is preserved and reported. Future migrations must retain stable event IDs and the meaning of v1 evidence. There is no lexical copy, automatic history expiry or network dependency. Clearing app storage removes local progress.
+
+### Enrolment and session lifecycle
+
+1. Word detail adds one word. Deck selection confirms the selected canonical IDs, including all remaining members when requested. Duplicate and overlapping adds leave existing learning history intact.
+2. Learn New takes up to five distinct enrolled words in the current context with no first-pass rating in either direction. Decks follow manifest order, and Today follows enrolment order. Selection and concrete directions are frozen at session creation. Mixed alternates from recognition. A direction preference change applies to future sessions.
+3. Showing the front records presentation. Revealing records formal exposure. Acknowledging a rating atomically inserts its event and, for a weak first pass, reserves one same-direction revisit. The saved feedback is itself a recoverable checkpoint. Next advances the cursor. Resubmitting for an already rated occurrence or a stale cursor leaves the original result intact.
+4. At the end of the first pass, learners can take the finite revisit queue or finish. Accepted revisit ratings are retained as same-session practice. Completion counts first-pass words rated and revisits actually rated. Completion and summary dismissal are independently idempotent.
+5. Leaving, backgrounding or terminating the app retains the checkpoint. Today offers Resume or the undismissed completion summary. Starting another session explicitly abandons the previous one and selects eligible words in the same transaction. The old cards, exposures and ratings remain available. Unrated words remain new. A failed replacement restores the prior session. An unavailable canonical ID is skipped at presentation and identified in the UI.
+
+### Directional input to PR #19
+
+Read `learning_evidence_v1` in local sequence order. Stable event IDs combine the session ID, pass and position. Sequence provides a replay cursor even if the device clock changes. A first pass from `cards.learn_new` supplies the official self-report for that single direction. Again, Almost and Knew It correspond to the existing not-sure, almost and correct outcomes. Revisit events remain available for practice summaries. Full Vokri optional practice keeps its separate product eligibility rules.
+
+An item introduced through recognition is no longer a new *word*. Its production *direction* is still unattempted until that direction has its own first-pass rating. The converse holds for production-first introductions. To find introduced words awaiting production, PR #19 can query the v1 contract directly:
+
+```sql
+SELECT e.wordId
+FROM enrolments e
+WHERE e.languageId = :language
+  AND EXISTS (
+    SELECT 1 FROM learning_evidence_v1 r
+    WHERE r.languageId = e.languageId AND r.wordId = e.wordId
+      AND r.pass = 'first' AND r.direction = 'recognition'
+  )
+  AND NOT EXISTS (
+    SELECT 1 FROM learning_evidence_v1 r
+    WHERE r.languageId = e.languageId AND r.wordId = e.wordId
+      AND r.pass = 'first' AND r.direction = 'production'
+  );
+```
+
+A first-pass card with a reveal time and no rating is formal exposure without an attempt. Its session can still be resumed. PR #19 owns the policy for introducing the other direction, consuming pending exposure, and projecting intervals and due dates. The future Today count counts distinct due words per language even if both directions are due. PR #18 writes the observations needed for this projection and displays only current Learn New activity.
 
 ## 1. Identity and source-of-truth boundaries
 
@@ -213,4 +265,4 @@ Suggested envelope, nonbinding before domain acceptance:
 | Switch target language in future | Finnish and Swedish schedules remain independent |
 | Kill app midway through new session | Restored cursor, revealed state and source; no duplicate rating |
 
-**This document is a design-to-domain contract, not working software.** Resolve explicitly marked owner/domain choices before production implementation rather than silently inventing them.
+The implemented Learn New section above takes precedence over earlier proposals. Resolve remaining review, personal vocabulary and interchange decisions in their respective milestones.

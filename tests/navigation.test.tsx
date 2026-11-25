@@ -1,3 +1,4 @@
+import { testDatabase } from './learning-db';
 import path from 'node:path';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, fireEvent, renderRouter, screen, waitFor } from 'expo-router/testing-library';
@@ -7,13 +8,24 @@ import { palettes } from '@/ui/theme';
 jest.mock('@react-native-async-storage/async-storage', () =>
   require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
 );
+let mockDatabase: ReturnType<typeof testDatabase>;
+jest.mock('expo-sqlite', () => ({
+  openDatabaseAsync: async () => {
+    mockDatabase = require('./learning-db').testDatabase();
+    return mockDatabase;
+  },
+}));
 jest.mock('expo-font', () => ({
   ...jest.requireActual('expo-font'),
   useFonts: () => [true, null],
 }));
 
 const routes = path.resolve(__dirname, '../app');
+afterAll(() => mockDatabase?.closeSync());
 beforeEach(async () => {
+  mockDatabase?.execSync(
+    'DELETE FROM ratings; DELETE FROM session_cards; DELETE FROM sessions; DELETE FROM enrolments;',
+  );
   await AsyncStorage.removeItem(preferencesKey);
 });
 
@@ -102,6 +114,11 @@ it('opens a real curated deck, returns to its list, and preserves a catalogue qu
   await fireEvent.press(await screen.findByLabelText('Back'));
   expect(await screen.findByDisplayValue('en bok')).toBeOnTheScreen();
   expect(await AsyncStorage.getAllKeys()).toEqual([preferencesKey]);
+  for (const table of ['enrolments', 'session_cards', 'ratings']) {
+    expect(mockDatabase.getAllSync('SELECT count(*) AS total FROM ' + table)).toEqual([
+      { total: 0 },
+    ]);
+  }
 });
 
 it('intersects catalogue filters, clears an empty result and resets browsing when changing language', async () => {
@@ -134,6 +151,11 @@ it('recovers from an unknown vocabulary reference without creating learner recor
   await fireEvent.press(await screen.findByText('Back to Discover'));
   expect(await screen.findByText('Swedish Essentials')).toBeOnTheScreen();
   expect(await AsyncStorage.getAllKeys()).toEqual([preferencesKey]);
+  for (const table of ['enrolments', 'session_cards', 'ratings']) {
+    expect(mockDatabase.getAllSync('SELECT count(*) AS total FROM ' + table)).toEqual([
+      { total: 0 },
+    ]);
+  }
 });
 
 it.each([
@@ -167,4 +189,78 @@ it('opens Discover safely when a restored detail belongs to the previous languag
   await renderRouter(routes, { initialUrl: '/discover/word/sv-bok-9992bfa7?language=sv' });
   expect(await screen.findByText('Finnish Essentials')).toBeOnTheScreen();
   expect(screen.queryByText('en bok')).toBeNull();
+});
+
+it('studies an enrolled Swedish word in production and restores the actual completion summary', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/discover/word/sv-bok-9992bfa7?language=sv' });
+  await fireEvent.press(await screen.findByText('Add to study'));
+  await fireEvent.press(await screen.findByText('Learn New'));
+  await fireEvent.press(await screen.findByRole('radio', { name: 'English → Swedish' }));
+  await fireEvent.press(screen.getByText('Start session'));
+  expect(await screen.findByRole('header', { name: 'book' })).toBeOnTheScreen();
+  expect(screen.queryByText('Knew It')).toBeNull();
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+  expect(await screen.findByText('en bok')).toBeOnTheScreen();
+  await fireEvent.press(screen.getByText('Almost'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  await fireEvent.press(await screen.findByText('Revisit 1 word'));
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+  await fireEvent.press(await screen.findByText('Knew It'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  expect(await screen.findByText('New words studied · 1')).toBeOnTheScreen();
+  expect(screen.getByText('Items revisited · 1')).toBeOnTheScreen();
+  await fireEvent.press(screen.getByText('Back to Today'));
+  expect(screen).toHavePathname('/today');
+  expect(
+    mockDatabase.getAllSync(
+      'SELECT direction,pass,rating FROM learning_evidence_v1 ORDER BY sequence',
+    ),
+  ).toEqual([
+    { direction: 'production', pass: 'first', rating: 'Almost' },
+    { direction: 'production', pass: 'revisit', rating: 'Knew It' },
+  ]);
+});
+
+it('confirms whole-deck enrolment, pauses a revealed card and replaces only after confirmation', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'fi', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/discover/deck/fi.essentials?language=fi' });
+  await fireEvent.press(await screen.findByText('Start with 5 words'));
+  await fireEvent.press(await screen.findByText('Select all remaining'));
+  expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM enrolments')).toEqual([{ n: 0 }]);
+  await fireEvent.press(screen.getByText('Add 24 to study'));
+  expect(await screen.findByText('24 in study · 0 available to add')).toBeOnTheScreen();
+  await fireEvent.press(screen.getByText('Learn New'));
+  await fireEvent.press(await screen.findByText('Start session'));
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+  await fireEvent.press(screen.getByText('Again'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+  await fireEvent.press(screen.getByLabelText('Close flashcards'));
+  await fireEvent.press(await screen.findByText('Leave session'));
+  await fireEvent.press(await screen.findByText('Learn New'));
+  await fireEvent.press(await screen.findByText('Start a new session'));
+  await fireEvent.press(screen.getByText('Keep current session'));
+  expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM sessions')).toEqual([{ n: 1 }]);
+  await fireEvent.press(screen.getByText('Start a new session'));
+  await fireEvent.press(screen.getByText('End and start new'));
+  expect(await screen.findByRole('header', { name: 'kiitos' })).toBeOnTheScreen();
+  expect(screen.queryByText('Again')).toBeNull();
+  expect(mockDatabase.getAllSync('SELECT phase FROM sessions ORDER BY rowid')).toEqual([
+    { phase: 'abandoned' },
+    { phase: 'first' },
+  ]);
+  expect(mockDatabase.getAllSync('SELECT rating FROM learning_evidence_v1')).toEqual([
+    { rating: 'Again' },
+  ]);
 });
