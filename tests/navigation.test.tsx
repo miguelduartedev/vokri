@@ -16,6 +16,10 @@ jest.mock('expo-sqlite', () => ({
     return mockDatabase;
   },
 }));
+jest.mock('@/cards/portability-files', () => ({
+  ...jest.requireActual('@/cards/portability-files'),
+  pickVocabulary: jest.fn(),
+}));
 jest.mock('expo-font', () => ({
   ...jest.requireActual('expo-font'),
   useFonts: () => [true, null],
@@ -492,4 +496,47 @@ it('restores a frozen card from Today and returns to the overview when its colle
   await fireEvent.press(await screen.findByText('Back to collections'));
   expect(await screen.findByText('A place for your words.')).toBeOnTheScreen();
   expect(store.today('sv')).toMatchObject({ enrolled: 1, introduced: 1 });
+});
+
+it('previews a Swedish file from Finnish Settings and commits only after explicit confirmation', async () => {
+  const { pickVocabulary } = jest.requireMock('@/cards/portability-files');
+  const document = {
+    format: 'vokri-cards-my-words',
+    version: 1,
+    exportedAt: '2026-11-25T12:00:00.000Z',
+    learningLanguage: 'sv',
+    personalEntries: [
+      {
+        languageId: 'sv',
+        wordId: 'personal:' + 'f'.repeat(32),
+        type: 'Sentence',
+        displayForm: 'En blå dörr stod öppen.',
+        english: 'A blue door stood open.',
+      },
+    ],
+    collections: [],
+    memberships: [],
+  };
+  pickVocabulary.mockResolvedValue({ name: 'swedish.json', document });
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'fi', appearance: 'system' }),
+  );
+  await renderRouter(routes, { initialUrl: '/settings' });
+  await fireEvent.press(await screen.findByText('Import vocabulary'));
+  await fireEvent.press(await screen.findByText('Choose JSON file'));
+  await screen.findByText('Import into Swedish?');
+  const store = await openLearningStore();
+  expect(store.personal('sv', document.personalEntries[0].wordId)).toBeUndefined();
+  await fireEvent.press(screen.getByText('Preview Swedish vocabulary'));
+  await screen.findByText('Review before you add.');
+  expect(store.personal('sv', document.personalEntries[0].wordId)).toBeUndefined();
+  await fireEvent.press(screen.getByText('Confirm import'));
+  await screen.findByText('Vocabulary imported.');
+  expect(store.personal('sv', document.personalEntries[0].wordId)?.english).toBe(
+    'A blue door stood open.',
+  );
+  expect(store.personal('fi', document.personalEntries[0].wordId)).toBeUndefined();
+  await fireEvent.press(screen.getByText('Back to Settings'));
+  expect(await screen.findByLabelText('Learning language, Finnish · Suomi')).toBeOnTheScreen();
 });

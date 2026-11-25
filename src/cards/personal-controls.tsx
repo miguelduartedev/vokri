@@ -20,10 +20,12 @@ export function openEntry(language: LearningLanguage, id: string, replace = fals
 }
 export function PersonalPage({
   children,
+  onBack,
   title,
   language,
 }: {
   children: ReactNode;
+  onBack?: () => void;
   title: string;
   language: string;
 }) {
@@ -33,7 +35,9 @@ export function PersonalPage({
       <View style={{ flexDirection: 'row', paddingHorizontal: 20, alignItems: 'center', gap: 8 }}>
         <Control
           accessibilityLabel="Back"
-          onPress={() => (router.canGoBack() ? router.back() : router.replace('/my-words'))}
+          onPress={
+            onBack ?? (() => (router.canGoBack() ? router.back() : router.replace('/my-words')))
+          }
         >
           <Icon name="back" tint={colors.ink} />
         </Control>

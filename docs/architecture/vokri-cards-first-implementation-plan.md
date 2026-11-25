@@ -17,7 +17,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 19 | [Private alpha with scheduled Review, live Today and SQLite v2 recovery](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) |
 | 20 | [My Words, personal capture and SQLite v3 content revisions](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-vocabulary--pr-20) |
 | 21 | [Personal collections, explicit enrolment and collection-scoped Learn New](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-collections) |
-| 22 | Language-scoped interchange, data management and backup decisions |
+| 22 | Language-scoped JSON vocabulary export and import (22A and 22B) |
 | 23 | Feature-complete V1 candidate after cross-feature, accessibility and native regression QA |
 | 24 | Native beta readiness, release content clearance and distribution preparation |
 
@@ -46,4 +46,6 @@ A mixed session resolves each card to learning-language-to-English or English-to
 
 Appearance and active language are global preferences. Enrolment, history, schedules and unfinished sessions are scoped by language. Checkpoint ongoing study before switching and restore it when the learner returns. Known Finnish-only legacy data may be migrated to Finnish when an actual historical format exists. Require explicit language provenance.
 
-SQLite v4 preserves collection origins on frozen sessions and keeps membership independent of learning evidence. The older personal-word JSON handoff and the latest CSV interchange designs describe different data scopes. Resolve interchange and complete backup before PR 22. A CSV cannot restore review evidence or session state. Preview imports with explicit language identity, resolve duplicates per language and preserve existing content. Name the affected language on reset and preserve personal words when resetting study progress.
+SQLite v4 preserves collection origins on frozen sessions and keeps membership independent of learning evidence. Settings provides single-language JSON vocabulary portability in milestone 22B. Learners preview the file, resolve conflicts and explicitly confirm additions. [Interchange implementation](../handoff/vokri-cards/vocabulary-interchange-integration.md)
+
+**Future full local backup and restoration.** Preserve a consistent SQLite snapshot and validated preferences in a separate package. Before replacing live data, verify schema compatibility and integrity on a staged copy. Restoration needs an atomic switch and recovery of the original state after failure. CSV and study-progress reset remain separate product decisions.

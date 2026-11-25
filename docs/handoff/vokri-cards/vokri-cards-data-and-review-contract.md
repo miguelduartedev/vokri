@@ -275,29 +275,11 @@ Use Figma [Review Front 426:2738](https://www.figma.com/design/vJPxcNnHyCOAp57MB
 
 ## 8. Local storage and backup contracts
 
-Follow the shared [Expo stack](../../architecture/mobile_first_tech_stack_plan.md): local-first React Native/Expo + TypeScript, Zod validators and `AsyncStorage` through a versioned abstraction, no V1 backend. Persist progress, schedules, sessions, preferences and personal content in **separate versioned namespaces**; bundle immutable vocabulary/decks as validated app content (not duplicated to AsyncStorage).
+SQLite v4 holds learner content, collections, learning evidence, schedules and session checkpoints. Preferences use their own versioned AsyncStorage record. Curated vocabulary ships in the application bundle.
 
-On app start: **parse → migrate → validate → hydrate**. A corrupted save must not crash the app; preserve healthy user content/preferences and provide a safe recovery route. Handle offline/interruption and atomic rating writes in the domain layer.
+### My Words portability
 
-### Export My Words — not full backup
-
-Versioned JSON contains personal entries, optional notes, personal collection metadata and membership references. **Explicitly excludes** full review/schedule history, due dates, reminders, global UI preferences and accounts/cloud sync. Show this limitation in Settings.
-
-Suggested envelope, nonbinding before domain acceptance:
-
-```json
-{
-  "format": "vokri-cards-my-words",
-  "version": 1,
-  "learningLanguage": "fi",
-  "exportedAt": "ISO-8601",
-  "personalEntries": [],
-  "collections": [],
-  "memberships": []
-}
-```
-
-**Import:** validate content type, JSON shape/version/size, language, duplicate identifiers and user-provided field lengths; preview new/duplicate/conflict counts; require choices to merge/keep-both/skip as authored by owner; commit only after explicit confirmation, using non-destructive transaction semantics. Never silently overwrite existing personal meanings or shift study due dates. Invalid/unrecognized files **do not** mutate local content.
+Settings exports one learning language using the [v1 document contract](vocabulary-interchange-v1.md). Export reads a consistent SQLite snapshot. Import validates and previews the file, asks for any identity and membership decisions, then commits the accepted content in one transaction. Existing learning history and enrolment retain their local identities. New personal entries start unenrolled. [Native file handling and conflict rules](vocabulary-interchange-integration.md)
 
 **Reset Study Progress:** reset the learner's review/schedule/active-session history **only** after clear confirmation. **Preserve personal entries, collections and preferences**. Removing a personal entry is a different destructive operation.
 

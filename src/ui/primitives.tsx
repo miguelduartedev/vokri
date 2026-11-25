@@ -112,12 +112,14 @@ export function Control({
 
 export function Button({
   label,
+  accessibilityLabel,
   onPress,
   disabled,
   align = 'center',
   variant = 'primary',
 }: {
   label: string;
+  accessibilityLabel?: string;
   onPress: () => void;
   disabled?: boolean;
   align?: 'left' | 'center';
@@ -126,6 +128,7 @@ export function Button({
   const { colors } = useTheme();
   return (
     <Control
+      accessibilityLabel={accessibilityLabel}
       onPress={onPress}
       disabled={disabled}
       accessibilityState={{ disabled: !!disabled }}

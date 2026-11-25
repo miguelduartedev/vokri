@@ -13,7 +13,8 @@
       "expo-router",
       "expo-font",
       "expo-asset",
-      "expo-sqlite"
+      "expo-sqlite",
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": true

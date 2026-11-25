@@ -86,6 +86,21 @@ export default function Settings() {
             onPress={appearanceSheet.show}
           />
         </View>
+        <View style={{ marginTop: 24 }}>
+          <Type variant="eyebrow" color={colors.secondary}>
+            VOCABULARY FILES
+          </Type>
+          <SettingRow
+            title="Export vocabulary"
+            detail="Save or share your words and collections."
+            onPress={() => router.push('/portability/export')}
+          />
+          <SettingRow
+            title="Import vocabulary"
+            detail="Preview and add vocabulary from a JSON file."
+            onPress={() => router.push('/portability/import')}
+          />
+        </View>
       </ScrollView>
       {languageSheet.open && (
         <LanguageSheet
