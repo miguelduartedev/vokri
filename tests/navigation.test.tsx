@@ -24,7 +24,7 @@ const routes = path.resolve(__dirname, '../app');
 afterAll(() => mockDatabase?.closeSync());
 beforeEach(async () => {
   mockDatabase?.execSync(
-    'DELETE FROM ratings; DELETE FROM session_cards; DELETE FROM sessions; DELETE FROM enrolments;',
+    'DELETE FROM ratings; DELETE FROM session_cards; DELETE FROM sessions; DELETE FROM enrolments; DELETE FROM personal_entries;',
   );
   await AsyncStorage.removeItem(preferencesKey);
 });
@@ -323,4 +323,82 @@ it('refreshes Today when a due boundary passes and reviews the frozen directions
   } finally {
     jest.useRealTimers();
   }
+});
+
+it('captures a Swedish sentence, searches its translation, studies it and keeps the authored note behind reveal', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/my-words' });
+  await fireEvent.press(await screen.findByText('Add your first word'));
+  await fireEvent.press(await screen.findByText('Sentence'));
+  await fireEvent.press(screen.getByText('Save sentence'));
+  expect(await screen.findByText(/Enter both/)).toBeOnTheScreen();
+  await fireEvent.changeText(
+    screen.getByLabelText('Swedish expression'),
+    'Jag skulle vilja ha en kopp kaffe.',
+  );
+  await fireEvent.changeText(
+    screen.getByLabelText('English meaning'),
+    'I would like a cup of coffee.',
+  );
+  await fireEvent.press(screen.getByText('Add optional details'));
+  await fireEvent.changeText(screen.getByLabelText('Personal note'), 'At the café');
+  await fireEvent.press(screen.getByText('Save sentence'));
+  expect(await screen.findByText('Saved · Not in study')).toBeOnTheScreen();
+  expect(mockDatabase.getAllSync('SELECT * FROM enrolments')).toEqual([]);
+  await fireEvent.press(screen.getByLabelText('Back'));
+  await fireEvent.changeText(await screen.findByLabelText('Search My Words'), 'coffee');
+  await fireEvent.press(screen.getByText('Sentences'));
+  await fireEvent.press(
+    await screen.findByLabelText(
+      'Jag skulle vilja ha en kopp kaffe., I would like a cup of coffee.',
+    ),
+  );
+  await fireEvent.press(await screen.findByText('Add to study'));
+  await fireEvent.press(await screen.findByText('Learn New'));
+  await fireEvent.press(await screen.findByText('Start session'));
+  expect(
+    await screen.findByRole('header', { name: 'Jag skulle vilja ha en kopp kaffe.' }),
+  ).toBeOnTheScreen();
+  expect(screen.queryByText(/At the café/)).toBeNull();
+  await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+  await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+  expect(await screen.findByText(/At the café/)).toBeOnTheScreen();
+  await fireEvent.press(screen.getByText('Knew It'));
+  await fireEvent.press(await screen.findByText('Next card'));
+  await fireEvent.press(await screen.findByText('Back to word'));
+  expect(await screen.findByText('In study · Introduced')).toBeOnTheScreen();
+});
+
+it('offers the curated match and preserves the separate draft across a failed combined save', async () => {
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+  );
+  await renderRouter(routes, { initialUrl: '/my-words' });
+  await fireEvent.press(await screen.findByText('Add your first word'));
+  await fireEvent.changeText(screen.getByLabelText('Swedish expression'), 'en nyckel');
+  await fireEvent.changeText(screen.getByLabelText('English meaning'), 'a key to my apartment');
+  await fireEvent.press(screen.getByText('Save and add to study'));
+  await fireEvent.press(await screen.findByText('View existing entry'));
+  await fireEvent.press(await screen.findByText('Add to study'));
+  expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM personal_entries')).toEqual([{ n: 0 }]);
+  await fireEvent.press(screen.getByLabelText('Back'));
+  mockDatabase.execSync(
+    "CREATE TRIGGER fail_capture BEFORE INSERT ON personal_entries BEGIN SELECT RAISE(ABORT,'failed'); END",
+  );
+  try {
+    await fireEvent.press(await screen.findByText('Keep as a separate entry'));
+    expect(await screen.findByText(/Your text is still here/)).toBeOnTheScreen();
+    expect(screen.getByDisplayValue('a key to my apartment')).toBeOnTheScreen();
+  } finally {
+    mockDatabase.execSync('DROP TRIGGER fail_capture');
+  }
+  await fireEvent.press(screen.getByText('Save and add to study'));
+  await fireEvent.press(await screen.findByText('Keep as a separate entry'));
+  expect(await screen.findByText('In study · New')).toBeOnTheScreen();
+  expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM enrolments')).toEqual([{ n: 2 }]);
+  expect(mockDatabase.getAllSync('SELECT * FROM ratings')).toEqual([]);
 });

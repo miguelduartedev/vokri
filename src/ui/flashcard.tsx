@@ -1,7 +1,7 @@
 import { View, useWindowDimensions } from 'react-native';
 import { languages } from '../domain/languages';
 import { ratings, type Direction, type Rating } from '../domain/learning/model';
-import type { VocabularyItem } from '../domain/vocabulary/schema';
+import type { LearningItem } from '../domain/learning/personal';
 import { Control, Surface, Type } from './primitives';
 import { suppliedForms } from './vocabulary';
 import { useTheme } from './theme';
@@ -12,18 +12,27 @@ export function Flashcard({
   revealed,
   reveal,
 }: {
-  item: VocabularyItem;
+  item: LearningItem;
   direction: Direction;
   revealed: boolean;
   reveal: () => void;
 }) {
   const { colors } = useTheme();
-  const language = languages[item.languageId].name;
+  const language = languages[item.content.languageId].name;
   const forward = direction === 'recognition';
-  const prompt = forward ? item.displayForm : item.english;
-  const answer = forward ? item.english : item.displayForm;
+  const prompt = forward ? item.content.displayForm : item.content.english;
+  const answer = forward ? item.content.english : item.content.displayForm;
   const { height } = useWindowDimensions();
-  const details = suppliedForms(item)
+  const details = (
+    item.source === 'curated'
+      ? suppliedForms(item.content)
+      : [
+          ['Dictionary form', item.content.lemma],
+          ['Context', item.content.context],
+          ['Forms', item.content.forms],
+          ['Personal note', item.content.note],
+        ].filter(([, value]) => !!value)
+  )
     .map(([label, value]) => label + ' · ' + value)
     .join('\n');
   const front = (
@@ -76,16 +85,18 @@ export function Flashcard({
         <Type variant="eyebrow">{(forward ? 'English' : language).toUpperCase()} / ANSWER</Type>
         <Type variant="title">{answer}</Type>
       </View>
-      {item.example && (
+      {item.source === 'curated' && item.content.example && (
         <View style={{ padding: 12, borderRadius: 12, backgroundColor: colors.muted, gap: 4 }}>
-          <Type variant="caption">{item.example.learning}</Type>
+          <Type variant="caption">{item.content.example.learning}</Type>
           <Type variant="caption" color={colors.secondary}>
-            {item.example.english}
+            {item.content.example.english}
           </Type>
         </View>
       )}
       {!!details && <Type variant="caption">{details}</Type>}
-      {!!item.spokenForms && <Type variant="caption">Spoken · {item.spokenForms}</Type>}
+      {item.source === 'curated' && !!item.content.spokenForms && (
+        <Type variant="caption">Spoken · {item.content.spokenForms}</Type>
+      )}
     </Surface>
   );
 }

@@ -20,6 +20,10 @@ export interface Session {
   cursor: number;
 }
 export interface Card {
+  contentRevision: number | null;
+  targetSnapshot: string | null;
+  englishSnapshot: string | null;
+  firstPractice: number;
   position: number;
   pass: Pass;
   wordId: string;

@@ -28,7 +28,10 @@ export const vocabularyRefSchema = z.object({
 }) satisfies z.ZodType<VocabularyRef>;
 
 const common = {
-  wordId: text,
+  wordId: text.refine(
+    (id) => !id.startsWith('personal:'),
+    'Reserved personal vocabulary namespace',
+  ),
   lemma: text,
   displayForm: text,
   english: text,

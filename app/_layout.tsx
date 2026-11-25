@@ -57,6 +57,8 @@ function Navigation({ fontsReady }: { fontsReady: boolean }) {
         <Stack.Protected guard={selected}>
           <Stack.Screen name="(tabs)" />
           <Stack.Screen name="settings" />
+          <Stack.Screen name="personal/edit" />
+          <Stack.Screen name="personal/[id]" />
           <Stack.Screen name="study" options={{ gestureEnabled: false }} />
         </Stack.Protected>
       </Stack>

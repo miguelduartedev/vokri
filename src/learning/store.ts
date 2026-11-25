@@ -1,3 +1,13 @@
+import { getVocabulary, getVocabularyItem } from '../domain/vocabulary/registry';
+import {
+  personalPrefix,
+  materialChange,
+  validDraft,
+  searchKey,
+  type PersonalEntry,
+  type PersonalDraft,
+  type LearningItem,
+} from '../domain/learning/personal';
 import type { LearningLanguage } from '../domain/languages';
 import {
   needsRevisit,
@@ -18,7 +28,7 @@ type Occurrence = Pick<Card, 'position' | 'pass'>;
 export class LearningStore {
   constructor(
     private db: LearningDatabase,
-    private available: (language: LearningLanguage, id: string) => boolean,
+    private curatedAvailable: (language: LearningLanguage, id: string) => boolean,
     readonly now: () => number = () => Date.now(),
   ) {}
   private listeners = new Set<() => void>();
@@ -35,19 +45,171 @@ export class LearningStore {
     this.revision++;
     this.listeners.forEach((listener) => listener());
   }
+  personal(language: LearningLanguage, id: string): PersonalEntry | undefined {
+    return this.db.getAllSync<PersonalEntry>(
+      'SELECT * FROM personal_entries WHERE languageId=? AND wordId=? AND archivedAt IS NULL',
+      language,
+      id,
+    )[0];
+  }
+  entries(language: LearningLanguage) {
+    return this.db.getAllSync<PersonalEntry>(
+      'SELECT * FROM personal_entries WHERE languageId=? AND archivedAt IS NULL ORDER BY createdAt DESC,rowid DESC',
+      language,
+    );
+  }
+  resolve(languageId: LearningLanguage, wordId: string): LearningItem | undefined {
+    if (wordId.startsWith(personalPrefix)) {
+      const content = this.personal(languageId, wordId);
+      return content && { source: 'personal', content };
+    }
+    const content = getVocabularyItem({ languageId, wordId });
+    return content && { source: 'curated', content };
+  }
+  private currentContent(language: LearningLanguage, card: Card) {
+    return (
+      card.contentRevision === null ||
+      this.personal(language, card.wordId)?.revision === card.contentRevision
+    );
+  }
+  private available(language: LearningLanguage, id: string) {
+    return id.startsWith(personalPrefix)
+      ? !!this.personal(language, id)
+      : this.curatedAvailable(language, id);
+  }
+  newPersonalId() {
+    return (
+      personalPrefix +
+      this.db.getAllSync<{ id: string }>('SELECT lower(hex(randomblob(16))) AS id')[0].id
+    );
+  }
+  matches(language: LearningLanguage, draft: PersonalDraft, exclude?: string) {
+    const target = searchKey(draft.displayForm);
+    const items = [...this.entries(language), ...getVocabulary(language)];
+    return items
+      .filter(
+        (item) =>
+          item.wordId !== exclude &&
+          [item.displayForm, item.lemma].some((t) => searchKey(t) === target),
+      )
+      .sort(
+        (a, b) =>
+          Number(searchKey(b.english) === searchKey(draft.english)) -
+          Number(searchKey(a.english) === searchKey(draft.english)),
+      );
+  }
+  saveEntry(
+    language: LearningLanguage,
+    id: string,
+    draft: PersonalDraft,
+    options: { original?: PersonalEntry; enrol?: boolean; confirmReset?: boolean } = {},
+  ) {
+    if (!validDraft(draft) || !/^personal:[0-9a-f]{32}$/.test(id))
+      throw new Error('Enter an expression and English meaning.');
+    const { type, displayForm, english, lemma, context, forms, note } = draft;
+    this.commit(() => {
+      const old = this.personal(language, id);
+      const time = new Date(
+        Math.max(this.now(), old ? Date.parse(old.updatedAt) + 1 : 0),
+      ).toISOString();
+      if (options.original) {
+        if (!old || old.updatedAt !== options.original.updatedAt)
+          throw new Error('This entry changed. Reopen it before editing.');
+        const reset = materialChange(old, draft);
+        if (reset && !options.confirmReset && this.hasStudyHistory(language, id))
+          throw new Error('Confirm restart of study progress.');
+        this.db.runSync(
+          'UPDATE personal_entries SET type=?,displayForm=?,english=?,lemma=?,context=?,forms=?,note=?,updatedAt=?,revision=revision+? WHERE languageId=? AND wordId=?',
+          type,
+          displayForm,
+          english,
+          lemma,
+          context,
+          forms,
+          note,
+          time,
+          Number(reset),
+          language,
+          id,
+        );
+        if (reset) this.invalidate(language, id);
+      } else if (!old) {
+        this.db.runSync(
+          'INSERT INTO personal_entries(languageId,wordId,type,displayForm,english,lemma,context,forms,note,createdAt,updatedAt) VALUES(?,?,?,?,?,?,?,?,?,?,?)',
+          language,
+          id,
+          type,
+          displayForm,
+          english,
+          lemma,
+          context,
+          forms,
+          note,
+          time,
+          time,
+        );
+      } else if (
+        Object.keys(draft).some(
+          (k) => draft[k as keyof PersonalDraft] !== old[k as keyof PersonalDraft],
+        )
+      )
+        throw new Error('This entry already exists.');
+      if (options.enrol)
+        this.db.runSync('INSERT OR IGNORE INTO enrolments VALUES(?,?,?)', language, id, time);
+    });
+  }
+  hasStudyHistory(language: LearningLanguage, id: string) {
+    return !!this.db.getAllSync(
+      'SELECT 1 FROM session_cards c JOIN personal_entries p USING(languageId,wordId) WHERE languageId=? AND wordId=? AND c.contentRevision=p.revision LIMIT 1',
+      language,
+      id,
+    ).length;
+  }
+  archiveEntry(language: LearningLanguage, id: string) {
+    this.commit(() => {
+      this.db.runSync(
+        'UPDATE personal_entries SET archivedAt=? WHERE languageId=? AND wordId=? AND archivedAt IS NULL',
+        new Date(this.now()).toISOString(),
+        language,
+        id,
+      );
+      if (id.startsWith(personalPrefix)) this.invalidate(language, id);
+    });
+  }
+  private invalidate(language: LearningLanguage, id: string) {
+    this.db.runSync('DELETE FROM review_state WHERE languageId=? AND wordId=?', language, id);
+    const session = this.current(language);
+    if (!session || session.phase === 'completed') return;
+    this.db.runSync(
+      `UPDATE session_cards SET skipped=1 WHERE sessionId=? AND wordId=? AND NOT EXISTS
+      (SELECT 1 FROM ratings r WHERE r.sessionId=session_cards.sessionId AND r.pass=session_cards.pass AND r.position=session_cards.position)`,
+      session.id,
+      id,
+    );
+    const cards = this.cards(session.id);
+    if (session.phase === 'offer' && !cards.some((c) => c.pass === 'revisit' && !c.skipped))
+      this.finish(session.id);
+    if (
+      cards.some((c) => c.pass === session.phase && c.position === session.cursor && c.skipped) &&
+      (session.phase === 'first' || session.phase === 'revisit')
+    )
+      this.advance(session.id, { pass: session.phase, position: session.cursor });
+  }
   inventory(language: LearningLanguage) {
     const rows = this.db.getAllSync<{ wordId: string; attempted: number }>(
       `
       SELECT e.wordId, EXISTS(SELECT 1 FROM review_state r
         WHERE r.languageId=e.languageId AND r.wordId=e.wordId AND r.lastRating IS NOT NULL) AS attempted
-      FROM enrolments e WHERE languageId=? ORDER BY enrolledAt, e.rowid`,
+      FROM enrolments e WHERE languageId=? AND NOT EXISTS(SELECT 1 FROM personal_entries p WHERE p.wordId=e.wordId AND p.archivedAt IS NOT NULL) ORDER BY enrolledAt, e.rowid`,
       language,
+    );
+    const availableRows = rows.filter(
+      ({ wordId }) => wordId.startsWith(personalPrefix) || this.curatedAvailable(language, wordId),
     );
     return {
       enrolled: new Set(rows.map((row) => row.wordId)),
-      eligible: rows
-        .filter((row) => !row.attempted && this.available(language, row.wordId))
-        .map((row) => row.wordId),
+      available: new Set(availableRows.map((row) => row.wordId)),
+      eligible: availableRows.filter((row) => !row.attempted).map((row) => row.wordId),
     };
   }
   enrol(language: LearningLanguage, ids: readonly string[]) {
@@ -72,7 +234,10 @@ export class LearningStore {
   }
   cards(id: string) {
     return this.db.getAllSync<Card>(
-      `SELECT c.*,r.rating FROM session_cards c LEFT JOIN ratings r USING(sessionId,pass,position)
+      `SELECT c.*,r.rating, NOT EXISTS(SELECT 1 FROM session_cards prior JOIN ratings pr USING(sessionId,pass,position)
+        WHERE prior.languageId=c.languageId AND prior.wordId=c.wordId AND prior.direction=c.direction AND prior.pass='first'
+          AND prior.contentRevision IS c.contentRevision AND (r.sequence IS NULL OR pr.sequence<r.sequence)) AS firstPractice
+        FROM session_cards c LEFT JOIN ratings r USING(sessionId,pass,position)
       WHERE c.sessionId=? ORDER BY c.pass,c.position`,
       id,
     );
@@ -83,9 +248,7 @@ export class LearningStore {
   today(language: LearningLanguage, now = this.now(), releaseSession = false) {
     const inventory = this.inventory(language);
     const newWords = new Set(inventory.eligible);
-    const availableWords = new Set(
-      [...inventory.enrolled].filter((id) => this.available(language, id)),
-    );
+    const availableWords = inventory.available;
     const session = this.current(language);
     const reserved = new Set(
       !releaseSession && session?.mode === 'learn_new'
@@ -124,6 +287,7 @@ export class LearningStore {
       nextDueAt,
       session,
       enrolled: availableWords.size,
+      introduced: availableWords.size - newWords.size,
       newWords: inventory.eligible.filter((id) => !dueWords.has(id)),
       familiarWords: [...familiarDirections.values()].filter((count) => count === 2).length,
     };
@@ -216,7 +380,7 @@ export class LearningStore {
   present(language: LearningLanguage, id: string, key: Occurrence) {
     this.commit(() => {
       const card = this.at(language, id, key);
-      if (!card) return;
+      if (!card || card.rating) return;
       if (!this.available(language, card.wordId)) {
         this.db.runSync(
           'UPDATE session_cards SET skipped=1 WHERE sessionId=? AND pass=? AND position=?',
@@ -239,7 +403,8 @@ export class LearningStore {
   reveal(language: LearningLanguage, id: string, key: Occurrence) {
     this.commit(() => {
       const card = this.at(language, id, key);
-      if (!card?.shownAt || card.revealedAt) return;
+      if (!card?.shownAt || card.skipped || card.revealedAt || !this.currentContent(language, card))
+        return;
       const now = this.now();
       this.db.runSync(
         'UPDATE session_cards SET revealedAt=? WHERE sessionId=? AND pass=? AND position=?',
@@ -254,7 +419,7 @@ export class LearningStore {
   rate(language: LearningLanguage, id: string, key: Occurrence, rating: Rating) {
     this.commit(() => {
       const card = this.at(language, id, key);
-      if (!card || card.rating) return;
+      if (!card || card.skipped || card.rating || !this.currentContent(language, card)) return;
       if (!card.revealedAt) throw new Error('Reveal the answer first.');
       const now = this.now();
       this.db.runSync(
@@ -287,9 +452,10 @@ export class LearningStore {
   }
   private advance(id: string, key: Occurrence) {
     const cards = this.cards(id);
-    if (cards.some((c) => c.pass === key.pass && c.position === key.position + 1)) {
-      this.db.runSync('UPDATE sessions SET cursor=cursor+1 WHERE id=?', id);
-    } else if (key.pass === 'first' && cards.some((c) => c.pass === 'revisit')) {
+    const next = cards.find((c) => c.pass === key.pass && c.position > key.position && !c.skipped);
+    if (next) {
+      this.db.runSync('UPDATE sessions SET cursor=? WHERE id=?', next.position, id);
+    } else if (key.pass === 'first' && cards.some((c) => c.pass === 'revisit' && !c.skipped)) {
       this.db.runSync("UPDATE sessions SET phase='offer',cursor=0 WHERE id=?", id);
     } else this.finish(id);
   }
@@ -297,7 +463,11 @@ export class LearningStore {
     this.commit(() => {
       const session = this.current(language);
       if (session?.id !== id || session.phase !== 'offer') return;
-      if (revisit) this.db.runSync("UPDATE sessions SET phase='revisit' WHERE id=?", id);
+      if (revisit)
+        this.db.runSync(
+          "UPDATE sessions SET phase='revisit',cursor=(SELECT min(position) FROM session_cards WHERE sessionId=sessions.id AND pass='revisit' AND skipped=0) WHERE id=?",
+          id,
+        );
       else this.finish(id);
     });
   }
