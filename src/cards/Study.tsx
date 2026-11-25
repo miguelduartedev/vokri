@@ -10,11 +10,14 @@ import {
   type DirectionChoice,
   type Origin,
   type Session,
+  type SessionMode,
 } from '@/domain/learning/model';
+import { localDueTime } from './use-daily-learning';
+import { reviewBatchSize } from '../domain/learning/review';
 import { useLearning, useInventory } from '@/learning/provider';
 import { Type, Button, Control, Icon, Surface } from '@/ui/primitives';
 import { useTheme } from '@/ui/theme';
-import { Flashcard, RatingActions } from '@/ui/flashcard';
+import { Flashcard, RatingActions, ratingColors } from '@/ui/flashcard';
 import { DirectionChoices } from '@/ui/preferences';
 import { useLearningAction } from '@/cards/study-controls';
 
@@ -42,20 +45,31 @@ export function Study({
   origin,
   context,
   initialChoice,
+  mode,
+  startedSessionId,
 }: {
   language: LearningLanguage;
   origin: Origin;
   context?: string[];
   initialChoice: DirectionChoice;
+  mode: SessionMode;
+  startedSessionId?: string;
 }) {
   const store = useLearning();
   const { session, eligible } = useInventory(language);
+  const review = (session?.mode ?? mode) === 'review_due';
   const { colors } = useTheme();
   const { width, fontScale } = useWindowDimensions();
   const { run, error } = useLearningAction();
   const [choice, setChoice] = useState(initialChoice);
+  function startSession(replaceId?: string) {
+    if (mode === 'review_due') store.startReview(language, replaceId);
+    else store.start(language, origin, choice, context, replaceId);
+  }
   const [view, setView] = useState<'study' | 'resume' | 'leave' | 'replace'>(() =>
-    session && session.phase !== 'completed' ? 'resume' : 'study',
+    session && session.id !== startedSessionId && session.phase !== 'completed'
+      ? 'resume'
+      : 'study',
   );
   const [presentError, setPresentError] = useState(false);
   const [retry, setRetry] = useState(0);
@@ -107,32 +121,55 @@ export function Study({
   const revisits = cards.filter((c) => c.pass === 'revisit');
   const studied = first.filter((c) => c.rating).length;
   const revisited = revisits.filter((c) => c.rating).length;
-  const count = selectNew(eligible, context).length;
+  let count = 0;
+  if (!session || view === 'replace') {
+    const candidates = store.today(language, store.now(), view === 'replace');
+    count =
+      mode === 'review_due'
+        ? Math.min(candidates.due.length, reviewBatchSize)
+        : selectNew(context ? eligible : candidates.newWords, context).length;
+  }
   const name = languages[language].name;
   let title = '',
-    stage = 'NEW WORDS',
+    stage = review ? 'DUE REVIEW' : 'NEW WORDS',
     counter = '',
     progress = 0,
     body: ReactNode,
     actions: ReactNode;
   if (!session) {
-    title = count ? 'Learn new words.' : 'No new words here.';
+    title = review
+      ? count
+        ? 'Review due cards.'
+        : 'All caught up.'
+      : count
+        ? 'Learn new words.'
+        : 'No new words here.';
     body = count ? (
       <>
         <Type>
-          {count} {name} {count === 1 ? 'word' : 'words'} ready to study.
+          {count} {name}{' '}
+          {review ? (count === 1 ? 'card' : 'cards') : count === 1 ? 'word' : 'words'} ready to
+          study.
         </Type>
-        <Type variant="eyebrow">CARD DIRECTION</Type>
-        <DirectionChoices language={language} value={choice} onSelect={setChoice} />
+        {!review && (
+          <>
+            <Type variant="eyebrow">CARD DIRECTION</Type>
+            <DirectionChoices language={language} value={choice} onSelect={setChoice} />
+          </>
+        )}
       </>
     ) : (
-      <Type>Add words in Discover to start learning.</Type>
+      <Type>
+        {review ? 'No cards are due for review.' : 'Add words in Discover to start learning.'}
+      </Type>
     );
     actions = count ? (
       <Button
-        label="Start session"
-        onPress={() => run(() => store.start(language, origin, choice, context))}
+        label={review ? 'Start review' : 'Start session'}
+        onPress={() => run(() => startSession())}
       />
+    ) : review ? (
+      <Button label="Back to Today" onPress={() => leave({ kind: 'today' })} />
     ) : (
       <Button label="Explore words" onPress={() => router.dismissTo('/discover')} />
     );
@@ -151,9 +188,11 @@ export function Study({
     body = (
       <>
         <Type>
-          Your ratings and study words stay saved. Unrated words are available to learn again.
+          Your ratings and study words stay saved. Unrated cards remain available for study.
         </Type>
-        {!!count && <DirectionChoices language={language} value={choice} onSelect={setChoice} />}
+        {!!count && mode === 'learn_new' && (
+          <DirectionChoices language={language} value={choice} onSelect={setChoice} />
+        )}
       </>
     );
     actions = (
@@ -167,7 +206,7 @@ export function Study({
           label={count ? 'End and start new' : 'End unfinished session'}
           onPress={() =>
             run(() => {
-              store.start(language, origin, choice, context, session.id);
+              startSession(session.id);
               setView('study');
             })
           }
@@ -181,7 +220,7 @@ export function Study({
       <Surface>
         <Type variant="title">{name} flashcards</Type>
         <Type>
-          {studied} of {first.length} words rated
+          {studied} of {first.length} {review ? 'cards' : 'words'} rated
         </Type>
       </Surface>
     );
@@ -205,9 +244,10 @@ export function Study({
         <Type>Take one more look at words you marked Again or Almost.</Type>
         <Surface>
           {revisits.map((c) => (
-            <Type key={c.wordId}>
+            <Type key={c.position}>
               {getVocabularyItem({ languageId: language, wordId: c.wordId })?.displayForm ??
                 'Unavailable word'}
+              {review && ' · ' + c.direction}
             </Type>
           ))}
         </Surface>
@@ -221,27 +261,60 @@ export function Study({
           onPress={() => run(() => store.chooseRevisit(language, session.id, false))}
         />
         <Button
-          label={'Revisit ' + revisits.length + (revisits.length === 1 ? ' word' : ' words')}
+          label={
+            'Revisit ' +
+            revisits.length +
+            (review
+              ? revisits.length === 1
+                ? ' card'
+                : ' cards'
+              : revisits.length === 1
+                ? ' word'
+                : ' words')
+          }
           onPress={() => run(() => store.chooseRevisit(language, session.id, true))}
         />
       </>
     );
   } else if (session.phase === 'completed') {
-    title = 'New words to return to.';
+    title = review ? 'Review complete.' : 'New words to return to.';
     stage = 'SESSION FINISHED';
     counter = studied + ' studied';
     progress = 1;
     body = (
       <>
-        <Type>Your ratings are saved on this device.</Type>
+        <Type>
+          {review
+            ? 'Your ratings set the next review for each direction.'
+            : 'Your ratings are saved on this device.'}
+        </Type>
         <Surface>
-          <Type>New words studied · {studied}</Type>
+          <Type>
+            {review ? 'Cards reviewed' : 'New words studied'} · {studied}
+          </Type>
+          {review && (
+            <Type>
+              Distinct words · {new Set(first.filter((c) => c.rating).map((c) => c.wordId)).size}
+            </Type>
+          )}
           <Type>Items revisited · {revisited}</Type>
         </Surface>
       </>
     );
     actions = (
       <>
+        {review && (
+          <Button
+            variant="secondary"
+            label="Explore words"
+            onPress={() =>
+              run(() => {
+                store.dismiss(language, session.id);
+                router.dismissTo('/discover');
+              })
+            }
+          />
+        )}
         {source.kind !== 'today' && (
           <Button
             variant="secondary"
@@ -255,16 +328,29 @@ export function Study({
   } else if (card && item) {
     const total = card.pass === 'first' ? first.length : revisits.length;
     counter = card.position + 1 + ' of ' + total;
-    stage = card.pass === 'first' ? 'LEARNING · FIRST PASS' : 'ANOTHER LOOK';
+    stage =
+      card.pass === 'first'
+        ? review
+          ? 'REVIEW · FIRST PASS'
+          : 'LEARNING · FIRST PASS'
+        : 'ANOTHER LOOK';
     progress = (card.position + (card.rating ? 1 : 0)) / total;
     const reveal = () => run(() => store.reveal(language, session.id, card));
     const deckTitle = source.kind === 'deck' ? getDeck(language, source.id)?.title : undefined;
+    const schedule =
+      card.rating && card.pass === 'first' ? store.reviewState(language, card) : undefined;
     body = (
       <>
-        <Type variant="eyebrow" color={colors.secondary}>
-          {(deckTitle ?? name).toUpperCase()} ·{' '}
-          {card.pass === 'first' ? 'NEW WORDS' : 'SAME-SESSION REVISIT'}
-        </Type>
+        {!card.rating && (
+          <Type variant="eyebrow" color={colors.secondary}>
+            {(deckTitle ?? name).toUpperCase()} ·{' '}
+            {card.pass === 'first'
+              ? review
+                ? 'SCHEDULED REVIEW'
+                : 'NEW WORDS'
+              : 'SAME-SESSION REVISIT'}
+          </Type>
+        )}
         <Flashcard
           item={item}
           direction={card.direction}
@@ -272,8 +358,20 @@ export function Study({
           reveal={reveal}
         />
         {card.rating && (
-          <Surface style={{ backgroundColor: colors.selected }}>
-            <Type accessibilityLiveRegion="polite">{card.rating} · Rating saved</Type>
+          <Surface
+            style={{
+              backgroundColor: ratingColors[card.rating],
+              borderColor: ratingColors[card.rating],
+            }}
+          >
+            <Type accessibilityLiveRegion="polite" color="#183B35" variant="label">
+              {card.rating} · Rating saved
+            </Type>
+            {schedule && (
+              <Type variant="caption" color="#183B35">
+                Next {card.direction} review · {localDueTime(schedule.dueAt)}
+              </Type>
+            )}
           </Surface>
         )}
       </>
@@ -305,7 +403,9 @@ export function Study({
         <Type variant="label" style={{ flex: 1 }}>
           Flashcards
         </Type>
-        {width / fontScale >= 300 && <Type variant="eyebrow">NEW WORDS</Type>}
+        {width / fontScale >= 300 && (
+          <Type variant="eyebrow">{review ? 'DUE REVIEW' : 'NEW WORDS'}</Type>
+        )}
       </View>
       <ScrollView
         ref={scroll}

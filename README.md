@@ -1,6 +1,6 @@
 # Vokri Cards
 
-Vokri Cards is a local-first flashcards app for learners of Finnish and Swedish. Its interface is English. The mobile foundation includes language selection, navigation, preferences and an offline vocabulary engine for 4,000 entries. Full Vokri, the future structured-course product, will reuse the vocabulary, learning-domain, persistence and design foundations.
+Vokri Cards is a local-first flashcards app for learners of Finnish and Swedish. Its interface is English. Today offers daily reviews and new words from your enrolled vocabulary. Each recall direction has its own offline schedule. Full Vokri, the future structured-course product, will reuse the vocabulary, learning-domain, persistence and design foundations.
 
 ## Run on a phone or emulator
 
@@ -39,8 +39,8 @@ Open the project in a compatible Expo Go client for SDK 58. Scan the Metro QR co
 
 GitHub Actions runs clean installation, vocabulary validation and reproducibility, type checking, linting, tests, Expo configuration and dependency checks, and both bundle exports for pull requests. [Android verification and screenshots](docs/handoff/vokri-cards/foundation-qa.md)
 
-## Source and next milestone
+## Learning and vocabulary sources
 
 Expo Router routes live in `app/`. Cards-specific screens and navigation composition live in `src/cards/`. Shared language and vocabulary references live in `src/domain/`, storage and state in `src/preferences/`, and navigation-independent controls and theme in `src/ui/`.
 
-The shared vocabulary engine exposes 2,000 Finnish and 2,000 Swedish entries through stable references, language-scoped search, tier and topic filters, and optional grammar. Discover uses it for six curated decks and the complete bilingual catalogue. [Discover architecture and deck inventory](docs/architecture/vokri-cards-discover.md) · [Discover QA and screenshots](docs/handoff/vokri-cards/discover-qa.md) [Flashcards and local learning evidence](docs/handoff/vokri-cards/vokri-cards-data-and-review-contract.md#implemented-learn-new-contract--pr-18) · [Learn New QA](docs/handoff/vokri-cards/learn-new-qa.md). Scheduled Review follows in PR #19. [Vocabulary engine and commands](docs/architecture/vocabulary-engine.md) · [Source audit and validation](docs/architecture/vocabulary-engine-validation.md) · [Cards-first roadmap](docs/architecture/vokri-cards-first-implementation-plan.md)
+The shared vocabulary engine exposes 2,000 Finnish and 2,000 Swedish entries through stable references, language-scoped search, tier and topic filters, and optional grammar. Discover uses it for six curated decks and the complete bilingual catalogue. [Discover architecture and deck inventory](docs/architecture/vokri-cards-discover.md) · [Discover QA and screenshots](docs/handoff/vokri-cards/discover-qa.md) [Flashcards and local learning evidence](docs/handoff/vokri-cards/vokri-cards-data-and-review-contract.md#implemented-learn-new-contract--pr-18) · [Learn New QA](docs/handoff/vokri-cards/learn-new-qa.md). Today offers up to ten due cards per batch and preserves paused reviews across restarts. [Scheduling contract](docs/handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) · [Review QA](docs/handoff/vokri-cards/review-qa.md). [Vocabulary engine and commands](docs/architecture/vocabulary-engine.md) · [Source audit and validation](docs/architecture/vocabulary-engine-validation.md) · [Cards-first roadmap](docs/architecture/vokri-cards-first-implementation-plan.md)

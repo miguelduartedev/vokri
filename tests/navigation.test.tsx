@@ -264,3 +264,63 @@ it('confirms whole-deck enrolment, pauses a revealed card and replaces only afte
     { rating: 'Again' },
   ]);
 });
+
+it('refreshes Today when a due boundary passes and reviews the frozen directions with actual counts', async () => {
+  jest.useFakeTimers({ now: Date.UTC(2026, 2, 28, 12) });
+  try {
+    await AsyncStorage.setItem(
+      preferencesKey,
+      JSON.stringify({ schemaVersion: 1, activeLearningLanguage: 'sv', appearance: 'light' }),
+    );
+    await renderRouter(routes, { initialUrl: '/discover/word/sv-bok-9992bfa7?language=sv' });
+    await fireEvent.press(await screen.findByText('Add to study'));
+    await fireEvent.press(await screen.findByText('Learn New'));
+    await fireEvent.press(await screen.findByText('Start session'));
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled());
+    await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+    await fireEvent.press(await screen.findByText('Knew It'));
+    await fireEvent.press(await screen.findByText('Next card'));
+    // Both persisted directions mature while Today stays mounted.
+    const [{ dueAt }] = mockDatabase.getAllSync<{ dueAt: number }>(
+      'SELECT min(dueAt) AS dueAt FROM review_state',
+    );
+    jest.setSystemTime(dueAt - 5000);
+    await fireEvent.press(await screen.findByText('Back to Today'));
+    expect(await screen.findByText('All caught up.')).toBeOnTheScreen();
+    await act(async () => {
+      jest.advanceTimersByTime(dueAt - Date.now() - 1);
+    });
+    expect(screen.queryByRole('button', { name: 'Review 1 word' })).toBeNull();
+    await act(async () => {
+      jest.advanceTimersByTime(1);
+    });
+    const due = await screen.findByRole('button', { name: 'Review 1 word' });
+    await fireEvent.press(due);
+    expect(await screen.findByText('1 of 2')).toBeOnTheScreen();
+    expect(screen.getByText('DUE REVIEW')).toBeOnTheScreen();
+    for (const rating of ['Again', 'Knew It']) {
+      await waitFor(() =>
+        expect(screen.getByRole('button', { name: 'Show answer' })).toBeEnabled(),
+      );
+      await fireEvent.press(screen.getByRole('button', { name: 'Show answer' }));
+      await fireEvent.press(await screen.findByText(rating));
+      expect(await screen.findByText(/Next (recognition|production) review/)).toBeOnTheScreen();
+      await fireEvent.press(await screen.findByText('Next card'));
+    }
+    await fireEvent.press(await screen.findByText('Finish session'));
+    expect(await screen.findByText('Cards reviewed · 2')).toBeOnTheScreen();
+    expect(screen.getByText('Distinct words · 1')).toBeOnTheScreen();
+    await fireEvent.press(screen.getByText('Back to Today'));
+    expect(await screen.findByText('All caught up.')).toBeOnTheScreen();
+    expect(
+      mockDatabase.getAllSync(
+        "SELECT rating,direction FROM learning_evidence_v2 WHERE source='cards.review_due' ORDER BY sequence",
+      ),
+    ).toEqual([
+      { rating: 'Again', direction: 'recognition' },
+      { rating: 'Knew It', direction: 'production' },
+    ]);
+  } finally {
+    jest.useRealTimers();
+  }
+});

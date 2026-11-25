@@ -58,7 +58,7 @@ afterEach(() => {
 it('applies migration once and preserves newer database versions', () => {
   store.enrol('fi', ['a']);
   migrateLearning(db);
-  db.execSync('PRAGMA user_version=2');
+  db.execSync('PRAGMA user_version=3');
   expect(() => migrateLearning(db)).toThrow(/newer app/);
   expect(store.inventory('fi').eligible).toEqual(['a']);
 });

@@ -1,5 +1,1 @@
-import { TabPage } from '@/cards/TabPage';
-
-export default function Today() {
-  return <TabPage page="today" />;
-}
+export { Today as default } from '@/cards/Today';
