@@ -2,6 +2,7 @@ import { router, useFocusEffect } from 'expo-router';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { BackHandler, ScrollView, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { collectionRoute } from './collection-controls';
 import { blankDraft, personalPrefix, type LearningItem } from '@/domain/learning/personal';
 import { getVocabularyItem } from '@/domain/vocabulary/registry';
 import { getDeck } from '@/domain/vocabulary/decks';
@@ -24,6 +25,7 @@ import { useLearningAction } from '@/cards/study-controls';
 
 function returnTo(language: LearningLanguage, origin: Origin) {
   if (origin.kind === 'today') return router.dismissTo('/today');
+  if (origin.kind === 'collection') return router.dismissTo(collectionRoute(language, origin.id));
   if (origin.kind === 'deck' && getDeck(language, origin.id))
     return router.dismissTo({
       pathname: '/discover/deck/[deckId]',
@@ -124,7 +126,9 @@ export function Study({
   function leave(destination: Origin = source) {
     run(() => {
       if (session?.phase === 'completed') store.dismiss(language, session.id);
-      if (destination === source && missingPersonalOrigin) router.dismissTo('/my-words');
+      if (destination.kind === 'collection' && !store.collection(language, destination.id))
+        router.dismissTo('/my-words/collections');
+      else if (destination === source && missingPersonalOrigin) router.dismissTo('/my-words');
       else returnTo(language, destination);
     });
   }
@@ -347,11 +351,15 @@ export function Study({
           <Button
             variant="secondary"
             label={
-              source.kind === 'deck'
-                ? 'Back to collection'
-                : missingPersonalOrigin
-                  ? 'Back to My Words'
-                  : 'Back to word'
+              source.kind === 'collection'
+                ? store.collection(language, source.id)
+                  ? 'Back to collection'
+                  : 'Back to collections'
+                : source.kind === 'deck'
+                  ? 'Back to collection'
+                  : missingPersonalOrigin
+                    ? 'Back to My Words'
+                    : 'Back to word'
             }
             onPress={() => leave()}
           />
@@ -373,7 +381,12 @@ export function Study({
         : 'ANOTHER LOOK';
     progress = (index + (card.rating ? 1 : 0)) / total;
     const reveal = () => run(() => store.reveal(language, session.id, card));
-    const deckTitle = source.kind === 'deck' ? getDeck(language, source.id)?.title : undefined;
+    const originTitle =
+      source.kind === 'collection'
+        ? store.collection(language, source.id)?.name
+        : source.kind === 'deck'
+          ? getDeck(language, source.id)?.title
+          : undefined;
     const schedule =
       card.rating && !historical && card.pass === 'first'
         ? store.reviewState(language, card)
@@ -382,7 +395,7 @@ export function Study({
       <>
         {!card.rating && (
           <Type variant="eyebrow" color={colors.secondary}>
-            {(deckTitle ?? name).toUpperCase()} ·{' '}
+            {(originTitle ?? name).toUpperCase()} ·{' '}
             {card.pass === 'first'
               ? review
                 ? card.firstPractice

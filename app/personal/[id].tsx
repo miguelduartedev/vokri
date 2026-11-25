@@ -1,3 +1,4 @@
+import { OrganizeButton } from '@/cards/collection-controls';
 import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { Alert } from 'react-native';
 import { useLanguage } from '@/cards/discover-controls';
@@ -59,6 +60,7 @@ function Detail({ language, id }: { language: LearningLanguage; id: string }) {
           <Button label="Go to Today" onPress={() => router.navigate('/today')} />
         )}
       </Surface>
+      <OrganizeButton language={language} wordId={id} />
       <Button
         variant="secondary"
         label="Edit entry"

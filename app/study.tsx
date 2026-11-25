@@ -26,7 +26,16 @@ export default function StudyRoute() {
   const language = state.preferences.activeLearningLanguage;
   let origin: Origin = { kind: 'today' };
   let context: string[] | undefined;
-  if (params.origin === 'deck') {
+  if (params.origin === 'collection') {
+    const id = params.id ?? '';
+    if (!store.collection(language, id)) {
+      const frozen = store.current(language);
+      if (frozen?.originKind !== 'collection' || frozen.originId !== id)
+        return <Redirect href="/my-words/collections" />;
+    }
+    origin = { kind: 'collection', id };
+    context = store.memberIds(language, id);
+  } else if (params.origin === 'deck') {
     const deck = getDeck(language, params.id ?? '');
     if (!deck) return <Redirect href="/discover" />;
     origin = { kind: 'deck', id: deck.deckId };

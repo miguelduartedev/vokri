@@ -6,7 +6,7 @@ Vokri Cards is Vokri’s first application. Learners choose Finnish or Swedish, 
 
 One iOS/Android Expo application uses Expo Router, React Native and strict TypeScript. The UI uses Nordic Editorial tokens and locally bundled Newsreader and Inter. A small React provider exposes a pure TypeScript preference store to both the app and its tests. The native composition root supplies AsyncStorage. Zod validates the versioned record. Jest Expo runs domain and navigation tests together. The installed versions and commands live in the [root README](../../README.md).
 
-Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Learning now shares directional evidence, resumable session persistence and the deterministic review engine. Personal words, phrases and sentences resolve through the same learning store as curated items. Collection membership comes in the next milestone. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
+Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Learning now shares directional evidence, resumable session persistence and the deterministic review engine. Personal words, phrases and sentences resolve through the same learning store as curated items. Language-scoped personal collections reference those items and feed the existing Learn New engine. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
 
 | Expected PR | Deliverable and dependency |
 | --- | --- |
@@ -16,7 +16,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 18 | Explicit enrolment, Learn New, persistent directional evidence and resumable flashcards |
 | 19 | [Private alpha with scheduled Review, live Today and SQLite v2 recovery](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) |
 | 20 | [My Words, personal capture and SQLite v3 content revisions](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-vocabulary--pr-20) |
-| 21 | Personal collections and study using canonical membership references |
+| 21 | [Personal collections, explicit enrolment and collection-scoped Learn New](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-collections) |
 | 22 | Language-scoped interchange, data management and backup decisions |
 | 23 | Feature-complete V1 candidate after cross-feature, accessibility and native regression QA |
 | 24 | Native beta readiness, release content clearance and distribution preparation |
@@ -46,4 +46,4 @@ A mixed session resolves each card to learning-language-to-English or English-to
 
 Appearance and active language are global preferences. Enrolment, history, schedules and unfinished sessions are scoped by language. Checkpoint ongoing study before switching and restore it when the learner returns. Known Finnish-only legacy data may be migrated to Finnish when an actual historical format exists. Require explicit language provenance.
 
-The older personal-word JSON handoff and the latest CSV interchange designs describe different data scopes. Resolve interchange and complete backup before PR 22. A CSV cannot restore review evidence or session state. Preview imports with explicit language identity, resolve duplicates per language and preserve existing content. Name the affected language on reset and preserve personal words when resetting study progress.
+SQLite v4 preserves collection origins on frozen sessions and keeps membership independent of learning evidence. The older personal-word JSON handoff and the latest CSV interchange designs describe different data scopes. Resolve interchange and complete backup before PR 22. A CSV cannot restore review evidence or session state. Preview imports with explicit language identity, resolve duplicates per language and preserve existing content. Name the affected language on reset and preserve personal words when resetting study progress.

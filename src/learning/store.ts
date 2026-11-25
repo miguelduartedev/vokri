@@ -24,6 +24,20 @@ import { selectReview, type ReviewCard } from '../domain/learning/review';
 import { getReviewState, recordExposure, recordFirstPass } from './review-state';
 import type { LearningDatabase } from './database';
 
+export interface Collection {
+  id: string;
+  languageId: LearningLanguage;
+  name: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+}
+export interface MembershipChange {
+  collectionId: string;
+  wordId: string;
+  selected: boolean;
+}
+
 type Occurrence = Pick<Card, 'position' | 'pass'>;
 export class LearningStore {
   constructor(
@@ -77,6 +91,115 @@ export class LearningStore {
       ? !!this.personal(language, id)
       : this.curatedAvailable(language, id);
   }
+  collections(language: LearningLanguage) {
+    return this.db.getAllSync<Collection & { count: number; enrolled: number }>(
+      `SELECT c.*, count(m.wordId) AS count,count(e.wordId) AS enrolled
+      FROM collections c LEFT JOIN collection_members m ON c.languageId=m.languageId AND c.id=m.collectionId
+      LEFT JOIN enrolments e ON e.languageId=m.languageId AND e.wordId=m.wordId
+      WHERE c.languageId=? GROUP BY c.id ORDER BY c.createdAt DESC,c.rowid DESC`,
+      language,
+    );
+  }
+  collection(language: LearningLanguage, id: string): Collection | undefined {
+    return this.db.getAllSync<Collection>(
+      'SELECT * FROM collections WHERE languageId=? AND id=?',
+      language,
+      id,
+    )[0];
+  }
+  memberIds(language: LearningLanguage, id: string) {
+    return this.db
+      .getAllSync<{
+        wordId: string;
+      }>('SELECT wordId FROM collection_members WHERE languageId=? AND collectionId=? ORDER BY rowid', language, id)
+      .map((row) => row.wordId);
+  }
+  memberships(language: LearningLanguage, wordId: string) {
+    return this.db
+      .getAllSync<{
+        collectionId: string;
+      }>('SELECT collectionId FROM collection_members WHERE languageId=? AND wordId=?', language, wordId)
+      .map((row) => row.collectionId);
+  }
+  saveCollection(
+    language: LearningLanguage,
+    name: string,
+    description: string,
+    original?: Collection,
+  ) {
+    const key = searchKey(name);
+    if (!key) throw new Error('Enter a collection name.');
+    const id =
+      original?.id ??
+      this.db.getAllSync<{ id: string }>('SELECT lower(hex(randomblob(16))) AS id')[0].id;
+    this.commit(() => {
+      if (original && this.collection(language, id)?.updatedAt !== original.updatedAt)
+        throw new Error('This collection changed. Reopen it before editing.');
+      if (
+        this.db.getAllSync(
+          'SELECT 1 FROM collections WHERE languageId=? AND nameKey=? AND id<>?',
+          language,
+          key,
+          id,
+        ).length
+      )
+        throw new Error('A collection with this name already exists.');
+      const stamp = new Date(
+        Math.max(this.now(), original ? Date.parse(original.updatedAt) + 1 : 0),
+      ).toISOString();
+      if (original)
+        this.db.runSync(
+          'UPDATE collections SET name=?,nameKey=?,description=?,updatedAt=? WHERE languageId=? AND id=?',
+          name.trim(),
+          key,
+          description.trim(),
+          stamp,
+          language,
+          id,
+        );
+      else
+        this.db.runSync(
+          'INSERT INTO collections(languageId,id,name,nameKey,description,createdAt,updatedAt) VALUES(?,?,?,?,?,?,?)',
+          language,
+          id,
+          name.trim(),
+          key,
+          description.trim(),
+          stamp,
+          stamp,
+        );
+    });
+    return id;
+  }
+  deleteCollection(language: LearningLanguage, id: string) {
+    this.commit(() =>
+      this.db.runSync('DELETE FROM collections WHERE languageId=? AND id=?', language, id),
+    );
+  }
+  private addMember(language: LearningLanguage, collectionId: string, wordId: string) {
+    this.db.runSync(
+      'INSERT INTO collection_members VALUES(?,?,?) ON CONFLICT DO NOTHING',
+      language,
+      collectionId,
+      wordId,
+    );
+  }
+  changeMemberships(language: LearningLanguage, changes: readonly MembershipChange[]) {
+    this.commit(() => {
+      for (const { collectionId, wordId, selected } of changes) {
+        if (selected) {
+          if (!this.available(language, wordId)) throw new Error('This vocabulary is unavailable.');
+          this.addMember(language, collectionId, wordId);
+        } else
+          this.db.runSync(
+            'DELETE FROM collection_members WHERE languageId=? AND collectionId=? AND wordId=?',
+            language,
+            collectionId,
+            wordId,
+          );
+      }
+    });
+  }
   newPersonalId() {
     return (
       personalPrefix +
@@ -102,7 +225,12 @@ export class LearningStore {
     language: LearningLanguage,
     id: string,
     draft: PersonalDraft,
-    options: { original?: PersonalEntry; enrol?: boolean; confirmReset?: boolean } = {},
+    options: {
+      original?: PersonalEntry;
+      enrol?: boolean;
+      confirmReset?: boolean;
+      collections?: readonly string[];
+    } = {},
   ) {
     if (!validDraft(draft) || !/^personal:[0-9a-f]{32}$/.test(id))
       throw new Error('Enter an expression and English meaning.');
@@ -154,6 +282,8 @@ export class LearningStore {
         )
       )
         throw new Error('This entry already exists.');
+      for (const collectionId of options.collections ?? [])
+        this.addMember(language, collectionId, id);
       if (options.enrol)
         this.db.runSync('INSERT OR IGNORE INTO enrolments VALUES(?,?,?)', language, id, time);
     });
@@ -173,7 +303,14 @@ export class LearningStore {
         language,
         id,
       );
-      if (id.startsWith(personalPrefix)) this.invalidate(language, id);
+      if (id.startsWith(personalPrefix)) {
+        this.db.runSync(
+          'DELETE FROM collection_members WHERE languageId=? AND wordId=?',
+          language,
+          id,
+        );
+        this.invalidate(language, id);
+      }
     });
   }
   private invalidate(language: LearningLanguage, id: string) {
@@ -320,6 +457,7 @@ export class LearningStore {
   ) {
     const { mode, origin, choice, context } = request;
     this.commit(() => {
+      if (origin.kind === 'collection' && !this.collection(language, origin.id)) return;
       const prior = this.current(language);
       if (prior && prior.id !== replaceId) return;
       if (replaceId && (!prior || prior.phase === 'completed')) return;
@@ -340,7 +478,10 @@ export class LearningStore {
           origin.kind === 'today'
             ? this.today(language, timestamp).newWords
             : this.inventory(language).eligible;
-        cards = selectNew(eligible, context).map((wordId, position) => ({
+        cards = selectNew(
+          eligible,
+          origin.kind === 'collection' ? this.memberIds(language, origin.id) : context,
+        ).map((wordId, position) => ({
           wordId,
           direction: resolveDirection(choice, position),
         }));

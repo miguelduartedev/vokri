@@ -10,6 +10,8 @@ import { CardsHeader } from './controls';
 import { DiscoverPage, useLanguage } from './discover-controls';
 import { Field, Chips, openEntry } from './personal-controls';
 
+import { MyWordsSections } from './collection-controls';
+
 export function MyWords() {
   const language = useLanguage();
   return language && <List key={language} language={language} />;
@@ -46,6 +48,7 @@ function List({ language }: { language: LearningLanguage }) {
               My Words.
             </Type>
             <Type>The {name} expressions you want to remember.</Type>
+            <MyWordsSections />
             <View
               style={{
                 marginTop: 8,

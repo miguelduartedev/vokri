@@ -1,6 +1,6 @@
 # Vokri Cards — Standalone Data, Review & Session Contract (V1)
 
-**Current implementation.** Finnish and Swedish share the personal vocabulary and daily review contracts below. The PR #18 section records the original Learn New and SQLite v1 behavior. The numbered design proposals are historical.
+**Current implementation.** Finnish and Swedish share the collection, personal vocabulary and daily review contracts below. The PR #18 section records the original Learn New and SQLite v1 behavior. The numbered design proposals are historical.
 
 **Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
 
@@ -8,9 +8,23 @@
 
 **The key deliberate adaptation:** In *full Vokri*, optional Flashcards practice does **not** commit scheduled Review outcomes. In **standalone Vokri Cards**, Flashcards is the **main** learning tool and a first-pass Again/Almost/Knew It rating **must** commit the app's one official spaced-review outcome (subject to the idempotency contract below). No second scheduler is created.
 
+## Personal collections
+
+A collection has an opaque 128-bit ID, a single learning language, a name, an optional description and UTC creation and metadata-edit timestamps. A language-scoped name key normalizes Unicode (NFC), case and whitespace for duplicate detection. Renaming preserves the ID. An entry can belong to any number of collections.
+
+SQLite v4 stores metadata in `collections` and references in `collection_members(languageId, collectionId, wordId)`. The composite primary key makes adding a membership idempotent. The collection foreign key enforces the language boundary and cascades membership removal when a collection is deleted. The store checks each selected item against the active language's bundled registry or personal content before committing the selection. The picker writes only the membership changes the learner selected. Saving a personal entry with memberships and optional enrolment is one transaction.
+
+**Study.** Collection detail derives its counts from real members and learner state. Add to study enrols the outstanding entries. Learn New takes up to five eligible, enrolled items in membership order and uses the existing direction preference and flashcards. It resolves membership inside the session creation transaction. The frozen cards retain their original identity and content revision. Today still counts each due word across the whole language, and Review uses the existing directional schedule. Membership alone generates zero evidence.
+
+**Changes during a session.** Membership removal and collection deletion leave the actual vocabulary, enrolments, schedules, ratings and frozen cards intact. Collection-origin sessions keep the collection ID through rename and restart. On exit the learner returns to that collection, or to the collections overview if it was deleted. A material personal edit updates the display in every collection and follows the PR #20 revision policy for frozen occurrences. Archiving a personal entry removes its active memberships in the same transaction.
+
+**Upgrade.** The old `sessions.originKind` constraint allowed only Today, deck and word. Migration copies the session headers, recreates that table with the collection origin, restores the headers and recreates the one-open-session index. The card, evidence, schedule and personal content tables stay in place. During the parent-table replacement, foreign-key enforcement is suspended on the migration connection. SQLite checks all foreign keys before commit. Enforcement is restored on both success and rollback.
+
+**Interchange handoff (roadmap milestone 22).** Interchange must preserve the language, collection ID, source word ID and memberships independently of enrolment. Where an import resolves a personal entry to a different local ID, map its references explicitly. An import of organization alone should create neither ratings nor due dates. [Android migration and collection QA](./collections-qa.md)
+
 ## Personal vocabulary · PR #20
 
-**Identity and capture.** All study references use `(languageId, wordId)`. Bundled IDs retain their existing assignments. SQLite generates a personal ID from 16 random bytes in the reserved `personal:` namespace. It survives spelling and translation edits. A future collection can store the same pair and resolve it through `LearningStore.resolve`. The resolver returns either a curated item with its editorial metadata or a personal item with its learner-authored fields.
+**Identity and capture.** All study references use `(languageId, wordId)`. Bundled IDs retain their existing assignments. SQLite generates a personal ID from 16 random bytes in the reserved `personal:` namespace. It survives spelling and translation edits. Collections store the same pair and resolve it through `LearningStore.resolve`. The resolver returns either a curated item with its editorial metadata or a personal item with its learner-authored fields.
 
 My Words stores an entire word, phrase or sentence as one learning item. Target expression and English meaning are required. Notes, example/context, dictionary form and language-specific forms are optional. A Swedish noun article is part of its authored expression. Search covers target and meaning. Duplicate checks look within the active language, compare personal and curated expressions and lemmas, and put exact bilingual matches first. Comparison uses NFC, folded case and collapsed whitespace while preserving accents and the original display text. Learners can open the existing item or keep a separate sense.
 
