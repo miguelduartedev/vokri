@@ -8,7 +8,9 @@ export type Rating = (typeof ratings)[number];
 export type Pass = 'first' | 'revisit';
 export type Phase = Pass | 'offer' | 'completed' | 'abandoned';
 export type Origin = { kind: 'today' } | { kind: 'deck' | 'word'; id: string };
+export type SessionMode = 'learn_new' | 'review_due';
 export interface Session {
+  mode: SessionMode;
   id: string;
   languageId: LearningLanguage;
   originKind: Origin['kind'];

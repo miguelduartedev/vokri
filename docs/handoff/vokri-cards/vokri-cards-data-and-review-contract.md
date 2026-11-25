@@ -1,12 +1,49 @@
 # Vokri Cards — Standalone Data, Review & Session Contract (V1)
 
-**Current implementation.** The [Learn New contract](#implemented-learn-new-contract--pr-18) describes the shipped database, evidence and recovery semantics for PR #18.
+**Current implementation.** Finnish and Swedish use the daily review contract below. The PR #18 section records the original Learn New and SQLite v1 behavior. The numbered design proposals are historical.
 
 **Historical handoff.** The [multilingual addendum](./vokri-cards-multilingual-implementation-addendum.md) supersedes Finnish-only launch, switching and data-scope assumptions. The [Cards-first roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records current engineering milestones.
 
 **Original design proposal, 21 November 2026.** The standalone application is Finnish-first (`fi`) and local-first; Swedish (`sv`) is a separate future target language, **not** an automatically populated switch or second interface translation. The contract reconciles actual [Vokri Cards Figma](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=407-766), [Phase 5 handoff](https://www.figma.com/design/vJPxcNnHyCOAp57MBh46O7/Finnish-Learning-App?node-id=447-4058), [existing Vokri learning architecture](../../architecture/content_learning_data_architecture_specification.md) and the [full Vokri optional-practice contract](../vocabulary-practice/vocabulary-practice-data-contract.md).
 
 **The key deliberate adaptation:** In *full Vokri*, optional Flashcards practice does **not** commit scheduled Review outcomes. In **standalone Vokri Cards**, Flashcards is the **main** learning tool and a first-pass Again/Almost/Knew It rating **must** commit the app's one official spaced-review outcome (subject to the idempotency contract below). No second scheduler is created.
+
+## Daily review and Today · PR #19
+
+### Official learning events
+
+Review Engine V1 consumes one accepted first-pass rating at a time for a single `(languageId, wordId, direction)`. A direction is recognition or production. Mixed only controls how Learn New chooses directions. The engine receives the previous directional state and the explicit rating time. An enrolment, prompt display, reveal or same-session revisit cannot earn a recall level. Full Vokri retains its own eligibility rules for formal assessment. [Pure TypeScript engine](../../../src/domain/learning/review.ts)
+
+| First-pass response | Next interval | Directional progression |
+| --- | --- | --- |
+| Again | 4 hours | Reset level and spaced-success streak. Familiar moves to becoming familiar. A second consecutive Again while becoming familiar returns the direction to learning. |
+| Almost | 8 hours | Reduce level by one, down to zero, and clear the streak. Two consecutive weak responses demote familiar to becoming familiar. |
+| Knew It | 1, 3, 7, 14, then 30 days | Increase level by one up to level five. Only a previously rated direction answered at or after its deadline earns a spaced return. Two consecutive spaced successes establish becoming familiar and four establish familiar. |
+
+Each deadline is an elapsed interval from the accepted rating, including overdue answers. A day is 24 hours across daylight-saving transitions. SQLite stores due instants in epoch milliseconds and retains original UTC event timestamps. The UI formats dates in the device's local time. A first Knew It in either session mode earns level one and zero spaced returns.
+
+### First practice and formal exposure
+
+- A word's first accepted rating makes its unattempted opposite direction available for first practice at the rated direction's first deadline. The opposite row has a null rating, zero level and zero spaced returns. Its first actual answer is its introduction.
+- A first-pass reveal creates pending eligibility eight hours after exposure. The checkpoint preserves the actual reveal. When multiple reasons make an unrated direction eligible, keep the earliest deadline. A later reveal cannot postpone it. A rated direction keeps its own schedule.
+- A wholly unrated word remains eligible for explicit Learn New from its word or deck. The frozen cards of an open Learn New session take priority. Once released, a mature exposure appears in Today’s review pool and leaves Today’s new pool. If both directions have pending exposures, surface the earliest one while the word is wholly unrated. A rating consumes only its own direction. The other direction retains the earliest legitimate deadline.
+- New words in Discover, pending first practice and rated returns all refer to the same canonical vocabulary ID. Original reveals and immutable events distinguish exposure, first practice and recall.
+
+### Storage, migration and recovery
+
+SQLite v2 adds `sessions.mode` and a `review_state` table keyed by language, word and direction. This projection stores the deadline, level, consecutive spaced returns, familiarity and last official rating. The append-only rating ledger remains the source for attempts. The v1 evidence view keeps its original IDs, source, sequence and columns. The v2 view includes both `cards.learn_new` and `cards.review_due` with the same occurrence IDs.
+
+One transaction upgrades existing sessions to Learn New, rebuilds card/rating constraints to allow one occurrence per **word and direction** in each pass, and copies the original rating sequences. It seeds earliest directional reveals, replays official first passes in sequence, checks foreign keys and advances `user_version`. Revisit history, skipped cards, progress, origin, undismissed summaries and interrupted sessions survive. An error rolls back the entire migration. [Migration](../../../src/learning/database.ts) · [Replay and schedule writes](../../../src/learning/review-state.ts)
+
+A reveal and its exposure deadline commit together. A first-pass rating, its directional transition, any opposite-direction introduction and an optional revisit reservation also share a transaction. Retrying a saved occurrence returns its existing feedback. Next advances the frozen cursor separately. A revisit records practice history. Its rating leaves both schedules intact. Leaving saves the current session. Confirming replacement abandons it while preserving its ratings and releasing unrated cards. Each language has room for one open session, including its undismissed summary.
+
+### Today and review selection
+
+Today prioritises the saved summary or unfinished session, then due reviews, enrolled new words and Discover. A word counts once while any eligible direction is due. For example, eight words due only for recognition, five only for production and seven in both directions yield **20 due words and 27 cards**. Progress in the current batch counts actual directional occurrences. A word contributes to the familiar-word total only when both directions have earned familiar status.
+
+Eligible cards have a deadline at or before the current time. Select at most ten, oldest deadline first. For equal deadlines the order is Again, Almost, Knew It, then first practice. Canonical ID and recognition before production break ties. Within the selected batch, take the earliest remaining card with a different word from the preceding card when possible. Both directions are available regardless of the Learn New preference. Missing canonical items are excluded, and an unavailable frozen card is skipped without deleting history.
+
+Today refreshes on commits, focus, foregrounding and the next deadline or local midnight, with a one-minute cap to pick up clock changes. Its timer runs only while the screen is focused and the app is active. No background service or network is necessary. [Android upgrade and private alpha QA](review-qa.md)
 
 ## Implemented Learn New contract · PR #18
 

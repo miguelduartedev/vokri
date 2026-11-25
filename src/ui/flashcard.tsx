@@ -89,12 +89,13 @@ export function Flashcard({
     </Surface>
   );
 }
+export const ratingColors: Record<Rating, string> = {
+  Again: '#FCE9DE',
+  Almost: '#C9D8F6',
+  'Knew It': '#D6EAE0',
+};
+
 export function RatingActions({ onRate }: { onRate: (rating: Rating) => void }) {
-  const fills: Record<Rating, string> = {
-    Again: '#FCE9DE',
-    Almost: '#C9D8F6',
-    'Knew It': '#D6EAE0',
-  };
   return (
     <View style={{ gap: 10 }}>
       <Type variant="eyebrow">HOW WELL DID YOU REMEMBER?</Type>
@@ -110,7 +111,7 @@ export function RatingActions({ onRate }: { onRate: (rating: Rating) => void }) 
               paddingVertical: 12,
               minHeight: 56,
               borderRadius: 13,
-              backgroundColor: fills[rating],
+              backgroundColor: ratingColors[rating],
             }}
           >
             <Type variant="label" color="#183B35" style={{ textAlign: 'center' }}>

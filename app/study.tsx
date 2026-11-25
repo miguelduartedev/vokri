@@ -12,6 +12,8 @@ export default function StudyRoute() {
     origin: string;
     id?: string;
     selection?: string;
+    mode?: string;
+    started?: string;
   }>();
   if (
     state.status !== 'ready' ||
@@ -48,6 +50,8 @@ export default function StudyRoute() {
       language={language}
       origin={origin}
       context={context}
+      mode={origin.kind === 'today' && params.mode === 'review_due' ? 'review_due' : 'learn_new'}
+      startedSessionId={params.started}
       initialChoice={state.preferences.directions?.[language] ?? 'recognition'}
     />
   );

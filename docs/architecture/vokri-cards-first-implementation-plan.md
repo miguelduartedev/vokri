@@ -6,7 +6,7 @@ Vokri Cards is Vokri’s first application. Learners choose Finnish or Swedish, 
 
 One iOS/Android Expo application uses Expo Router, React Native and strict TypeScript. The UI uses Nordic Editorial tokens and locally bundled Newsreader and Inter. A small React provider exposes a pure TypeScript preference store to both the app and its tests. The native composition root supplies AsyncStorage. Zod validates the versioned record. Jest Expo runs domain and navigation tests together. The installed versions and commands live in the [root README](../../README.md).
 
-Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Future reusable modules will include recall evidence, session logic, a deterministic review engine, personal vocabulary and collection identities. Introduce each with its first working consumer. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
+Cards owns Today, Discover, My Words, its navigation, curated decks, collection-based study and self-rated Flashcards. Shared code owns language definitions, vocabulary references, validated content, language-specific adapters, catalogue access, preference storage and reusable UI controls. Learning now shares directional evidence, resumable session persistence and the deterministic review engine. Later milestones add personal vocabulary and collection identities. Introduce each with its first working consumer. Full Vokri owns course navigation, authored lessons, grammar instruction, exercise evaluation, unit completion, progression, capability assessment and optional practice.
 
 | Expected PR | Deliverable and dependency |
 | --- | --- |
@@ -14,7 +14,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 16 | Shared vocabulary ingestion, stable IDs and editorial metadata on the foundation |
 | 17 | [Bilingual Discover, six curated decks, search, topic/tier filters and vocabulary details](vokri-cards-discover.md) |
 | 18 | Explicit enrolment, Learn New, persistent directional evidence and resumable flashcards |
-| 19 | Private alpha with scheduled Review, derived Today, checkpointing and resume |
+| 19 | [Private alpha with scheduled Review, live Today and SQLite v2 recovery](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) |
 | 20 | My Words editing for personal words, phrases and sentences |
 | 21 | Personal collections and study using canonical membership references |
 | 22 | Language-scoped interchange, data management and backup decisions |
@@ -42,8 +42,8 @@ Both immutable source CSVs contain 2,000 curated entries. They share engineering
 
 Keep catalogue availability, saved membership, collection membership, enrolment, encounter, rating, due status, becoming familiar and familiar distinguishable. Use one deterministic scheduling engine with product-specific event eligibility. In Cards a first-pass Again, Almost or Knew It commits an official recall event. Same-session revisits cannot duplicate spaced successes. Full Vokri optional practice retains the course’s formal assessment rules.
 
-A mixed session resolves each card to learning-language-to-English or English-to-learning-language before presentation. Preserve recognition and production evidence separately under the same item identity. PR #19 will project each direction independently and count distinct due words on Today. The versioned SQLite evidence and session contract is documented in the [review contract](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md).
+A mixed session resolves each card to learning-language-to-English or English-to-learning-language before presentation. Preserve recognition and production evidence separately under the same item identity. Each direction has its own schedule. Today counts distinct due words. The versioned SQLite evidence and session contract is documented in the [review contract](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md).
 
-Appearance and active language are global preferences. Future learning data is scoped by language, including enrolment, personal words, collections, history, schedules and unfinished sessions. Checkpoint ongoing study before switching and restore it when the learner returns. Known Finnish-only legacy data may be migrated to Finnish when an actual historical format exists. Require explicit language provenance.
+Appearance and active language are global preferences. Enrolment, history, schedules and unfinished sessions are scoped by language. Checkpoint ongoing study before switching and restore it when the learner returns. Known Finnish-only legacy data may be migrated to Finnish when an actual historical format exists. Require explicit language provenance.
 
 The older personal-word JSON handoff and the latest CSV interchange designs describe different data scopes. Resolve interchange and complete backup before PR 22. A CSV cannot restore review evidence or session state. Preview imports with explicit language identity, resolve duplicates per language and preserve existing content. Name the affected language on reset and preserve personal words when resetting study progress.
