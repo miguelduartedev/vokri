@@ -142,3 +142,20 @@ it.each([
 ] as const)('resolves %s with device %s to %s', (choice, system, expected) => {
   expect(resolveMode(choice, system)).toBe(expected);
 });
+
+it('adds independent card directions to an existing preference record and preserves concurrent changes', async () => {
+  const { store, storage } = memory(
+    JSON.stringify({ ...defaults, activeLearningLanguage: 'sv', appearance: 'dark' }),
+  );
+  await store.hydrate();
+  await Promise.all([store.setDirection('fi', 'mixed'), store.setDirection('sv', 'production')]);
+  const reopened = new PreferenceStore(storage);
+  await reopened.hydrate();
+  expect(reopened.getSnapshot()).toMatchObject({
+    preferences: {
+      activeLearningLanguage: 'sv',
+      appearance: 'dark',
+      directions: { fi: 'mixed', sv: 'production' },
+    },
+  });
+});

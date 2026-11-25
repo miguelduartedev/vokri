@@ -6,18 +6,37 @@ import { languages } from '../domain/languages';
 import { usePreferences } from '../preferences/context';
 import { Button, Surface, Type } from '../ui/primitives';
 import { useTheme } from '../ui/theme';
+import { useInventory } from '../learning/provider';
+import type { LearningLanguage } from '../domain/languages';
+import { openStudy } from './study-controls';
 import { CardsHeader } from './controls';
 
 export function TabPage({ page }: { page: 'today' | 'my-words' }) {
   const { state } = usePreferences();
-  const { colors } = useTheme();
   if (state.status !== 'ready' || !state.preferences.activeLearningLanguage) return null;
-  const language = state.preferences.activeLearningLanguage;
+  return <LanguageTab page={page} language={state.preferences.activeLearningLanguage} />;
+}
+function LanguageTab({
+  page,
+  language,
+}: {
+  page: 'today' | 'my-words';
+  language: LearningLanguage;
+}) {
+  const { colors } = useTheme();
+  const { session, enrolled, eligible } = useInventory(language);
+  const returning = enrolled.size > 0;
   const name = languages[language].name;
   const today = page === 'today';
-  const title = today ? name + ' begins\nwith one word.' : 'My Words.';
+  const title = today
+    ? returning
+      ? 'A little ' + name + ', every day.'
+      : name + ' begins\nwith one word.'
+    : 'My Words.';
   const caption = today
-    ? 'Start with a few useful words. We’ll bring them back.'
+    ? returning
+      ? 'Your vocabulary is ready when you are.'
+      : 'Start with a few useful words.'
     : 'The ' + name + ' expressions you want to remember.';
   const explore = (
     <Button
@@ -46,20 +65,48 @@ export function TabPage({ page }: { page: 'today' | 'my-words' }) {
         </View>
         {today ? (
           <View style={{ marginTop: 30, gap: 24 }}>
-            <Surface style={{ minHeight: 222 }}>
-              <Type variant="eyebrow" color={colors.secondary}>
-                A FRESH START
-              </Type>
-              <Type variant="title">Start with the essentials.</Type>
-              <Type variant="caption" color={colors.secondary}>
-                Choose words you want to remember.
-              </Type>
-              <View style={{ flex: 1, minHeight: 10 }} />
-              {explore}
-            </Surface>
-            <Type variant="caption" color={colors.secondary}>
-              No {name} reviews yet.
-            </Type>
+            {returning ? (
+              <>
+                <Surface>
+                  <Type variant="eyebrow">YOUR STUDY WORDS</Type>
+                  <Type variant="title">
+                    {session
+                      ? 'Your session.'
+                      : eligible.length
+                        ? 'Ready to learn.'
+                        : 'Your words are in study.'}
+                  </Type>
+                  <Type>
+                    {enrolled.size} in study · {eligible.length} new
+                  </Type>
+                  {(session || eligible.length > 0) && (
+                    <Button
+                      label={
+                        session?.phase === 'completed'
+                          ? 'View session summary'
+                          : session
+                            ? 'Resume session'
+                            : 'Learn New'
+                      }
+                      onPress={() => openStudy(language, { kind: 'today' })}
+                    />
+                  )}
+                </Surface>
+                {explore}
+              </>
+            ) : (
+              <Surface style={{ minHeight: 222 }}>
+                <Type variant="eyebrow" color={colors.secondary}>
+                  A FRESH START
+                </Type>
+                <Type variant="title">Start with the essentials.</Type>
+                <Type variant="caption" color={colors.secondary}>
+                  Choose words you want to remember.
+                </Type>
+                <View style={{ flex: 1, minHeight: 10 }} />
+                {explore}
+              </Surface>
+            )}
           </View>
         ) : (
           <View style={{ gap: 16, marginTop: 32 }}>

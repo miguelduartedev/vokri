@@ -115,11 +115,13 @@ export function Button({
   onPress,
   disabled,
   align = 'center',
+  variant = 'primary',
 }: {
   label: string;
   onPress: () => void;
   disabled?: boolean;
   align?: 'left' | 'center';
+  variant?: 'primary' | 'secondary';
 }) {
   const { colors } = useTheme();
   return (
@@ -133,10 +135,16 @@ export function Button({
         paddingHorizontal: 16,
         borderRadius: layout.controlRadius,
         alignItems: align === 'left' ? 'flex-start' : 'center',
-        backgroundColor: colors.action,
+        backgroundColor: variant === 'primary' ? colors.action : colors.surface,
+        borderWidth: variant === 'primary' ? 0 : 1,
+        borderColor: colors.border,
       }}
     >
-      <Type variant="label" color={colors.onAction} style={{ textAlign: align }}>
+      <Type
+        variant="label"
+        color={variant === 'primary' ? colors.onAction : colors.ink}
+        style={{ textAlign: align }}
+      >
         {label}
       </Type>
     </Control>

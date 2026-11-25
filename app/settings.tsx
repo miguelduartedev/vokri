@@ -7,6 +7,8 @@ import { appearances, type AppearancePreference } from '@/preferences/store';
 import { usePreferences } from '@/preferences/context';
 import {
   LanguageSheet,
+  DirectionChoices,
+  directionLabel,
   useSheetTrigger,
   SettingRow,
   Sheet,
@@ -24,11 +26,13 @@ export default function Settings() {
   const { state, store } = usePreferences();
   const { colors } = useTheme();
   const languageSheet = useSheetTrigger();
+  const directionSheet = useSheetTrigger();
   const appearanceSheet = useSheetTrigger();
   const { saving, save, error } = usePreferenceAction();
   if (state.status !== 'ready' || !state.preferences.activeLearningLanguage) return null;
   const { appearance, activeLearningLanguage: language } = state.preferences;
   const { name, nativeName } = languages[language];
+  const direction = state.preferences.directions?.[language] ?? 'recognition';
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ paddingHorizontal: layout.margin, paddingBottom: 30 }}>
@@ -68,6 +72,13 @@ export default function Settings() {
             onPress={languageSheet.show}
           />
           <SettingRow
+            title="Default card direction"
+            detail="Used in new flashcard sessions."
+            value={directionLabel(language, direction)}
+            trigger={directionSheet.trigger}
+            onPress={directionSheet.show}
+          />
+          <SettingRow
             trigger={appearanceSheet.trigger}
             title="Appearance"
             detail="Follow your phone or choose a theme."
@@ -82,6 +93,22 @@ export default function Settings() {
           language={language}
           close={languageSheet.close}
         />
+      )}
+      {directionSheet.open && (
+        <Sheet
+          title="Default card direction"
+          description="Choose which side you usually see first."
+          onClose={directionSheet.close}
+        >
+          <DirectionChoices
+            language={language}
+            value={direction}
+            onSelect={(choice) =>
+              void save(() => store.setDirection(language, choice), directionSheet.close)
+            }
+          />
+          {!!error && <Type accessibilityRole="alert">{error}</Type>}
+        </Sheet>
       )}
       {appearanceSheet.open && (
         <Sheet

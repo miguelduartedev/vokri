@@ -1,3 +1,4 @@
+import { directions, type DirectionChoice } from '../domain/learning/model';
 import { layout } from '@/ui/layout';
 import { useRef, useState, type ReactNode, type RefObject } from 'react';
 import {
@@ -305,5 +306,46 @@ export function LanguageSheet({
         Review schedules stay separate for each language.
       </Type>
     </Sheet>
+  );
+}
+
+export function directionLabel(language: LearningLanguage, choice: DirectionChoice) {
+  if (choice === 'mixed') return 'Mixed';
+  const name = languages[language].name;
+  return choice === 'recognition' ? name + ' → English' : 'English → ' + name;
+}
+export function DirectionChoices({
+  language,
+  value,
+  onSelect,
+}: {
+  language: LearningLanguage;
+  value: DirectionChoice;
+  onSelect: (choice: DirectionChoice) => void;
+}) {
+  const { colors } = useTheme();
+  return (
+    <View accessibilityRole="radiogroup" style={{ gap: 6 }}>
+      {directions.map((choice) => (
+        <Control
+          key={choice}
+          accessibilityRole="radio"
+          accessibilityLabel={directionLabel(language, choice)}
+          accessibilityState={{ checked: value === choice }}
+          onPress={() => onSelect(choice)}
+          style={{
+            padding: 14,
+            borderRadius: 12,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            backgroundColor: value === choice ? colors.selected : colors.surface,
+          }}
+        >
+          <Type variant="label">{directionLabel(language, choice)}</Type>
+          <Icon name={value === choice ? 'selected' : 'unselected'} />
+        </Control>
+      ))}
+    </View>
   );
 }

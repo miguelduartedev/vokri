@@ -8,14 +8,23 @@ import { useTheme } from './theme';
 export const VocabularyRow = memo(function VocabularyRow({
   item,
   onOpen,
+  inStudy = false,
 }: {
   item: VocabularyItem;
   onOpen: (item: VocabularyItem) => void;
+  inStudy?: boolean;
 }) {
   const { colors } = useTheme();
   return (
     <Control
-      accessibilityLabel={item.displayForm + ', ' + item.english + ', ' + item.partOfSpeech}
+      accessibilityLabel={
+        item.displayForm +
+        ', ' +
+        item.english +
+        ', ' +
+        item.partOfSpeech +
+        (inStudy ? ', In study' : '')
+      }
       onPress={() => onOpen(item)}
       style={{
         backgroundColor: colors.surface,
@@ -32,6 +41,7 @@ export const VocabularyRow = memo(function VocabularyRow({
         <Type variant="section">{item.displayForm}</Type>
         <Type variant="caption" color={colors.secondary}>
           {item.english} · {item.partOfSpeech}
+          {inStudy && ' · In study'}
         </Type>
       </View>
       <Icon name="right" tint={colors.secondary} />
@@ -51,10 +61,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-export function VocabularyDetail({ item }: { item: VocabularyItem }) {
-  const { colors } = useTheme();
+export function suppliedForms(item: VocabularyItem) {
   const swedish = item.languageId === 'sv' ? item : undefined;
-  const forms = [
+  return [
     ['Gender', swedish?.noun?.gender],
     ['Definite singular', swedish?.noun?.definiteSingular],
     ['Indefinite plural', swedish?.noun?.indefinitePlural],
@@ -65,6 +74,11 @@ export function VocabularyDetail({ item }: { item: VocabularyItem }) {
     ['Neuter', swedish?.adjective?.neuter],
     ['Plural', swedish?.adjective?.plural],
   ].filter(([, value]) => value);
+}
+
+export function VocabularyDetail({ item }: { item: VocabularyItem }) {
+  const { colors } = useTheme();
+  const forms = suppliedForms(item);
   return (
     <Surface style={{ padding: 20, gap: 18 }}>
       <Type variant="eyebrow" color={colors.secondary}>

@@ -1,5 +1,6 @@
+import { WordEnrolment } from '@/cards/Enrolment';
 import { Redirect, useLocalSearchParams } from 'expo-router';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { getVocabularyItem } from '@/domain/vocabulary/registry';
 import { BackLink, DiscoverPage, MissingContent, useLanguage } from '@/cards/discover-controls';
 import { languages } from '@/domain/languages';
@@ -20,6 +21,9 @@ export default function WordPage() {
         </Type>
         <VocabularyDetail item={item} />
       </ScrollView>
+      <View style={{ paddingHorizontal: 24, paddingVertical: 10 }}>
+        <WordEnrolment language={item.languageId} id={item.wordId} />
+      </View>
     </DiscoverPage>
   );
 }

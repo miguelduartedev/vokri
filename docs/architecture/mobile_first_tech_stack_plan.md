@@ -60,6 +60,8 @@ The product consists mainly of text, exercises, native navigation and local lear
 
 ## Storage abstraction
 
+Vokri Cards uses AsyncStorage for preferences and Expo SQLite for transactional learner records starting with PR #18. The [implemented Learn New contract](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#implemented-learn-new-contract--pr-18) defines the database and evidence consumed by future Review.
+
 Learning logic must not call AsyncStorage directly. Use an interface for progress, preferences and resumable optional practice. The implementation should use **brand-neutral versioned keys** such as `language-learning:progress:v1` and `language-learning:preferences:v1`, and namespace curriculum/progress/knowledge/review/My Words by **learningLanguage** (fi now; sv later).
 
 Remember that optional Flashcards/Word Match session checkpoints are distinct from scheduled Review outcomes. If a real deployed build already uses legacy `suomi:` keys, migrate non-destructively; do not create them as new keys. Reset progress preserves preferences and should not silently erase user-authored My Words without a separate explicit product decision.

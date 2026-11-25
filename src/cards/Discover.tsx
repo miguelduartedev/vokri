@@ -15,6 +15,7 @@ import { getVocabularyCount } from '../domain/vocabulary/registry';
 import { tiers, type VocabularyTier } from '../domain/vocabulary/schema';
 import { Control, Icon, Type } from '../ui/primitives';
 import { Sheet } from '../ui/preferences';
+import { useInventory } from '../learning/provider';
 import { VocabularyRow } from '../ui/vocabulary';
 import { useTheme } from '../ui/theme';
 import { CardsHeader } from './controls';
@@ -167,6 +168,7 @@ export function Discover({
   const decks = useMemo(() => getDecks(language), [language]);
   const count = getVocabularyCount(language).toLocaleString('en-US');
   const openWord = useOpenWord();
+  const { enrolled } = useInventory(language);
   function openCatalogue(selected?: string) {
     router.push({
       pathname: '/discover/all',
@@ -366,7 +368,9 @@ export function Discover({
         keyboardDismissMode="on-drag"
         contentContainerStyle={{ paddingHorizontal: 24, paddingBottom: 32, gap: 8 }}
         ListHeaderComponent={header}
-        renderItem={({ item }) => <VocabularyRow item={item} onOpen={openWord} />}
+        renderItem={({ item }) => (
+          <VocabularyRow item={item} inStudy={enrolled.has(item.wordId)} onOpen={openWord} />
+        )}
         ListEmptyComponent={
           resultsMode ? (
             <View style={{ gap: 8, paddingVertical: 16 }}>

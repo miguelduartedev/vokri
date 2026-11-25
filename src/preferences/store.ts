@@ -1,3 +1,4 @@
+import { directions, type DirectionChoice } from '../domain/learning/model';
 import { z } from 'zod';
 import { languageIds, type LearningLanguage } from '../domain/languages';
 
@@ -7,6 +8,7 @@ export interface Preferences {
   schemaVersion: 1;
   activeLearningLanguage: LearningLanguage | null;
   appearance: AppearancePreference;
+  directions?: Partial<Record<LearningLanguage, DirectionChoice>>;
 }
 
 export const preferencesKey = 'language-learning:preferences:v1';
@@ -25,6 +27,10 @@ const schema = z
     schemaVersion: z.literal(1),
     activeLearningLanguage: z.enum(languageIds).nullable().catch(null),
     appearance: z.enum(appearances).catch('system'),
+    directions: z
+      .object({ fi: z.enum(directions).optional(), sv: z.enum(directions).optional() })
+      .optional()
+      .catch(undefined),
   })
   .passthrough();
 
@@ -104,16 +110,21 @@ export class PreferenceStore {
     }
   }
 
-  private update(patch: Partial<Pick<Preferences, 'activeLearningLanguage' | 'appearance'>>) {
+  private update(patch: Partial<Preferences> | ((current: Preferences) => Partial<Preferences>)) {
     const operation = this.writes.then(async () => {
       if (this.snapshot.status !== 'ready') throw new Error('Preferences are unavailable');
-      const preferences = { ...this.snapshot.preferences, ...patch };
+      const preferences = {
+        ...this.snapshot.preferences,
+        ...(typeof patch === 'function' ? patch(this.snapshot.preferences) : patch),
+      };
       await this.storage.setItem(preferencesKey, JSON.stringify(preferences));
       this.publish({ status: 'ready', preferences, needsRepair: false });
     });
     this.writes = operation.catch(() => {});
     return operation;
   }
+  setDirection = (language: LearningLanguage, choice: DirectionChoice) =>
+    this.update((current) => ({ directions: { ...current.directions, [language]: choice } }));
   setLanguage = (activeLearningLanguage: LearningLanguage) =>
     this.update({ activeLearningLanguage });
   setAppearance = (appearance: AppearancePreference) => this.update({ appearance });
