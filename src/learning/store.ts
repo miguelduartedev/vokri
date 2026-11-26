@@ -1,3 +1,11 @@
+import {
+  exportSnapshot,
+  previewImport,
+  writeImport,
+  type Choices,
+  type ImportPreview,
+} from './portability';
+import type { VocabularyDocument } from '../domain/interchange/format';
 import { getVocabulary, getVocabularyItem } from '../domain/vocabulary/registry';
 import {
   personalPrefix,
@@ -58,6 +66,19 @@ export class LearningStore {
     this.db.withTransactionSync(operation);
     this.revision++;
     this.listeners.forEach((listener) => listener());
+  }
+  vocabularyExport(language: LearningLanguage) {
+    return exportSnapshot(this.db, language, new Date(this.now()).toISOString());
+  }
+  importPreview(doc: VocabularyDocument) {
+    return previewImport(this.db, doc);
+  }
+  importVocabulary(preview: ImportPreview, choices: Choices) {
+    let result!: ReturnType<typeof writeImport>;
+    this.commit(() => {
+      result = writeImport(this.db, preview, choices, new Date(this.now()).toISOString());
+    });
+    return result;
   }
   personal(language: LearningLanguage, id: string): PersonalEntry | undefined {
     return this.db.getAllSync<PersonalEntry>(
