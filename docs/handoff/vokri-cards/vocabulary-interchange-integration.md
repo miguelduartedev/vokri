@@ -25,4 +25,4 @@ The system document picker accepts files regardless of their extension. Android 
 
 The transaction writes only personal entries, collections and membership links. Learning events, revisions of reused entries, enrolment, review schedules and frozen sessions retain their previous values. Schema version 4 already supports these writes. [SQLite adapter](../../../src/learning/portability.ts) · [Verification](portability-qa.md)
 
-The roadmap reserves complete device backup and recovery for a separate milestone. [Roadmap](../../architecture/vokri-cards-first-implementation-plan.md)
+Settings also offers full bilingual replacement restoration through milestone 22C. [Full local backup](full-local-backup.md)
