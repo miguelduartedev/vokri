@@ -1,4 +1,12 @@
-import { mkdtempSync, rmSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import {
+  mkdirSync,
+  mkdtempSync,
+  renameSync,
+  rmSync,
+  readFileSync,
+  writeFileSync,
+  existsSync,
+} from 'node:fs';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
@@ -8,7 +16,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import * as Picker from 'expo-document-picker';
 import { blankDraft } from '@/domain/learning/personal';
-import { Paths, backupDatabaseAsync, openDatabaseAsync as platformOpen } from './backup-platform';
+import {
+  Paths,
+  backupDatabaseAsync,
+  openDatabaseAsync as platformOpen,
+  setDatabaseDirectory,
+} from './backup-platform';
 import { preferencesKey, PreferenceStore } from '@/preferences/store';
 import {
   closeLearningConnection,
@@ -49,7 +62,9 @@ const prefs = () => new PreferenceStore(AsyncStorage);
 beforeEach(async () => {
   jest.replaceProperty(Platform, 'OS', 'android');
   dir = mkdtempSync(join(tmpdir(), 'vokri-restore-'));
-  Paths.cache = Paths.document = dir;
+  setDatabaseDirectory(dir);
+  Paths.document = join(dir, 'documents');
+  Paths.cache = join(dir, 'cache');
   Paths.availableDiskSpace = 1e9;
   await AsyncStorage.clear();
 });
@@ -200,6 +215,36 @@ it('refuses a changed staged file and a corrupt recovery snapshot; startup never
   expect(existsSync(path)).toBe(false);
   expect(await AsyncStorage.getItem(journal)).toBeTruthy();
 });
+it.each(['committed', 'rolledBack'])(
+  'blocks startup and retry with a missing live database and a %s journal',
+  async (phase) => {
+    const live = join(dir, learnerDatabaseName);
+    const recovery = join(Paths.document, 'vokri-restore-recovery');
+    const previous = join(recovery, 'previous.db');
+    (await learningConnection()).store.enrol('fi', ['vocab.hei']);
+    await closeLearningConnection();
+    mkdirSync(recovery, { recursive: true });
+    renameSync(live, previous);
+    const bytes = readFileSync(previous);
+    // A same-named file in Documents is not the installation's live SQLite database.
+    writeFileSync(join(Paths.document, learnerDatabaseName), bytes);
+    const marker = JSON.stringify({
+      version: 1,
+      phase,
+      previousDigest: createHash('sha256').update(bytes).digest('hex'),
+      previousPreferences: storedDefault,
+    });
+    await AsyncStorage.setItem(journal, marker);
+    platformOpen.mockClear();
+    for (const retry of [false, true]) {
+      await expect(recoverStartup(retry)).rejects.toThrow();
+      expect(existsSync(live)).toBe(false);
+      expect(platformOpen).not.toHaveBeenCalled();
+      expect(await AsyncStorage.getItem(journal)).toBe(marker);
+      expect(readFileSync(previous).equals(bytes)).toBe(true);
+    }
+  },
+);
 it('rejects interchange, oversize, tampering, truncation, trailing data and incompatible metadata before preview', async () => {
   const { file, candidate } = await saved();
   discardCandidate(candidate);
@@ -280,7 +325,7 @@ it('retries interrupted rollback from the durable prepared marker before permitt
     expect(JSON.parse((await AsyncStorage.getItem(journal))!).phase).toBe('prepared');
     expect(rows(path)).not.toEqual(before);
     await expect(recoverStartup()).rejects.toThrow();
-    expect(existsSync(join(dir, 'vokri-restore-recovery', 'previous.db'))).toBe(true);
+    expect(existsSync(join(Paths.document, 'vokri-restore-recovery', 'previous.db'))).toBe(true);
   } finally {
     backupDatabaseAsync.mockImplementation(real);
   }
@@ -421,5 +466,5 @@ it('leaves the live installation untouched when its recovery snapshot cannot be 
   expect(rows(path)).toEqual(before);
   expect(await AsyncStorage.getItem(preferencesKey)).toBe(storedDefault);
   expect(await AsyncStorage.getItem(journal)).toBeNull();
-  expect(existsSync(join(dir, 'vokri-restore-recovery'))).toBe(false);
+  expect(existsSync(join(Paths.document, 'vokri-restore-recovery'))).toBe(false);
 });

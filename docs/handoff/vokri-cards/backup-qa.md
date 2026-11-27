@@ -1,6 +1,6 @@
 # Full local backup and restoration QA
 
-Milestone 22C was verified against merged main `a337ee1590818fb6ac838e3a5f65d2fa73fad2ed`. The baseline passed 127 Jest tests and 14 vocabulary pipeline tests. The final suite passes 142 Jest tests and the same 14 pipeline tests.
+Milestone 22C was verified against merged main `a337ee1590818fb6ac838e3a5f65d2fa73fad2ed`. The baseline passed 127 Jest tests and 14 vocabulary pipeline tests. The final suite passes 144 Jest tests and the same 14 pipeline tests.
 
 ## Native Android
 
@@ -14,6 +14,7 @@ Pixel 7 emulator, API 34, Expo Go 58.0.6, Hermes. Two disposable SQLite database
 | Native failure and rollback | A one-shot exception after the incoming database copy and before preference replacement restored `kohde` and the target's original preferences. The normal application reopened. |
 | Force-stop before commit | Paused execution after database replacement. Android force-stopped Expo Go, and `pidof` confirmed process exit. On cold launch the gate restored the original database and preferences first. Repeated with a later rated inventory. |
 | Force-stop after commit | Paused cleanup after persisting the committed marker. Cold startup retained the incoming Finnish installation, its original one-of-two rated checkpoint and its preferences. Cleanup completed on restart. |
+| Missing live database after finalization | With either a `committed` or `rolledBack` journal, startup recovery and retry left the live file absent and preserved the journal and recovery snapshot. After the disposable live database was restored, verification and cleanup succeeded in both cases. |
 | Disconnected round trip | Disabled Wi-Fi and mobile data and removed the Metro reverse port after loading the app. Created and saved a new backup, selected the original through Documents, confirmed replacement and resumed the revealed Finnish production card. Recording **Knew It** showed the next review deadline. Reconnected Metro solely to launch the development bundle after force-stop. The same acknowledged rating and deadline appeared after restart. |
 | Swedish recovery | Switching to Swedish showed its undismissed two-card collection summary. The Finnish session retained its independent checkpoint. |
 

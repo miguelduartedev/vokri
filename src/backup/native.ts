@@ -1,6 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Directory, File, Paths } from 'expo-file-system';
-import { openDatabaseAsync, backupDatabaseAsync, type SQLiteDatabase } from 'expo-sqlite';
+import {
+  openDatabaseAsync,
+  backupDatabaseAsync,
+  defaultDatabaseDirectory,
+  type SQLiteDatabase,
+} from 'expo-sqlite';
 import manifest from '../content/vocabulary/generated/manifest.json';
 import { preferencesKey, type PreferenceStore } from '../preferences/store';
 import {
@@ -129,7 +134,9 @@ const io: RecoveryIO = {
   },
   replacePrevious: (digest) => install(previous(), digest),
   async verifyLive() {
-    // Never run migrations on this path. A missing or empty live DB must fail validation.
+    // The native default is an absolute path. Opening by name would create a missing file.
+    const live = new File('file:///', defaultDatabaseDirectory, learnerDatabaseName);
+    if (!(live.size > 0)) throw new BackupError('The live learner database is missing or empty.');
     await using(openDatabaseAsync(learnerDatabaseName, { useNewConnection: true }), inspect);
   },
   async cleanup() {

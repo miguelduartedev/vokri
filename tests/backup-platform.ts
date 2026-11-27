@@ -6,6 +6,10 @@ import { createHash } from 'node:crypto';
 import { backup, DatabaseSync } from 'node:sqlite';
 
 export const Paths = { document: '', cache: '', availableDiskSpace: 1e9 };
+export let defaultDatabaseDirectory: string;
+export function setDatabaseDirectory(path: string) {
+  defaultDatabaseDirectory = path;
+}
 function pathOf(parent: string | Directory, child?: string) {
   const path =
     typeof parent === 'string'
@@ -46,8 +50,8 @@ export class Directory {
 export const FileMode = { ReadOnly: 'r', WriteOnly: 'r+' };
 export class File {
   path: string;
-  constructor(parent: string | Directory, child?: string) {
-    this.path = pathOf(parent, child);
+  constructor(parent: string | Directory, ...children: string[]) {
+    this.path = join(pathOf(parent), ...children);
   }
   get uri() {
     return pathToFileURL(this.path).href;
@@ -98,7 +102,7 @@ export class File {
 }
 export const openDatabaseAsync = jest.fn(
   async (name: string, _options?: unknown, directory?: string) => {
-    const path = name === ':memory:' ? name : pathOf(directory ?? Paths.document, name);
+    const path = name === ':memory:' ? name : pathOf(directory ?? defaultDatabaseDirectory, name);
     const raw = new DatabaseSync(path);
     return {
       raw,
