@@ -113,6 +113,7 @@ export function Control({
 export function Button({
   label,
   accessibilityLabel,
+  accessibilityState,
   onPress,
   disabled,
   align = 'center',
@@ -120,6 +121,7 @@ export function Button({
 }: {
   label: string;
   accessibilityLabel?: string;
+  accessibilityState?: PressableProps['accessibilityState'];
   onPress: () => void;
   disabled?: boolean;
   align?: 'left' | 'center';
@@ -131,7 +133,7 @@ export function Button({
       accessibilityLabel={accessibilityLabel}
       onPress={onPress}
       disabled={disabled}
-      accessibilityState={{ disabled: !!disabled }}
+      accessibilityState={{ ...accessibilityState, disabled: !!disabled }}
       style={{
         minHeight: layout.buttonHeight,
         paddingVertical: 12,

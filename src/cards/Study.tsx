@@ -476,7 +476,14 @@ export function Study({
           gap: 18,
         }}
       >
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 6 }}>
+        <View
+          style={{
+            flexDirection: width / fontScale < 320 ? 'column' : 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            gap: 6,
+          }}
+        >
           <Type variant="eyebrow" color={colors.secondary}>
             {stage}
           </Type>

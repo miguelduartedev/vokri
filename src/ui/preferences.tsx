@@ -90,6 +90,8 @@ export function SettingRow({
   trigger?: RefObject<React.ComponentRef<typeof View> | null>;
 }) {
   const { colors } = useTheme();
+  const { width, fontScale } = useWindowDimensions();
+  const stackValue = width / fontScale < 320;
   return (
     <Control
       ref={trigger}
@@ -110,8 +112,9 @@ export function SettingRow({
         <Type variant="caption" color={colors.secondary}>
           {detail}
         </Type>
+        {stackValue && value && <Type variant="caption">{value}</Type>}
       </View>
-      {value && <Type variant="caption">{value}</Type>}
+      {!stackValue && value && <Type variant="caption">{value}</Type>}
       <Icon name="right" tint={colors.secondary} />
     </Control>
   );

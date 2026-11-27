@@ -24,8 +24,8 @@ The header chip and Settings row open the same selector. Selecting a language up
 
 Today links to Discover. Discover and My Words show language-specific first-use states. Settings includes learning language and appearance. Future-only controls and sample counts from the designs are omitted. The brand header uses native safe areas and system status indicators. The shared light palette comes from the [Nordic token export](../Nordic_Editorial_Mobile_Tokens.json), with the light/dark overrides drawn from the editable VC theme.
 
-## Later milestones
+## Shipped multilingual behaviour
 
-- Phase 2 will share the catalogue and Flashcard UI while displaying Finnish authored/spoken forms and Swedish approved expressions, examples and inflections. Preserve `en bok`, `ett hus`, bare forms and verb distinctions from the source. Restore an unfinished language-specific session after switching back.
-- Phase 3 will scope personal entries, collections, import previews, duplicates and reset confirmations by language. Preserve personal vocabulary across a study reset. The versioned full-backup proposal and vocabulary interchange decisions belong to PR 22.
-- Finnish-only migration applies to identifiable historical data. This repository began with documentation and datasets, so the foundation starts at preference schema version 1. The [roadmap](../../architecture/vokri-cards-first-implementation-plan.md) records the remaining decisions.
+- Discover and Flashcards share the catalogue. Finnish authored and spoken forms and Swedish articles and inflections appear where supplied. Each language keeps its own frozen session and directional review deadlines.
+- My Words and collections follow the active language. Vocabulary interchange previews one language per file. A full backup includes both languages, study history, open sessions and preferences. [Interchange contract](vocabulary-interchange-v1.md) · [Backup and recovery](full-local-backup.md)
+- Preferences use schema v1 and the learner database uses SQLite v4. See the [learning and persistence contract](vokri-cards-data-and-review-contract.md) for the migration history and the [roadmap](../../architecture/vokri-cards-first-implementation-plan.md) for native beta preparation.

@@ -6,7 +6,6 @@ import { Icon } from '@/ui/primitives';
 import { useTheme } from '@/ui/theme';
 
 const tabs = { today: 'Today', discover: 'Discover', 'my-words': 'My Words' } as const;
-export const unstable_settings = { initialRouteName: 'today' };
 export default function TabLayout() {
   const { colors, fonts } = useTheme();
   const { bottom } = useSafeAreaInsets();

@@ -348,7 +348,12 @@ it('captures a Swedish sentence, searches its translation, studies it and keeps 
     screen.getByLabelText('English meaning'),
     'I would like a cup of coffee.',
   );
-  await fireEvent.press(screen.getByText('Add optional details'));
+  await fireEvent.press(
+    screen.getByRole('button', { name: 'Add optional details', expanded: false }),
+  );
+  expect(
+    screen.getByRole('button', { name: 'Hide optional details', expanded: true }),
+  ).toBeOnTheScreen();
   await fireEvent.changeText(screen.getByLabelText('Personal note'), 'At the café');
   await fireEvent.press(screen.getByText('Save sentence'));
   expect(await screen.findByText('Saved · Not in study')).toBeOnTheScreen();
@@ -387,7 +392,9 @@ it('offers the curated match and preserves the separate draft across a failed co
   await fireEvent.changeText(screen.getByLabelText('Swedish expression'), 'en nyckel');
   await fireEvent.changeText(screen.getByLabelText('English meaning'), 'a key to my apartment');
   await fireEvent.press(screen.getByText('Save and add to study'));
-  await fireEvent.press(await screen.findByText('View existing entry'));
+  await fireEvent.press(
+    await screen.findByRole('button', { name: /^View existing entry: en nyckel, / }),
+  );
   await fireEvent.press(await screen.findByText('Add to study'));
   expect(mockDatabase.getAllSync('SELECT count(*) AS n FROM personal_entries')).toEqual([{ n: 0 }]);
   await fireEvent.press(screen.getByLabelText('Back'));
@@ -539,4 +546,43 @@ it('previews a Swedish file from Finnish Settings and commits only after explici
   expect(store.personal('fi', document.personalEntries[0].wordId)).toBeUndefined();
   await fireEvent.press(screen.getByText('Back to Settings'));
   expect(await screen.findByLabelText('Learning language, Finnish · Suomi')).toBeOnTheScreen();
+});
+
+it('announces the chosen existing vocabulary when an import match is revisited', async () => {
+  const { pickVocabulary } = jest.requireMock('@/cards/portability-files');
+  pickVocabulary.mockResolvedValue({
+    name: 'course.json',
+    document: {
+      format: 'vokri-cards-my-words',
+      version: 1,
+      exportedAt: '2026-11-25T12:00:00.000Z',
+      learningLanguage: 'fi',
+      personalEntries: [
+        {
+          languageId: 'fi',
+          wordId: 'personal:' + '3'.repeat(32),
+          type: 'Word',
+          displayForm: 'olla',
+          english: 'to exist',
+        },
+      ],
+      collections: [],
+      memberships: [],
+    },
+  });
+  await AsyncStorage.setItem(
+    preferencesKey,
+    JSON.stringify({
+      schemaVersion: 1,
+      activeLearningLanguage: 'fi',
+      appearance: 'system',
+    }),
+  );
+  await renderRouter(routes, { initialUrl: '/portability/import' });
+  await fireEvent.press(await screen.findByText('Choose JSON file'));
+  await fireEvent.press(await screen.findByText('Review matches · 1 remaining'));
+  const name = 'Use olla · to be';
+  await fireEvent.press(await screen.findByRole('button', { name, selected: false }));
+  await fireEvent.press(await screen.findByText('Review matches · 0 remaining'));
+  expect(await screen.findByRole('button', { name, selected: true })).toBeOnTheScreen();
 });
