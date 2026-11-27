@@ -116,6 +116,19 @@ export default function Settings() {
             onPress={() => router.push('/backup?mode=restore')}
           />
         </View>
+        <View style={{ marginTop: 24, gap: 8 }}>
+          <Type variant="eyebrow" accessibilityRole="header" color={colors.secondary}>
+            VOCABULARY SOURCES
+          </Type>
+          <Type variant="caption" color={colors.secondary}>
+            Finnish vocabulary draws on Daniel Radice’s Yle Uutisten taajuussanakirja, based on Yle
+            news and Kotus headwords.
+          </Type>
+          <Type variant="caption" color={colors.secondary}>
+            Swedish vocabulary draws on the Swedish Kelly List by Elena Volodina and Sofie Johansson
+            Kokkinakis, Språkbanken Text, University of Gothenburg.
+          </Type>
+        </View>
       </ScrollView>
       {languageSheet.open && (
         <LanguageSheet

@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router';
 import { useTheme } from '@/ui/theme';
-export const unstable_settings = { initialRouteName: 'index' };
+export const unstable_settings = { anchor: 'index' };
 export default function DiscoverLayout() {
   const { colors } = useTheme();
   return (

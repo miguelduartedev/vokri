@@ -19,7 +19,7 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 21 | [Personal collections, explicit enrolment and collection-scoped Learn New](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-collections) |
 | 22A–22B | Language-scoped JSON vocabulary export and import |
 | 22C | [Full local bilingual backup and recoverable replacement restoration](../handoff/vokri-cards/full-local-backup.md) |
-| 23 | Feature-complete V1 candidate after cross-feature, accessibility and native regression QA |
+| 23 | [V1 candidate polish, accessibility findings and cross-feature QA](../handoff/vokri-cards/v1-candidate-qa.md) |
 | 24 | Native beta readiness, release content clearance and distribution preparation |
 
 ## Durable lexical identity

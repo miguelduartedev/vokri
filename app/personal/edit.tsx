@@ -141,6 +141,7 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
               </Type>
               <Button
                 label="View existing entry"
+                accessibilityLabel={'View existing entry: ' + m.displayForm + ', ' + m.english}
                 onPress={() =>
                   m.wordId.startsWith(personalPrefix)
                     ? openEntry(language, m.wordId)
@@ -190,6 +191,7 @@ function Editor({ language, entry }: { language: LearningLanguage; entry?: Perso
           {field('english', 'English meaning', draft.type !== 'Word')}
           <Button
             label={details ? 'Hide optional details' : 'Add optional details'}
+            accessibilityState={{ expanded: details }}
             variant="secondary"
             onPress={() => setDetails(!details)}
           />

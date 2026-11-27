@@ -137,6 +137,7 @@ export function ImportDecisions({
                 : 'Use this existing entry'
             }
             accessibilityLabel={'Use ' + item.displayForm + ' · ' + item.english}
+            accessibilityState={{ selected: current?.action === 'reuse' && current.id === item.wordId }}
             variant="secondary"
             onPress={() => choose({ action: 'reuse', id: item.wordId })}
           />
@@ -157,6 +158,7 @@ export function ImportDecisions({
                 : 'Use this collection'
             }
             accessibilityLabel={'Use collection ' + g.name}
+            accessibilityState={{ selected: current?.action === 'reuse' && current.id === g.collectionId }}
             variant="secondary"
             onPress={() => choose({ action: 'reuse', id: g.collectionId })}
           />

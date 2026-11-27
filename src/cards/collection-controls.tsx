@@ -31,7 +31,8 @@ export function MyWordsSections({ collections = false }: { collections?: boolean
               backgroundColor: active ? colors.selected : colors.surface,
               borderRadius: 12,
               borderWidth: 1,
-              borderColor: colors.border,
+              borderBottomWidth: active ? 3 : 1,
+              borderColor: active ? colors.onSelected : colors.border,
               padding: 6,
             }}
           >
