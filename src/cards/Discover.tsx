@@ -44,7 +44,8 @@ function Chip({
         borderRadius: 12,
         alignItems: 'center',
         borderWidth: 1,
-        borderColor: selected ? colors.selected : colors.border,
+        borderBottomWidth: selected ? 3 : 1,
+        borderColor: selected ? colors.onSelected : colors.border,
         backgroundColor: selected ? colors.selected : colors.surface,
       }}
     >
@@ -231,7 +232,7 @@ export function Discover({
           gap: 10,
           borderWidth: 1,
           borderRadius: 13,
-          borderColor: focused ? colors.focus : colors.border,
+          borderColor: focused ? colors.focus : colors.fieldBorder,
           backgroundColor: colors.surface,
         }}
       >

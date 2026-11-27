@@ -76,7 +76,7 @@ export function Field({ label, ...props }: TextInputProps & { label: string }) {
         style={{
           color: colors.ink,
           backgroundColor: colors.surface,
-          borderColor: colors.border,
+          borderColor: colors.fieldBorder,
           borderWidth: 1,
           borderRadius: 12,
           minHeight: props.multiline ? 76 : 50,
@@ -110,7 +110,8 @@ export function Chips<T extends string>({
             paddingHorizontal: 13,
             borderRadius: 12,
             borderWidth: 1,
-            borderColor: colors.border,
+            borderBottomWidth: value === option ? 3 : 1,
+            borderColor: value === option ? colors.onSelected : colors.border,
             backgroundColor: value === option ? colors.selected : colors.surface,
           }}
         >

@@ -4,7 +4,7 @@ Vokri Cards is a local-first flashcards app for learners of Finnish and Swedish.
 
 ## Run on a phone or emulator
 
-Use Node **24.22.2** and npm **11.19.1**. The lockfile resolves Expo **58.0.26**, React Native **0.88.1**, React **19.3.0** and Expo Router **58.0.32**. Install native packages with `npx expo install` so Expo selects compatible versions. Expo Router’s dependency tree uses the matching React DOM peer. Application targets are Android and iOS.
+Use Node **24.22.2** and npm **11.19.1**. The lockfile resolves Expo **58.1.0**, React Native **0.88.1**, React **19.3.0** and Expo Router **58.0.33**. Install native packages with `npx expo install` so Expo selects compatible versions. Expo Router’s dependency tree uses the matching React DOM peer. Application targets are Android and iOS.
 
 ```sh
 nvm use
