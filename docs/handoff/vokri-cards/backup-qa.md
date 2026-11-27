@@ -24,7 +24,7 @@ The source and restored Android exports matched across **all 58 rows**, includin
 
 The tests use real on-disk SQLite, online backups, WAL and bounded file handles. They cover empty-install replacement, repeat restoration, queued preference writes, strict staging, exact logical copy comparison, storage preflight, failures while preserving and replacing, failed preference writes and failed database reopening. Rollback checks distinguish an absent preference key from a verbatim stored default. Additional tests exercise repeated failed rollback, lost commit acknowledgement, cleanup failure after commit and preservation of subsequent study data. A router test checks that recovery blocks the providers and that confirmation remounts them with restored preferences.
 
-Strict TypeScript, ESLint, vocabulary validation, reproducibility, Expo dependency compatibility, Expo Doctor (20/20) and Android and iOS production exports passed locally. Native iOS restoration and system file interaction remain unverified on this host, which lacks `simctl`.
+Strict TypeScript, ESLint, vocabulary validation, reproducibility and Android and iOS production exports passed locally. Expo Doctor passed 20/20 checks during initial milestone verification. On the recovery-fix rerun it passed 19/20. The online dependency check now recommends Expo 58.1.0 and six companion package updates for the existing lockfile. Native iOS restoration and system file interaction remain unverified on this host, which lacks `simctl`.
 
 ## Design and screenshots
 
