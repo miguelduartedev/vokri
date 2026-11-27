@@ -101,6 +101,21 @@ export default function Settings() {
             onPress={() => router.push('/portability/import')}
           />
         </View>
+        <View style={{ marginTop: 24 }}>
+          <Type variant="eyebrow" color={colors.secondary}>
+            BACKUP &amp; RESTORE
+          </Type>
+          <SettingRow
+            title="Create backup"
+            detail="Protect both languages, study progress and preferences."
+            onPress={() => router.push('/backup?mode=create')}
+          />
+          <SettingRow
+            title="Restore from backup"
+            detail="Replace this installation with a saved backup."
+            onPress={() => router.push('/backup?mode=restore')}
+          />
+        </View>
       </ScrollView>
       {languageSheet.open && (
         <LanguageSheet

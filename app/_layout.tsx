@@ -1,3 +1,4 @@
+import { RecoveryBoundary } from '@/backup/boundary';
 import { LearningProvider } from '@/learning/provider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Inter_400Regular } from '@expo-google-fonts/inter/400Regular';
@@ -57,6 +58,7 @@ function Navigation({ fontsReady }: { fontsReady: boolean }) {
         <Stack.Protected guard={selected}>
           <Stack.Screen name="(tabs)" />
           <Stack.Screen name="settings" />
+          <Stack.Screen name="backup" />
           <Stack.Screen name="portability/import" />
           <Stack.Screen name="portability/export" />
           <Stack.Screen name="collection/edit" />
@@ -96,13 +98,21 @@ function Startup() {
     </ThemeProvider>
   );
 }
-export default function RootLayout() {
+function Application() {
   const [preferences] = useState(() => new PreferenceStore(AsyncStorage));
   return (
+    <PreferencesProvider store={preferences}>
+      <Startup />
+    </PreferencesProvider>
+  );
+}
+
+export default function RootLayout() {
+  return (
     <SafeAreaProvider>
-      <PreferencesProvider store={preferences}>
-        <Startup />
-      </PreferencesProvider>
+      <RecoveryBoundary>
+        <Application />
+      </RecoveryBoundary>
     </SafeAreaProvider>
   );
 }

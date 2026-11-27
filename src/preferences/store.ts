@@ -110,7 +110,17 @@ export class PreferenceStore {
     }
   }
 
+  private suspended = false;
+  async suspendWrites() {
+    this.suspended = true;
+    await this.writes;
+    return () => {
+      this.suspended = false;
+    };
+  }
+
   private update(patch: Partial<Preferences> | ((current: Preferences) => Partial<Preferences>)) {
+    if (this.suspended) return Promise.reject(new Error('Local data is busy. Try again.'));
     const operation = this.writes.then(async () => {
       if (this.snapshot.status !== 'ready') throw new Error('Preferences are unavailable');
       const preferences = {

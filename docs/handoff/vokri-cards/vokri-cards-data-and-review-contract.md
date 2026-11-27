@@ -277,6 +277,10 @@ Use Figma [Review Front 426:2738](https://www.figma.com/design/vJPxcNnHyCOAp57MB
 
 SQLite v4 holds learner content, collections, learning evidence, schedules and session checkpoints. Preferences use their own versioned AsyncStorage record. Curated vocabulary ships in the application bundle.
 
+### Full local backup
+
+Settings creates a bilingual SQLite snapshot with validated preferences. A confirmed replacement preserves historical evidence, current schedules and frozen study checkpoints exactly. Startup resolves interrupted replacements before learning resumes. [Format, validation and restoration contract](full-local-backup.md)
+
 ### My Words portability
 
 Settings exports one learning language using the [v1 document contract](vocabulary-interchange-v1.md). Export reads a consistent SQLite snapshot. Import validates and previews the file, asks for any identity and membership decisions, then commits the accepted content in one transaction. Existing learning history and enrolment retain their local identities. New personal entries start unenrolled. [Native file handling and conflict rules](vocabulary-interchange-integration.md)

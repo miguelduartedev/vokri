@@ -17,7 +17,8 @@ Cards owns Today, Discover, My Words, its navigation, curated decks, collection-
 | 19 | [Private alpha with scheduled Review, live Today and SQLite v2 recovery](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#daily-review-and-today--pr-19) |
 | 20 | [My Words, personal capture and SQLite v3 content revisions](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-vocabulary--pr-20) |
 | 21 | [Personal collections, explicit enrolment and collection-scoped Learn New](../handoff/vokri-cards/vokri-cards-data-and-review-contract.md#personal-collections) |
-| 22 | Language-scoped JSON vocabulary export and import (22A and 22B) |
+| 22A–22B | Language-scoped JSON vocabulary export and import |
+| 22C | [Full local bilingual backup and recoverable replacement restoration](../handoff/vokri-cards/full-local-backup.md) |
 | 23 | Feature-complete V1 candidate after cross-feature, accessibility and native regression QA |
 | 24 | Native beta readiness, release content clearance and distribution preparation |
 
@@ -48,4 +49,4 @@ Appearance and active language are global preferences. Enrolment, history, sched
 
 SQLite v4 preserves collection origins on frozen sessions and keeps membership independent of learning evidence. Settings provides single-language JSON vocabulary portability in milestone 22B. Learners preview the file, resolve conflicts and explicitly confirm additions. [Interchange implementation](../handoff/vokri-cards/vocabulary-interchange-integration.md)
 
-**Future full local backup and restoration.** Preserve a consistent SQLite snapshot and validated preferences in a separate package. Before replacing live data, verify schema compatibility and integrity on a staged copy. Restoration needs an atomic switch and recovery of the original state after failure. CSV and study-progress reset remain separate product decisions.
+Milestone 22C adds a full local backup for both languages and their preferences. The root checks a durable restoration journal before opening learner data. [Backup format and recovery contract](../handoff/vokri-cards/full-local-backup.md) · [Native QA](../handoff/vokri-cards/backup-qa.md)

@@ -62,7 +62,15 @@ export class LearningStore {
       this.listeners.delete(listener);
     };
   };
+  private suspended = false;
+  suspendWrites() {
+    this.suspended = true;
+    return () => {
+      this.suspended = false;
+    };
+  }
   private commit(operation: () => void) {
+    if (this.suspended) throw new Error('Local data is busy. Try again.');
     this.db.withTransactionSync(operation);
     this.revision++;
     this.listeners.forEach((listener) => listener());
